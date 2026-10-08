@@ -1,0 +1,19 @@
+{
+  "pdf_header": {
+    "doc_id": 8,
+    "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/Integrity.pdf",
+    "title": null,
+    "document_type": "ethicals",
+    "unit_code": null,
+    "unit_name": null,
+    "academic_year": null,
+    "period": null,
+    "page_count": 12,
+    "pages": []
+  },
+  "pdf_feature": "<<\n  /Type /Catalog\n  /Pages 32 0 R\n  /Dests 33 0 R\n  /MarkInfo <<\n    /Type /MarkInfo\n    /Marked true\n  >>\n  /StructTreeRoot 34 0 R\n  /Outlines 321 0 R\n  /ViewerPreferences <<\n    /Type /ViewerPreferences\n    /DisplayDocTitle true\n  >>\n  /Lang (en)\n>>",
+  "xml_feature": {
+    "available": false,
+    "raw": null
+  }
+}

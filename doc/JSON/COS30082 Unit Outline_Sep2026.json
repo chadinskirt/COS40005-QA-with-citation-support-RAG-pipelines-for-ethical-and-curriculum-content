@@ -1,0 +1,208 @@
+{
+  "pdf_header": {
+    "doc_id": 6,
+    "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS30082 Unit Outline_Sep2026.pdf",
+    "title": "Unit Outline Template",
+    "document_type": "unit_outline",
+    "unit_code": "COS30082",
+    "unit_name": "Applied Machine Learning",
+    "academic_year": 2026,
+    "period": "September",
+    "page_count": 11,
+    "pages": []
+  },
+  "pdf_feature": "<<\n  /Type /Catalog\n  /Pages 2 0 R\n  /Lang (en)\n  /StructTreeRoot 94 0 R\n  /MarkInfo <<\n    /Marked true\n  >>\n  /Metadata 911 0 R\n  /ViewerPreferences 912 0 R\n>>",
+  "xml_feature": {
+    "available": true,
+    "raw": {
+      "root": {
+        "tag": "x:xmpmeta",
+        "attributes": {
+          "{adobe:ns:meta/}xmptk": "3.1-701"
+        },
+        "text": null,
+        "children": [
+          {
+            "tag": "rdf:RDF",
+            "attributes": {},
+            "text": null,
+            "children": [
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "pdf:Producer",
+                    "attributes": {},
+                    "text": "Microsoft® Word for Microsoft 365",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "pdfx:MSIP_Label_f1340588-a344-42f9-b355-c2f852587c6c_Enabled",
+                    "attributes": {},
+                    "text": "true",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdfx:MSIP_Label_f1340588-a344-42f9-b355-c2f852587c6c_Method",
+                    "attributes": {},
+                    "text": "Privileged",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdfx:MSIP_Label_f1340588-a344-42f9-b355-c2f852587c6c_SiteId",
+                    "attributes": {},
+                    "text": "df7f7579-3e9c-4a7e-b844-420280f53859",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "dc:title",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Alt",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {
+                              "{http://www.w3.org/XML/1998/namespace}lang": "x-default"
+                            },
+                            "text": "Unit Outline Template",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "dc:creator",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Seq",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {},
+                            "text": "Chris Pilgrim",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "dc:description",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Alt",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {
+                              "{http://www.w3.org/XML/1998/namespace}lang": "x-default"
+                            },
+                            "text": "Approved for use in 2023",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "xmp:CreatorTool",
+                    "attributes": {},
+                    "text": "Microsoft® Word for Microsoft 365",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmp:CreateDate",
+                    "attributes": {},
+                    "text": "2026-09-05T21:18:17+07:00",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmp:ModifyDate",
+                    "attributes": {},
+                    "text": "2026-09-05T21:18:17+07:00",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "xmpMM:DocumentID",
+                    "attributes": {},
+                    "text": "uuid:5DB69A0D-3A7A-4608-A9D1-5429A2D08879",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmpMM:InstanceID",
+                    "attributes": {},
+                    "text": "uuid:5DB69A0D-3A7A-4608-A9D1-5429A2D08879",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "namespace": {
+        "x": "adobe:ns:meta/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "pdf": "http://ns.adobe.com/pdf/1.3/",
+        "pdfx": "http://ns.adobe.com/pdfx/1.3/",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "xmp": "http://ns.adobe.com/xap/1.0/",
+        "xmpMM": "http://ns.adobe.com/xap/1.0/mm/"
+      }
+    }
+  }
+}

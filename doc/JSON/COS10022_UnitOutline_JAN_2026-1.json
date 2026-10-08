@@ -1,0 +1,19 @@
+{
+  "pdf_header": {
+    "doc_id": 1,
+    "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS10022_UnitOutline_JAN_2026-1.pdf",
+    "title": null,
+    "document_type": "unit_outline",
+    "unit_code": "COS10022",
+    "unit_name": "Data Science Principles",
+    "academic_year": 2026,
+    "period": "January",
+    "page_count": 13,
+    "pages": []
+  },
+  "pdf_feature": "<<\n  /Type /Catalog\n  /Pages 106 0 R\n  /Version /1.4\n>>",
+  "xml_feature": {
+    "available": false,
+    "raw": null
+  }
+}

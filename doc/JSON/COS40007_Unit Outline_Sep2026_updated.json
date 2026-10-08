@@ -1,0 +1,176 @@
+{
+  "pdf_header": {
+    "doc_id": 7,
+    "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS40007_Unit Outline_Sep2026_updated.pdf",
+    "title": null,
+    "document_type": "unit_outline",
+    "unit_code": "COS40007",
+    "unit_name": "Artificial Intelligence Engineering",
+    "academic_year": 2026,
+    "period": "September",
+    "page_count": 11,
+    "pages": []
+  },
+  "pdf_feature": "<<\n  /Type /Catalog\n  /Pages 2 0 R\n  /Lang (en)\n  /StructTreeRoot 110 0 R\n  /MarkInfo <<\n    /Marked true\n  >>\n  /Metadata 1023 0 R\n  /ViewerPreferences 1024 0 R\n>>",
+  "xml_feature": {
+    "available": true,
+    "raw": {
+      "root": {
+        "tag": "x:xmpmeta",
+        "attributes": {
+          "{adobe:ns:meta/}xmptk": "3.1-701"
+        },
+        "text": null,
+        "children": [
+          {
+            "tag": "rdf:RDF",
+            "attributes": {},
+            "text": null,
+            "children": [
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "pdf:Producer",
+                    "attributes": {},
+                    "text": "Microsoft® Word for Microsoft 365",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "pdfx:MSIP_Label_5583b3fa-365b-4fa2-9885-a560b35483b3_ActionId",
+                    "attributes": {},
+                    "text": "ece8bc2d-7c4a-4fb5-8f8a-461c2e09e1fb",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdfx:MSIP_Label_5583b3fa-365b-4fa2-9885-a560b35483b3_ContentBits",
+                    "attributes": {},
+                    "text": "1",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdfx:MSIP_Label_5583b3fa-365b-4fa2-9885-a560b35483b3_Enabled",
+                    "attributes": {},
+                    "text": "true",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdfx:MSIP_Label_5583b3fa-365b-4fa2-9885-a560b35483b3_Method",
+                    "attributes": {},
+                    "text": "Standard",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdfx:MSIP_Label_5583b3fa-365b-4fa2-9885-a560b35483b3_SiteId",
+                    "attributes": {},
+                    "text": "df7f7579-3e9c-4a7e-b844-420280f53859",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "dc:creator",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Seq",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {},
+                            "text": "Chau Melodi",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "xmp:CreatorTool",
+                    "attributes": {},
+                    "text": "Microsoft® Word for Microsoft 365",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmp:CreateDate",
+                    "attributes": {},
+                    "text": "2026-09-16T23:56:54+07:00",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmp:ModifyDate",
+                    "attributes": {},
+                    "text": "2026-09-16T23:56:54+07:00",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "xmpMM:DocumentID",
+                    "attributes": {},
+                    "text": "uuid:20F95F20-49B1-44CF-994E-058CAE915CE4",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmpMM:InstanceID",
+                    "attributes": {},
+                    "text": "uuid:20F95F20-49B1-44CF-994E-058CAE915CE4",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "namespace": {
+        "x": "adobe:ns:meta/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "pdf": "http://ns.adobe.com/pdf/1.3/",
+        "pdfx": "http://ns.adobe.com/pdfx/1.3/",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "xmp": "http://ns.adobe.com/xap/1.0/",
+        "xmpMM": "http://ns.adobe.com/xap/1.0/mm/"
+      }
+    }
+  }
+}

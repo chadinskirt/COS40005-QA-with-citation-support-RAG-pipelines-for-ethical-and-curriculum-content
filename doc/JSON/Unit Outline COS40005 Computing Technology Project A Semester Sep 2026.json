@@ -1,0 +1,237 @@
+{
+  "pdf_header": {
+    "doc_id": 14,
+    "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/Unit Outline COS40005 Computing Technology Project A Semester Sep 2026.pdf",
+    "title": "Unit Outline Template",
+    "document_type": "unit_outline",
+    "unit_code": "COS40005",
+    "unit_name": "Computing Technology Project A",
+    "academic_year": 2026,
+    "period": "September",
+    "page_count": 12,
+    "pages": []
+  },
+  "pdf_feature": "<<\n  /Lang <FEFF0045004E002D00410055>\n  /MarkInfo <<\n    /Marked true\n  >>\n  /Metadata 61 0 R\n  /Outlines 90 0 R\n  /PageLayout /OneColumn\n  /Pages 1318 0 R\n  /StructTreeRoot 161 0 R\n  /Type /Catalog\n  /ViewerPreferences <<\n    /DisplayDocTitle true\n  >>\n  /AcroForm 1356 0 R\n>>",
+  "xml_feature": {
+    "available": true,
+    "raw": {
+      "root": {
+        "tag": "x:xmpmeta",
+        "attributes": {
+          "{adobe:ns:meta/}xmptk": "Adobe XMP Core 9.1-c001 79.675d0f7, 2023/06/11-19:21:16        "
+        },
+        "text": null,
+        "children": [
+          {
+            "tag": "rdf:RDF",
+            "attributes": {},
+            "text": null,
+            "children": [
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "xmp:ModifyDate",
+                    "attributes": {},
+                    "text": "2026-07-24T17:21:18+10:00",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmp:CreateDate",
+                    "attributes": {},
+                    "text": "2026-07-24T17:21:12+10:00",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmp:MetadataDate",
+                    "attributes": {},
+                    "text": "2026-07-24T17:21:18+10:00",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmp:CreatorTool",
+                    "attributes": {},
+                    "text": "Acrobat PDFMaker 26 for Word",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmpMM:DocumentID",
+                    "attributes": {},
+                    "text": "uuid:1efe47ac-2127-4d4b-a226-9cd2def894d9",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmpMM:InstanceID",
+                    "attributes": {},
+                    "text": "uuid:97388451-b281-443f-bdb1-3da4b1345928",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmpMM:subject",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Seq",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {},
+                            "text": "90",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "dc:format",
+                    "attributes": {},
+                    "text": "application/pdf",
+                    "children": []
+                  },
+                  {
+                    "tag": "dc:title",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Alt",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {
+                              "{http://www.w3.org/XML/1998/namespace}lang": "x-default"
+                            },
+                            "text": "Unit Outline Template",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "dc:description",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Alt",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {
+                              "{http://www.w3.org/XML/1998/namespace}lang": "x-default"
+                            },
+                            "text": "Approved for use in 2023",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "dc:creator",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Seq",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {},
+                            "text": "Chris Pilgrim",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "pdf:Producer",
+                    "attributes": {},
+                    "text": "Adobe PDF Library 26.1.187",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdf:Keywords",
+                    "attributes": {},
+                    "text": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "pdfx:SourceModified",
+                    "attributes": {},
+                    "text": "D:20260724072059",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdfx:Company",
+                    "attributes": {},
+                    "text": "Swinburne",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdfx:ContentTypeId",
+                    "attributes": {},
+                    "text": "0x010100E26321D00CF47F4FB22CA25E3A433A8A",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdfx:GrammarlyDocumentId",
+                    "attributes": {},
+                    "text": "382eba12-bfb5-47e6-8441-cf19ced132b9",
+                    "children": []
+                  },
+                  {
+                    "tag": "photoshop:headline",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Seq",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {},
+                            "text": "Approved for use in 2023",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "namespace": {
+        "x": "adobe:ns:meta/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xmp": "http://ns.adobe.com/xap/1.0/",
+        "xmpMM": "http://ns.adobe.com/xap/1.0/mm/",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "pdf": "http://ns.adobe.com/pdf/1.3/",
+        "pdfx": "http://ns.adobe.com/pdfx/1.3/",
+        "photoshop": "http://ns.adobe.com/photoshop/1.0/"
+      }
+    }
+  }
+}

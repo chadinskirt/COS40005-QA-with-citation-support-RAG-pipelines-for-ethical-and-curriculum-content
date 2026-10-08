@@ -1,6 +1,8 @@
 import json
 import pymupdf
 from pathlib import Path
+import xml.etree.ElementTree as ET
+from normalize import parse_xml_metadata, find_xml_text, extract_page0_metadata
 
 def make_document_metadata(doc, source, doc_id):
 
@@ -12,21 +14,9 @@ def make_document_metadata(doc, source, doc_id):
         "unit_code": None,
         "unit_name": None,
         "academic_year": None,
-        "semester": None,
+        "period": None,
         "page_count": doc.page_count,
         "pages": []
-    }
-    ref =  {
-        "language": None,
-        "is_tagged": False,
-        "has_metadata": False,
-        "has_structure_tree": False,
-        "has_acroform": False,
-
-        "pages_xref": None,
-        "metadata_xref": None,
-        "structure_tree_xref": None,
-        "acroform_xref": None
     }
     return{
         "pdf_header": header,
@@ -36,7 +26,6 @@ def make_document_metadata(doc, source, doc_id):
             "raw": None
         }
     }
-
 def load_pdf(path):
     doc = pymupdf.open(path)
     print(type(doc))
@@ -57,36 +46,52 @@ def save_json(metadata, path):
         print(f"Object cannot be serialized to JSON")
         return False
     return True
-def iterate_dir(Dir,metadata_Dir):
-    #print(Dir.exists())
-    #print(Dir.resolve())
-    doc_id = 0
-    save = False
+def extract_pdf_metadata(doc, file, doc_id):
+    metadata = make_document_metadata(doc, file, doc_id)
+    page0 = extract_page0_metadata(doc[0], metadata)
+    # PDF catalog
+    cat = doc.pdf_catalog()
+    metadata["pdf_feature"] = doc.xref_object(cat)
 
-    for file in Dir.iterdir():
+    # XMP metadata
+    xml = doc.get_xml_metadata()
+    if xml:
+        metadata["xml_feature"]["available"] = True
+        metadata["xml_feature"]["raw"] = parse_xml_metadata(xml)
+
+        xml_root = metadata["xml_feature"]["raw"]["root"]
+        title = find_xml_text(xml_root, "dc:title")
+
+        if title:
+            metadata["pdf_header"]["title"] = title
+        else:
+            print(f"No title found: {file.name}")
+
+    return metadata
+
+
+def iterate_dir(source_dir, metadata_dir):
+    doc_id = 0
+
+    for file in source_dir.iterdir():
         if file.suffix.lower() != ".pdf":
             continue
-        #load and create boilerplate metadata
-        doc = load_pdf(file)
-        metadata = make_document_metadata(doc, file, doc_id)
-        # catalog authoritive reference site
-        cat = doc.pdf_catalog()
-        metadata["pdf_feature"] = doc.xref_object(cat)
-        #collect pdf xml metadata
-        xml = doc.get_xml_metadata()
-        if xml:
-            metadata["xml_feature"]["available"] = True
-            metadata["xml_feature"]["raw"] = xml
-        #output and save json files
-        output_path = metadata_Dir/ f"{file.stem}.json"
-        if save_json(metadata, output_path):
-            doc_id += 1
 
-        doc.close()
+        doc = load_pdf(file)
+        try:
+            metadata = extract_pdf_metadata(doc, file, doc_id)
+
+            output_path = metadata_dir / f"{file.stem}.json"
+
+            if save_json(metadata, output_path):
+                doc_id += 1
+
+        finally:
+            doc.close()
 
 def main():
-    Dir = Path("/mnt/d/pdf-MD_parser")
-    metadata_Dir = Path("/mnt/d/pdf-MD_parser/JSON")
+    Dir = Path("/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive")
+    metadata_Dir = Path("/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/JSON")
     iterate_dir(Dir, metadata_Dir)
 
 if __name__ == "__main__":

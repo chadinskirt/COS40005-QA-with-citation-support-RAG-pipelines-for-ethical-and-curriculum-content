@@ -1,0 +1,137 @@
+{
+  "pdf_header": {
+    "doc_id": 11,
+    "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/SWE30003 Unit Outline_May 2026.pdf",
+    "title": "Microsoft Word - SWE30003 Unit Outline_2025_S2.docx",
+    "document_type": "unit_outline",
+    "unit_code": "SWE30003",
+    "unit_name": "Software Architectures and Design",
+    "academic_year": 2026,
+    "period": "May",
+    "page_count": 12,
+    "pages": []
+  },
+  "pdf_feature": "<<\n  /Metadata 86 0 R\n  /PageLabels 121 0 R\n  /Pages 123 0 R\n  /Type /Catalog\n>>",
+  "xml_feature": {
+    "available": true,
+    "raw": {
+      "root": {
+        "tag": "x:xmpmeta",
+        "attributes": {
+          "{adobe:ns:meta/}xmptk": "Adobe XMP Core 9.1-c001 79.675d0f7, 2023/06/11-19:21:16        "
+        },
+        "text": null,
+        "children": [
+          {
+            "tag": "rdf:RDF",
+            "attributes": {},
+            "text": null,
+            "children": [
+              {
+                "tag": "rdf:Description",
+                "attributes": {
+                  "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about": ""
+                },
+                "text": null,
+                "children": [
+                  {
+                    "tag": "dc:format",
+                    "attributes": {},
+                    "text": "application/pdf",
+                    "children": []
+                  },
+                  {
+                    "tag": "dc:creator",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Seq",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {},
+                            "text": "jhan",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "dc:title",
+                    "attributes": {},
+                    "text": null,
+                    "children": [
+                      {
+                        "tag": "rdf:Alt",
+                        "attributes": {},
+                        "text": null,
+                        "children": [
+                          {
+                            "tag": "rdf:li",
+                            "attributes": {
+                              "{http://www.w3.org/XML/1998/namespace}lang": "x-default"
+                            },
+                            "text": "Microsoft Word - SWE30003 Unit Outline_2025_S2.docx",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "xmp:CreatorTool",
+                    "attributes": {},
+                    "text": "PScript5.dll Version 5.2.2",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmp:ModifyDate",
+                    "attributes": {},
+                    "text": "2025-09-25T14:55:25+10:00",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmp:CreateDate",
+                    "attributes": {},
+                    "text": "2025-09-25T14:55:25+10:00",
+                    "children": []
+                  },
+                  {
+                    "tag": "pdf:Producer",
+                    "attributes": {},
+                    "text": "Acrobat Distiller 25.0 (Windows)",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmpMM:DocumentID",
+                    "attributes": {},
+                    "text": "uuid:f1b03deb-6fd2-410d-bc9c-33858fe11409",
+                    "children": []
+                  },
+                  {
+                    "tag": "xmpMM:InstanceID",
+                    "attributes": {},
+                    "text": "uuid:2eac3e52-4187-43fa-a66f-1a6af928b953",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "namespace": {
+        "x": "adobe:ns:meta/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "xmp": "http://ns.adobe.com/xap/1.0/",
+        "pdf": "http://ns.adobe.com/pdf/1.3/",
+        "xmpMM": "http://ns.adobe.com/xap/1.0/mm/"
+      }
+    }
+  }
+}
