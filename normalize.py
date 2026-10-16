@@ -2,6 +2,26 @@ import io
 import xml.etree.ElementTree as ET
 import re
 
+FIELD_RE = re.compile(
+    r"/(?P<key>\w+)\s+"
+    r"(?P<value>"
+    r"/\S+"
+    r"|\d+\s+\d+\s+R"
+    r"|true|false"
+    r"|\([^)]*\)"
+    r")"
+)
+
+def parse_xref(xref):
+    fields = {}
+
+    for match in FIELD_RE.finditer(xref):
+        key = match.group("key")
+        value = match.group("value")
+
+        fields[key] = value
+
+    return fields
 #extract first 3-4 upper case letter and following 4-5 numbers 
 def extract_unit_code(lines):
     UNIT_CODE_RE = re.compile(r"\b[A-Z]{3,4}\d{4,5}\b")
@@ -147,6 +167,58 @@ def extract_page0_metadata(page,metadata):
     if metadata["pdf_header"]["unit_code"]:
         metadata["pdf_header"]["document_type"] = "unit_outline"
     else:
-        metadata["pdf_header"]["document_type"] = "ethicals"
+        metadata["pdf_header"]["document_type"] = "undefined"
 
     return metadata
+
+#extract xref obj within page
+def page0_xref_build(doc,page, metadata):
+    xref = page.xref
+    metadata["page_content"] = {
+        "page_num": page.number + 1,
+        "xref": xref, 
+        "object": parse_xref(doc.xref_object(xref))
+    }
+    return metadata
+
+#extract pdf metadata
+def extracts_pdf_metadata(doc, metadata):
+    metadata = doc.metadata or {}
+
+    return {
+        "title": metadata.get("title") or None,
+        "author": metadata.get("author") or None,
+        "subject": metadata.get("subject") or None,
+        "keywords": metadata.get("keywords") or None,
+        "creator": metadata.get("creator") or None,
+        "producer": metadata.get("producer") or None,
+        "creation_date": metadata.get("creationDate") or None,
+        "modification_date": metadata.get("modDate") or None,
+    }
+
+def page_xref_build(doc, page):
+    xref = page.xref
+
+    return {
+        "page_num": page.number + 1,
+        "xref": xref,
+        "page_object": parse_xref(doc.xref_object(xref)),
+    }
+
+def normalize_table_rows(rows):
+    normalized_rows = []
+
+    for row in rows:
+        normalized_row = [
+            cell.strip() if isinstance(cell, str)
+            else "" if cell is None
+            else str(cell)
+            for cell in row
+        ]
+
+        if not any(normalized_row):
+            continue
+
+        normalized_rows.append(normalized_row)
+
+    return normalized_rows

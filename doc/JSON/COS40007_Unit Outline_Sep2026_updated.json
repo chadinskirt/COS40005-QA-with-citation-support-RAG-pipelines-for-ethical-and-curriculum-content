@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "doc_id": 7,
+    "doc_id": 6,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS40007_Unit Outline_Sep2026_updated.pdf",
     "title": null,
     "document_type": "unit_outline",
@@ -8,10 +8,17 @@
     "unit_name": "Artificial Intelligence Engineering",
     "academic_year": 2026,
     "period": "September",
-    "page_count": 11,
-    "pages": []
+    "page_count": 11
   },
-  "pdf_feature": "<<\n  /Type /Catalog\n  /Pages 2 0 R\n  /Lang (en)\n  /StructTreeRoot 110 0 R\n  /MarkInfo <<\n    /Marked true\n  >>\n  /Metadata 1023 0 R\n  /ViewerPreferences 1024 0 R\n>>",
+  "pdf_feature": {
+    "Type": "/Catalog",
+    "Pages": "2 0 R",
+    "Lang": "(en)",
+    "StructTreeRoot": "110 0 R",
+    "Marked": "true",
+    "Metadata": "1023 0 R",
+    "ViewerPreferences": "1024 0 R"
+  },
   "xml_feature": {
     "available": true,
     "raw": {
@@ -172,5 +179,3168 @@
         "xmpMM": "http://ns.adobe.com/xap/1.0/mm/"
       }
     }
-  }
+  },
+  "property": {
+    "pages": 11,
+    "text_chars": 25523,
+    "images": 5,
+    "drawings": 964,
+    "tables": 12
+  },
+  "pages": [
+    {
+      "page_num": 1,
+      "xref": 4,
+      "page_object": {
+        "page_num": 1,
+        "xref": 4,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F3": "13 0 R",
+          "F4": "15 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "Image12": "12 0 R",
+          "Image17": "17 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "5 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000001",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            115.24996948242188,
+            321.5898742675781,
+            148.24998474121094
+          ],
+          "text": "School of Science, Computing and Emerging\nTechnologies",
+          "role": "body",
+          "source_id": "txt_000001"
+        },
+        {
+          "id": "txt_000002",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            191.65997314453125,
+            199.15399169921875,
+            215.65997314453125
+          ],
+          "text": "Unit Outline",
+          "role": "section_heading",
+          "source_id": "txt_000002"
+        },
+        {
+          "id": "txt_000003",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            218.64617919921875,
+            396.4182434082031,
+            229.75157165527344
+          ],
+          "text": "This content is protected and may not be shared, uploaded, or distributed.",
+          "role": "body",
+          "source_id": "txt_000003"
+        },
+        {
+          "id": "txt_000005",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            251.54000854492188,
+            159.4690399169922,
+            271.58001708984375
+          ],
+          "text": "COS40007",
+          "role": "section_heading",
+          "source_id": "txt_000005"
+        },
+        {
+          "id": "txt_000006",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            285.7399597167969,
+            348.0390625,
+            305.77996826171875
+          ],
+          "text": "Artificial Intelligence Engineering",
+          "role": "section_heading",
+          "source_id": "txt_000006"
+        },
+        {
+          "id": "txt_000007",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            312.7999572753906,
+            247.136962890625,
+            328.75994873046875
+          ],
+          "text": "Semester September 2026",
+          "role": "body",
+          "source_id": "txt_000007"
+        },
+        {
+          "id": "txt_000008",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            354.8899841308594,
+            320.0899658203125,
+            366.8899841308594
+          ],
+          "text": "Please read this Unit Outline carefully. It includes:",
+          "role": "section_heading",
+          "source_id": "txt_000008"
+        },
+        {
+          "id": "txt_000009",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            377.6899719238281,
+            110.61199951171875,
+            389.6899719238281
+          ],
+          "text": "PART A",
+          "role": "section_heading",
+          "source_id": "txt_000009"
+        },
+        {
+          "id": "txt_000009",
+          "type": "text",
+          "bbox": [
+            148.10000610351562,
+            377.6899719238281,
+            219.84201049804688,
+            389.6899719238281
+          ],
+          "text": "Unit summary",
+          "role": "body",
+          "source_id": "txt_000009"
+        },
+        {
+          "id": "txt_000010",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            400.72998046875,
+            109.89199829101562,
+            412.72998046875
+          ],
+          "text": "PART B",
+          "role": "section_heading",
+          "source_id": "txt_000010"
+        },
+        {
+          "id": "txt_000010",
+          "type": "text",
+          "bbox": [
+            151.5800018310547,
+            400.72998046875,
+            270.36199951171875,
+            412.72998046875
+          ],
+          "text": "Your Unit in more detail",
+          "role": "body",
+          "source_id": "txt_000010"
+        },
+        {
+          "id": "txt_000011",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            423.66998291015625,
+            109.53199768066406,
+            435.66998291015625
+          ],
+          "text": "PART C",
+          "role": "section_heading",
+          "source_id": "txt_000011"
+        },
+        {
+          "id": "txt_000011",
+          "type": "text",
+          "bbox": [
+            150.02000427246094,
+            423.66998291015625,
+            248.40200805664062,
+            435.66998291015625
+          ],
+          "text": "Further information",
+          "role": "body",
+          "source_id": "txt_000011"
+        }
+      ],
+      "groups": [
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            71.54399871826172,
+            115.24996948242188,
+            321.5898742675781,
+            148.24998474121094
+          ],
+          "text": "School of Science, Computing and Emerging\nTechnologies",
+          "element_ids": [
+            "txt_000001"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            72.02400207519531,
+            191.65997314453125,
+            199.15399169921875,
+            215.65997314453125
+          ],
+          "text": "Unit Outline",
+          "element_ids": [
+            "txt_000002"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            72.02400207519531,
+            218.64617919921875,
+            396.4182434082031,
+            229.75157165527344
+          ],
+          "text": "This content is protected and may not be shared, uploaded, or distributed.",
+          "element_ids": [
+            "txt_000003"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            71.54399871826172,
+            251.54000854492188,
+            159.4690399169922,
+            271.58001708984375
+          ],
+          "text": "COS40007",
+          "element_ids": [
+            "txt_000005"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            71.54399871826172,
+            285.7399597167969,
+            348.0390625,
+            305.77996826171875
+          ],
+          "text": "Artificial Intelligence Engineering",
+          "element_ids": [
+            "txt_000006"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            72.02400207519531,
+            312.7999572753906,
+            247.136962890625,
+            328.75994873046875
+          ],
+          "text": "Semester September 2026",
+          "element_ids": [
+            "txt_000007"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            71.54399871826172,
+            354.8899841308594,
+            320.0899658203125,
+            366.8899841308594
+          ],
+          "text": "Please read this Unit Outline carefully. It includes:",
+          "element_ids": [
+            "txt_000008"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            71.54399871826172,
+            377.6899719238281,
+            110.61199951171875,
+            389.6899719238281
+          ],
+          "text": "PART A",
+          "element_ids": [
+            "txt_000009"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            148.10000610351562,
+            377.6899719238281,
+            219.84201049804688,
+            389.6899719238281
+          ],
+          "text": "Unit summary",
+          "element_ids": [
+            "txt_000009"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            71.54399871826172,
+            400.72998046875,
+            109.89199829101562,
+            412.72998046875
+          ],
+          "text": "PART B",
+          "element_ids": [
+            "txt_000010"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            151.5800018310547,
+            400.72998046875,
+            270.36199951171875,
+            412.72998046875
+          ],
+          "text": "Your Unit in more detail",
+          "element_ids": [
+            "txt_000010"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            71.54399871826172,
+            423.66998291015625,
+            109.53199768066406,
+            435.66998291015625
+          ],
+          "text": "PART C",
+          "element_ids": [
+            "txt_000011"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 1,
+          "bbox": [
+            150.02000427246094,
+            423.66998291015625,
+            248.40200805664062,
+            435.66998291015625
+          ],
+          "text": "Further information",
+          "element_ids": [
+            "txt_000011"
+          ]
+        }
+      ]
+    },
+    {
+      "page_num": 2,
+      "xref": 19,
+      "page_object": {
+        "page_num": 2,
+        "xref": 19,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F3": "13 0 R",
+          "F5": "21 0 R",
+          "F4": "15 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "20 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000014",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            87.52999877929688,
+            120.43304443359375,
+            101.56999969482422
+          ],
+          "text": "PART A:",
+          "role": "section_heading",
+          "source_id": "txt_000014"
+        },
+        {
+          "id": "txt_000014",
+          "type": "text",
+          "bbox": [
+            166.1300048828125,
+            87.52999877929688,
+            251.9830322265625,
+            101.56999969482422
+          ],
+          "text": "Unit Summary",
+          "role": "section_heading",
+          "source_id": "txt_000014"
+        },
+        {
+          "id": "txt_000015",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            503.5599670410156,
+            513.0909423828125,
+            582.3999633789062
+          ],
+          "text": "This unit of study aims to equip engineers with both theoretical knowledge and practical skills to design,\nimplement, and evaluate Artificial Intelligence (AI) and Machine Learning (ML) solutions for complex\nengineering challenges. It emphasises developing proficiency in selecting suitable algorithms, optimising\nsystem performance, and considering ethical aspects, while bridging the gap between Artificial Intelligence\n(AI) theory and engineering applications. The course prepares professionals to deploy intelligent systems\nefficiently and communicate technical solutions across multidisciplinary teams.",
+          "role": "body",
+          "source_id": "txt_000015"
+        },
+        {
+          "id": "txt_000017",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            600.3399658203125,
+            193.92201232910156,
+            612.3399658203125
+          ],
+          "text": "Unit Learning Outcomes",
+          "role": "section_heading",
+          "source_id": "txt_000017"
+        },
+        {
+          "id": "txt_000018",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            620.5900268554688,
+            273.98095703125,
+            630.5499877929688
+          ],
+          "text": "Students who successfully complete this unit can:",
+          "role": "body",
+          "source_id": "txt_000018"
+        },
+        {
+          "id": "txt_000019",
+          "type": "text",
+          "bbox": [
+            89.06400299072266,
+            635.1099853515625,
+            509.0493469238281,
+            741.4299926757812
+          ],
+          "text": "1. Design, develop, deploy, and maintain Machine Learning (ML)/Artificial Intelligence (AI) pipelines by\nselecting and training datasets to address complex, multidisciplinary engineering problems.\n2. Explain and compare a range of Artificial Intelligence (AI), Machine Learning (ML), & Deep Learning\n(DL) algorithms in terms of their structure, function, and real-world applicability.\n3. Evaluate and justify the selection of AI techniques based on computational efficiency, ethical\nimplications, and problem constraints for solving diverse computational engineering challenges.\n4. Communicate clearly and effectively technical concepts, project outcomes, and design decisions\nthrough written reports and oral presentations.",
+          "role": "list_item",
+          "source_id": "txt_000019"
+        }
+      ],
+      "groups": [
+        {
+          "type": "text_group",
+          "page_num": 2,
+          "bbox": [
+            71.54399871826172,
+            87.52999877929688,
+            120.43304443359375,
+            101.56999969482422
+          ],
+          "text": "PART A:",
+          "element_ids": [
+            "txt_000014"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 2,
+          "bbox": [
+            166.1300048828125,
+            87.52999877929688,
+            251.9830322265625,
+            101.56999969482422
+          ],
+          "text": "Unit Summary",
+          "element_ids": [
+            "txt_000014"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 2,
+          "bbox": [
+            72.02400207519531,
+            503.5599670410156,
+            513.0909423828125,
+            582.3999633789062
+          ],
+          "text": "This unit of study aims to equip engineers with both theoretical knowledge and practical skills to design,\nimplement, and evaluate Artificial Intelligence (AI) and Machine Learning (ML) solutions for complex\nengineering challenges. It emphasises developing proficiency in selecting suitable algorithms, optimising\nsystem performance, and considering ethical aspects, while bridging the gap between Artificial Intelligence\n(AI) theory and engineering applications. The course prepares professionals to deploy intelligent systems\nefficiently and communicate technical solutions across multidisciplinary teams.",
+          "element_ids": [
+            "txt_000015"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 2,
+          "bbox": [
+            72.02400207519531,
+            600.3399658203125,
+            193.92201232910156,
+            612.3399658203125
+          ],
+          "text": "Unit Learning Outcomes",
+          "element_ids": [
+            "txt_000017"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 2,
+          "bbox": [
+            72.02400207519531,
+            620.5900268554688,
+            273.98095703125,
+            630.5499877929688
+          ],
+          "text": "Students who successfully complete this unit can:",
+          "element_ids": [
+            "txt_000018"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 2,
+          "bbox": [
+            89.06400299072266,
+            635.1099853515625,
+            509.0493469238281,
+            741.4299926757812
+          ],
+          "text": "1. Design, develop, deploy, and maintain Machine Learning (ML)/Artificial Intelligence (AI) pipelines by\nselecting and training datasets to address complex, multidisciplinary engineering problems.\n2. Explain and compare a range of Artificial Intelligence (AI), Machine Learning (ML), & Deep Learning\n(DL) algorithms in terms of their structure, function, and real-world applicability.\n3. Evaluate and justify the selection of AI techniques based on computational efficiency, ethical\nimplications, and problem constraints for solving diverse computational engineering challenges.\n4. Communicate clearly and effectively technical concepts, project outcomes, and design decisions\nthrough written reports and oral presentations.",
+          "element_ids": [
+            "txt_000019"
+          ]
+        }
+      ]
+    },
+    {
+      "page_num": 3,
+      "xref": 23,
+      "page_object": {
+        "page_num": 3,
+        "xref": 23,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F6": "25 0 R",
+          "F4": "15 0 R",
+          "F7": "30 0 R",
+          "F8": "35 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "24 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000020",
+          "type": "text",
+          "bbox": [
+            81.6240005493164,
+            474.7599792480469,
+            486.494140625,
+            498.15997314453125
+          ],
+          "text": "Feedback provided by previous students through the Student Survey has resulted in improvements\nthat have been made to this unit. Recent improvements include:",
+          "role": "body",
+          "source_id": "txt_000020"
+        },
+        {
+          "id": "txt_000021",
+          "type": "text",
+          "bbox": [
+            99.6240005493164,
+            500.6961975097656,
+            498.79095458984375,
+            551.679931640625
+          ],
+          "text": "- The Unit Content and name change has been updated to reflect the unit’s focus on the design,\ndevelopment, and deployment of AI systems within an engineering context. It also aligns with\ncurrent industry terminology and emerging job roles (e.g., AI Engineer), and more accurately\ncommunicates the hands-on, systemoriented nature of the unit content.",
+          "role": "body",
+          "source_id": "txt_000021"
+        },
+        {
+          "id": "txt_000022",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            72.58999633789062,
+            512.9151611328125,
+            109.66999053955078
+          ],
+          "text": "The Swinburne Graduate Attributes describe the capability of our graduates to use knowledge, skills and\nbehaviours to contribute to society meaningfully and positively. They include professional, self-directed\nlearning and future-ready skills.",
+          "role": "body",
+          "source_id": "txt_000022"
+        },
+        {
+          "id": "txt_000024",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            127.54995727539062,
+            436.6309509277344,
+            137.5099639892578
+          ],
+          "text": "This unit contributes to the development of the following Swinburne Graduate Attributes:",
+          "role": "body",
+          "source_id": "txt_000024"
+        },
+        {
+          "id": "txt_000025",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            140.18563842773438,
+            516.7538452148438,
+            250.21998596191406
+          ],
+          "text": "-\nGA1 Communication - Verbal communication\n-\nGA2 Communication - Communicating using different media\n-\nGA3 Teamwork - Collaboration and negotiation\n-\nGA4 Teamwork – Teamwork roles and processes\n-\nGA5 Digital literacies– Information literacy\n-\nGA6 Digital Literacies– Technical literacy\nOther graduate attributes may be practised in the unit but are not formally taught as part of the unit content,\nnor incorporated within formal assessment.",
+          "role": "body",
+          "source_id": "txt_000025"
+        },
+        {
+          "id": "txt_000027",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            282.04998779296875,
+            114.09199523925781,
+            294.04998779296875
+          ],
+          "text": "Content",
+          "role": "section_heading",
+          "source_id": "txt_000027"
+        },
+        {
+          "id": "txt_000028",
+          "type": "text",
+          "bbox": [
+            89.54399871826172,
+            301.7356262207031,
+            502.31890869140625,
+            397.0999755859375
+          ],
+          "text": "-\nUtilising Machine Learning (ML) paradigms such as Supervised, Unsupervised, and Reinforcement\nLearning.\n-\nUnderstanding foundation models vs traditional machine learning trade-offs.\n-\nData-Centric Artificial Intelligence (AI) Development.\n-\nAutomated Data Pipelines and Machine Learning Operations (MLOps) for reproducibility.\n-\nAlgorithm Selection Frameworks for Production-Grade Machine Learning (ML) Specifications.\n-\nArtificial Intelligence (AI) for Emerging Engineering Applications & Technologies.",
+          "role": "body",
+          "source_id": "txt_000028"
+        },
+        {
+          "id": "txt_000030",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            415.53997802734375,
+            119.83304595947266,
+            429.5799865722656
+          ],
+          "text": "PART B:",
+          "role": "section_heading",
+          "source_id": "txt_000030"
+        },
+        {
+          "id": "txt_000030",
+          "type": "text",
+          "bbox": [
+            171.0500030517578,
+            415.53997802734375,
+            312.9630432128906,
+            429.5799865722656
+          ],
+          "text": "Your Unit in more detail",
+          "role": "section_heading",
+          "source_id": "txt_000030"
+        },
+        {
+          "id": "txt_000031",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            443.1099853515625,
+            170.52200317382812,
+            455.1099853515625
+          ],
+          "text": "Unit Improvements",
+          "role": "section_heading",
+          "source_id": "txt_000031"
+        },
+        {
+          "id": "txt_000032",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            572.22998046875,
+            167.61199951171875,
+            584.22998046875
+          ],
+          "text": "Unit Teaching Staff",
+          "role": "section_heading",
+          "source_id": "txt_000032"
+        }
+      ],
+      "groups": [
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            72.02400207519531,
+            72.58999633789062,
+            512.9151611328125,
+            109.66999053955078
+          ],
+          "text": "The Swinburne Graduate Attributes describe the capability of our graduates to use knowledge, skills and\nbehaviours to contribute to society meaningfully and positively. They include professional, self-directed\nlearning and future-ready skills.",
+          "element_ids": [
+            "txt_000022"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            72.02400207519531,
+            127.54995727539062,
+            436.6309509277344,
+            137.5099639892578
+          ],
+          "text": "This unit contributes to the development of the following Swinburne Graduate Attributes:",
+          "element_ids": [
+            "txt_000024"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            72.50399780273438,
+            140.18563842773438,
+            516.7538452148438,
+            250.21998596191406
+          ],
+          "text": "-\nGA1 Communication - Verbal communication\n-\nGA2 Communication - Communicating using different media\n-\nGA3 Teamwork - Collaboration and negotiation\n-\nGA4 Teamwork – Teamwork roles and processes\n-\nGA5 Digital literacies– Information literacy\n-\nGA6 Digital Literacies– Technical literacy\nOther graduate attributes may be practised in the unit but are not formally taught as part of the unit content,\nnor incorporated within formal assessment.",
+          "element_ids": [
+            "txt_000025"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            72.02400207519531,
+            282.04998779296875,
+            114.09199523925781,
+            294.04998779296875
+          ],
+          "text": "Content",
+          "element_ids": [
+            "txt_000027"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            89.54399871826172,
+            301.7356262207031,
+            502.31890869140625,
+            397.0999755859375
+          ],
+          "text": "-\nUtilising Machine Learning (ML) paradigms such as Supervised, Unsupervised, and Reinforcement\nLearning.\n-\nUnderstanding foundation models vs traditional machine learning trade-offs.\n-\nData-Centric Artificial Intelligence (AI) Development.\n-\nAutomated Data Pipelines and Machine Learning Operations (MLOps) for reproducibility.\n-\nAlgorithm Selection Frameworks for Production-Grade Machine Learning (ML) Specifications.\n-\nArtificial Intelligence (AI) for Emerging Engineering Applications & Technologies.",
+          "element_ids": [
+            "txt_000028"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            71.54399871826172,
+            415.53997802734375,
+            119.83304595947266,
+            429.5799865722656
+          ],
+          "text": "PART B:",
+          "element_ids": [
+            "txt_000030"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            171.0500030517578,
+            415.53997802734375,
+            312.9630432128906,
+            429.5799865722656
+          ],
+          "text": "Your Unit in more detail",
+          "element_ids": [
+            "txt_000030"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            72.02400207519531,
+            443.1099853515625,
+            170.52200317382812,
+            455.1099853515625
+          ],
+          "text": "Unit Improvements",
+          "element_ids": [
+            "txt_000031"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            81.6240005493164,
+            474.7599792480469,
+            486.494140625,
+            498.15997314453125
+          ],
+          "text": "Feedback provided by previous students through the Student Survey has resulted in improvements\nthat have been made to this unit. Recent improvements include:",
+          "element_ids": [
+            "txt_000020"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            99.6240005493164,
+            500.6961975097656,
+            498.79095458984375,
+            551.679931640625
+          ],
+          "text": "- The Unit Content and name change has been updated to reflect the unit’s focus on the design,\ndevelopment, and deployment of AI systems within an engineering context. It also aligns with\ncurrent industry terminology and emerging job roles (e.g., AI Engineer), and more accurately\ncommunicates the hands-on, systemoriented nature of the unit content.",
+          "element_ids": [
+            "txt_000021"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 3,
+          "bbox": [
+            72.02400207519531,
+            572.22998046875,
+            167.61199951171875,
+            584.22998046875
+          ],
+          "text": "Unit Teaching Staff",
+          "element_ids": [
+            "txt_000032"
+          ]
+        }
+      ]
+    },
+    {
+      "page_num": 4,
+      "xref": 42,
+      "page_object": {
+        "page_num": 4,
+        "xref": 42,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F3": "13 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "43 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000033",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            84.13995361328125,
+            233.7620086669922,
+            96.13995361328125
+          ],
+          "text": "Learning and Teaching Structure",
+          "role": "section_heading",
+          "source_id": "txt_000033"
+        },
+        {
+          "id": "txt_000035",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            265.6099853515625,
+            196.32200622558594,
+            277.6099853515625
+          ],
+          "text": "Week by Week Schedule",
+          "role": "section_heading",
+          "source_id": "txt_000035"
+        }
+      ],
+      "groups": [
+        {
+          "type": "text_group",
+          "page_num": 4,
+          "bbox": [
+            72.02400207519531,
+            84.13995361328125,
+            233.7620086669922,
+            96.13995361328125
+          ],
+          "text": "Learning and Teaching Structure",
+          "element_ids": [
+            "txt_000033"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 4,
+          "bbox": [
+            72.02400207519531,
+            265.6099853515625,
+            196.32200622558594,
+            277.6099853515625
+          ],
+          "text": "Week by Week Schedule",
+          "element_ids": [
+            "txt_000035"
+          ]
+        }
+      ]
+    },
+    {
+      "page_num": 5,
+      "xref": 44,
+      "page_object": {
+        "page_num": 5,
+        "xref": 44,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F3": "13 0 R",
+          "F9": "46 0 R",
+          "F4": "15 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "45 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000036",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            189.5,
+            132.57200622558594,
+            201.5
+          ],
+          "text": "Assessment",
+          "role": "section_heading",
+          "source_id": "txt_000036"
+        },
+        {
+          "id": "txt_000037",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            209.77999877929688,
+            80.86844635009766,
+            220.8199920654297
+          ],
+          "text": "a) Assessment overview",
+          "role": "list_item",
+          "source_id": "txt_000037"
+        },
+        {
+          "id": "txt_000038",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            505.3599548339844,
+            422.7027893066406,
+            515.3199462890625
+          ],
+          "text": "*Students can be asked to demo during On-Campus Studios with the tutor's discretion.",
+          "role": "body",
+          "source_id": "txt_000038"
+        },
+        {
+          "id": "txt_000039",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            525.4000244140625,
+            174.84619140625,
+            535.3599853515625
+          ],
+          "text": "* To be determined later.",
+          "role": "body",
+          "source_id": "txt_000039"
+        }
+      ],
+      "groups": [
+        {
+          "type": "text_group",
+          "page_num": 5,
+          "bbox": [
+            72.02400207519531,
+            189.5,
+            132.57200622558594,
+            201.5
+          ],
+          "text": "Assessment",
+          "element_ids": [
+            "txt_000036"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 5,
+          "bbox": [
+            72.02400207519531,
+            209.77999877929688,
+            80.86844635009766,
+            220.8199920654297
+          ],
+          "text": "a) Assessment overview",
+          "element_ids": [
+            "txt_000037"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 5,
+          "bbox": [
+            72.02400207519531,
+            505.3599548339844,
+            422.7027893066406,
+            535.3599853515625
+          ],
+          "text": "*Students can be asked to demo during On-Campus Studios with the tutor's discretion.\n* To be determined later.",
+          "element_ids": [
+            "txt_000038",
+            "txt_000039"
+          ]
+        }
+      ]
+    },
+    {
+      "page_num": 6,
+      "xref": 48,
+      "page_object": {
+        "page_num": 6,
+        "xref": 48,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F4": "15 0 R",
+          "F3": "13 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "49 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": [],
+      "groups": []
+    },
+    {
+      "page_num": 7,
+      "xref": 54,
+      "page_object": {
+        "page_num": 7,
+        "xref": 54,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F6": "25 0 R",
+          "F4": "15 0 R",
+          "F3": "13 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "55 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": []
+    },
+    {
+      "page_num": 8,
+      "xref": 63,
+      "page_object": {
+        "page_num": 8,
+        "xref": 63,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F9": "46 0 R",
+          "F4": "15 0 R",
+          "F5": "21 0 R",
+          "F6": "25 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "64 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000043",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            308.9299621582031,
+            81.34846496582031,
+            319.969970703125
+          ],
+          "text": "b) Final unit results",
+          "role": "list_item",
+          "source_id": "txt_000043"
+        },
+        {
+          "id": "txt_000045",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            401.2099914550781,
+            180.96200561523438,
+            413.2099914550781
+          ],
+          "text": "Required Textbook(s)",
+          "role": "section_heading",
+          "source_id": "txt_000045"
+        },
+        {
+          "id": "txt_000046",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            421.8399658203125,
+            499.1061706542969,
+            445.8399658203125
+          ],
+          "text": "The required textbook(s) can be purchased from bookshops and may be available through the Swinburne\nLibrary.",
+          "role": "body",
+          "source_id": "txt_000046"
+        },
+        {
+          "id": "txt_000047",
+          "type": "text",
+          "bbox": [
+            89.54399871826172,
+            455.3199768066406,
+            515.2509765625,
+            575.7999267578125
+          ],
+          "text": "1. Huyen, C. (2024). AI engineering: Building applications with foundation models. \" O'Reilly Media, Inc.\"\n2. Goodfellow, I., Bengio, Y., Courville, A., & Bengio, Y. (2016). Deep learning (Vol. 1, No. 2, pp. 1-800).\nCambridge: MIT press.\n3. Bass, L., Lu, Q., Weber, I., & Zhu, L. (2025). Engineering AI systems: architecture and DevOps\nessentials. Addison-Wesley Professional.\n4. Raschka, S., Liu, Y. H., & Mirjalili, V. (2022). Machine Learning with PyTorch and Scikit-Learn: Develop\n5. machine learning and deep learning models with Python. Packt Publishing Ltd.\n6. Kapoor, A., Gulli, A., Pal, S., & Chollet, F. (2022). Deep Learning with TensorFlow and Keras: Build and\ndeploy supervised, unsupervised, deep, and reinforcement learning models. Packt Publishing Ltd.",
+          "role": "list_item",
+          "source_id": "txt_000047"
+        },
+        {
+          "id": "txt_000049",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            593.739990234375,
+            241.802001953125,
+            605.739990234375
+          ],
+          "text": "Recommended Reading Materials",
+          "role": "section_heading",
+          "source_id": "txt_000049"
+        },
+        {
+          "id": "txt_000050",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            613.8699951171875,
+            503.7724609375,
+            650.949951171875
+          ],
+          "text": "Swinburne Library has a large collection of resources. Listed below are some references that will provide\nvaluable supplementary information to this unit. It is also recommended that you explore other sources to\nbroaden your understanding.",
+          "role": "body",
+          "source_id": "txt_000050"
+        },
+        {
+          "id": "txt_000051",
+          "type": "text",
+          "bbox": [
+            89.54399871826172,
+            653.2462158203125,
+            504.1909484863281,
+            664.75
+          ],
+          "text": "-\nhttps://librarysearch.swinburne.edu.au/permalink/61SUT_INST/7ojd5o/alma99386298 46201361",
+          "role": "body",
+          "source_id": "txt_000051"
+        },
+        {
+          "id": "txt_000052",
+          "type": "text",
+          "bbox": [
+            89.54399871826172,
+            673.7661743164062,
+            504.1909484863281,
+            685.2699584960938
+          ],
+          "text": "-\nhttps://librarysearch.swinburne.edu.au/permalink/61SUT_INST/7ojd5o/alma9938703980 401361",
+          "role": "body",
+          "source_id": "txt_000052"
+        },
+        {
+          "id": "txt_000054",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            707.3499755859375,
+            359.92095947265625,
+            731.3499755859375
+          ],
+          "text": "Readings TAB in Canvas:\nhttps://swinburne.instructure.com/courses/73590/external_tools/6356",
+          "role": "body",
+          "source_id": "txt_000054"
+        }
+      ],
+      "groups": [
+        {
+          "type": "text_group",
+          "page_num": 8,
+          "bbox": [
+            72.02400207519531,
+            308.9299621582031,
+            81.34846496582031,
+            319.969970703125
+          ],
+          "text": "b) Final unit results",
+          "element_ids": [
+            "txt_000043"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 8,
+          "bbox": [
+            72.02400207519531,
+            401.2099914550781,
+            180.96200561523438,
+            413.2099914550781
+          ],
+          "text": "Required Textbook(s)",
+          "element_ids": [
+            "txt_000045"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 8,
+          "bbox": [
+            72.50399780273438,
+            421.8399658203125,
+            499.1061706542969,
+            445.8399658203125
+          ],
+          "text": "The required textbook(s) can be purchased from bookshops and may be available through the Swinburne\nLibrary.",
+          "element_ids": [
+            "txt_000046"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 8,
+          "bbox": [
+            89.54399871826172,
+            455.3199768066406,
+            515.2509765625,
+            575.7999267578125
+          ],
+          "text": "1. Huyen, C. (2024). AI engineering: Building applications with foundation models. \" O'Reilly Media, Inc.\"\n2. Goodfellow, I., Bengio, Y., Courville, A., & Bengio, Y. (2016). Deep learning (Vol. 1, No. 2, pp. 1-800).\nCambridge: MIT press.\n3. Bass, L., Lu, Q., Weber, I., & Zhu, L. (2025). Engineering AI systems: architecture and DevOps\nessentials. Addison-Wesley Professional.\n4. Raschka, S., Liu, Y. H., & Mirjalili, V. (2022). Machine Learning with PyTorch and Scikit-Learn: Develop\n5. machine learning and deep learning models with Python. Packt Publishing Ltd.\n6. Kapoor, A., Gulli, A., Pal, S., & Chollet, F. (2022). Deep Learning with TensorFlow and Keras: Build and\ndeploy supervised, unsupervised, deep, and reinforcement learning models. Packt Publishing Ltd.",
+          "element_ids": [
+            "txt_000047"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 8,
+          "bbox": [
+            72.02400207519531,
+            593.739990234375,
+            241.802001953125,
+            605.739990234375
+          ],
+          "text": "Recommended Reading Materials",
+          "element_ids": [
+            "txt_000049"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 8,
+          "bbox": [
+            72.50399780273438,
+            613.8699951171875,
+            503.7724609375,
+            650.949951171875
+          ],
+          "text": "Swinburne Library has a large collection of resources. Listed below are some references that will provide\nvaluable supplementary information to this unit. It is also recommended that you explore other sources to\nbroaden your understanding.",
+          "element_ids": [
+            "txt_000050"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 8,
+          "bbox": [
+            89.54399871826172,
+            653.2462158203125,
+            504.1909484863281,
+            685.2699584960938
+          ],
+          "text": "-\nhttps://librarysearch.swinburne.edu.au/permalink/61SUT_INST/7ojd5o/alma99386298 46201361\n-\nhttps://librarysearch.swinburne.edu.au/permalink/61SUT_INST/7ojd5o/alma9938703980 401361",
+          "element_ids": [
+            "txt_000051",
+            "txt_000052"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 8,
+          "bbox": [
+            71.54399871826172,
+            707.3499755859375,
+            359.92095947265625,
+            731.3499755859375
+          ],
+          "text": "Readings TAB in Canvas:\nhttps://swinburne.instructure.com/courses/73590/external_tools/6356",
+          "element_ids": [
+            "txt_000054"
+          ]
+        }
+      ]
+    },
+    {
+      "page_num": 9,
+      "xref": 68,
+      "page_object": {
+        "page_num": 9,
+        "xref": 68,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F4": "15 0 R",
+          "F6": "25 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "Image70": "70 0 R",
+          "Image73": "73 0 R",
+          "Image75": "75 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "69 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000055",
+          "type": "text",
+          "bbox": [
+            150.5,
+            104.02876281738281,
+            443.8033447265625,
+            128.33836364746094
+          ],
+          "text": "For further information on any of these topics, refer to Swinb\nStudent webpaghettp://www.swinburne.edu.au/st/udent",
+          "role": "body",
+          "source_id": "txt_000055"
+        },
+        {
+          "id": "txt_000056",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            75.52999877929688,
+            119.35304260253906,
+            89.56999969482422
+          ],
+          "text": "PART C:",
+          "role": "section_heading",
+          "source_id": "txt_000056"
+        },
+        {
+          "id": "txt_000056",
+          "type": "text",
+          "bbox": [
+            169.61000061035156,
+            75.52999877929688,
+            315.7230224609375,
+            89.56999969482422
+          ],
+          "text": "FURTHER INFORMATION",
+          "role": "section_heading",
+          "source_id": "txt_000056"
+        },
+        {
+          "id": "txt_000058",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            168.25997924804688,
+            224.90504455566406,
+            179.2999725341797
+          ],
+          "text": "Student behaviour and wellbeing",
+          "role": "possible_heading",
+          "source_id": "txt_000058"
+        },
+        {
+          "id": "txt_000059",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            188.62997436523438,
+            504.05780029296875,
+            239.2699737548828
+          ],
+          "text": "All students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying,\nviolence, discrimination, sexual harassment, vilification and other forms of unacceptable behaviour.",
+          "role": "body",
+          "source_id": "txt_000059"
+        },
+        {
+          "id": "txt_000061",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            257.1799621582031,
+            495.33929443359375,
+            294.739990234375
+          ],
+          "text": "The Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a\nquality learning experience. The Charter also sets out what is expected of students with regards to your\nstudies and the way you conduct yourself towards other people and property.",
+          "role": "body",
+          "source_id": "txt_000061"
+        },
+        {
+          "id": "txt_000063",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            312.7399597167969,
+            507.1938171386719,
+            363.2599792480469
+          ],
+          "text": "You are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations\nand the People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.",
+          "role": "body",
+          "source_id": "txt_000063"
+        },
+        {
+          "id": "txt_000065",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            381.0199890136719,
+            227.54095458984375,
+            390.97998046875
+          ],
+          "text": "Examples of expected behaviours are:",
+          "role": "body",
+          "source_id": "txt_000065"
+        },
+        {
+          "id": "txt_000066",
+          "type": "text",
+          "bbox": [
+            89.54399871826172,
+            393.9961853027344,
+            507.7237548828125,
+            475.1199645996094
+          ],
+          "text": "-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens\nin an emergency response.",
+          "role": "body",
+          "source_id": "txt_000066"
+        },
+        {
+          "id": "txt_000067",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            491.22998046875,
+            106.07504272460938,
+            502.2699890136719
+          ],
+          "text": "Canvas",
+          "role": "possible_heading",
+          "source_id": "txt_000067"
+        },
+        {
+          "id": "txt_000068",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            511.2399597167969,
+            506.0721435546875,
+            549.1599731445312
+          ],
+          "text": "You should regularly log on to the Swinburne learning management system, Canvas. You can access Canvas\nvia the Student login webpage or https://swinburne.instructure.com/ Canvas is updated regularly with\nimportant unit information and communications.",
+          "role": "body",
+          "source_id": "txt_000068"
+        },
+        {
+          "id": "txt_000069",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            564.669921875,
+            145.67503356933594,
+            575.7099609375
+          ],
+          "text": "Communication",
+          "role": "possible_heading",
+          "source_id": "txt_000069"
+        },
+        {
+          "id": "txt_000070",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            585.3099975585938,
+            498.8733215332031,
+            622.75
+          ],
+          "text": "All communication will be via your Swinburne email address. If you access your email through a provider\nother than Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to\nyour private email address.",
+          "role": "body",
+          "source_id": "txt_000070"
+        },
+        {
+          "id": "txt_000071",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            639.3399658203125,
+            158.8750457763672,
+            650.3800048828125
+          ],
+          "text": "Academic Integrity",
+          "role": "possible_heading",
+          "source_id": "txt_000071"
+        },
+        {
+          "id": "txt_000072",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            659.7100219726562,
+            508.3668212890625,
+            723.7899780273438
+          ],
+          "text": "Academic integrity is about taking responsibility for your learning and submitting work that is honestly your\nown. It means acknowledging the ideas, contributions and work of others; referencing your sources and\nacknowledging the use of generative artificial intelligence; contributing fairly to group work; and\ncompleting tasks, tests and exams without cheating. Artificial intelligence tools should only be used where\napproved by the Unit Convenor.",
+          "role": "body",
+          "source_id": "txt_000072"
+        }
+      ],
+      "groups": [
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            71.54399871826172,
+            75.52999877929688,
+            119.35304260253906,
+            89.56999969482422
+          ],
+          "text": "PART C:",
+          "element_ids": [
+            "txt_000056"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            169.61000061035156,
+            75.52999877929688,
+            315.7230224609375,
+            89.56999969482422
+          ],
+          "text": "FURTHER INFORMATION",
+          "element_ids": [
+            "txt_000056"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            150.5,
+            104.02876281738281,
+            443.8033447265625,
+            128.33836364746094
+          ],
+          "text": "For further information on any of these topics, refer to Swinb\nStudent webpaghettp://www.swinburne.edu.au/st/udent",
+          "element_ids": [
+            "txt_000055"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.02400207519531,
+            168.25997924804688,
+            224.90504455566406,
+            179.2999725341797
+          ],
+          "text": "Student behaviour and wellbeing",
+          "element_ids": [
+            "txt_000058"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.02400207519531,
+            188.62997436523438,
+            504.05780029296875,
+            239.2699737548828
+          ],
+          "text": "All students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying,\nviolence, discrimination, sexual harassment, vilification and other forms of unacceptable behaviour.",
+          "element_ids": [
+            "txt_000059"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.02400207519531,
+            257.1799621582031,
+            495.33929443359375,
+            294.739990234375
+          ],
+          "text": "The Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a\nquality learning experience. The Charter also sets out what is expected of students with regards to your\nstudies and the way you conduct yourself towards other people and property.",
+          "element_ids": [
+            "txt_000061"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.02400207519531,
+            312.7399597167969,
+            507.1938171386719,
+            363.2599792480469
+          ],
+          "text": "You are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations\nand the People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.",
+          "element_ids": [
+            "txt_000063"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.50399780273438,
+            381.0199890136719,
+            227.54095458984375,
+            390.97998046875
+          ],
+          "text": "Examples of expected behaviours are:",
+          "element_ids": [
+            "txt_000065"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            89.54399871826172,
+            393.9961853027344,
+            507.7237548828125,
+            475.1199645996094
+          ],
+          "text": "-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens\nin an emergency response.",
+          "element_ids": [
+            "txt_000066"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.02400207519531,
+            491.22998046875,
+            106.07504272460938,
+            502.2699890136719
+          ],
+          "text": "Canvas",
+          "element_ids": [
+            "txt_000067"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.02400207519531,
+            511.2399597167969,
+            506.0721435546875,
+            549.1599731445312
+          ],
+          "text": "You should regularly log on to the Swinburne learning management system, Canvas. You can access Canvas\nvia the Student login webpage or https://swinburne.instructure.com/ Canvas is updated regularly with\nimportant unit information and communications.",
+          "element_ids": [
+            "txt_000068"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.02400207519531,
+            564.669921875,
+            145.67503356933594,
+            575.7099609375
+          ],
+          "text": "Communication",
+          "element_ids": [
+            "txt_000069"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.50399780273438,
+            585.3099975585938,
+            498.8733215332031,
+            622.75
+          ],
+          "text": "All communication will be via your Swinburne email address. If you access your email through a provider\nother than Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to\nyour private email address.",
+          "element_ids": [
+            "txt_000070"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.02400207519531,
+            639.3399658203125,
+            158.8750457763672,
+            650.3800048828125
+          ],
+          "text": "Academic Integrity",
+          "element_ids": [
+            "txt_000071"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 9,
+          "bbox": [
+            72.50399780273438,
+            659.7100219726562,
+            508.3668212890625,
+            723.7899780273438
+          ],
+          "text": "Academic integrity is about taking responsibility for your learning and submitting work that is honestly your\nown. It means acknowledging the ideas, contributions and work of others; referencing your sources and\nacknowledging the use of generative artificial intelligence; contributing fairly to group work; and\ncompleting tasks, tests and exams without cheating. Artificial intelligence tools should only be used where\napproved by the Unit Convenor.",
+          "element_ids": [
+            "txt_000072"
+          ]
+        }
+      ]
+    },
+    {
+      "page_num": 10,
+      "xref": 91,
+      "page_object": {
+        "page_num": 10,
+        "xref": 91,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F6": "25 0 R",
+          "F4": "15 0 R",
+          "F7": "30 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "92 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000073",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            74.62997436523438,
+            495.1380920410156,
+            111.70996856689453
+          ],
+          "text": "Swinburne University uses the Turnitin system, which helps to identify inadequate citations, poor\nparaphrasing and unoriginal work in assignments that are submitted via Canvas. Your Unit Convenor will\nprovide further details.",
+          "role": "body",
+          "source_id": "txt_000073"
+        },
+        {
+          "id": "txt_000075",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            129.58999633789062,
+            506.470947265625,
+            180.46998596191406
+          ],
+          "text": "Plagiarism, collusion, contract cheating, unauthorised file sharing, falsification, fabrication, manipulation or\nmisrepresentation of information, reuse of previous work and noncompliance with instructions in an\ninvigilated or non-invigilated assessment item are all breaches of academic integrity and treated as\nacademic misconduct. Examples of breaches of academic integrity include, but are not limited to:",
+          "role": "body",
+          "source_id": "txt_000075"
+        },
+        {
+          "id": "txt_000076",
+          "type": "text",
+          "bbox": [
+            89.54399871826172,
+            182.88616943359375,
+            507.8958435058594,
+            499.3599548339844
+          ],
+          "text": "-\nsubmitting work as your own for assessment that has been fully or partially completed by a third\nparty, either paid or unpaid\n-\nusing output from artificial intelligence tools (e.g. ChatGPT) in whole or part without\nacknowledgement and/or without the approval of the Unit Convenor\n-\nusing another person’s work or ideas as though it is your own work, without appropriate\nattribution\n-\nworking closely with another student or group of students (either past or current), to submit for\nassessment, some or all of the other student or students’ work as your own work\n-\nsharing without permission of the Unit Convenor, Swinburne resources or other material related\nto assessment to an entity or document repository site\n-\ncreating, intentionally modifying or inventing information that is intended to be submitted as part\nof an assessment item\n-\nusing the whole or part of a computer program written by another person as your own without\nappropriate acknowledgement\n-\npoorly paraphrasing somebody else’s work\n-\nusing a musical composition or audio, visual, graphic and photographic work created by another\nperson without acknowledgement\n-\nenabling others to cheat, including letting another student copy your work or by giving access to a\ndraft or completed assignment\n-\nletting someone or something else impersonate you, or you impersonate someone else in an\ninvigilated or non-invigilated assessment item\n-\naccessing, obtaining and/or providing to others unauthorised materials relating to an invigilated or\nnon-invigilated assessment item.",
+          "role": "body",
+          "source_id": "txt_000076"
+        },
+        {
+          "id": "txt_000078",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            517.3599853515625,
+            495.9765319824219,
+            554.43994140625
+          ],
+          "text": "The penalties for academic misconduct can be severe, ranging from a zero grade for an assessment task\nthrough to exclusion from Swinburne. For further details, see https://www.swinburne.edu.au/student-\nlogin/academic-integrity/",
+          "role": "body",
+          "source_id": "txt_000078"
+        },
+        {
+          "id": "txt_000079",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            570.7899169921875,
+            148.31504821777344,
+            581.8299560546875
+          ],
+          "text": "Student support",
+          "role": "possible_heading",
+          "source_id": "txt_000079"
+        },
+        {
+          "id": "txt_000080",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            591.3099975585938,
+            504.0657653808594,
+            657.3399658203125
+          ],
+          "text": "Swinburne offers a range of services and resources to help you complete your studies successfully, such as\nstudy and learning support and health and wellbeing services. Your Unit Convenor or studentHQ can\nprovide information about the study support and other services available for Swinburne students. For\nfurther information, see the Student support services web page.\nSpecial consideration",
+          "role": "body",
+          "source_id": "txt_000080"
+        },
+        {
+          "id": "txt_000081",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            666.6700439453125,
+            504.74407958984375,
+            703.75
+          ],
+          "text": "If your studies have been adversely affected due to serious and unavoidable circumstances outside of your\ncontrol (e.g. severe illness or unavoidable obligation), you may be able to apply for special consideration\n(SPC).",
+          "role": "body",
+          "source_id": "txt_000081"
+        },
+        {
+          "id": "txt_000083",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            721.75,
+            504.4309387207031,
+            745.14599609375
+          ],
+          "text": "Applications for Special Consideration are submitted via the SPC online tool normally no later than 5.00pm\non the third working day after the submission/sitting date for the relevant assessment component. See",
+          "role": "body",
+          "source_id": "txt_000083"
+        }
+      ],
+      "groups": [
+        {
+          "type": "text_group",
+          "page_num": 10,
+          "bbox": [
+            72.02400207519531,
+            74.62997436523438,
+            495.1380920410156,
+            111.70996856689453
+          ],
+          "text": "Swinburne University uses the Turnitin system, which helps to identify inadequate citations, poor\nparaphrasing and unoriginal work in assignments that are submitted via Canvas. Your Unit Convenor will\nprovide further details.",
+          "element_ids": [
+            "txt_000073"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 10,
+          "bbox": [
+            72.02400207519531,
+            129.58999633789062,
+            506.470947265625,
+            180.46998596191406
+          ],
+          "text": "Plagiarism, collusion, contract cheating, unauthorised file sharing, falsification, fabrication, manipulation or\nmisrepresentation of information, reuse of previous work and noncompliance with instructions in an\ninvigilated or non-invigilated assessment item are all breaches of academic integrity and treated as\nacademic misconduct. Examples of breaches of academic integrity include, but are not limited to:",
+          "element_ids": [
+            "txt_000075"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 10,
+          "bbox": [
+            89.54399871826172,
+            182.88616943359375,
+            507.8958435058594,
+            499.3599548339844
+          ],
+          "text": "-\nsubmitting work as your own for assessment that has been fully or partially completed by a third\nparty, either paid or unpaid\n-\nusing output from artificial intelligence tools (e.g. ChatGPT) in whole or part without\nacknowledgement and/or without the approval of the Unit Convenor\n-\nusing another person’s work or ideas as though it is your own work, without appropriate\nattribution\n-\nworking closely with another student or group of students (either past or current), to submit for\nassessment, some or all of the other student or students’ work as your own work\n-\nsharing without permission of the Unit Convenor, Swinburne resources or other material related\nto assessment to an entity or document repository site\n-\ncreating, intentionally modifying or inventing information that is intended to be submitted as part\nof an assessment item\n-\nusing the whole or part of a computer program written by another person as your own without\nappropriate acknowledgement\n-\npoorly paraphrasing somebody else’s work\n-\nusing a musical composition or audio, visual, graphic and photographic work created by another\nperson without acknowledgement\n-\nenabling others to cheat, including letting another student copy your work or by giving access to a\ndraft or completed assignment\n-\nletting someone or something else impersonate you, or you impersonate someone else in an\ninvigilated or non-invigilated assessment item\n-\naccessing, obtaining and/or providing to others unauthorised materials relating to an invigilated or\nnon-invigilated assessment item.",
+          "element_ids": [
+            "txt_000076"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 10,
+          "bbox": [
+            72.50399780273438,
+            517.3599853515625,
+            495.9765319824219,
+            554.43994140625
+          ],
+          "text": "The penalties for academic misconduct can be severe, ranging from a zero grade for an assessment task\nthrough to exclusion from Swinburne. For further details, see https://www.swinburne.edu.au/student-\nlogin/academic-integrity/",
+          "element_ids": [
+            "txt_000078"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 10,
+          "bbox": [
+            72.02400207519531,
+            570.7899169921875,
+            148.31504821777344,
+            581.8299560546875
+          ],
+          "text": "Student support",
+          "element_ids": [
+            "txt_000079"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 10,
+          "bbox": [
+            72.02400207519531,
+            591.3099975585938,
+            504.0657653808594,
+            657.3399658203125
+          ],
+          "text": "Swinburne offers a range of services and resources to help you complete your studies successfully, such as\nstudy and learning support and health and wellbeing services. Your Unit Convenor or studentHQ can\nprovide information about the study support and other services available for Swinburne students. For\nfurther information, see the Student support services web page.\nSpecial consideration",
+          "element_ids": [
+            "txt_000080"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 10,
+          "bbox": [
+            72.50399780273438,
+            666.6700439453125,
+            504.74407958984375,
+            703.75
+          ],
+          "text": "If your studies have been adversely affected due to serious and unavoidable circumstances outside of your\ncontrol (e.g. severe illness or unavoidable obligation), you may be able to apply for special consideration\n(SPC).",
+          "element_ids": [
+            "txt_000081"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 10,
+          "bbox": [
+            72.50399780273438,
+            721.75,
+            504.4309387207031,
+            745.14599609375
+          ],
+          "text": "Applications for Special Consideration are submitted via the SPC online tool normally no later than 5.00pm\non the third working day after the submission/sitting date for the relevant assessment component. See",
+          "element_ids": [
+            "txt_000083"
+          ]
+        }
+      ]
+    },
+    {
+      "page_num": 11,
+      "xref": 99,
+      "page_object": {
+        "page_num": 11,
+        "xref": 99,
+        "page_object": {
+          "Type": "/Group",
+          "Parent": "2 0 R",
+          "F1": "6 0 R",
+          "F2": "10 0 R",
+          "F5": "21 0 R",
+          "GS8": "8 0 R",
+          "GS9": "9 0 R",
+          "PDF": "/Text",
+          "ImageB": "/ImageC",
+          "Contents": "100 0 R",
+          "S": "/Transparency",
+          "CS": "/DeviceRGB",
+          "Tabs": "/S"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000084",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            74.62997436523438,
+            470.9077453613281,
+            98.14997100830078
+          ],
+          "text": "https://www.swinburne.edu.au/life-at-swinburne/studentsupport-services/special-consideration-\nassistance/",
+          "role": "body",
+          "source_id": "txt_000084"
+        },
+        {
+          "id": "txt_000086",
+          "type": "text",
+          "bbox": [
+            71.54399871826172,
+            116.14999389648438,
+            501.89678955078125,
+            153.70997619628906
+          ],
+          "text": "Note: Submitting fraudulent (fake or altered) medical certificates is considered misconduct and can lead to\nserious penalties from Swinburne. In addition, your doctor may report fraudulent medical certificates as a\nprosecutable offence under the Victorian Crimes Act.",
+          "role": "body",
+          "source_id": "txt_000086"
+        },
+        {
+          "id": "txt_000087",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            170.17996215820312,
+            172.3450469970703,
+            181.21995544433594
+          ],
+          "text": "AccessAbility Services",
+          "role": "possible_heading",
+          "source_id": "txt_000087"
+        },
+        {
+          "id": "txt_000088",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            190.54995727539062,
+            496.9909362792969,
+            241.18995666503906
+          ],
+          "text": "If you are a student with a disability, medical or mental health condition or you have significant carer\nresponsibilities, you may require reasonable adjustments to fully access and participate in education.\nSwinburne's AccessAbility Services can develop an Education Access Plan (EAP) that includes the services\nand reasonable adjustments that you need.",
+          "role": "body",
+          "source_id": "txt_000088"
+        },
+        {
+          "id": "txt_000090",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            259.1000061035156,
+            504.6455993652344,
+            296.53997802734375
+          ],
+          "text": "It is recommended that you register with AccessAbility Services when you first commence your course, but\nyou can contact the service at any time during your studies to find out about reasonable adjustments.\nContact Accessibility Services to discuss further.",
+          "role": "body",
+          "source_id": "txt_000090"
+        },
+        {
+          "id": "txt_000092",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            314.5399475097656,
+            504.7601623535156,
+            338.65997314453125
+          ],
+          "text": "Once you have an approved EAP, you should contact the Unit Convenor as early as possible (e.g. beginning\nof semester) to discuss your adjustments so that we can better support your learning.",
+          "role": "body",
+          "source_id": "txt_000092"
+        },
+        {
+          "id": "txt_000093",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            354.7699890136719,
+            148.67503356933594,
+            365.80999755859375
+          ],
+          "text": "Review of marks",
+          "role": "possible_heading",
+          "source_id": "txt_000093"
+        },
+        {
+          "id": "txt_000094",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            375.1399841308594,
+            471.89801025390625,
+            412.219970703125
+          ],
+          "text": "An independent marker reviews all fail grades for major assessment tasks. In addition, a review of\nassessment is undertaken if your final result is between 45 and 49 or within 2 marks of any grade\nthreshold.",
+          "role": "body",
+          "source_id": "txt_000094"
+        },
+        {
+          "id": "txt_000096",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            430.1199645996094,
+            492.9831237792969,
+            495.51995849609375
+          ],
+          "text": "You can ask the Unit Convenor to check the result for an assessment item or your final result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit Convenor\ncan discuss the marking criteria with you and check the aggregate marks of assessment components to\nidentify if an error has been made. This is known as local resolution. If you are dissatisfied with the\noutcome of the local resolution, you can lodge a formal complaint.",
+          "role": "body",
+          "source_id": "txt_000096"
+        },
+        {
+          "id": "txt_000097",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            511.6299743652344,
+            247.5850372314453,
+            522.6699829101562
+          ],
+          "text": "Feedback, complaints and suggestions",
+          "role": "possible_heading",
+          "source_id": "txt_000097"
+        },
+        {
+          "id": "txt_000098",
+          "type": "text",
+          "bbox": [
+            72.02400207519531,
+            531.6400146484375,
+            495.7361145019531,
+            584.22998046875
+          ],
+          "text": "In the first instance, discuss any issues with your Unit Convenor. If your concerns are not resolved or you\nwould prefer not to deal with your Unit Convenor, then you can complete a feedback form. See\nhttps://www.swinburne.edu.au/corporate/feedback/\nAdvocacy",
+          "role": "body",
+          "source_id": "txt_000098"
+        },
+        {
+          "id": "txt_000099",
+          "type": "text",
+          "bbox": [
+            72.50399780273438,
+            593.5900268554688,
+            505.27093505859375,
+            645.0699462890625
+          ],
+          "text": "Should you require assistance with any academic issues, University statutes, regulations, policies and\nprocedures, you are advised to seek advice from an Academic Student Support Officer at Swinburne\nStudent Life.\nFor an appointment, please call 19006412 or lodge a query via Student Portal at https://portal.swin.edu.vn",
+          "role": "body",
+          "source_id": "txt_000099"
+        }
+      ],
+      "groups": [
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.50399780273438,
+            74.62997436523438,
+            470.9077453613281,
+            98.14997100830078
+          ],
+          "text": "https://www.swinburne.edu.au/life-at-swinburne/studentsupport-services/special-consideration-\nassistance/",
+          "element_ids": [
+            "txt_000084"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            71.54399871826172,
+            116.14999389648438,
+            501.89678955078125,
+            153.70997619628906
+          ],
+          "text": "Note: Submitting fraudulent (fake or altered) medical certificates is considered misconduct and can lead to\nserious penalties from Swinburne. In addition, your doctor may report fraudulent medical certificates as a\nprosecutable offence under the Victorian Crimes Act.",
+          "element_ids": [
+            "txt_000086"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.02400207519531,
+            170.17996215820312,
+            172.3450469970703,
+            181.21995544433594
+          ],
+          "text": "AccessAbility Services",
+          "element_ids": [
+            "txt_000087"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.50399780273438,
+            190.54995727539062,
+            496.9909362792969,
+            241.18995666503906
+          ],
+          "text": "If you are a student with a disability, medical or mental health condition or you have significant carer\nresponsibilities, you may require reasonable adjustments to fully access and participate in education.\nSwinburne's AccessAbility Services can develop an Education Access Plan (EAP) that includes the services\nand reasonable adjustments that you need.",
+          "element_ids": [
+            "txt_000088"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.02400207519531,
+            259.1000061035156,
+            504.6455993652344,
+            296.53997802734375
+          ],
+          "text": "It is recommended that you register with AccessAbility Services when you first commence your course, but\nyou can contact the service at any time during your studies to find out about reasonable adjustments.\nContact Accessibility Services to discuss further.",
+          "element_ids": [
+            "txt_000090"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.50399780273438,
+            314.5399475097656,
+            504.7601623535156,
+            338.65997314453125
+          ],
+          "text": "Once you have an approved EAP, you should contact the Unit Convenor as early as possible (e.g. beginning\nof semester) to discuss your adjustments so that we can better support your learning.",
+          "element_ids": [
+            "txt_000092"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.02400207519531,
+            354.7699890136719,
+            148.67503356933594,
+            365.80999755859375
+          ],
+          "text": "Review of marks",
+          "element_ids": [
+            "txt_000093"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.50399780273438,
+            375.1399841308594,
+            471.89801025390625,
+            412.219970703125
+          ],
+          "text": "An independent marker reviews all fail grades for major assessment tasks. In addition, a review of\nassessment is undertaken if your final result is between 45 and 49 or within 2 marks of any grade\nthreshold.",
+          "element_ids": [
+            "txt_000094"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.50399780273438,
+            430.1199645996094,
+            492.9831237792969,
+            495.51995849609375
+          ],
+          "text": "You can ask the Unit Convenor to check the result for an assessment item or your final result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit Convenor\ncan discuss the marking criteria with you and check the aggregate marks of assessment components to\nidentify if an error has been made. This is known as local resolution. If you are dissatisfied with the\noutcome of the local resolution, you can lodge a formal complaint.",
+          "element_ids": [
+            "txt_000096"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.02400207519531,
+            511.6299743652344,
+            247.5850372314453,
+            522.6699829101562
+          ],
+          "text": "Feedback, complaints and suggestions",
+          "element_ids": [
+            "txt_000097"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.02400207519531,
+            531.6400146484375,
+            495.7361145019531,
+            584.22998046875
+          ],
+          "text": "In the first instance, discuss any issues with your Unit Convenor. If your concerns are not resolved or you\nwould prefer not to deal with your Unit Convenor, then you can complete a feedback form. See\nhttps://www.swinburne.edu.au/corporate/feedback/\nAdvocacy",
+          "element_ids": [
+            "txt_000098"
+          ]
+        },
+        {
+          "type": "text_group",
+          "page_num": 11,
+          "bbox": [
+            72.50399780273438,
+            593.5900268554688,
+            505.27093505859375,
+            645.0699462890625
+          ],
+          "text": "Should you require assistance with any academic issues, University statutes, regulations, policies and\nprocedures, you are advised to seek advice from an Academic Student Support Officer at Swinburne\nStudent Life.\nFor an appointment, please call 19006412 or lodge a query via Student Portal at https://portal.swin.edu.vn",
+          "element_ids": [
+            "txt_000099"
+          ]
+        }
+      ]
+    }
+  ],
+  "page_content": {
+    "page_num": 1,
+    "xref": 4,
+    "object": {
+      "Type": "/Group",
+      "Parent": "2 0 R",
+      "F1": "6 0 R",
+      "F2": "10 0 R",
+      "F3": "13 0 R",
+      "F4": "15 0 R",
+      "GS8": "8 0 R",
+      "GS9": "9 0 R",
+      "Image12": "12 0 R",
+      "Image17": "17 0 R",
+      "PDF": "/Text",
+      "ImageB": "/ImageC",
+      "Contents": "5 0 R",
+      "S": "/Transparency",
+      "CS": "/DeviceRGB",
+      "Tabs": "/S"
+    }
+  },
+  "pdf_metadata": {
+    "title": null,
+    "author": "Chau Melodi",
+    "subject": null,
+    "keywords": null,
+    "creator": "Microsoft® Word for Microsoft 365",
+    "producer": "Microsoft® Word for Microsoft 365",
+    "creation_date": "D:20260916235654+07'00'",
+    "modification_date": "D:20260916235654+07'00'"
+  },
+  "tables": [
+    {
+      "id": "tbl_002_000",
+      "type": "table",
+      "page_num": 2,
+      "bbox": [
+        72.49866824679904,
+        103.43597412109375,
+        523.6959920247396,
+        474.4299850463867
+      ],
+      "rows": [
+        [
+          "Unit Code(s)",
+          null,
+          "COS40007"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "Unit Title",
+          null,
+          "Artificial Intelligence Engineering"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "Duration",
+          null,
+          "One Semester"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "Total Contact Hours",
+          null,
+          "150 Hours"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "Requisites:",
+          null,
+          ""
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "",
+          "",
+          "100 cp in BEng or BCompSc or related double degrees\nAND\nCOS10009 Introduction to Programming"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          null,
+          "Pre-requisites",
+          null
+        ],
+        [
+          null,
+          "",
+          null
+        ],
+        [
+          "",
+          "Co-requisites",
+          "NIL"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          null
+        ],
+        [
+          "",
+          "Concurrent prerequisites",
+          "NIL"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          null
+        ],
+        [
+          "",
+          "Anti-requisites",
+          "NIL"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          null
+        ],
+        [
+          "",
+          "Assumed knowledge",
+          "NIL"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          null
+        ],
+        [
+          "Credit Points",
+          null,
+          "12.5"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "Campus/Location",
+          null,
+          "Swinburne Vietnam"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "Mode of Delivery",
+          null,
+          "Online seminar and on-campus workshop"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          "Applied Project (Group): 52%\nPortfolio (Individual): 48%\nImportant: Check Hurdle Requirements under\nAssessment Requirements"
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "Assessment Summary",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "id": "tbl_003_000",
+      "type": "table",
+      "page_num": 3,
+      "bbox": [
+        72.6986690097385,
+        585.5949554443359,
+        512.4813435872396,
+        703.0999704996744
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "Consultation Times"
+        ],
+        [
+          "Name",
+          "Role",
+          "Location",
+          "Email / Teams",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          null
+        ],
+        [
+          "Dr. Mai Duc Tho",
+          "Unit Coordinator",
+          "Hanoi",
+          "tmai@swin.edu.au",
+          "By appointment"
+        ],
+        [
+          "Mr. Minh Anh\nHoang",
+          "Lead Coordinator",
+          "HCMC",
+          "manh@swin.edu.au",
+          "By appointment"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_004_000",
+      "type": "table",
+      "page_num": 4,
+      "bbox": [
+        72.30763938210227,
+        96.87498474121094,
+        512.2486996858016,
+        246.77998860677084
+      ],
+      "rows": [
+        [
+          "Category",
+          "Activity",
+          "Total",
+          "Hours per",
+          "Teaching Period"
+        ],
+        [
+          null,
+          null,
+          "Hours",
+          "Week",
+          "Weeks"
+        ],
+        [
+          "",
+          "",
+          null,
+          null,
+          null
+        ],
+        [
+          "Live Online",
+          "Lecture",
+          "12 hours",
+          "1 hours",
+          "Weeks 1 to 12"
+        ],
+        [
+          "Online",
+          "Asynchronous\nLecture",
+          "12 Hours",
+          "1 Hours",
+          "Weeks 1 to 12"
+        ],
+        [
+          "In-person/On-\nCampus",
+          "Studio",
+          "24 hours",
+          "2 hours",
+          "Weeks 1 to 12"
+        ],
+        [
+          "Online",
+          "Self-paced online\nlearning activities",
+          "102 hours",
+          "8.5 hours",
+          "Weeks 1 to 12"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_004_001",
+      "type": "table",
+      "page_num": 4,
+      "bbox": [
+        72.30763938210227,
+        279.05921818659857,
+        512.2486996858016,
+        734.1880126953125
+      ],
+      "rows": [
+        [
+          "Week",
+          "Week",
+          "Teaching and Learning",
+          "Student Task or Assessment"
+        ],
+        [
+          null,
+          "Beginning",
+          "Activity",
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          ""
+        ],
+        [
+          "1.",
+          "14 Sep",
+          "Seminar: Introduction to the AI\nEngineering Design Process\nand AI Model Life Cycle.",
+          ""
+        ],
+        [
+          "2.",
+          "21 Sep",
+          "Seminar: Data\nEngineering",
+          ""
+        ],
+        [
+          "3.",
+          "28 Sep",
+          "Seminar: Software Engineering\nand DevOps\nfor AI",
+          "Submission of Portfolio Task 1"
+        ],
+        [
+          "4.",
+          "5 Oct",
+          "Seminar: Building AI\nApps: Traditional ML &\nFeature Engineering",
+          ""
+        ],
+        [
+          "5.",
+          "12 Oct",
+          "Seminar: Building AI\nApps: Deep Learning &\nFoundation Models",
+          "Submission of Portfolio Task 2"
+        ],
+        [
+          "6.",
+          "19 Oct",
+          "Seminar: Responsible AI:\nEthics, Fairness, Bias\nMitigation",
+          "Submission of Applied Project\nTask 1"
+        ],
+        [
+          "7.",
+          "26 Oct",
+          "Seminar: System Life\nCycle in AI & Project\nManagement",
+          "Submission of Portfolio Task 3"
+        ],
+        [
+          "8.",
+          "2 Nov",
+          "Seminar: Deployment and\nMLOps Practices",
+          "Submission of Applied Project Task 2"
+        ],
+        [
+          "9.",
+          "9 Nov",
+          "Seminar: Scaling and\nMonitoring AI Systems",
+          ""
+        ],
+        [
+          "10.",
+          "16 Nov",
+          "Seminar: AI Security & Privacy\nPreserving Techniques",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "tbl_005_000",
+      "type": "table",
+      "page_num": 5,
+      "bbox": [
+        72.32084475065533,
+        48.1919921875,
+        512.3400039672852,
+        185.34798583984374
+      ],
+      "rows": [
+        [
+          "11.",
+          "23 Nov",
+          "Seminar: AI\nTrustworthiness with Case\nStudies on AI for the\nEngineering Domain.",
+          "Submission of Applied Project\nTask 3"
+        ],
+        [
+          "12.",
+          "30 Nov",
+          "Seminar: Future of AI\nEngineering (+ Optional\nIndustry Project Talk)",
+          "Online Demo/On-Campus\nApplied Project Presentation"
+        ],
+        [
+          "13.",
+          "7 Dec",
+          "",
+          "Submission of Final Applied Project\nReport + Peer Review"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_005_001",
+      "type": "table",
+      "page_num": 5,
+      "bbox": [
+        72.32084475065533,
+        222.52083547491776,
+        520.2428545270648,
+        503.14426967075894
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Mapped",
+          "Mapped",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          null,
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          null,
+          "Unit",
+          "Graduate",
+          null
+        ],
+        [
+          "Tasks and",
+          "Individual or",
+          "Weigh",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "Learning",
+          "Attribute",
+          "Assessment Due Date"
+        ],
+        [
+          "Details",
+          "Group",
+          "ting",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "Outcom es",
+          "s",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "",
+          "",
+          null
+        ],
+        [
+          "1. Portfolio\nTask",
+          "Individual",
+          "48%",
+          "1,2,3,4",
+          "GA1, GA2,\nGA5, GA6",
+          "During the middle of Weeks\n3, 5, 7: Individual Portfolio\nSubmissions"
+        ],
+        [
+          "2. Applied Project\nTask",
+          "Group",
+          "25%",
+          "1,2,3,4",
+          "GA1, GA2,\nGA3, GA4,\nGA5, GA6",
+          "During the middle of\nWeeks 6, 8, 11: Group\nProject Submissions"
+        ],
+        [
+          "3. Video\nPresentation",
+          "Group",
+          "5%",
+          "All",
+          "GA1, GA2",
+          "During Week 12: Online\n/On-Campus"
+        ],
+        [
+          "4. Final Applied\nProject\nReport",
+          "Group",
+          "22%",
+          "1,2,3,4",
+          "GA1, GA2,\nGA3, GA4,\nGA5, GA6",
+          "End of Week 13"
+        ],
+        [
+          "5. Peer Review",
+          "Individual",
+          "0%",
+          "All",
+          "",
+          "End of week 13"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_005_002",
+      "type": "table",
+      "page_num": 5,
+      "bbox": [
+        72.32084475065533,
+        554.5099690755209,
+        520.2428545270648,
+        764.7200113932291
+      ],
+      "rows": [
+        [
+          "Assessment Requirements",
+          "Details"
+        ],
+        [
+          "b) Use of generative AI (genAI) in this\nunit",
+          "Permitted use of genAI varies by assessment task in this unit.\nRefer to each assessment description below for specific\nguidance.\n1. No AI for Individual Portfolio & Group Assessments:\nThe Portfolio and Group Tasks in this unit should be\ncompleted entirely without genAI assistance.\n2. Report Writing for Assessments: genAI may be used for\nbrainstorming, structuring, and generating ideas to improve\nwork. Any use of genAI must be acknowledged, with\nprompts and outputs included in an appendix."
+        ]
+      ]
+    },
+    {
+      "id": "tbl_006_000",
+      "type": "table",
+      "page_num": 6,
+      "bbox": [
+        72.18400319417317,
+        48.159993489583336,
+        519.3199869791666,
+        427.1099853515625
+      ],
+      "rows": [
+        [
+          "c) Hurdle requirements",
+          "To pass this unit, you must:\n(i) Achieve an overall mark for the unit of 50% or more, and\n(ii) Complete the project to an acceptable standard. A rubric\nwill be used to determine if students have met the acceptable\nstandard. The rubric is available on\nCanvas, and\n(iii) Achieve a minimum of 50% or more on the Portfolio\n(must pass at least 50% of the portfolio assessment activities).\nStudents who do not successfully achieve hurdle requirements\n(ii) and (iii) in full will receive a maximum of 45% as the total\nmark for the unit."
+        ],
+        [
+          "d) Final assessment period",
+          "There is no final examination for this unit. However, some\nsubmissions are scheduled during the examination period."
+        ],
+        [
+          "e) Submission requirements",
+          "Assignments and other assessments are generally submitted\nonline through the Canvas assessment submission system which\nintegrates with the Turnitin.\nThe Assessment Cover Sheet should be submitted with the\nassignment.\nThe GitHub Repository Link should be submitted with each\nsubmission."
+        ]
+      ]
+    },
+    {
+      "id": "tbl_006_001",
+      "type": "table",
+      "page_num": 6,
+      "bbox": [
+        72.18400319417317,
+        441.9499816894531,
+        519.3199869791666,
+        558.6299845377604
+      ],
+      "rows": [
+        [
+          "",
+          "Please ensure you keep a copy of all assessments that are\nsubmitted.\nIn cases where a hard copy submission is required an Assessment\nCover Sheet must be submitted with your assignment. The\nstandard Assessment Cover Sheet is available from the\nSubmitting work webpage or\nwww.swinburne.edu.au/studentforms/"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_007_000",
+      "type": "table",
+      "page_num": 7,
+      "bbox": [
+        72.20400333404541,
+        48.17999267578125,
+        519.1799926757812,
+        707.2200113932291
+      ],
+      "rows": [
+        [
+          "f) Extensions, late penalties and\nspecial consideration",
+          "Extensions\nFor extensions (other than those granted through\nSpecial Consideration), please contact your Unit Convenor who\nwill assess on a case-by-case basis.\nLate Penalties\nUnless an extension has been approved, late submissions will\nresult in a mark penalty. You will be penalised 5% of the available\nmark for each calendar day the task is late, up to a maximum of\nseven calendar days. After seven calendar days, a zero mark will\nbe recorded. For example:\n• if you achieve 90/100 on an assessment task but the task\nwas submitted two days late, a late penalty of 10 is applied,\nand your mark is recorded as 80/100.\n• if you achieve 29/35 on an assessment but the task was\nsubmitted five days late, a late penalty of 8.75 (25% of the\n35 available marks) is applied, and your mark is recorded as\n20.25/35.\nSpecial Consideration\nIf your studies have been adversely affected by serious and\nunavoidable circumstances outside of your control (e.g.\nsevere illness or unavoidable obligation), you can apply for\nspecial consideration. Applications for Special Consideration\nare made via an online form no later than 5.00pm of the third\nworking day after the assessment due date. For further\ninformation about eligibility and how to apply, see\nhttps://www.swinburne.edu.au/life-atswinburne/student-\nsupport-services/specialconsideration-assistance/"
+        ],
+        [
+          "g) Referencing",
+          "To avoid breaching academic integrity, you are required to\nprovide references whenever you include information from other\nsources in your work and acknowledge when you have used\nArtificial Intelligence (AI) tools (such as Microsoft Copilot).\nFurther details regarding academic integrity are available in\nSection C of this document.\nReferencing conventions required for this unit are:"
+        ],
+        [
+          "",
+          "IEEE citation style\n(https://pitt.libguides.com/citationhelp/ieee)\nHelpful information on referencing can be found at\nhttp://www.swinburne.edu.au/library/referencing/"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_008_000",
+      "type": "table",
+      "page_num": 8,
+      "bbox": [
+        72.14400291442871,
+        48.17999267578125,
+        519.3599853515625,
+        291.469970703125
+      ],
+      "rows": [
+        [
+          "h) Groupwork guidelines",
+          "A group assignment is the collective responsibility of the entire\ngroup, and if one member is temporarily unable to contribute,\nthe group should be able to reallocate responsibilities to keep to\nschedule. In the event of longer-term illness or other serious\nproblems involving a member of group, it is the responsibility of\nthe other members to notify immediately the Unit Convenor or\nrelevant Tutor.\nGroup submissions must be submitted with an Assignment Cover\nSheet, signed by all members of the group.\nAll group members must be satisfied that the work has been\ncorrectly submitted. Any penalties for late submission will\ngenerally apply to all group members, not just the person who\nsubmitted."
+        ]
+      ]
+    },
+    {
+      "id": "tbl_008_001",
+      "type": "table",
+      "page_num": 8,
+      "bbox": [
+        72.14400291442871,
+        321.32997639973956,
+        519.3599853515625,
+        378.0099792480469
+      ],
+      "rows": [
+        [
+          "a) Supplementary assessment",
+          "Supplementary assessment is not available in this unit due to\nlearning verification requirements."
+        ]
+      ]
+    }
+  ]
 }
