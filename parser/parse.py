@@ -475,3 +475,114 @@ def is_in_margin(bbox, page_rect, margin_ratio=0.08):
     bottom_limit = page_rect.y1 - page_height * margin_ratio
 
     return bbox[3] <= top_limit or bbox[1] >= bottom_limit
+
+def create_text_groups(blocks):
+
+    groups = []
+    current_group = []
+
+    group_counter = 0
+
+    for block in blocks:
+        role = block.get("role")
+
+        if role == "section_heading":
+
+            if current_group:
+                groups.append(current_group)
+
+            current_group = [block]
+
+        elif role == "body":
+
+            if current_group:
+                current_group.append(block)
+
+    if current_group:
+        groups.append(current_group)
+
+    result = []
+
+    for i, elements in enumerate(groups):
+
+        result.append({
+            "id": f"grp_{i:06d}",
+            "type": "text_group",
+            "element_ids": [
+                element["id"] for element in elements
+            ],
+            "text": "\n".join(
+                element["text"] for element in elements
+            )
+        })
+
+    return result
+
+NULL_VALUES = {
+    "",
+    "null",
+    "n/a"
+}
+
+
+def normalize_cell(value):
+    if value is None:
+        return None
+
+    value = re.sub(r"\s+", " ", str(value)).strip()
+
+    if value.casefold() in NULL_VALUES:
+        return None
+
+    return value
+
+
+def clean_table(rows):
+    cleaned = []
+    seen = set()
+
+    for row in rows:
+        normalized = [
+            normalize_cell(cell)
+            for cell in row
+        ]
+
+        # Remove entirely empty rows.
+        if all(cell is None for cell in normalized):
+            continue
+
+        # Remove exact duplicate rows.
+        key = tuple(normalized)
+
+        if key in seen:
+            continue
+
+        seen.add(key)
+        cleaned.append(normalized)
+
+    return cleaned
+
+def normalize_tables(tables):
+
+    normalized_tables = []
+
+    for table in tables:
+
+        rows = clean_table(table.get("rows", []))
+
+        # Skip empty tables.
+        if not rows:
+            continue
+
+        normalized_tables.append({
+            **table,
+            "rows": rows
+        })
+
+    return normalized_tables
+
+def normalize_tables(tables):
+    for table in tables:
+        table["rows"] = clean_table(table["rows"])
+
+    return tables

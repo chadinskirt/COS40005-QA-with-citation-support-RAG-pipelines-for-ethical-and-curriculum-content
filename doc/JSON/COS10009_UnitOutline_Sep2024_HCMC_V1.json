@@ -161,104 +161,40 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.75992584228516,
-            72.88239288330078,
-            456.3567810058594,
-            88.43103790283203
-          ],
-          "text": "School of Science, Computing and Engineering Technologies",
-          "element_ids": [
-            "txt_000000"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.75992584228516,
-            185.9199981689453,
-            215.36624145507812,
-            212.72799682617188
-          ],
-          "text": "Unit Outline",
           "element_ids": [
             "txt_000001"
-          ]
+          ],
+          "text": "Unit Outline"
         },
         {
+          "id": "grp_000001",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            73.95987701416016,
-            258.4924011230469,
-            178.4527130126953,
-            280.7430419921875
-          ],
-          "text": "COS10009",
           "element_ids": [
             "txt_000002"
-          ]
+          ],
+          "text": "COS10009"
         },
         {
+          "id": "grp_000002",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            73.95987701416016,
-            295.452392578125,
-            356.0480651855469,
-            317.7030334472656
-          ],
-          "text": "Introduction to Programming",
           "element_ids": [
-            "txt_000003"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.75992584228516,
-            342.54998779296875,
-            241.91452026367188,
-            362.656005859375
-          ],
-          "text": "Semester Sep, 2024",
-          "element_ids": [
+            "txt_000003",
             "txt_000004"
-          ]
+          ],
+          "text": "Introduction to Programming\nSemester Sep, 2024"
         },
         {
+          "id": "grp_000003",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.75992584228516,
-            387.58001708984375,
-            361.055908203125,
-            400.9840087890625
-          ],
-          "text": "Please read this Unit Outline carefully. It includes:",
           "element_ids": [
-            "txt_000005"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.75992584228516,
-            414.88238525390625,
-            128.63995361328125,
-            478.6710510253906
-          ],
-          "text": "PART A Unit summary\nPART B Your Unit in more detail\nPART C Further information",
-          "element_ids": [
+            "txt_000005",
             "txt_000006",
             "txt_000007",
             "txt_000008"
-          ]
+          ],
+          "text": "Please read this Unit Outline carefully. It includes:\nPART A Unit summary\nPART B Your Unit in more detail\nPART C Further information"
         }
       ]
     },
@@ -461,161 +397,52 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.75992584228516,
-            56.3223991394043,
-            235.7019500732422,
-            71.87104034423828
-          ],
-          "text": "PART A: Unit Summary",
           "element_ids": [
             "txt_000010"
-          ]
+          ],
+          "text": "PART A: Unit Summary"
         },
         {
+          "id": "grp_000001",
           "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.75992584228516,
-            399.82000732421875,
-            105.43966674804688,
-            413.2239990234375
-          ],
-          "text": "Aims",
           "element_ids": [
+            "txt_000011",
             "txt_000011"
-          ]
+          ],
+          "text": "Aims\nThis unit of study aims to introduce students to structured procedural programming and design."
         },
         {
+          "id": "grp_000002",
           "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.75992584228516,
-            413.16876220703125,
-            536.2088623046875,
-            425.5004577636719
-          ],
-          "text": "This unit of study aims to introduce students to structured procedural programming and design.",
           "element_ids": [
-            "txt_000011"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.75992584228516,
-            429.1000061035156,
-            215.24339294433594,
-            442.5039978027344
-          ],
-          "text": "Unit Learning Outcomes",
-          "element_ids": [
-            "txt_000011"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.75992584228516,
-            447.248779296875,
-            384.5202331542969,
-            459.5804748535156
-          ],
-          "text": "Students who successfully complete this Unit should be able to:",
-          "element_ids": [
+            "txt_000011",
             "txt_000012"
-          ]
+          ],
+          "text": "Unit Learning Outcomes\nStudents who successfully complete this Unit should be able to:"
         },
         {
+          "id": "grp_000003",
           "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            90.70986938476562,
-            475.56878662109375,
-            530.7791137695312,
-            622.7803955078125
-          ],
-          "text": "1. Apply code reading and debugging techniques to analyze, interpret, and describe the\npurpose of program code, and locate within this code errors in syntax, logic, style and/or\ngood practice.\n2. Describe the principles of structured programming and relate these to the syntactical\nelements of the programming language used and the way programs are developed.\n3. Construct small programs, using the programming languages covered, that include the\nuse of arrays, functions and procedures, parameter passing with call by value and call\nby reference, custom data types, and pointers.\n4. Use modular and functional decomposition to break problems down functionally,\nrepresent the resulting structures diagrammatically, and implement these structures in\ncode as functions and procedures.",
           "element_ids": [
-            "txt_000013"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.75992584228516,
-            631.9000244140625,
-            188.72750854492188,
-            645.3040161132812
-          ],
-          "text": "Graduate Attributes",
-          "element_ids": [
-            "txt_000014"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.75992584228516,
-            648.3687744140625,
-            520.7883911132812,
-            660.700439453125
-          ],
-          "text": "This unit may contribute to the development of the following Swinburne Graduate Attributes:",
-          "element_ids": [
-            "txt_000014"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            87.45988464355469,
-            664.9287719726562,
-            221.9867401123047,
-            706.3004150390625
-          ],
-          "text": "-\nCommunication skills\n-\nTeamwork skills\n-\nDigital literacies",
-          "element_ids": [
+            "txt_000014",
+            "txt_000014",
             "txt_000015",
             "txt_000016",
             "txt_000017"
-          ]
+          ],
+          "text": "Graduate Attributes\nThis unit may contribute to the development of the following Swinburne Graduate Attributes:\n-\nCommunication skills\n-\nTeamwork skills\n-\nDigital literacies"
         },
         {
+          "id": "grp_000004",
           "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.75992584228516,
-            724.5399780273438,
-            121.41816711425781,
-            737.9439697265625
-          ],
-          "text": "Content",
           "element_ids": [
-            "txt_000018"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            90.70986938476562,
-            738.1287841796875,
-            428.6209411621094,
-            765.1004638671875
-          ],
-          "text": "-\nDesigning, writing, compiling, documenting, and testing programs\n-\nProgramming language syntax",
-          "element_ids": [
+            "txt_000018",
             "txt_000019",
             "txt_000020"
-          ]
+          ],
+          "text": "Content\n-\nDesigning, writing, compiling, documenting, and testing programs\n-\nProgramming language syntax"
         }
       ]
     },
@@ -818,161 +645,45 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            90.70986938476562,
-            74.768798828125,
-            236.21722412109375,
-            87.10047149658203
-          ],
-          "text": "-\nFunctional decomposition",
           "element_ids": [
-            "txt_000021"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            83.80998229980469,
-            105.33999633789062,
-            427.90142822265625,
-            118.7439956665039
-          ],
-          "text": "Swinburne Engineering Competencies for this Unit of Study",
-          "element_ids": [
-            "txt_000022"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            83.80998229980469,
-            142.9287872314453,
-            502.05926513671875,
-            171.8204803466797
-          ],
-          "text": "This Unit of Study will contribute to you attaining the following Swinburne Engineering\nCompetencies:",
-          "element_ids": [
+            "txt_000022",
             "txt_000023",
-            "txt_000024"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            72.75991821289062,
-            190.44879150390625,
-            540.5291137695312,
-            450.7004699707031
-          ],
-          "text": "-\nK1 Basic Science: Proficiently applies concepts, theories and techniques of the\nrelevant natural and physical sciences to the solution of complex engineering problems.\n-\nK2 Maths and IT as Tools: Proficiently uses relevant mathematics and computer and\ninformation science concepts as tools in complex engineering activities.\n-\nK3 Discipline Specific: Proficiently applies advanced technical knowledge of the\nspecific discipline within that context.\n-\nK6 Professional Practice: Appreciates the principles of professional engineering\npractice in a sustainable context.\n-\nS1 Engineering Methods: Applies engineering methods in practical applications and\ncomplex engineering problems.\n-\nS2 Problem Solving: Systematically uses current or emerging knowledge and\nresearch methods to undertake independent research in solving complex engineering\nproblems and as preparation for research higher degrees.\n-\nS3 Design: Systematically uses engineering methods in designing solutions to\ncomplex engineering problems.\n-\nA2 Communication: Demonstrates effective communication to professional and wider\naudiences including in complex engineering activities.\nA4 Information Management: Demonstrates seeking, using, assessing and managing\ninformation.",
-          "element_ids": [
+            "txt_000024",
             "txt_000025"
-          ]
+          ],
+          "text": "Swinburne Engineering Competencies for this Unit of Study\nThis Unit of Study will contribute to you attaining the following Swinburne Engineering\nCompetencies:\n-\nK1 Basic Science: Proficiently applies concepts, theories and techniques of the\nrelevant natural and physical sciences to the solution of complex engineering problems.\n-\nK2 Maths and IT as Tools: Proficiently uses relevant mathematics and computer and\ninformation science concepts as tools in complex engineering activities.\n-\nK3 Discipline Specific: Proficiently applies advanced technical knowledge of the\nspecific discipline within that context.\n-\nK6 Professional Practice: Appreciates the principles of professional engineering\npractice in a sustainable context.\n-\nS1 Engineering Methods: Applies engineering methods in practical applications and\ncomplex engineering problems.\n-\nS2 Problem Solving: Systematically uses current or emerging knowledge and\nresearch methods to undertake independent research in solving complex engineering\nproblems and as preparation for research higher degrees.\n-\nS3 Design: Systematically uses engineering methods in designing solutions to\ncomplex engineering problems.\n-\nA2 Communication: Demonstrates effective communication to professional and wider\naudiences including in complex engineering activities.\nA4 Information Management: Demonstrates seeking, using, assessing and managing\ninformation."
         },
         {
+          "id": "grp_000001",
           "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            72.75992584228516,
-            471.52239990234375,
-            298.3455810546875,
-            487.071044921875
-          ],
-          "text": "PART B: Your Unit in more detail",
           "element_ids": [
             "txt_000026"
-          ]
+          ],
+          "text": "PART B: Your Unit in more detail"
         },
         {
+          "id": "grp_000002",
           "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            72.75992584228516,
-            501.5799560546875,
-            184.73141479492188,
-            514.9839477539062
-          ],
-          "text": "Unit Improvements",
-          "element_ids": [
-            "txt_000027"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            72.75992584228516,
-            515.6488037109375,
-            484.9129333496094,
-            546.9404296875
-          ],
-          "text": "Feedback provided by previous students through the Student Survey has resulted in\nimprovements that have been made to this unit. Recent improvements include:",
           "element_ids": [
             "txt_000027",
-            "txt_000028"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            101.80996704101562,
-            553.5687866210938,
-            508.1101379394531,
-            565.9004516601562
-          ],
-          "text": "-\nChanged sequence of lecture materials to better introduce concepts in a logical",
-          "element_ids": [
-            "txt_000029"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            119.80998229980469,
-            572.52880859375,
-            151.61444091796875,
-            584.8604736328125
-          ],
-          "text": "order.",
-          "element_ids": [
-            "txt_000030"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            101.80996704101562,
-            591.48876953125,
-            450.6800842285156,
-            622.7803955078125
-          ],
-          "text": "-\nRemoved some tasks and added others to focus on main concepts.\n-\nIntroduced Python tasks.",
-          "element_ids": [
+            "txt_000027",
+            "txt_000028",
+            "txt_000029",
+            "txt_000030",
             "txt_000031",
             "txt_000032"
-          ]
+          ],
+          "text": "Unit Improvements\nFeedback provided by previous students through the Student Survey has resulted in\nimprovements that have been made to this unit. Recent improvements include:\n-\nChanged sequence of lecture materials to better introduce concepts in a logical\norder.\n-\nRemoved some tasks and added others to focus on main concepts.\n-\nIntroduced Python tasks."
         },
         {
+          "id": "grp_000003",
           "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            72.75992584228516,
-            641.739990234375,
-            185.3817901611328,
-            655.1439819335938
-          ],
-          "text": "Unit Teaching Staff",
           "element_ids": [
             "txt_000034"
-          ]
+          ],
+          "text": "Unit Teaching Staff"
         }
       ]
     },
@@ -989,7 +700,8 @@
           "Contents": "72 0 R"
         }
       },
-      "elements": []
+      "elements": [],
+      "groups": []
     },
     {
       "page_num": 5,
@@ -1136,135 +848,7 @@
           "source_id": "txt_000047"
         }
       ],
-      "groups": [
-        {
-          "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            66.70986938476562,
-            76.20880126953125,
-            206.26821899414062,
-            88.54047393798828
-          ],
-          "text": "a) Assessment Overview",
-          "element_ids": [
-            "txt_000038"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            66.70986938476562,
-            345.9687805175781,
-            298.8179016113281,
-            358.30047607421875
-          ],
-          "text": "b) Minimum requirements to pass this Unit",
-          "element_ids": [
-            "txt_000039"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            93.20986938476562,
-            365.16876220703125,
-            491.3425598144531,
-            418.30047607421875
-          ],
-          "text": "-\nComplete all Tests, Pass tasks, i.e all tests and Pass tasks signed off as\ncomplete/passed to at least the basic 50 P level.\n-\nTasks must be attempted before the specified target dates.\n-\nEnsure completed work clearly demonstrates your abilities; note the following:",
-          "element_ids": [
-            "txt_000040"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            122.80998229980469,
-            423.0087890625,
-            521.6290893554688,
-            536.6204833984375
-          ],
-          "text": "The aim of the portfolio is that you provide sufficient evidence that you have\nachieved the grade you are aiming for. If you work with other students, or\nget substantial help at the Programming Help Desk, this MUST be\nacknowledged clearly in comments at the top of any code submitted. If your\nportfolio contains work that is not unique (or which you cannot explain) or if\nyour progress is not consistent throughout semester, you may be required\nto provide additional evidence, for example, you may need to complete\nadditional tasks or to attend an interview during which you will be expected\nto further demonstrate your knowledge.",
-          "element_ids": [
-            "txt_000041"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            66.75992584228516,
-            542.52880859375,
-            530.6447143554688,
-            580.7803955078125
-          ],
-          "text": "You are expected to attempt every iteration of the Semester Tests (Test 1, Test 2, and Test 1\nRedo and Test 2 Resit – if required) until you demonstrate sufficient knowledge to pass this unit\nof study (but there is only one re-sit for each test).",
-          "element_ids": [
-            "txt_000042"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            66.75992584228516,
-            592.208740234375,
-            524.7889404296875,
-            632.1404418945312
-          ],
-          "text": "c) Examinations\nIf the unit you are enrolled in has an official examination, you will be expected to be available for\nthe entire examination period including any Special Exam period.",
-          "element_ids": [
-            "txt_000043"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            66.75992584228516,
-            643.8087768554688,
-            277.0619201660156,
-            670.7803955078125
-          ],
-          "text": "d) Submission Requirements\nPortfolio tasks are submitted online via Ed.",
-          "element_ids": [
-            "txt_000044"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            66.75992584228516,
-            676.9287719726562,
-            525.12158203125,
-            720.9404296875
-          ],
-          "text": "Please ensure you keep a copy of all assessments that are submitted.\nThis unit uses portfolio assessment to determine your final grade. You are required to submit a\nportfolio that contains the following items:",
-          "element_ids": [
-            "txt_000045",
-            "txt_000046"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            93.25993347167969,
-            726.8487548828125,
-            485.328369140625,
-            752.1404418945312
-          ],
-          "text": "1. Learning Summary Report that reflects on what you have learnt, and shows how\nyour portfolio addresses the assessment criteria and unit learning outcomes.",
-          "element_ids": [
-            "txt_000047"
-          ]
-        }
-      ]
+      "groups": []
     },
     {
       "page_num": 6,
@@ -1489,232 +1073,7 @@
           "source_id": "txt_000064"
         }
       ],
-      "groups": [
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            126.70986938476562,
-            87.48880004882812,
-            197.3505096435547,
-            99.82047271728516
-          ],
-          "text": "a. Your tests",
-          "element_ids": [
-            "txt_000048"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            126.70986938476562,
-            105.96879577636719,
-            439.380615234375,
-            118.30046844482422
-          ],
-          "text": "b. Answers, code, and reports from the weekly and other tasks",
-          "element_ids": [
-            "txt_000049"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            126.70986938476562,
-            124.44880676269531,
-            425.42437744140625,
-            136.78048706054688
-          ],
-          "text": "c. A program of your own design (for Distinction and above)",
-          "element_ids": [
-            "txt_000050"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            126.70986938476562,
-            143.16880798339844,
-            417.7717590332031,
-            155.50048828125
-          ],
-          "text": "d. A research report (for High Distinction at or above 90%)",
-          "element_ids": [
-            "txt_000051"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            66.75992584228516,
-            166.92880249023438,
-            557.810791015625,
-            279.3404846191406
-          ],
-          "text": "e) Extensions and Late Submission\nLate Submissions - Unless an extension has been approved from the Unit Convenor, late\nsubmissions will result in a penalty. You will be penalized 10% of your achieved mark for each\nworking day the task is late, up to a maximum of 5 working days. After 5 working days, a zero result\nwill be recorded. For example, if a student achieves 90/100 on an assessment task but the task was\nsubmitted two days late. A late penalty of 20% (of that 90/100 mark) will be applied and the student’s\nfinal mark will be recorded as 72/100 (being 90 less 09 marks/1st day and another 09 mark/2ndday).\nExtension – please check the university policy for obtaining an extension.",
-          "element_ids": [
-            "txt_000052"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            72.75992584228516,
-            281.4087829589844,
-            528.72900390625,
-            308.3804626464844
-          ],
-          "text": "If you are unable to sit any iteration of the Semester Tests and you must apply for Special\nConsideration, then you must either",
-          "element_ids": [
-            "txt_000053"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            93.20986938476562,
-            310.68878173828125,
-            432.63470458984375,
-            323.0204772949219
-          ],
-          "text": "1. have attempted every previous iteration of the Semester Tests; or",
-          "element_ids": [
-            "txt_000054"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            93.25993347167969,
-            327.7287902832031,
-            525.3790893554688,
-            354.4604797363281
-          ],
-          "text": "2. present documented evidence of the extenuating circumstances that prevented you\nfrom attempting every iteration of the Semester Test to date.",
-          "element_ids": [
-            "txt_000055"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            66.75992584228516,
-            367.80877685546875,
-            530.5856323242188,
-            420.7004699707031
-          ],
-          "text": "f)\nReferencing\nTo avoid plagiarism, you are required to provide a reference whenever you include information\nfrom other sources in your work. Further details regarding plagiarism are available in Section C\nof this document.",
-          "element_ids": [
-            "txt_000056"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            66.75992584228516,
-            426.6087646484375,
-            334.34844970703125,
-            438.9404602050781
-          ],
-          "text": "Referencing conventions required for this unit are APA",
-          "element_ids": [
-            "txt_000057"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            66.75992584228516,
-            445.32879638671875,
-            320.07904052734375,
-            494.8604736328125
-          ],
-          "text": "Helpful information on referencing can be found at\nhttp://www.swinburne.edu.au/library/referencing/\nRecommended Reading Materials",
-          "element_ids": [
-            "txt_000058"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            66.75992584228516,
-            499.3287658691406,
-            530.7317504882812,
-            537.1004638671875
-          ],
-          "text": "The Library has a large collection of resource materials, both texts and current journals. Listed\nbelow are some references that will provide valuable supplementary information to this unit. It is\nalso recommended that you explore other sources to broaden your understanding.",
-          "element_ids": [
-            "txt_000059"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            90.05996704101562,
-            542.0487670898438,
-            530.879150390625,
-            581.98046875
-          ],
-          "text": "-\nSpeight, A 2020 Bite Sized Python. Wiley. Available online from Swinburne Library.\n-\nPine, C 2009 Learn to Program, The Pragmatic Programmer. Available online from the\nSwinburne Library.",
-          "element_ids": [
-            "txt_000060"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            90.05996704101562,
-            597.728759765625,
-            528.9339599609375,
-            622.7803955078125
-          ],
-          "text": "-\nSobkowicz, M 2015 Learn Game Programming with Ruby : Bring Your Ideas to Life with\nGosu. The Pragmatic Programmer. Available online from the Swinburne Library",
-          "element_ids": [
-            "txt_000062"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            90.05996704101562,
-            629.1687622070312,
-            528.8965454101562,
-            654.46044921875
-          ],
-          "text": "-\nRobertson, L.A 2014 Students Guide to Program Design, Newnes. Available online\nfrom the Swinburne Library.",
-          "element_ids": [
-            "txt_000063"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            90.05996704101562,
-            661.0887451171875,
-            529.112060546875,
-            686.1404418945312
-          ],
-          "text": "-\nFreider, O, Frieder, G & Grossman, D. 2013 Computer Science Programming Basics\nin Ruby, O’Reilly Media Inc. Available online from the Swinburne Library.",
-          "element_ids": [
-            "txt_000064"
-          ]
-        }
-      ]
+      "groups": []
     },
     {
       "page_num": 7,
@@ -1928,188 +1287,22 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            72.75992584228516,
-            56.3223991394043,
-            310.02996826171875,
-            71.87104034423828
-          ],
-          "text": "PART C: FURTHER INFORMATION",
           "element_ids": [
-            "txt_000065"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            164.0399932861328,
-            108.12882995605469,
-            489.90911865234375,
-            133.18048095703125
-          ],
-          "text": "For further information on any of these topics, refer to Swinburne’s\nCurrent Students web page http://www.swinburne.edu.au/student/.",
-          "element_ids": [
-            "txt_000080"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            72.75992584228516,
-            166.92880249023438,
-            247.72674560546875,
-            179.26048278808594
-          ],
-          "text": "Student behaviour and wellbeing",
-          "element_ids": [
-            "txt_000066"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            72.75992584228516,
-            185.3175811767578,
-            561.9620971679688,
-            332.17694091796875
-          ],
-          "text": "All students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying, violence,\ndiscrimination, sexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a quality\nlearning experience. The Charter also sets out what is expected of students with regards to your studies and\nthe way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations and\nthe People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:",
-          "element_ids": [
-            "txt_000067"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            90.70985412597656,
-            335.7975769042969,
-            561.4122314453125,
-            412.3369445800781
-          ],
-          "text": "-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate footwear\nand safety equipment, not acting in a manner which is dangerous or disruptive (e.g. playing computer\ngames), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens in\nan emergency response",
-          "element_ids": [
+            "txt_000065",
+            "txt_000067",
             "txt_000068",
             "txt_000069",
-            "txt_000070"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            72.75992584228516,
-            425.16876220703125,
-            114.96282958984375,
-            437.5004577636719
+            "txt_000070",
+            "txt_000072",
+            "txt_000074",
+            "txt_000076",
+            "txt_000077",
+            "txt_000078",
+            "txt_000080"
           ],
-          "text": "Canvas",
-          "element_ids": [
-            "txt_000071"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            72.75992584228516,
-            443.3175964355469,
-            561.662353515625,
-            477.616943359375
-          ],
-          "text": "You should regularly access the Swinburne learning management system, Canvas, which is available via the\nCurrent Students webpage or https://swinburne.instructure.com/ Canvas is updated regularly with important\nunit information and communications.",
-          "element_ids": [
-            "txt_000072"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            72.75992584228516,
-            489.248779296875,
-            158.9413604736328,
-            501.5804748535156
-          ],
-          "text": "Communication",
-          "element_ids": [
-            "txt_000073"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            72.75992584228516,
-            507.6376037597656,
-            561.6121826171875,
-            541.9369506835938
-          ],
-          "text": "All communication will be via your Swinburne email address. If you access your email through a provider other\nthan Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to your private\nemail address.",
-          "element_ids": [
-            "txt_000074"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            72.75992584228516,
-            554.768798828125,
-            174.09906005859375,
-            567.1004638671875
-          ],
-          "text": "Academic Integrity",
-          "element_ids": [
-            "txt_000075"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            72.75992584228516,
-            572.9176025390625,
-            561.562255859375,
-            681.85693359375
-          ],
-          "text": "Academic integrity is about taking responsibility for your learning and submitting work that is honestly your own.\nIt means acknowledging the ideas, contributions and work of others; referencing your sources; contributing\nfairly to group work; and completing tasks, tests and exams without cheating.\nSwinburne University uses the Turnitin system, which helps to identify inadequate citations, poor paraphrasing\nand unoriginal work in assignments that are submitted via Canvas. Your Unit Convenor will provide further\ndetails. Plagiarising, cheating and seeking an unfair advantage with regards to an exam or assessment are all\nbreaches of academic integrity and treated as academic misconduct.\nPlagiarism is submitting or presenting someone else’s work as though it is your own without full and appropriate\nacknowledgement of their ideas and work. Examples include:",
-          "element_ids": [
-            "txt_000076"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            90.70985412597656,
-            685.9575805664062,
-            479.59381103515625,
-            697.2572631835938
-          ],
-          "text": "-\nusing the whole or part of computer program written by another person as your own",
-          "element_ids": [
-            "txt_000077"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 7,
-          "bbox": [
-            90.70985412597656,
-            714.2776489257812,
-            561.5120849609375,
-            748.5769653320312
-          ],
-          "text": "-\nusing the whole or part of somebody else’s written work in an essay or other assessable work, including\nmaterial from a book, journal, newspaper article, a website or database, a set of lecture notes, current\nor past student’s work, or any other person’s work",
-          "element_ids": [
-            "txt_000078"
-          ]
+          "text": "PART C: FURTHER INFORMATION\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying, violence,\ndiscrimination, sexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a quality\nlearning experience. The Charter also sets out what is expected of students with regards to your studies and\nthe way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations and\nthe People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate footwear\nand safety equipment, not acting in a manner which is dangerous or disruptive (e.g. playing computer\ngames), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens in\nan emergency response\nYou should regularly access the Swinburne learning management system, Canvas, which is available via the\nCurrent Students webpage or https://swinburne.instructure.com/ Canvas is updated regularly with important\nunit information and communications.\nAll communication will be via your Swinburne email address. If you access your email through a provider other\nthan Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to your private\nemail address.\nAcademic integrity is about taking responsibility for your learning and submitting work that is honestly your own.\nIt means acknowledging the ideas, contributions and work of others; referencing your sources; contributing\nfairly to group work; and completing tasks, tests and exams without cheating.\nSwinburne University uses the Turnitin system, which helps to identify inadequate citations, poor paraphrasing\nand unoriginal work in assignments that are submitted via Canvas. Your Unit Convenor will provide further\ndetails. Plagiarising, cheating and seeking an unfair advantage with regards to an exam or assessment are all\nbreaches of academic integrity and treated as academic misconduct.\nPlagiarism is submitting or presenting someone else’s work as though it is your own without full and appropriate\nacknowledgement of their ideas and work. Examples include:\n-\nusing the whole or part of computer program written by another person as your own\n-\nusing the whole or part of somebody else’s written work in an essay or other assessable work, including\nmaterial from a book, journal, newspaper article, a website or database, a set of lecture notes, current\nor past student’s work, or any other person’s work\nFor further information on any of these topics, refer to Swinburne’s\nCurrent Students web page http://www.swinburne.edu.au/student/."
         }
       ]
     },
@@ -2284,176 +1477,7 @@
           "source_id": "txt_000092"
         }
       ],
-      "groups": [
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            55.957603454589844,
-            561.76220703125,
-            223.4569549560547
-          ],
-          "text": "-\npoorly paraphrasing somebody else’s work\n-\nusing a musical composition or audio, visual, graphic and photographic work created by another\n-\nusing realia created by another person, such as objects, artefacts, costumes, models\n-\nsubmitting assessments that have been developed by another person or service (paid or unpaid), often\nreferred to as contract cheating\n-\npresenting or submitting assignments or other work in conjunction with another person or group of\npeople when that work should be your own independent work. This is regardless of whether or not it is\nwith the knowledge or consent of the other person(s). Swinburne encourages students to talk to staff,\nfellow students and other people who may be able to contribute to a student’s academic work but where\nan independent assignment is required, the work must be the student’s own\n-\nenabling others to plagiarise or cheat, including letting another student copy your work or by giving\naccess to a draft or completed assignment\nThe penalties for academic misconduct can be severe, ranging from a zero grade for an assessment task\nthrough to expulsion from the unit and, in the extreme, exclusion from Swinburne.",
-          "element_ids": [
-            "txt_000081"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            236.28880310058594,
-            160.6620330810547,
-            248.6204833984375
-          ],
-          "text": "Student support",
-          "element_ids": [
-            "txt_000082"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            254.43759155273438,
-            561.562255859375,
-            288.7369384765625
-          ],
-          "text": "Swinburne offers a range of services and resources to help you complete your studies successfully. Your Unit\nConvenor or studentHQ can provide information about the study support and other services available for\nSwinburne students.",
-          "element_ids": [
-            "txt_000083"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            301.32879638671875,
-            189.4296112060547,
-            313.6604919433594
-          ],
-          "text": "Special consideration",
-          "element_ids": [
-            "txt_000084"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            319.4775695800781,
-            560.6629638671875,
-            368.41693115234375
-          ],
-          "text": "If your studies have been adversely affected due to serious and unavoidable circumstances outside of your\ncontrol (e.g. severe illness or unavoidable obligation), you may be able to apply for special consideration (SPC).\nApplications for Special Consideration will be submitted via the SPC online tool normally no later than 5.00pm\non the third working day after the submission/sitting date for the relevant assessment component.",
-          "element_ids": [
-            "txt_000085"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            381.248779296875,
-            177.83343505859375,
-            393.5804748535156
-          ],
-          "text": "Accessibility needs",
-          "element_ids": [
-            "txt_000086"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            399.3975830078125,
-            561.8121337890625,
-            468.2569580078125
-          ],
-          "text": "Sometimes students with a disability, a mental health or medical condition or significant carer responsibilities\nrequire reasonable adjustments to enable full access to and participation in education. Your needs can be\naddressed by Swinburne's AccessAbility Services by negotiating and distributing an 'Education Access Plan'.\nThe plan makes recommendations to University teaching and examination staff. You must notify AccessAbility\nServices of your disability or condition within one week after the commencement of your unit to allow the\nUniversity to make reasonable adjustments.",
-          "element_ids": [
-            "txt_000087"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            481.0887756347656,
-            162.5472869873047,
-            493.42047119140625
-          ],
-          "text": "Review of marks",
-          "element_ids": [
-            "txt_000088"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            499.2375793457031,
-            559.92236328125,
-            570.7369384765625
-          ],
-          "text": "An independent marker reviews all fail grades for major assessment tasks. In addition, a review of assessment\nis undertaken if your final result is between 45 and 49 or within 2 marks of any grade threshold.\nIf you are not satisfied with the result of an assessment, you can ask the Unit Convenor to review the result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit Convenor will\nreview your result to determine if your result is appropriate. If you are dissatisfied with the outcomes\nof the review, you can lodge a formal complaint.",
-          "element_ids": [
-            "txt_000089"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            583.8087768554688,
-            281.0588684082031,
-            596.1404418945312
-          ],
-          "text": "Feedback, complaints and suggestions",
-          "element_ids": [
-            "txt_000090"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            602.1975708007812,
-            561.4122314453125,
-            636.4969482421875
-          ],
-          "text": "In the first instance, discuss any issues with your Unit Convenor. If you are dissatisfied with the outcome of the\ndiscussion or would prefer not to deal with your Unit Convenor, then you can complete a feedback form. See\nhttps://www.swinburne.edu.au/corporate/feedback/",
-          "element_ids": [
-            "txt_000091"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 8,
-          "bbox": [
-            72.75992584228516,
-            653.4088134765625,
-            559.175048828125,
-            743.5369262695312
-          ],
-          "text": "Advocacy\nShould you require assistance with any academic issues, University statutes, regulations, policies and\nprocedures, you are advised to seek advice from an Independent Advocacy Officer at Swinburne Student Life\n(previously Swinburne Student Amenities Association (SSAA).\nFor an appointment, please call +61-(0)3-9214 5445 or email advocacy@swin.edu.au\nFor more information, please see https://www.swinbume.edu.au/current-students/student-seivices-\nsupport/advocacy/",
-          "element_ids": [
-            "txt_000092"
-          ]
-        }
-      ]
+      "groups": []
     }
   ],
   "page_content": {
@@ -2494,19 +1518,9 @@
           "COS10009"
         ],
         [
-          "",
-          null,
-          null
-        ],
-        [
           "Unit Title",
           null,
           "Introduction to Programming"
-        ],
-        [
-          "",
-          null,
-          null
         ],
         [
           "Duration",
@@ -2514,19 +1528,9 @@
           "One semester"
         ],
         [
-          "",
-          null,
-          null
-        ],
-        [
           "Total Contact Hours",
           null,
           "48 hours (+ 06 hours tests and resit tests)"
-        ],
-        [
-          "",
-          null,
-          null
         ],
         [
           "Requisites:",
@@ -2534,18 +1538,8 @@
           "Nil"
         ],
         [
-          "",
+          null,
           "Pre-requisites",
-          null
-        ],
-        [
-          "",
-          null,
-          null
-        ],
-        [
-          null,
-          "",
           null
         ],
         [
@@ -2555,18 +1549,8 @@
         ],
         [
           null,
-          "",
-          null
-        ],
-        [
-          null,
           "Concurrent pre-requisites",
           "Nil"
-        ],
-        [
-          null,
-          "",
-          null
         ],
         [
           null,
@@ -2575,18 +1559,8 @@
         ],
         [
           null,
-          "",
-          null
-        ],
-        [
-          null,
           "Assumed knowledge",
           "Nil"
-        ],
-        [
-          null,
-          "",
-          null
         ],
         [
           "Credit Points",
@@ -2594,39 +1568,19 @@
           "12.5"
         ],
         [
-          "",
-          null,
-          null
-        ],
-        [
           "Campus/Location",
           null,
           "Ho Chi Minh City"
         ],
         [
-          "",
-          null,
-          null
-        ],
-        [
           "Mode of Delivery",
           null,
-          "Blended\nLectures 24 hrs), Labs (24 hrs),\nWorkshop (up to 6 hrs - for Tests and Test Re-sits)"
-        ],
-        [
-          "",
-          null,
-          null
+          "Blended Lectures 24 hrs), Labs (24 hrs), Workshop (up to 6 hrs - for Tests and Test Re-sits)"
         ],
         [
           "Assessment Summary",
           null,
           "Portfolio 100% - includes two tests."
-        ],
-        [
-          "",
-          null,
-          null
         ]
       ]
     },
@@ -2648,16 +1602,10 @@
           "Consultation Times"
         ],
         [
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
           "Dr Van HO",
           "Unit Coordinator",
           "See the Canvas home page",
-          "By email appointment\nin advance"
+          "By email appointment in advance"
         ]
       ]
     },
@@ -2673,10 +1621,10 @@
       ],
       "rows": [
         [
-          "",
+          null,
           "Total",
           "Hours per",
-          ""
+          null
         ],
         [
           "Activity",
@@ -2689,12 +1637,6 @@
           "Hours",
           "Week",
           null
-        ],
-        [
-          "",
-          null,
-          null,
-          ""
         ],
         [
           "Lectures",
@@ -2712,7 +1654,7 @@
           "Tests (and resits)",
           "6 hours",
           "2 hours",
-          "Weeks 7 or 8, 10 and 12\n(if needed)"
+          "Weeks 7 or 8, 10 and 12 (if needed)"
         ]
       ]
     },
@@ -2742,102 +1684,95 @@
           null
         ],
         [
-          "",
-          null,
-          null,
-          "",
-          null
-        ],
-        [
           "1",
           "02 Sep",
           "Basic elements of a program",
-          "Compl ete\nweekly tasks\nSubmit tasks\nfor feedback\nand signoff",
-          ""
+          "Compl ete weekly tasks Submit tasks for feedback and signoff",
+          null
         ],
         [
           "2",
           "09 Sep",
-          "Procedures, Functions and Structure\ncharts",
+          "Procedures, Functions and Structure charts",
           null,
-          ""
+          null
         ],
         [
           "3",
           "16 Sep",
           "Composite Data Types",
           null,
-          ""
+          null
         ],
         [
           "4",
           "23 Sep",
           "File Handling, Static and Dynamic Typing",
           null,
-          ""
+          null
         ],
         [
           "5",
           "30 Sep",
           "Selection and Iteration",
           null,
-          ""
+          null
         ],
         [
           "6",
           "07 Oct",
           "Introduction to Arrays, GUI Drawing",
           null,
-          ""
+          null
         ],
         [
           "7",
           "14 Oct",
           "Data References, Arrays, Searching",
           null,
-          "Checkpoint Week for tasks\nWeeks 1 – 5 (due at 23:59\n(VN Time) of Sunday, 20\nOct 2024"
+          "Checkpoint Week for tasks Weeks 1 – 5 (due at 23:59 (VN Time) of Sunday, 20 Oct 2024"
         ],
         [
           "8",
           "21 Oct",
           "GUI and Game Programming",
           null,
-          "Test 1 Online (in class test\norganize by lecturer)"
+          "Test 1 Online (in class test organize by lecturer)"
         ],
         [
           "9",
           "28 Oct",
           "Sorting, Complexity and Recursion",
           null,
-          ""
+          null
         ],
         [
           "10",
           "04 Nov",
           "Testing and debugging",
           null,
-          "Test 2 Online In class test\norganize by lecturer\nCheckpoint Week for tasks\nWeeks 6 – 8 (due at 23:59\n(VN Time) of Sunday, 10\nNov 2024"
+          "Test 2 Online In class test organize by lecturer Checkpoint Week for tasks Weeks 6 – 8 (due at 23:59 (VN Time) of Sunday, 10 Nov 2024"
         ],
         [
           "11",
           "11 Nov",
           "Other Languages",
           null,
-          "Checkpoint Week for tasks\nWks. 9 -10 (due at 23:59\n(VN Time) of Sunday, 17\nNov 2024"
+          "Checkpoint Week for tasks Wks. 9 -10 (due at 23:59 (VN Time) of Sunday, 17 Nov 2024"
         ],
         [
           "12",
           "18 Nov",
           "Testing, tools and projects",
           null,
-          "Test 2 – Re-sit\n(if needed)\nWeek 12 and custom tasks\ndue at 23:59 (VN Time) of\nSunday, 24 Nov 2024"
+          "Test 2 – Re-sit (if needed) Week 12 and custom tasks due at 23:59 (VN Time) of Sunday, 24 Nov 2024"
         ],
         [
           "13",
           "25 Nov",
-          "SWOT VAC – PORTFOLIO\nSUBMISSION\nD and HD interviews held over exam\nperiod",
+          "SWOT VAC – PORTFOLIO SUBMISSION D and HD interviews held over exam period",
           null,
-          ""
+          null
         ]
       ]
     },
@@ -2853,23 +1788,16 @@
       ],
       "rows": [
         [
-          "",
-          "",
-          "",
+          null,
+          null,
+          null,
           "Unit Learning",
-          ""
+          null
         ],
         [
           null,
-          "",
           null,
           null,
-          ""
-        ],
-        [
-          "",
-          null,
-          "",
           "Outcomes that",
           null
         ],
@@ -2895,39 +1823,32 @@
           "Due Date"
         ],
         [
-          "",
           null,
-          "",
+          null,
+          null,
           "task relates to",
           null
         ],
         [
-          null,
-          "",
-          null,
-          null,
-          ""
-        ],
-        [
-          "1. Portfolio\n(for Pass and Credit and\n70D)",
+          "1. Portfolio (for Pass and Credit and 70D)",
           "Individual",
           "100%",
           "All",
-          "Pass and Credit Tasks\nCompleted/passed by End of\nWeek 12.\nPortfolios Due"
+          "Pass and Credit Tasks Completed/passed by End of Week 12. Portfolios Due"
         ],
         [
-          "2. Portfolio and Interview\n(for Distinction and High\nDistinction)",
+          "2. Portfolio and Interview (for Distinction and High Distinction)",
           "Individual",
           "100%",
           "All",
-          "Portfolio due\nInterviews held in exam\nperiod."
+          "Portfolio due Interviews held in exam period."
         ],
         [
           "3. Semester Tests",
           "Individual",
-          "Pass or\nFail",
+          "Pass or Fail",
           "All",
-          "Week 8 (online); Week\n10 (in class)\n(re-sit in Week 12)"
+          "Week 8 (online); Week 10 (in class) (re-sit in Week 12)"
         ]
       ]
     }

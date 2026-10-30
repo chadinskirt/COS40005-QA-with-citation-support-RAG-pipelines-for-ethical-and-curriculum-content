@@ -345,200 +345,66 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.0,
-            72.3813705444336,
-            159.1094970703125,
-            107.09577941894531
-          ],
-          "text": "School of Science, Computing and Engineering\nTechnologies",
           "element_ids": [
-            "txt_000000"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.0,
-            138.2129669189453,
-            225.97900390625,
-            170.85296630859375
-          ],
-          "text": "Unit Outline",
-          "element_ids": [
-            "txt_000001"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.0,
-            177.15687561035156,
-            398.9422912597656,
-            188.33920288085938
-          ],
-          "text": "This content is protected and may not be shared, uploaded, or distributed.",
-          "element_ids": [
+            "txt_000001",
             "txt_000002"
-          ]
+          ],
+          "text": "Unit Outline\nThis content is protected and may not be shared, uploaded, or distributed."
         },
         {
+          "id": "grp_000001",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.00000762939453,
-            198.6830596923828,
-            178.78927612304688,
-            220.98072814941406
-          ],
-          "text": "SWE30003",
           "element_ids": [
             "txt_000003"
-          ]
+          ],
+          "text": "SWE30003"
         },
         {
+          "id": "grp_000002",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.00000762939453,
-            232.7030792236328,
-            409.8460998535156,
-            255.00074768066406
-          ],
-          "text": "Software Architectures and Design",
           "element_ids": [
-            "txt_000004"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.00000762939453,
-            261.6641540527344,
-            219.72056579589844,
-            283.5314636230469
-          ],
-          "text": "Semester May, 2026",
-          "element_ids": [
-            "txt_000005"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.00000762939453,
-            317.70806884765625,
-            507.7626647949219,
-            342.6217346191406
-          ],
-          "text": "Note that the lectures are to be conducted live online via Canvas/Collaborate-Ultra,\nand tutorial classes will be conducted face-to-face on campus.",
-          "element_ids": [
+            "txt_000004",
+            "txt_000005",
             "txt_000006"
-          ]
+          ],
+          "text": "Software Architectures and Design\nSemester May, 2026\nNote that the lectures are to be conducted live online via Canvas/Collaborate-Ultra,\nand tutorial classes will be conducted face-to-face on campus."
         },
         {
+          "id": "grp_000003",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.00000762939453,
-            415.5636901855469,
-            374.9599304199219,
-            431.8839416503906
-          ],
-          "text": "Please read this Unit Outline carefully. It includes:",
           "element_ids": [
             "txt_000007"
-          ]
+          ],
+          "text": "Please read this Unit Outline carefully. It includes:"
         },
         {
+          "id": "grp_000004",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.0,
-            437.76806640625,
-            123.2436752319336,
-            456.7808532714844
-          ],
-          "text": "PART A",
           "element_ids": [
+            "txt_000008",
             "txt_000008"
-          ]
+          ],
+          "text": "PART A\nUnit summary"
         },
         {
+          "id": "grp_000005",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            142.92066955566406,
-            437.76806640625,
-            235.72413635253906,
-            456.7808532714844
-          ],
-          "text": "Unit summary",
           "element_ids": [
-            "txt_000008"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.0009994506836,
-            462.95806884765625,
-            122.99303436279297,
-            481.9708557128906
-          ],
-          "text": "PART B",
-          "element_ids": [
+            "txt_000009",
             "txt_000009"
-          ]
+          ],
+          "text": "PART B\nYour Unit in more detail"
         },
         {
+          "id": "grp_000006",
           "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            142.9210205078125,
-            462.95806884765625,
-            301.44036865234375,
-            481.9708557128906
-          ],
-          "text": "Your Unit in more detail",
           "element_ids": [
-            "txt_000009"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            72.0009994506836,
-            488.1480712890625,
-            122.50373077392578,
-            507.1608581542969
-          ],
-          "text": "PART C",
-          "element_ids": [
+            "txt_000010",
             "txt_000010"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 1,
-          "bbox": [
-            142.92172241210938,
-            488.1480712890625,
-            276.2218933105469,
-            507.1608581542969
           ],
-          "text": "Further information",
-          "element_ids": [
-            "txt_000010"
-          ]
+          "text": "PART C\nFurther information"
         }
       ]
     },
@@ -637,88 +503,38 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.0,
-            74.2890853881836,
-            128.01365661621094,
-            93.30188751220703
-          ],
-          "text": "PART A:",
           "element_ids": [
             "txt_000011"
-          ]
+          ],
+          "text": "PART A:"
         },
         {
+          "id": "grp_000001",
           "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            157.082275390625,
-            74.2890853881836,
-            261.7239990234375,
-            93.30188751220703
-          ],
-          "text": "Unit Summary",
           "element_ids": [
             "txt_000011"
-          ]
+          ],
+          "text": "Unit Summary"
         },
         {
+          "id": "grp_000002",
           "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.0,
-            633.2037353515625,
-            104.8176040649414,
-            649.5237426757812
-          ],
-          "text": "Aims",
           "element_ids": [
-            "txt_000012"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.0,
-            655.8828125,
-            525.6898193359375,
-            693.4563598632812
-          ],
-          "text": "The unit aims to facilitate an in-depth study of state-of-the-art approaches and techniques for\nsystem design with a special focus on the relationship between non-functional requirements\nand software architectures.",
-          "element_ids": [
+            "txt_000012",
             "txt_000013"
-          ]
+          ],
+          "text": "Aims\nThe unit aims to facilitate an in-depth study of state-of-the-art approaches and techniques for\nsystem design with a special focus on the relationship between non-functional requirements\nand software architectures."
         },
         {
+          "id": "grp_000003",
           "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.0,
-            722.9637451171875,
-            221.0627899169922,
-            739.2837524414062
-          ],
-          "text": "Unit Learning Outcomes",
           "element_ids": [
-            "txt_000014"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 2,
-          "bbox": [
-            72.0,
-            745.8383178710938,
-            304.737548828125,
-            759.4655151367188
-          ],
-          "text": "Students who successfully complete this unit can:",
-          "element_ids": [
+            "txt_000014",
             "txt_000015"
-          ]
+          ],
+          "text": "Unit Learning Outcomes\nStudents who successfully complete this unit can:"
         }
       ]
     },
@@ -856,91 +672,27 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            72.0,
-            326.48370361328125,
-            196.1136016845703,
-            342.8037109375
-          ],
-          "text": "Graduate Attributes",
           "element_ids": [
-            "txt_000016"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            72.0,
-            349.29833984375,
-            495.126708984375,
-            390.94146728515625
-          ],
-          "text": "The Swinburne Graduate Attributes describe the capability of our graduates to use\nknowledge, skills and behaviours to contribute to society meaningfully and positively. They\ninclude professional, self-directed learning and future-ready skills.",
-          "element_ids": [
-            "txt_000017"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            72.0,
-            397.1628112792969,
-            502.99859619140625,
-            409.4164733886719
-          ],
-          "text": "This unit contributes to the development of the following Swinburne Graduate Attributes:",
-          "element_ids": [
-            "txt_000018"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            89.82054138183594,
-            415.81781005859375,
-            409.7359313964844,
-            484.01458740234375
-          ],
-          "text": "\nGA2 Communication 2 - Communicating using different media\n\nGA3 Teamwork 1 - Collaboration and negotiation\n\nGA5 Digital literacies 1 – Information literacy\n\nGA6 Digital Literacies 2 – Technical literacy",
-          "element_ids": [
+            "txt_000016",
+            "txt_000017",
+            "txt_000018",
             "txt_000019",
             "txt_000020",
             "txt_000021",
-            "txt_000022"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            72.0,
-            498.5162353515625,
-            502.538330078125,
-            526.1814575195312
-          ],
-          "text": "Other graduate attributes may be practised in the unit but are not formally taught as part of\nthe unit content, nor incorporated within formal assessment.",
-          "element_ids": [
+            "txt_000022",
             "txt_000023"
-          ]
+          ],
+          "text": "Graduate Attributes\nThe Swinburne Graduate Attributes describe the capability of our graduates to use\nknowledge, skills and behaviours to contribute to society meaningfully and positively. They\ninclude professional, self-directed learning and future-ready skills.\nThis unit contributes to the development of the following Swinburne Graduate Attributes:\n\nGA2 Communication 2 - Communicating using different media\n\nGA3 Teamwork 1 - Collaboration and negotiation\n\nGA5 Digital literacies 1 – Information literacy\n\nGA6 Digital Literacies 2 – Technical literacy\nOther graduate attributes may be practised in the unit but are not formally taught as part of\nthe unit content, nor incorporated within formal assessment."
         },
         {
+          "id": "grp_000001",
           "type": "text_group",
-          "page_num": 3,
-          "bbox": [
-            72.0,
-            552.0237426757812,
-            123.47399139404297,
-            568.34375
-          ],
-          "text": "Content",
           "element_ids": [
             "txt_000024"
-          ]
+          ],
+          "text": "Content"
         }
       ]
     },
@@ -1011,64 +763,7 @@
           "source_id": "txt_000028"
         }
       ],
-      "groups": [
-        {
-          "type": "text_group",
-          "page_num": 4,
-          "bbox": [
-            72.0,
-            72.38280487060547,
-            185.6396942138672,
-            84.63648223876953
-          ],
-          "text": "Software Architectures",
-          "element_ids": [
-            "txt_000025"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 4,
-          "bbox": [
-            108.77999877929688,
-            84.90957641601562,
-            299.1966857910156,
-            122.55646514892578
-          ],
-          "text": "\nDecisions vs. structures\n\nArchitectural patterns\n\nDocumentation and communication",
-          "element_ids": [
-            "txt_000026"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 4,
-          "bbox": [
-            72.0,
-            136.9427947998047,
-            169.13345336914062,
-            149.19647216796875
-          ],
-          "text": "Architectural Styles",
-          "element_ids": [
-            "txt_000027"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 4,
-          "bbox": [
-            108.77999877929688,
-            149.46957397460938,
-            271.0586242675781,
-            187.17645263671875
-          ],
-          "text": "\nMessage-driven architectures\n\nClient-server architectures\n\nLayered Architectures",
-          "element_ids": [
-            "txt_000028"
-          ]
-        }
-      ]
+      "groups": []
     },
     {
       "page_num": 5,
@@ -1191,103 +886,54 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            72.0,
-            68.2890853881836,
-            127.7410659790039,
-            87.30188751220703
-          ],
-          "text": "PART B:",
           "element_ids": [
             "txt_000029"
-          ]
+          ],
+          "text": "PART B:"
         },
         {
+          "id": "grp_000001",
           "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            157.0501251220703,
-            68.2890853881836,
-            328.1933288574219,
-            87.30188751220703
-          ],
-          "text": "Your Unit in more detail",
           "element_ids": [
             "txt_000029"
-          ]
+          ],
+          "text": "Your Unit in more detail"
         },
         {
+          "id": "grp_000002",
           "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            72.0,
-            98.00370025634766,
-            192.12721252441406,
-            114.32369995117188
-          ],
-          "text": "Unit Improvements",
           "element_ids": [
             "txt_000030"
-          ]
+          ],
+          "text": "Unit Improvements"
         },
         {
+          "id": "grp_000003",
           "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            80.0999984741211,
-            136.1627655029297,
-            513.0256958007812,
-            205.00732421875
-          ],
-          "text": "Feedback provided by previous students through the Student Survey has resulted in\nimprovements that have been made to this unit. Recent improvements include:\n-\nMaking all assignments groupwork,\n-\nClarifying the expectations and their differences from other/prior units, and\n-\nIntroducing new architecture styles, including service-oriented architecture (SOA).",
-          "element_ids": [
-            "txt_000034",
-            "txt_000035"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            72.0,
-            222.5037078857422,
-            195.40919494628906,
-            238.82369995117188
-          ],
-          "text": "Unit Teaching Staff",
           "element_ids": [
             "txt_000031"
-          ]
+          ],
+          "text": "Unit Teaching Staff"
         },
         {
+          "id": "grp_000004",
           "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            72.0,
-            414.3236999511719,
-            270.59765625,
-            430.6437072753906
-          ],
-          "text": "Learning and Teaching Structure",
           "element_ids": [
             "txt_000032"
-          ]
+          ],
+          "text": "Learning and Teaching Structure"
         },
         {
+          "id": "grp_000005",
           "type": "text_group",
-          "page_num": 5,
-          "bbox": [
-            72.0,
-            610.7037353515625,
-            222.45599365234375,
-            627.0237426757812
-          ],
-          "text": "Week by Week Schedule",
           "element_ids": [
-            "txt_000033"
-          ]
+            "txt_000033",
+            "txt_000034",
+            "txt_000035"
+          ],
+          "text": "Week by Week Schedule\nFeedback provided by previous students through the Student Survey has resulted in\nimprovements that have been made to this unit. Recent improvements include:\n-\nMaking all assignments groupwork,\n-\nClarifying the expectations and their differences from other/prior units, and\n-\nIntroducing new architecture styles, including service-oriented architecture (SOA)."
         }
       ]
     },
@@ -1334,32 +980,12 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            72.0,
-            591.4437255859375,
-            146.2692108154297,
-            607.7637329101562
-          ],
-          "text": "Assessment",
           "element_ids": [
             "txt_000036"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 6,
-          "bbox": [
-            72.0,
-            613.8330688476562,
-            213.31700134277344,
-            628.765869140625
           ],
-          "text": "a)\nAssessment Overview",
-          "element_ids": [
-            "txt_000037"
-          ]
+          "text": "Assessment"
         }
       ]
     },
@@ -1376,7 +1002,8 @@
           "Resources": "7415 0 R"
         }
       },
-      "elements": []
+      "elements": [],
+      "groups": []
     },
     {
       "page_num": 8,
@@ -1391,7 +1018,8 @@
           "Resources": "7797 0 R"
         }
       },
-      "elements": []
+      "elements": [],
+      "groups": []
     },
     {
       "page_num": 9,
@@ -1592,58 +1220,12 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 9,
-          "bbox": [
-            72.0,
-            239.0037078857422,
-            275.817626953125,
-            255.32369995117188
-          ],
-          "text": "Recommended Reading Materials",
           "element_ids": [
-            "txt_000038"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 9,
-          "bbox": [
-            71.99998474121094,
-            261.6983642578125,
-            508.9151306152344,
-            303.2813720703125
-          ],
-          "text": "Swinburne Library has a large collection of resources. Listed below are some references that\nwill provide valuable supplementary information to this unit. It is also recommended that you\nexplore other sources to broaden your understanding.",
-          "element_ids": [
-            "txt_000039"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 9,
-          "bbox": [
-            72.0,
-            316.95306396484375,
-            386.7779846191406,
-            331.8858337402344
-          ],
-          "text": "Here is a list of recommended reading materials for this unit:",
-          "element_ids": [
-            "txt_000040"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 9,
-          "bbox": [
-            86.21907043457031,
-            338.2981872558594,
-            522.1810302734375,
-            594.2969360351562
-          ],
-          "text": "\nSoren Lauesen, Software Requirements: Styles and Techniques, Addison-Wesley,\n2002\n\nLen Bass, Paul Clements, and Rick Kazman, Software Architecture in Practice (4th\nEdition), Addison-Wesley, 2021\nPlease note that the 3rd or 2nd edition are also available through the Swinburne library\nand can be referenced..\n\nDavid Budgen, Software Design (2nd Edition), Addison-Wesley, 2003\n\nEric Evans, Domain-Driven Design, Addison-Wesley, 2004\n\nErich Gamma, Richard Helm, Ralph Johnson and John Vlissides, Design Patterns,\nAddison-Wesley, 1995\n\nFrank Buschmann, Regine Meunier, Hans Rohnert, Peter Sommerlad and Michael\nStal, Pattern-Oriented Software Architecture: A System of Patterns, Wiley, May 1996\n\nIan Sommerville, Software Engineering (8th Edition), Addison-Wesley, August 2007\n\nCraig Larman, Applying UML and Patterns (3rd Edition), Prentice Hall, 2005\n\nRebecca Wirfs-Brock and Alan McKean, Object Design, Addison-Wesley, 2003\n\nJeff Garland and Richard Anthony, Large-Scale Software Architecture, Wiley, 2003.",
-          "element_ids": [
+            "txt_000038",
+            "txt_000039",
+            "txt_000040",
             "txt_000041",
             "txt_000042",
             "txt_000043",
@@ -1653,22 +1235,10 @@
             "txt_000047",
             "txt_000048",
             "txt_000049",
-            "txt_000050"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 9,
-          "bbox": [
-            72.010986328125,
-            612.21630859375,
-            491.3641662597656,
-            637.7255249023438
-          ],
-          "text": "Further reading material will be provided during the lectures and/or made available on\nCanvas.",
-          "element_ids": [
+            "txt_000050",
             "txt_000051"
-          ]
+          ],
+          "text": "Recommended Reading Materials\nSwinburne Library has a large collection of resources. Listed below are some references that\nwill provide valuable supplementary information to this unit. It is also recommended that you\nexplore other sources to broaden your understanding.\nHere is a list of recommended reading materials for this unit:\n\nSoren Lauesen, Software Requirements: Styles and Techniques, Addison-Wesley,\n2002\n\nLen Bass, Paul Clements, and Rick Kazman, Software Architecture in Practice (4th\nEdition), Addison-Wesley, 2021\nPlease note that the 3rd or 2nd edition are also available through the Swinburne library\nand can be referenced..\n\nDavid Budgen, Software Design (2nd Edition), Addison-Wesley, 2003\n\nEric Evans, Domain-Driven Design, Addison-Wesley, 2004\n\nErich Gamma, Richard Helm, Ralph Johnson and John Vlissides, Design Patterns,\nAddison-Wesley, 1995\n\nFrank Buschmann, Regine Meunier, Hans Rohnert, Peter Sommerlad and Michael\nStal, Pattern-Oriented Software Architecture: A System of Patterns, Wiley, May 1996\n\nIan Sommerville, Software Engineering (8th Edition), Addison-Wesley, August 2007\n\nCraig Larman, Applying UML and Patterns (3rd Edition), Prentice Hall, 2005\n\nRebecca Wirfs-Brock and Alan McKean, Object Design, Addison-Wesley, 2003\n\nJeff Garland and Richard Anthony, Large-Scale Software Architecture, Wiley, 2003.\nFurther reading material will be provided during the lectures and/or made available on\nCanvas."
         }
       ]
     },
@@ -1884,214 +1454,29 @@
       ],
       "groups": [
         {
+          "id": "grp_000000",
           "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            72.0,
-            68.2890853881836,
-            127.24079895019531,
-            87.30188751220703
-          ],
-          "text": "PART C:",
           "element_ids": [
             "txt_000052"
-          ]
+          ],
+          "text": "PART C:"
         },
         {
+          "id": "grp_000001",
           "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            157.0314178466797,
-            68.2890853881836,
-            328.9975891113281,
-            87.30188751220703
-          ],
-          "text": "FURTHER INFORMATION",
           "element_ids": [
-            "txt_000052"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            166.02000427246094,
-            101.90282440185547,
-            491.87152099609375,
-            126.81641387939453
-          ],
-          "text": "For further information on any of these topics, refer to Swinburne’s\nStudent webpage http://www.swinburne.edu.au/student/",
-          "element_ids": [
+            "txt_000052",
+            "txt_000054",
+            "txt_000055",
+            "txt_000056",
+            "txt_000057",
+            "txt_000058",
+            "txt_000060",
+            "txt_000062",
+            "txt_000064",
             "txt_000065"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            71.99929809570312,
-            161.01268005371094,
-            256.70330810546875,
-            175.9454803466797
           ],
-          "text": "Student behaviour and wellbeing",
-          "element_ids": [
-            "txt_000053"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            72.0,
-            182.49835205078125,
-            508.2649230957031,
-            252.0972900390625
-          ],
-          "text": "All students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and\nrespectful of others; and appropriately use University resources, information, equipment and\nfacilities. All students are expected to contribute to creating a work and study environment\nthat is safe and free from bullying, violence, discrimination, sexual harassment, vilification\nand other forms of unacceptable behaviour.",
-          "element_ids": [
-            "txt_000054"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            71.99998474121094,
-            266.48602294921875,
-            506.56719970703125,
-            322.1214599609375
-          ],
-          "text": "The Student Charter describes what students can reasonably expect from Swinburne in order\nto enjoy a quality learning experience. The Charter also sets out what is expected of students\nwith regards to your studies and the way you conduct yourself towards other people and\nproperty.",
-          "element_ids": [
-            "txt_000055"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            71.99998474121094,
-            336.51019287109375,
-            498.9229431152344,
-            392.1455383300781
-          ],
-          "text": "You are expected to familiarise yourself with University regulations and policies and are\nobliged to abide by these, including the Student Academic Misconduct Regulations, Student\nGeneral Misconduct Regulations and the People, Culture and Integrity Policy. Any student\nfound to be in breach of these may be subject to disciplinary processes.",
-          "element_ids": [
-            "txt_000056"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            72.010009765625,
-            406.4741516113281,
-            251.65298461914062,
-            420.1013488769531
-          ],
-          "text": "Examples of expected behaviours are:",
-          "element_ids": [
-            "txt_000057"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            90.0086898803711,
-            420.5121765136719,
-            498.6855163574219,
-            532.1149291992188
-          ],
-          "text": "\nconducting yourself in teaching areas in a manner that is professional and not\ndisruptive to others\n\nfollowing specific safety procedures in Swinburne laboratories, such as wearing\nappropriate footwear and safety equipment, not acting in a manner which is\ndangerous or disruptive (e.g. playing computer games), and not bringing in food or\ndrink\n\nfollowing emergency and evacuation procedures and following instructions given by\nstaff/wardens in an emergency response.",
-          "element_ids": [
-            "txt_000058"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            72.0,
-            543.9931030273438,
-            114.09361267089844,
-            558.9259033203125
-          ],
-          "text": "Canvas",
-          "element_ids": [
-            "txt_000059"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            72.0,
-            565.4783325195312,
-            508.7877502441406,
-            607.1255493164062
-          ],
-          "text": "You should regularly log on to the Swinburne learning management system, Canvas. You can\naccess Canvas via the Student login webpage or https://swinburne.instructure.com/ Canvas is\nupdated regularly with important unit information and communications.",
-          "element_ids": [
-            "txt_000060"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            72.0,
-            618.9931030273438,
-            162.53555297851562,
-            633.9259033203125
-          ],
-          "text": "Communication",
-          "element_ids": [
-            "txt_000061"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            72.0,
-            640.4783325195312,
-            509.86029052734375,
-            682.0613403320312
-          ],
-          "text": "All communication will be via your Swinburne email address. If you access your email through\na provider other than Swinburne, then it is your responsibility to ensure that your Swinburne\nemail is redirected to your private email address.",
-          "element_ids": [
-            "txt_000062"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            72.0,
-            693.9931030273438,
-            178.53138732910156,
-            708.9259033203125
-          ],
-          "text": "Academic Integrity",
-          "element_ids": [
-            "txt_000063"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 10,
-          "bbox": [
-            72.0,
-            715.4183349609375,
-            507.41156005859375,
-            757.0614624023438
-          ],
-          "text": "Academic integrity is about taking responsibility for your learning and submitting work that is\nhonestly your own. It means acknowledging the ideas, contributions and work of others;\nreferencing your sources and acknowledging the use of generative artificial intelligence;",
-          "element_ids": [
-            "txt_000064"
-          ]
+          "text": "FURTHER INFORMATION\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and\nrespectful of others; and appropriately use University resources, information, equipment and\nfacilities. All students are expected to contribute to creating a work and study environment\nthat is safe and free from bullying, violence, discrimination, sexual harassment, vilification\nand other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order\nto enjoy a quality learning experience. The Charter also sets out what is expected of students\nwith regards to your studies and the way you conduct yourself towards other people and\nproperty.\nYou are expected to familiarise yourself with University regulations and policies and are\nobliged to abide by these, including the Student Academic Misconduct Regulations, Student\nGeneral Misconduct Regulations and the People, Culture and Integrity Policy. Any student\nfound to be in breach of these may be subject to disciplinary processes.\nExamples of expected behaviours are:\n\nconducting yourself in teaching areas in a manner that is professional and not\ndisruptive to others\n\nfollowing specific safety procedures in Swinburne laboratories, such as wearing\nappropriate footwear and safety equipment, not acting in a manner which is\ndangerous or disruptive (e.g. playing computer games), and not bringing in food or\ndrink\n\nfollowing emergency and evacuation procedures and following instructions given by\nstaff/wardens in an emergency response.\nYou should regularly log on to the Swinburne learning management system, Canvas. You can\naccess Canvas via the Student login webpage or https://swinburne.instructure.com/ Canvas is\nupdated regularly with important unit information and communications.\nAll communication will be via your Swinburne email address. If you access your email through\na provider other than Swinburne, then it is your responsibility to ensure that your Swinburne\nemail is redirected to your private email address.\nAcademic integrity is about taking responsibility for your learning and submitting work that is\nhonestly your own. It means acknowledging the ideas, contributions and work of others;\nreferencing your sources and acknowledging the use of generative artificial intelligence;\nFor further information on any of these topics, refer to Swinburne’s\nStudent webpage http://www.swinburne.edu.au/student/"
         }
       ]
     },
@@ -2201,106 +1586,7 @@
           "source_id": "txt_000072"
         }
       ],
-      "groups": [
-        {
-          "type": "text_group",
-          "page_num": 11,
-          "bbox": [
-            72.0003662109375,
-            72.51696014404297,
-            494.1700134277344,
-            100.1220703125
-          ],
-          "text": "contributing fairly to group work; and completing tasks, tests and exams without cheating.\nArtificial intelligence tools should only be used where approved by the Unit Convenor.",
-          "element_ids": [
-            "txt_000066"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 11,
-          "bbox": [
-            72.0003662109375,
-            114.51079559326172,
-            500.2320556640625,
-            156.1539306640625
-          ],
-          "text": "Swinburne University uses the Turnitin system, which helps to identify inadequate citations,\npoor paraphrasing and unoriginal work in assignments that are submitted via Canvas. Your\nUnit Convenor will provide further details.",
-          "element_ids": [
-            "txt_000067"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 11,
-          "bbox": [
-            72.00033569335938,
-            170.4825439453125,
-            509.9235534667969,
-            240.1416015625
-          ],
-          "text": "Plagiarism, collusion, contract cheating, unauthorised file sharing, falsification, fabrication,\nmanipulation or misrepresentation of information, reuse of previous work and non-\ncompliance with instructions in an invigilated or non-invigilated assessment item are all\nbreaches of academic integrity and treated as academic misconduct. Examples of breaches of\nacademic integrity include, but are not limited to:",
-          "element_ids": [
-            "txt_000068"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 11,
-          "bbox": [
-            89.96617126464844,
-            240.4923095703125,
-            511.8451843261719,
-            576.1323852539062
-          ],
-          "text": "\nsubmitting work as your own for assessment that has been fully or partially\ncompleted by a third party, either paid or unpaid\n\nusing output from artificial intelligence tools (e.g. ChatGPT) in whole or part without\nacknowledgement and/or without the approval of the Unit Convenor\n\nusing another person’s work or ideas as though it is your own work, without\nappropriate attribution\n\nworking closely with another student or group of students (either past or current), to\nsubmit for assessment, some or all of the other student or students’ work as your\nown work\n\nsharing without permission of the Unit Convenor, Swinburne resources or other\nmaterial related to assessment to an entity or document repository site\n\ncreating, intentionally modifying or inventing information that is intended to be\nsubmitted as part of an assessment item\n\nusing the whole or part of a computer program written by another person as your\nown without appropriate acknowledgement\n\npoorly paraphrasing somebody else’s work\n\nusing a musical composition or audio, visual, graphic and photographic work created\nby another person without acknowledgment\n\nenabling others to cheat, including letting another student copy your work or by\ngiving access to a draft or completed assignment\n\nletting someone or something else impersonate you, or you impersonate someone else\nin an invigilated or non-invigilated assessment item\n\naccessing, obtaining and/or providing to others unauthorised materials relating to an\ninvigilated or non-invigilated assessment item.",
-          "element_ids": [
-            "txt_000069"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 11,
-          "bbox": [
-            71.96023559570312,
-            590.4609985351562,
-            480.3462219238281,
-            632.1041259765625
-          ],
-          "text": "The penalties for academic misconduct can be severe, ranging from a zero grade for an\nassessment task through to exclusion from Swinburne. For further details, see\nhttps://www.swinburne.edu.au/student-login/academic-integrity/",
-          "element_ids": [
-            "txt_000070"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 11,
-          "bbox": [
-            72.0,
-            644.0130615234375,
-            164.3955841064453,
-            658.9458618164062
-          ],
-          "text": "Student support",
-          "element_ids": [
-            "txt_000071"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 11,
-          "bbox": [
-            72.0,
-            665.4983520507812,
-            508.0513610839844,
-            721.119384765625
-          ],
-          "text": "Swinburne offers a range of services and resources to help you complete your studies\nsuccessfully. Your Unit Convenor or studentHQ can provide information about the study\nsupport and other services available for Swinburne students. For further information, see the\nCurrent students web page.",
-          "element_ids": [
-            "txt_000072"
-          ]
-        }
-      ]
+      "groups": []
     },
     {
       "page_num": 12,
@@ -2499,204 +1785,7 @@
           "source_id": "txt_000086"
         }
       ],
-      "groups": [
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.0,
-            72.03306579589844,
-            191.9729461669922,
-            86.96586608886719
-          ],
-          "text": "Special consideration",
-          "element_ids": [
-            "txt_000073"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            71.99998474121094,
-            93.51836395263672,
-            498.2569885253906,
-            135.10137939453125
-          ],
-          "text": "If your studies have been adversely affected due to serious and unavoidable circumstances\noutside of your control (e.g. severe illness or unavoidable obligation), you may be able to\napply for special consideration (SPC).",
-          "element_ids": [
-            "txt_000074"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            71.99998474121094,
-            149.4901123046875,
-            507.84283447265625,
-            205.12554931640625
-          ],
-          "text": "Applications for Special Consideration are submitted via the SPC online tool normally no later\nthan 5.00pm on the third working day after the submission/sitting date for the relevant\nassessment component. See https://www.swinburne.edu.au/life-at-swinburne/student-\nsupport-services/special-consideration-assistance/",
-          "element_ids": [
-            "txt_000075"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.0,
-            219.516357421875,
-            508.7926330566406,
-            261.099365234375
-          ],
-          "text": "Note: Submitting fraudulent (fake or altered) medical certificates is considered misconduct and can\nlead to serious penalties from Swinburne. In addition, your doctor may report fraudulent medical\ncertificates as a prosecutable offence under the Victorian Crimes Act.",
-          "element_ids": [
-            "txt_000076"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.0,
-            273.032958984375,
-            197.42784118652344,
-            287.9657287597656
-          ],
-          "text": "AccessAbility Services",
-          "element_ids": [
-            "txt_000077"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.0,
-            294.4583740234375,
-            505.9001159667969,
-            350.07940673828125
-          ],
-          "text": "If you are a student with a disability, medical or mental health condition or you have\nsignificant carer responsibilities, you may require reasonable adjustments to fully access and\nparticipate in education. Swinburne's AccessAbility Services can develop an Education Access\nPlan (EAP) that includes the services and reasonable adjustments that you need.",
-          "element_ids": [
-            "txt_000078"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.01004028320312,
-            364.4681396484375,
-            505.9412841796875,
-            406.11126708984375
-          ],
-          "text": "It is recommended that you register with AccessAbility Services when you first commence\nyour course but you can contact the service at any time during your studies to find out about\nreasonable adjustments. Contact Accessibility Services to discuss further.",
-          "element_ids": [
-            "txt_000079"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.0,
-            417.9930419921875,
-            165.7098846435547,
-            432.92584228515625
-          ],
-          "text": "Review of marks",
-          "element_ids": [
-            "txt_000080"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.0,
-            439.47833251953125,
-            511.0684814453125,
-            481.06134033203125
-          ],
-          "text": "An independent marker reviews all fail grades for major assessment tasks. In addition, a\nreview of assessment is undertaken if your final result is between 45 and 49 or within 2 marks\nof any grade threshold.",
-          "element_ids": [
-            "txt_000081"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.0,
-            495.4500732421875,
-            508.74176025390625,
-            579.099365234375
-          ],
-          "text": "You can ask the Unit Convenor to check the result for an assessment item or your final result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit\nConvenor can discuss the marking criteria with you and check the aggregate marks of\nassessment components to identify if an error has been made. This is known as local\nresolution. If you are dissatisfied with the outcome of the local resolution, you can lodge a\nformal complaint.",
-          "element_ids": [
-            "txt_000082"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.0,
-            590.9730834960938,
-            285.440185546875,
-            605.9058837890625
-          ],
-          "text": "Feedback, complaints and suggestions",
-          "element_ids": [
-            "txt_000083"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.0,
-            612.4583129882812,
-            498.82879638671875,
-            654.0413208007812
-          ],
-          "text": "In the first instance, discuss any issues with your Unit Convenor. If your concerns are not\nresolved or you would prefer not to deal with your Unit Convenor, then you can complete a\nfeedback form. See https://www.swinburne.edu.au/corporate/feedback/",
-          "element_ids": [
-            "txt_000084"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            72.0,
-            665.9729614257812,
-            126.6847915649414,
-            680.90576171875
-          ],
-          "text": "Advocacy",
-          "element_ids": [
-            "txt_000085"
-          ]
-        },
-        {
-          "type": "text_group",
-          "page_num": 12,
-          "bbox": [
-            71.989990234375,
-            687.3983764648438,
-            507.2838439941406,
-            757.057373046875
-          ],
-          "text": "If you require assistance with any academic issues, University statutes, regulations, policies\nand procedures, you are advised to seek advice from an Independent Advocacy Officer at the\nSwinburne Student Association. Talking to an Advocacy Officer is free, independent and\nconfidential. For more information and booking an appointment, please see\nhttps://www.swinburne.edu.au/current-students/student-services-support/advocacy/",
-          "element_ids": [
-            "txt_000086"
-          ]
-        }
-      ]
+      "groups": []
     }
   ],
   "page_content": {
@@ -2732,52 +1821,52 @@
       ],
       "rows": [
         [
-          "",
+          null,
           "Unit Code(s)",
           null,
           null,
           null,
-          "",
+          null,
           "SWE30003"
         ],
         [
-          "",
+          null,
           "Unit Title",
           null,
           null,
           null,
-          "",
+          null,
           "Software Architectures and Design"
         ],
         [
-          "",
+          null,
           "Duration",
           null,
           null,
           null,
-          "",
+          null,
           "One semester or 12 weeks"
         ],
         [
-          "",
+          null,
           "Total Contact Hours",
           null,
           null,
           null,
-          "",
+          null,
           "36 hours"
         ],
         [
-          "",
+          null,
           "Requisites:",
           null,
           null,
           null,
-          "",
-          "COS20007 Object Oriented Programming\nAND\n150 Credit Points"
+          null,
+          "COS20007 Object Oriented Programming AND 150 Credit Points"
         ],
         [
-          "",
+          null,
           null,
           null,
           "Pre-requisites",
@@ -2786,21 +1875,21 @@
           null
         ],
         [
-          "",
-          "",
-          "",
-          "",
+          null,
+          null,
+          null,
+          null,
           "Co-requisites",
-          "",
+          null,
           null
         ],
         [
-          "",
           null,
           null,
-          "",
+          null,
+          null,
           "Concurrent pre-",
-          "",
+          null,
           null
         ],
         [
@@ -2813,48 +1902,48 @@
           null
         ],
         [
-          "",
-          "",
-          "",
-          "",
+          null,
+          null,
+          null,
+          null,
           "Anti-requisites",
-          "",
+          null,
           null
         ],
         [
-          "",
-          "",
-          "",
-          "",
+          null,
+          null,
+          null,
+          null,
           "Assumed knowledge",
-          "",
+          null,
           null
         ],
         [
-          "",
+          null,
           "Credit Points",
           null,
           null,
           null,
-          "",
+          null,
           "12.5"
         ],
         [
-          "",
+          null,
           "Campus/Location",
           null,
           null,
           null,
-          "",
+          null,
           "Hanoi - HCM - Danang"
         ],
         [
-          "",
+          null,
           "Mode of Delivery",
           null,
           null,
           null,
-          "",
+          null,
           "Lectures and Tutorials"
         ],
         [
@@ -2864,7 +1953,7 @@
           null,
           null,
           null,
-          "Weekly questions and answers submissions, three\ngroup-based assignments, and final assessment (test\n/ exam).\nAs the minimum requirements of assessment to pass\nthe unit and meet all Unit Learning Outcomes to a\nminimum standard, a student must achieve: (i) an\naggregate mark of 50% or more, and (ii) at least 40%\nin the final assessment test, and (iii) at least 40% of\nthe possible marks for the weekly questions and\nanswers. Students who do not successfully achieve\nhurdle requirements (ii) and (iii) will receive a total\nmark for the unit of at most 45%."
+          "Weekly questions and answers submissions, three group-based assignments, and final assessment (test / exam). As the minimum requirements of assessment to pass the unit and meet all Unit Learning Outcomes to a minimum standard, a student must achieve: (i) an aggregate mark of 50% or more, and (ii) at least 40% in the final assessment test, and (iii) at least 40% of the possible marks for the weekly questions and answers. Students who do not successfully achieve hurdle requirements (ii) and (iii) will receive a total mark for the unit of at most 45%."
         ]
       ]
     },
@@ -2884,7 +1973,7 @@
           "Given a set of user goals and priorities, identify, formulate and analyse the"
         ],
         [
-          "",
+          null,
           "requirements and constraints of a software system under consideration (K3, K6, S1,"
         ],
         [
@@ -2896,7 +1985,7 @@
           "Identify, construct and justify design abstractions at suitable levels for given user"
         ],
         [
-          "",
+          null,
           "goals and system constraints (K3, K6, S1, S2, S3, A4, A6)"
         ],
         [
@@ -2904,7 +1993,7 @@
           "Analyse a given system design in terms of the common design patterns used, and"
         ],
         [
-          "",
+          null,
           "its benefits, limitations and appropriateness for the given user goals and priorities"
         ],
         [
@@ -2916,7 +2005,7 @@
           "Given a system’s specification, formulate and document architectural decisions in"
         ],
         [
-          "",
+          null,
           "terms of common patterns, and analyse the benefits and limitations of these"
         ],
         [
@@ -2928,7 +2017,7 @@
           "Record and describe their design decisions and structures using a contemporary"
         ],
         [
-          "",
+          null,
           "modelling language (K3, S1, S3, A4, A5)"
         ]
       ]
@@ -2949,7 +2038,7 @@
           null
         ],
         [
-          "",
+          null,
           " User goals"
         ],
         [
@@ -2986,7 +2075,7 @@
           null
         ],
         [
-          "",
+          null,
           " Abstractions in software"
         ],
         [
@@ -3023,22 +2112,22 @@
       ],
       "rows": [
         [
-          "",
+          null,
           "Name",
-          "",
-          "",
+          null,
+          null,
           "Role",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           "Email",
-          "",
-          "",
+          null,
+          null,
           "Consultation Times",
-          ""
+          null
         ],
         [
           "Mr. Duc Le",
@@ -3129,9 +2218,9 @@
           "Category",
           "Activity",
           "Total Hours",
-          "",
+          null,
           "Hours per",
-          "",
+          null,
           "Teaching Period Weeks"
         ],
         [
@@ -3163,7 +2252,7 @@
         ],
         [
           "Online",
-          "Directed Online\nLearning and\nIndependent Learning",
+          "Directed Online Learning and Independent Learning",
           "24 hours",
           "2 hours",
           null,
@@ -3198,7 +2287,7 @@
           null
         ],
         [
-          "Unspecified\nActivities",
+          "Unspecified Activities",
           "Independent Learning",
           "90 hours",
           "7.5 hour",
@@ -3221,12 +2310,12 @@
       "rows": [
         [
           "Week",
-          "",
+          null,
           "Week",
           "Teaching and Learning Activity",
-          "",
+          null,
           "Student Task or",
-          ""
+          null
         ],
         [
           null,
@@ -3241,8 +2330,8 @@
           "1",
           "May 11",
           null,
-          "Lecture: Introduction, Issues in Software Design\nTutorial: Introduction and Group Formation",
-          "Assignment Group\nFormation",
+          "Lecture: Introduction, Issues in Software Design Tutorial: Introduction and Group Formation",
+          "Assignment Group Formation",
           null,
           null
         ],
@@ -3250,8 +2339,8 @@
           "2",
           "May 18",
           null,
-          "Lecture: Goal-Design Scale, User Tasks\nTutorial: Software Design Issues",
-          "Assignment Group\nFormation due",
+          "Lecture: Goal-Design Scale, User Tasks Tutorial: Software Design Issues",
+          "Assignment Group Formation due",
           null,
           null
         ],
@@ -3259,8 +2348,8 @@
           "3",
           "May 25",
           null,
-          "Lecture: Quality Attributes, Requirements\nValidation\nTutorial: User Tasks",
-          "",
+          "Lecture: Quality Attributes, Requirements Validation Tutorial: User Tasks",
+          null,
           null,
           null
         ]
@@ -3280,68 +2369,62 @@
         [
           "4",
           "Jun 01",
-          "Lecture: Domain Analysis, Domain Modelling,\nSoftware Abstractions\nTutorial: Quality Attributes; Assignment 1 Q&A",
-          ""
+          "Lecture: Domain Analysis, Domain Modelling, Software Abstractions Tutorial: Quality Attributes; Assignment 1 Q&A",
+          null
         ],
         [
           "5",
           "Jun 08",
-          "Lecture: Responsibility-Driven Design / Object\nOriented Design\nTutorial: Requirements Analysis Exercise",
-          ""
+          "Lecture: Responsibility-Driven Design / Object Oriented Design Tutorial: Requirements Analysis Exercise",
+          null
         ],
         [
           "6",
           "Jun 15",
-          "Lecture: Detailed Object Design\nTutorial: Object Oriented Design",
-          "Assignment 1\n(Requirements\nSpecification) due"
-        ],
-        [
-          "",
-          null,
-          null,
-          null
+          "Lecture: Detailed Object Design Tutorial: Object Oriented Design",
+          "Assignment 1 (Requirements Specification) due"
         ],
         [
           "7",
           "Jun 22",
-          "Lecture: Case Study in Object Design\nTutorial: OO Design Exercises (II part 1);\nAssignment 2 Q&A",
-          ""
+          "Lecture: Case Study in Object Design Tutorial: OO Design Exercises (II part 1); Assignment 2 Q&A",
+          null
         ],
         [
           "8",
           "Jun 29",
-          "Lecture: Design Patterns\nTutorial: Object-Oriented Design (II part 2),\nAssignment 1 feedback",
-          ""
+          "Lecture: Design Patterns Tutorial: Object-Oriented Design (II part 2), Assignment 1 feedback",
+          null
         ],
         [
           "9",
           "July 13",
-          "Lecture: Software Architectures, Architectural\nStyles\nTutorial: Software Architecture and Patterns",
-          "Assignment 2 (Object\nDesign I) due"
+          "Lecture: Software Architectures, Architectural Styles Tutorial: Software Architecture and Patterns",
+          "Assignment 2 (Object Design I) due"
         ],
         [
           "10",
           "July 20",
-          "Lecture: Case Study in Architectural Design\nTutorial: Architectural Design (I); Assignment 3\nQ&A",
-          ""
+          "Lecture: Case Study in Architectural Design Tutorial: Architectural Design (I); Assignment 3 Q&A",
+          null
         ],
         [
           "11",
           "July 27",
-          "Lecture: Documenting Designs\nTutorial: Architectural Design (II); Assignment 2\nFeedback",
-          ""
+          "Lecture: Documenting Designs Tutorial: Architectural Design (II); Assignment 2 Feedback",
+          null
         ],
         [
           "12",
           "Aug 03",
-          "Lecture: Summary of Main Concepts,\nWrapping Up\nTutorial: Architecture Tactics, Documentation,\nand Evaluation; Q&A",
-          "Assignment 3 (Object\nDesign II) due"
+          "Lecture: Summary of Main Concepts, Wrapping Up Tutorial: Architecture Tactics, Documentation, and Evaluation; Q&A",
+          "Assignment 3 (Object Design II) due"
         ],
         [
           "13",
-          "",
-          "",
-          "Final Assessment (in-\nperson, Invigilated)"
+          null,
+          null,
+          "Final Assessment (in- person, Invigilated)"
         ]
       ]
     },
@@ -3358,12 +2441,12 @@
       "rows": [
         [
           "Tasks and Details",
-          "Individu\nal or\nGroup",
+          "Individu al or Group",
           "Weighting",
-          "",
+          null,
           "Unit Learning",
-          "",
-          "Assessment\nDue Date"
+          null,
+          "Assessment Due Date"
         ],
         [
           null,
@@ -3451,7 +2534,7 @@
           "Individual",
           "40%",
           "All",
-          "Formal\nAssessment\nPeriod"
+          "Formal Assessment Period"
         ]
       ]
     },
@@ -3471,20 +2554,20 @@
           "Details"
         ],
         [
-          "b) Use of generative AI\n(genAI) in this unit",
-          "The assessments in this unit should be completed\nentirely WITHOUT genAI assistance.\ngenAI may be used for self-study and research\npurposes. However, be warned that answers from\ngenAI may not be correct or accurate."
+          "b) Use of generative AI (genAI) in this unit",
+          "The assessments in this unit should be completed entirely WITHOUT genAI assistance. genAI may be used for self-study and research purposes. However, be warned that answers from genAI may not be correct or accurate."
         ],
         [
           "c) Hurdle requirements",
-          "As the minimum requirements of assessment to pass\nthis unit and meet all ULOs to a minimum standard, a\nstudent must have achieved:\n(i) an aggregate mark for the unit of 50% or\nmore,\n(ii) at least 40% in the final assessment, and\n(iii) at least 40% of the available marks for the\nWeekly Questions and Answers submissions.\nStudents who do not successfully achieve hurdle\nrequirements (ii) and (iii) of the above requirements,\nwill receive a total mark for the unit of at most 45%."
+          "As the minimum requirements of assessment to pass this unit and meet all ULOs to a minimum standard, a student must have achieved: (i) an aggregate mark for the unit of 50% or more, (ii) at least 40% in the final assessment, and (iii) at least 40% of the available marks for the Weekly Questions and Answers submissions. Students who do not successfully achieve hurdle requirements (ii) and (iii) of the above requirements, will receive a total mark for the unit of at most 45%."
         ],
         [
           "d) Final assessment period",
-          "If the unit you are enrolled in has a final assessment\n(including invigilated exams), you will be expected to be\navailable for the entire final assessment period including\nany Special Exam period.\nFor this unit, a final assessment is to be\nconducted as an in-person invigilated test/exam\nduring the final assessment/exam period."
+          "If the unit you are enrolled in has a final assessment (including invigilated exams), you will be expected to be available for the entire final assessment period including any Special Exam period. For this unit, a final assessment is to be conducted as an in-person invigilated test/exam during the final assessment/exam period."
         ],
         [
-          "e) Submission\nrequirements",
-          "Assignments and other assessments are generally\nsubmitted online through the Canvas assessment\nsubmission system which integrates with the Turnitin .\nPlease ensure you keep a copy of all assessments that\nare submitted.\nAn Assessment Cover Sheet must be submitted with\nyour assignment. The standard Assessment Cover Sheet\nis available from the Submitting work webpage or\nwww.swinburne.edu.au/studentforms/"
+          "e) Submission requirements",
+          "Assignments and other assessments are generally submitted online through the Canvas assessment submission system which integrates with the Turnitin . Please ensure you keep a copy of all assessments that are submitted. An Assessment Cover Sheet must be submitted with your assignment. The standard Assessment Cover Sheet is available from the Submitting work webpage or www.swinburne.edu.au/studentforms/"
         ]
       ]
     },
@@ -3500,20 +2583,20 @@
       ],
       "rows": [
         [
-          "",
-          "The exact deliverables for each assignment will be\noutlined in the corresponding assignment specification.\nIn general, the deliverables are to be submitted through\nCanvas or other means to be specified in the\nassignment specifications.\nThe Weekly Question and Answer submission will be\nin electronic form, and submitted through Canvas.\nFor every group assignment, a contribution sheet must\nbe signed by all group members, and submitted with\nthe assignment. Group assignments submitted\nwithout the signed contribution list may not be\nmarked and may not receive any feedback. Individual\nmembers and the group must include a statement of\nevidence to substantiate their individual contributions\nand collaborations, as part of the contribution sheet."
+          null,
+          "The exact deliverables for each assignment will be outlined in the corresponding assignment specification. In general, the deliverables are to be submitted through Canvas or other means to be specified in the assignment specifications. The Weekly Question and Answer submission will be in electronic form, and submitted through Canvas. For every group assignment, a contribution sheet must be signed by all group members, and submitted with the assignment. Group assignments submitted without the signed contribution list may not be marked and may not receive any feedback. Individual members and the group must include a statement of evidence to substantiate their individual contributions and collaborations, as part of the contribution sheet."
         ],
         [
-          "f) Extensions and late\nsubmissions",
-          "Late Submissions - Unless an extension has been\napproved, late submissions will result in a penalty. You\nwill be penalised 10% of your achieved mark for each\nworking day the task is late, up to a maximum of\n5 working days. After 5 working days, a zero result will\nbe recorded.\nExtensions for ongoing assessments are available for\nmedical reasons (doctors certificate must be provided).\nStudents must apply for an extension by emailing the\nUnit convenor at least 48 hours prior to the due date\n(unless in emergency situations) and also must supply\nany supporting documentation if requested.\nIn general, no late submission will be granted for\nthe Weekly Question and Answer submissions."
+          "f) Extensions and late submissions",
+          "Late Submissions - Unless an extension has been approved, late submissions will result in a penalty. You will be penalised 10% of your achieved mark for each working day the task is late, up to a maximum of 5 working days. After 5 working days, a zero result will be recorded. Extensions for ongoing assessments are available for medical reasons (doctors certificate must be provided). Students must apply for an extension by emailing the Unit convenor at least 48 hours prior to the due date (unless in emergency situations) and also must supply any supporting documentation if requested. In general, no late submission will be granted for the Weekly Question and Answer submissions."
         ],
         [
           "g) Referencing",
-          "To avoid breaching academic integrity, you are required\nto provide references whenever you include information\nfrom other sources in your work and acknowledge when\nyou have used Artificial Intelligence (AI) tools (such as\nChatGPT). Further details regarding academic integrity\nare available in Section C of this document.\nReferencing conventions required for this unit are:\nHelpful information on referencing can be found at\nhttp://www.swinburne.edu.au/library/referencing/"
+          "To avoid breaching academic integrity, you are required to provide references whenever you include information from other sources in your work and acknowledge when you have used Artificial Intelligence (AI) tools (such as ChatGPT). Further details regarding academic integrity are available in Section C of this document. Referencing conventions required for this unit are: Helpful information on referencing can be found at http://www.swinburne.edu.au/library/referencing/"
         ],
         [
           "h) Groupwork guidelines",
-          "A group assignment is the collective responsibility of the\nentire group, and if one member is temporarily unable\nto contribute, the group should be able to reallocate\nresponsibilities to keep to schedule. In the event of\nlonger-term illness or other serious problems involving a\nmember of group, it is the responsibility of the other"
+          "A group assignment is the collective responsibility of the entire group, and if one member is temporarily unable to contribute, the group should be able to reallocate responsibilities to keep to schedule. In the event of longer-term illness or other serious problems involving a member of group, it is the responsibility of the other"
         ]
       ]
     },
@@ -3529,8 +2612,8 @@
       ],
       "rows": [
         [
-          "",
-          "members to notify immediately the Unit Convenor and\nrelevant tutor.\nGroup submissions must be submitted with an\nAssignment Cover Sheet, signed by all members of the\ngroup.\nAll group members must be satisfied that the work has\nbeen correctly submitted. Any penalties for late\nsubmission will generally apply to all group members,\nnot just the person who submitted."
+          null,
+          "members to notify immediately the Unit Convenor and relevant tutor. Group submissions must be submitted with an Assignment Cover Sheet, signed by all members of the group. All group members must be satisfied that the work has been correctly submitted. Any penalties for late submission will generally apply to all group members, not just the person who submitted."
         ]
       ]
     }

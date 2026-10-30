@@ -3,12 +3,13 @@ import pymupdf
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from normalize import parse_xml_metadata, find_xml_text, extract_page0_metadata, parse_xref, page0_xref_build, extracts_pdf_metadata, page_xref_build
-from parse import parse_text_obj, extract_tables, remove_key_recursive, inspect_pdf
+from parse import parse_text_obj, extract_tables, remove_key_recursive, inspect_pdf, create_text_groups, normalize_tables
 from pprint import pprint
 
 def make_document_metadata(doc, source, doc_id):
 
     header = {
+        "version": "1.0",
         "doc_id": doc_id,
         "source": str(source),
         "title": None,
@@ -119,7 +120,10 @@ def iterate_dir(source_dir, metadata_dir):
             metadata["tables"] = tables
             parse_text_obj(doc,metadata)
             remove_key_recursive(metadata["pages"], "lines")
+            for page in metadata["pages"]:
+                page["groups"] = create_text_groups(page["elements"])
 
+            metadata["tables"] = normalize_tables(metadata["tables"])
             # compute the file directory    
             output_path = metadata_dir / f"{file.stem}.json"
 
