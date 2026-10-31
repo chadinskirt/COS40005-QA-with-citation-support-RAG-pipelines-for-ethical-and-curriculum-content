@@ -1,5 +1,6 @@
 {
   "pdf_header": {
+    "version": "1.1",
     "doc_id": 3,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS30018_Unit Outline_May 2026.pdf",
     "title": "COS30018_Unit Outline_May 2026.docx",
@@ -810,7 +811,28 @@
           "source_id": "txt_000057"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000052",
+            "txt_000053"
+          ],
+          "text": "Course Notes:\nLecture Notes, 2025 (Available from the subject Canvas site during the teaching\nperiod)"
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000054",
+            "txt_000055",
+            "txt_000056",
+            "txt_000057"
+          ],
+          "text": "Text Book:\nNegnevitsky, M., 2005. Artificial intelligence: a guide to intelligent systems.\nPearson education, 3rd edition.\nWooldridge, M. An Introduction to Multi-Agent Systems. John Wiley & Sons, 2002\nRussell, S. & Norvig, P. Artificial Intelligence: A Modern Intelligence. Prentice Hall,\n3rd edition, 2009."
+        }
+      ]
     },
     {
       "page_num": 10,

@@ -486,14 +486,14 @@ def create_text_groups(blocks):
     for block in blocks:
         role = block.get("role")
 
-        if role == "section_heading":
+        if role == "section_heading" or role == "possible_heading":
 
             if current_group:
                 groups.append(current_group)
 
             current_group = [block]
 
-        elif role == "body":
+        elif role == "body" or role == "list_item":
 
             if current_group:
                 current_group.append(block)

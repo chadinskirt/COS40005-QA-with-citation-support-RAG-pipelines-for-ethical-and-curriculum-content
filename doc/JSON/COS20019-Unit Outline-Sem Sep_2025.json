@@ -1,5 +1,6 @@
 {
   "pdf_header": {
+    "version": "1.1",
     "doc_id": 2,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS20019-Unit Outline-Sem Sep_2025.pdf",
     "title": "COS20019-Unit Outline-Sem Sep_2025",
@@ -336,7 +337,39 @@
           "source_id": "txt_000025"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000016",
+            "txt_000017"
+          ],
+          "text": "Aims\nStudents will use a cloud platform to create well-architected deployments of distributed applications that\nare secure, scalable, reliable and cost optimised."
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000018",
+            "txt_000019",
+            "txt_000020"
+          ],
+          "text": "Unit Learning Outcomes\nStudents who successfully complete this unit can:\n1. Describe the features and value of Cloud Computing\n2. Create and manage cloud services using a cloud management platform 3. Design and implement a\ncloud-based web site that is reliable, scalable, secure and cost effective\n4. Compare and contrast architectural solutions for common Web applications"
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000021",
+            "txt_000022",
+            "txt_000023",
+            "txt_000024",
+            "txt_000025"
+          ],
+          "text": "Graduate Attributes\nThe Swinburne Graduate Attributes describe the capability of our graduates to use knowledge, skills and\nbehaviours to contribute to society meaningfully and positively. They include professional, self-directed\nlearning and future-ready skills.\nThis unit contributes to the development of the following Swinburne Graduate Attributes: ▪ GA1\nCommunication - Verbal communication"
+        }
+      ]
     },
     {
       "page_num": 3,
@@ -488,12 +521,24 @@
           "id": "grp_000000",
           "type": "text_group",
           "element_ids": [
+            "txt_000027",
+            "txt_000028",
+            "txt_000029",
+            "txt_000030",
+            "txt_000031"
+          ],
+          "text": "Content\n- Cloud Computing features, models of deployment and platforms\n- Cloud services for computation, data storage, security and networking ▪ Using a cloud management\nconsole to configure cloud services on a distributed cloud platform\n- Setting up virtual servers and files systems on a cloud platform\n- Creating a secure network of services in a Virtual Private Cloud\n- User identity management and access control\n- Data storage and database services in the cloud\n- Automated monitoring, scaling and load balancing of services\n- Infrastructure setup automation\n- Web content distribution and caching\n- Server-less cloud computing\n- Architectures for highly available solutions\nAWS Academy\nThis unit uses materials and infrastructure provided by Amazon Web Services (AWS) and partners. It\ncovers knowledge required for AWS Cloud Practitioner and Solutions Architect (Associate)\ncertifications. Swinburne is accredited to run this unit as part of the AWS Academy Program.\nPassing the Certification exams may require additional knowledge of AWS services for which additional\nstudy and exam preparation is recommended.\nStudents may be eligible for AWS certification discount vouchers. For further details, please refer to\nprovided instructions on Swinburne Canvas page.ed."
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
             "txt_000032"
           ],
           "text": "PART B: Your Unit in more detail"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000002",
           "type": "text_group",
           "element_ids": [
             "txt_000033",
@@ -653,9 +698,11 @@
           "type": "text_group",
           "element_ids": [
             "txt_000042",
+            "txt_000043",
+            "txt_000045",
             "txt_000046"
           ],
-          "text": "Assessment\nWeekly labs and practical deployments MUST be demonstrated and assessed during in person\nlab tutorials to receive marks."
+          "text": "Assessment\na) Assessment overview\nI. Lab submissions:\nWeekly labs and practical deployments MUST be demonstrated and assessed during in person\nlab tutorials to receive marks."
         }
       ]
     },
@@ -765,7 +812,26 @@
           "source_id": "txt_000053"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000050",
+            "txt_000051"
+          ],
+          "text": "II. Multiple Choice Questions Test 1 (MCQ Test 1):\nResit for this assessment is available only to students who have achieved less than 40% in their\nfirst attempt AND have NOT submitted assignment 1b.\nAnswer keys will not be published to students after the test."
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000052",
+            "txt_000053"
+          ],
+          "text": "III. Multiple Choice Questions Test 2 (MCQ Test 2):\nNo resit for this assessment.\nAnswer keys will not be published to students."
+        }
+      ]
     },
     {
       "page_num": 8,
@@ -1045,16 +1111,48 @@
           "id": "grp_000000",
           "type": "text_group",
           "element_ids": [
-            "txt_000063",
+            "txt_000063"
+          ],
+          "text": "PART C: FURTHER INFORMATION"
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000064",
             "txt_000065",
             "txt_000066",
             "txt_000067",
             "txt_000069",
-            "txt_000070",
-            "txt_000072",
+            "txt_000070"
+          ],
+          "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of others;\nand appropriately use University resources, information, equipment and facilities. All students are expected to\ncontribute to creating a work and study environment that is safe and free from bullying, violence, discrimination,\nsexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a quality\nlearning experience. The Charter also sets out what is expected of students with regards to your studies and the way\nyou conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by these,\nincluding the Student Academic Misconduct Regulations, Student General Misconduct Regulations and the People,\nCulture and Integrity Policy. Any student found to be in breach of these may be subject to disciplinary processes.\nExamples of expected behaviours are:\n- conducting yourself in teaching areas in a manner that is professional and not disruptive to others\n- following specific safety procedures in Swinburne laboratories, such as wearing appropriate footwear and\nsafety equipment, not acting in a manner which is dangerous or disruptive (e.g. playing computer games),\nand not bringing in food or drink\n- following emergency and evacuation procedures and following instructions given by staff/wardens in an\nemergency response."
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000071",
+            "txt_000072"
+          ],
+          "text": "Canvas\nYou should regularly log on to the Swinburne learning management system, Canvas. You can access Canvas via the\nStudent login webpage or https://swinburne.instructure.com/ Canvas is updated regularly with important unit\ninformation and communications."
+        },
+        {
+          "id": "grp_000003",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000073",
             "txt_000074"
           ],
-          "text": "PART C: FURTHER INFORMATION\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of others;\nand appropriately use University resources, information, equipment and facilities. All students are expected to\ncontribute to creating a work and study environment that is safe and free from bullying, violence, discrimination,\nsexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a quality\nlearning experience. The Charter also sets out what is expected of students with regards to your studies and the way\nyou conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by these,\nincluding the Student Academic Misconduct Regulations, Student General Misconduct Regulations and the People,\nCulture and Integrity Policy. Any student found to be in breach of these may be subject to disciplinary processes.\nExamples of expected behaviours are:\n- conducting yourself in teaching areas in a manner that is professional and not disruptive to others\n- following specific safety procedures in Swinburne laboratories, such as wearing appropriate footwear and\nsafety equipment, not acting in a manner which is dangerous or disruptive (e.g. playing computer games),\nand not bringing in food or drink\n- following emergency and evacuation procedures and following instructions given by staff/wardens in an\nemergency response.\nYou should regularly log on to the Swinburne learning management system, Canvas. You can access Canvas via the\nStudent login webpage or https://swinburne.instructure.com/ Canvas is updated regularly with important unit\ninformation and communications.\nAll communication will be via your Swinburne email address. If you access your email through a provider other than\nSwinburne, then it is your responsibility to ensure that your Swinburne email is redirected to your private email\naddress."
+          "text": "Communication\nAll communication will be via your Swinburne email address. If you access your email through a provider other than\nSwinburne, then it is your responsibility to ensure that your Swinburne email is redirected to your private email\naddress."
+        },
+        {
+          "id": "grp_000004",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000075"
+          ],
+          "text": "Academic Integrity"
         }
       ]
     },
@@ -1216,7 +1314,28 @@
           "source_id": "txt_000086"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000081",
+            "txt_000082"
+          ],
+          "text": "Student support\nSwinburne offers a range of services and resources to help you complete your studies successfully. Your Unit\nConvenor or studentHQ can provide information about the study support and other services available for Swinburne\nstudents. For further information, see the Current students web page."
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000083",
+            "txt_000084",
+            "txt_000085",
+            "txt_000086"
+          ],
+          "text": "Special consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances outside of your control\n(e.g. severe illness or unavoidable obligation), you may be able to apply for special consideration (SPC).\nApplications for Special Consideration are submitted via the SPC online tool normally no later than 5.00pm on the\nthird working day after the submission/sitting date for the relevant assessment component. See\nhttps://www.swinburne.edu.au/life-at-swinburne/student support-services/special-consideration-assistance/\nNote: Submitting fraudulent (fake or altered) medical certificates is considered misconduct and can lead to serious\npenalties from Swinburne. In addition, your doctor may report fraudulent medical certificates as a prosecutable"
+        }
+      ]
     },
     {
       "page_num": 11,
@@ -1363,7 +1482,37 @@
           "source_id": "txt_000096"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000089",
+            "txt_000090",
+            "txt_000091",
+            "txt_000092"
+          ],
+          "text": "Review of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a review of assessment is\nundertaken if your final result is between 45 and 49 or within 2 marks of any grade threshold.\nYou can ask the Unit Convenor to check the result for an assessment item or your final result. Your request must be\nmade in writing within 10 working days of receiving the result. The Unit Convenor can discuss the marking criteria\nwith you and check the aggregate marks of assessment components to identify if an error has been made. This is\nknown as local resolution. If you are dissatisfied with the outcome of the local resolution, you can lodge a formal\ncomplaint."
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000093",
+            "txt_000094"
+          ],
+          "text": "Feedback, complaints and suggestions\nIn the first instance, discuss any issues with your Unit Convenor. If your concerns are not resolved or you would\nprefer not to deal with your Unit Convenor, then you can complete a feedback form. See\nhttps://www.swinburne.edu.au/corporate/feedback/"
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000095",
+            "txt_000096"
+          ],
+          "text": "Advocacy\nShould you require assistance with any academic issues, University statutes, regulations, policies and\nprocedures, you are advised to seek advice from an Academic Student Support Officer at Swinburne Student\nLife.\nFor an appointment, please call 19006412 or email swin@fe.edu.vn .For more information, please see\nhttps://portal.swin.edu.vn"
+        }
+      ]
     }
   ],
   "page_content": {

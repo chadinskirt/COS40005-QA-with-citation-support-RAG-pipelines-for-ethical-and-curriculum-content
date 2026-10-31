@@ -1,5 +1,6 @@
 {
   "pdf_header": {
+    "version": "1.1",
     "doc_id": 0,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS10009_UnitOutline_Sep2024_HCMC_V1.pdf",
     "title": "COS10009_UnitOutline_Sep2024_HCMC_V1",
@@ -418,9 +419,10 @@
           "type": "text_group",
           "element_ids": [
             "txt_000011",
-            "txt_000012"
+            "txt_000012",
+            "txt_000013"
           ],
-          "text": "Unit Learning Outcomes\nStudents who successfully complete this Unit should be able to:"
+          "text": "Unit Learning Outcomes\nStudents who successfully complete this Unit should be able to:\n1. Apply code reading and debugging techniques to analyze, interpret, and describe the\npurpose of program code, and locate within this code errors in syntax, logic, style and/or\ngood practice.\n2. Describe the principles of structured programming and relate these to the syntactical\nelements of the programming language used and the way programs are developed.\n3. Construct small programs, using the programming languages covered, that include the\nuse of arrays, functions and procedures, parameter passing with call by value and call\nby reference, custom data types, and pointers.\n4. Use modular and functional decomposition to break problems down functionally,\nrepresent the resulting structures diagrammatically, and implement these structures in\ncode as functions and procedures."
         },
         {
           "id": "grp_000003",
@@ -848,7 +850,22 @@
           "source_id": "txt_000047"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000041",
+            "txt_000042",
+            "txt_000043",
+            "txt_000044",
+            "txt_000045",
+            "txt_000046",
+            "txt_000047"
+          ],
+          "text": "The aim of the portfolio is that you provide sufficient evidence that you have\nachieved the grade you are aiming for. If you work with other students, or\nget substantial help at the Programming Help Desk, this MUST be\nacknowledged clearly in comments at the top of any code submitted. If your\nportfolio contains work that is not unique (or which you cannot explain) or if\nyour progress is not consistent throughout semester, you may be required\nto provide additional evidence, for example, you may need to complete\nadditional tasks or to attend an interview during which you will be expected\nto further demonstrate your knowledge.\nYou are expected to attempt every iteration of the Semester Tests (Test 1, Test 2, and Test 1\nRedo and Test 2 Resit – if required) until you demonstrate sufficient knowledge to pass this unit\nof study (but there is only one re-sit for each test).\nc) Examinations\nIf the unit you are enrolled in has an official examination, you will be expected to be available for\nthe entire examination period including any Special Exam period.\nd) Submission Requirements\nPortfolio tasks are submitted online via Ed.\nPlease ensure you keep a copy of all assessments that are submitted.\nThis unit uses portfolio assessment to determine your final grade. You are required to submit a\nportfolio that contains the following items:\n1. Learning Summary Report that reflects on what you have learnt, and shows how\nyour portfolio addresses the assessment criteria and unit learning outcomes."
+        }
+      ]
     },
     {
       "page_num": 6,
@@ -1073,7 +1090,23 @@
           "source_id": "txt_000064"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000056",
+            "txt_000057",
+            "txt_000058",
+            "txt_000059",
+            "txt_000060",
+            "txt_000062",
+            "txt_000063",
+            "txt_000064"
+          ],
+          "text": "f)\nReferencing\nTo avoid plagiarism, you are required to provide a reference whenever you include information\nfrom other sources in your work. Further details regarding plagiarism are available in Section C\nof this document.\nReferencing conventions required for this unit are APA\nHelpful information on referencing can be found at\nhttp://www.swinburne.edu.au/library/referencing/\nRecommended Reading Materials\nThe Library has a large collection of resource materials, both texts and current journals. Listed\nbelow are some references that will provide valuable supplementary information to this unit. It is\nalso recommended that you explore other sources to broaden your understanding.\n-\nSpeight, A 2020 Bite Sized Python. Wiley. Available online from Swinburne Library.\n-\nPine, C 2009 Learn to Program, The Pragmatic Programmer. Available online from the\nSwinburne Library.\n-\nSobkowicz, M 2015 Learn Game Programming with Ruby : Bring Your Ideas to Life with\nGosu. The Pragmatic Programmer. Available online from the Swinburne Library\n-\nRobertson, L.A 2014 Students Guide to Program Design, Newnes. Available online\nfrom the Swinburne Library.\n-\nFreider, O, Frieder, G & Grossman, D. 2013 Computer Science Programming Basics\nin Ruby, O’Reilly Media Inc. Available online from the Swinburne Library."
+        }
+      ]
     },
     {
       "page_num": 7,
@@ -1290,19 +1323,51 @@
           "id": "grp_000000",
           "type": "text_group",
           "element_ids": [
-            "txt_000065",
+            "txt_000065"
+          ],
+          "text": "PART C: FURTHER INFORMATION"
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000066",
             "txt_000067",
             "txt_000068",
             "txt_000069",
-            "txt_000070",
-            "txt_000072",
-            "txt_000074",
+            "txt_000070"
+          ],
+          "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying, violence,\ndiscrimination, sexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a quality\nlearning experience. The Charter also sets out what is expected of students with regards to your studies and\nthe way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations and\nthe People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate footwear\nand safety equipment, not acting in a manner which is dangerous or disruptive (e.g. playing computer\ngames), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens in\nan emergency response"
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000071",
+            "txt_000072"
+          ],
+          "text": "Canvas\nYou should regularly access the Swinburne learning management system, Canvas, which is available via the\nCurrent Students webpage or https://swinburne.instructure.com/ Canvas is updated regularly with important\nunit information and communications."
+        },
+        {
+          "id": "grp_000003",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000073",
+            "txt_000074"
+          ],
+          "text": "Communication\nAll communication will be via your Swinburne email address. If you access your email through a provider other\nthan Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to your private\nemail address."
+        },
+        {
+          "id": "grp_000004",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000075",
             "txt_000076",
             "txt_000077",
             "txt_000078",
             "txt_000080"
           ],
-          "text": "PART C: FURTHER INFORMATION\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying, violence,\ndiscrimination, sexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a quality\nlearning experience. The Charter also sets out what is expected of students with regards to your studies and\nthe way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations and\nthe People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate footwear\nand safety equipment, not acting in a manner which is dangerous or disruptive (e.g. playing computer\ngames), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens in\nan emergency response\nYou should regularly access the Swinburne learning management system, Canvas, which is available via the\nCurrent Students webpage or https://swinburne.instructure.com/ Canvas is updated regularly with important\nunit information and communications.\nAll communication will be via your Swinburne email address. If you access your email through a provider other\nthan Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to your private\nemail address.\nAcademic integrity is about taking responsibility for your learning and submitting work that is honestly your own.\nIt means acknowledging the ideas, contributions and work of others; referencing your sources; contributing\nfairly to group work; and completing tasks, tests and exams without cheating.\nSwinburne University uses the Turnitin system, which helps to identify inadequate citations, poor paraphrasing\nand unoriginal work in assignments that are submitted via Canvas. Your Unit Convenor will provide further\ndetails. Plagiarising, cheating and seeking an unfair advantage with regards to an exam or assessment are all\nbreaches of academic integrity and treated as academic misconduct.\nPlagiarism is submitting or presenting someone else’s work as though it is your own without full and appropriate\nacknowledgement of their ideas and work. Examples include:\n-\nusing the whole or part of computer program written by another person as your own\n-\nusing the whole or part of somebody else’s written work in an essay or other assessable work, including\nmaterial from a book, journal, newspaper article, a website or database, a set of lecture notes, current\nor past student’s work, or any other person’s work\nFor further information on any of these topics, refer to Swinburne’s\nCurrent Students web page http://www.swinburne.edu.au/student/."
+          "text": "Academic Integrity\nAcademic integrity is about taking responsibility for your learning and submitting work that is honestly your own.\nIt means acknowledging the ideas, contributions and work of others; referencing your sources; contributing\nfairly to group work; and completing tasks, tests and exams without cheating.\nSwinburne University uses the Turnitin system, which helps to identify inadequate citations, poor paraphrasing\nand unoriginal work in assignments that are submitted via Canvas. Your Unit Convenor will provide further\ndetails. Plagiarising, cheating and seeking an unfair advantage with regards to an exam or assessment are all\nbreaches of academic integrity and treated as academic misconduct.\nPlagiarism is submitting or presenting someone else’s work as though it is your own without full and appropriate\nacknowledgement of their ideas and work. Examples include:\n-\nusing the whole or part of computer program written by another person as your own\n-\nusing the whole or part of somebody else’s written work in an essay or other assessable work, including\nmaterial from a book, journal, newspaper article, a website or database, a set of lecture notes, current\nor past student’s work, or any other person’s work\nFor further information on any of these topics, refer to Swinburne’s\nCurrent Students web page http://www.swinburne.edu.au/student/."
         }
       ]
     },
@@ -1477,7 +1542,61 @@
           "source_id": "txt_000092"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000082",
+            "txt_000083"
+          ],
+          "text": "Student support\nSwinburne offers a range of services and resources to help you complete your studies successfully. Your Unit\nConvenor or studentHQ can provide information about the study support and other services available for\nSwinburne students."
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000084",
+            "txt_000085"
+          ],
+          "text": "Special consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances outside of your\ncontrol (e.g. severe illness or unavoidable obligation), you may be able to apply for special consideration (SPC).\nApplications for Special Consideration will be submitted via the SPC online tool normally no later than 5.00pm\non the third working day after the submission/sitting date for the relevant assessment component."
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000086",
+            "txt_000087"
+          ],
+          "text": "Accessibility needs\nSometimes students with a disability, a mental health or medical condition or significant carer responsibilities\nrequire reasonable adjustments to enable full access to and participation in education. Your needs can be\naddressed by Swinburne's AccessAbility Services by negotiating and distributing an 'Education Access Plan'.\nThe plan makes recommendations to University teaching and examination staff. You must notify AccessAbility\nServices of your disability or condition within one week after the commencement of your unit to allow the\nUniversity to make reasonable adjustments."
+        },
+        {
+          "id": "grp_000003",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000088",
+            "txt_000089"
+          ],
+          "text": "Review of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a review of assessment\nis undertaken if your final result is between 45 and 49 or within 2 marks of any grade threshold.\nIf you are not satisfied with the result of an assessment, you can ask the Unit Convenor to review the result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit Convenor will\nreview your result to determine if your result is appropriate. If you are dissatisfied with the outcomes\nof the review, you can lodge a formal complaint."
+        },
+        {
+          "id": "grp_000004",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000090",
+            "txt_000091"
+          ],
+          "text": "Feedback, complaints and suggestions\nIn the first instance, discuss any issues with your Unit Convenor. If you are dissatisfied with the outcome of the\ndiscussion or would prefer not to deal with your Unit Convenor, then you can complete a feedback form. See\nhttps://www.swinburne.edu.au/corporate/feedback/"
+        },
+        {
+          "id": "grp_000005",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000092"
+          ],
+          "text": "Advocacy\nShould you require assistance with any academic issues, University statutes, regulations, policies and\nprocedures, you are advised to seek advice from an Independent Advocacy Officer at Swinburne Student Life\n(previously Swinburne Student Amenities Association (SSAA).\nFor an appointment, please call +61-(0)3-9214 5445 or email advocacy@swin.edu.au\nFor more information, please see https://www.swinbume.edu.au/current-students/student-seivices-\nsupport/advocacy/"
+        }
+      ]
     }
   ],
   "page_content": {

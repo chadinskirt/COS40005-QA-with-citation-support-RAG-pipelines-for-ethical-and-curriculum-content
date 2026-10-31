@@ -1,5 +1,6 @@
 {
   "pdf_header": {
+    "version": "1.1",
     "doc_id": 8,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/TNE10006_Unit Outline_Jan_2025 V1-1.pdf",
     "title": "TNE10006_Unit_Outline",
@@ -455,9 +456,16 @@
           "type": "text_group",
           "element_ids": [
             "txt_000024",
-            "txt_000025"
+            "txt_000025",
+            "txt_000026",
+            "txt_000027",
+            "txt_000028",
+            "txt_000029",
+            "txt_000030",
+            "txt_000031",
+            "txt_000032"
           ],
-          "text": "Unit Learning Outcomes\nStudents who successfully complete this Unit should be able to:"
+          "text": "Unit Learning Outcomes\nStudents who successfully complete this Unit should be able to:\n1. Use the OSI Model to discuss network design and infrastructure (K3, S3)\n2. Design an addressing scheme to subnet a network to given specifications (K2, K3,\nS3)\n3. Describe the processes of LAN switching and how VLANs are used in a switched\nnetwork (K3)\n4. Use best practice to design secure corporate networks and deploy security to\npractical networking environments (K3, S1, S3)\n5. Describe how the Spanning Tree Protocol eliminates loops in multi-switched LANs\n(K3)\n6. Construct a simple network of PCs, switches and a router, and troubleshoot\nproblems in those networks (K3, S1, S2, S3)\n7. Generate documentation for laboratory work and assignments (A2)"
         }
       ]
     },
@@ -1102,18 +1110,36 @@
           "id": "grp_000000",
           "type": "text_group",
           "element_ids": [
-            "txt_000058",
+            "txt_000058"
+          ],
+          "text": "Assessments"
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000059",
+            "txt_000061",
             "txt_000062",
             "txt_000063",
-            "txt_000064",
+            "txt_000064"
+          ],
+          "text": "a)\nAssessment Overview\nb) Minimum requirements to pass this Unit\nTo pass this Unit, you must:\n(i)\nachieve an overall mark for the unit of 50% or more, and\n(ii) obtain at least 40% in the Final Written Assessments, and\n(iii) must pass the Final Skills Assessment.\nStudents who do not meet (i), (ii) and (iii), will score a maximum of 45% as the total mark\nfor the Unit."
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000065",
             "txt_000066",
             "txt_000067",
+            "txt_000068",
             "txt_000069",
             "txt_000070",
             "txt_000071",
             "txt_000072"
           ],
-          "text": "Assessments\nTo pass this Unit, you must:\n(i)\nachieve an overall mark for the unit of 50% or more, and\n(ii) obtain at least 40% in the Final Written Assessments, and\n(iii) must pass the Final Skills Assessment.\nStudents who do not meet (i), (ii) and (iii), will score a maximum of 45% as the total mark\nfor the Unit.\n§\nAttempting the specified CCNA Modules within the CNAP Program is mandatory\n§\nEnrolment will be done by your instructor during Week 1\n§\nThe CCNA CNAP Program runs separately from the Swinburne Unit\n§\nIn order to achieve a pass within the CNAP Program, you must:\no pass the Swinburne Unit\no achieve a score of at least 60% in the CCNA1 Final Test\nIf the unit you are enrolled in has a final assessment (including invigilated exams), you\nwill be expected to be available for the entire final assessment period including any\nSpecial Exam period.\nThe use of dictionaries and calculators is not permitted during assessments.\nThe use of mobile phones, tablets and personal computers is not permitted during on-\ncampus assessments. During online assessments, the use of mobile phones, tablets or\npersonal computers is permitted only for accessing the online tools required to complete\nthe assessment. The use of these devices for any other purposes is not permitted.\nYou are expected to have access to the Unit’s online learning tools (i.e., Canvas,\nCollaborate Ultra, Ech360 and Cisco NetAcademy) for online assessments. You should\nalso be prepared to share screen, audio and video with the assessor team if required;\nthis means that your device should be equipped with a microphone and a webcam."
+          "text": "Cisco NetAcademy (CNAP) CCNA program\n§\nAttempting the specified CCNA Modules within the CNAP Program is mandatory\n§\nEnrolment will be done by your instructor during Week 1\n§\nThe CCNA CNAP Program runs separately from the Swinburne Unit\n§\nIn order to achieve a pass within the CNAP Program, you must:\no pass the Swinburne Unit\no achieve a score of at least 60% in the CCNA1 Final Test\nc) Final Assessment Period\nIf the unit you are enrolled in has a final assessment (including invigilated exams), you\nwill be expected to be available for the entire final assessment period including any\nSpecial Exam period.\nThe use of dictionaries and calculators is not permitted during assessments.\nThe use of mobile phones, tablets and personal computers is not permitted during on-\ncampus assessments. During online assessments, the use of mobile phones, tablets or\npersonal computers is permitted only for accessing the online tools required to complete\nthe assessment. The use of these devices for any other purposes is not permitted.\nYou are expected to have access to the Unit’s online learning tools (i.e., Canvas,\nCollaborate Ultra, Ech360 and Cisco NetAcademy) for online assessments. You should\nalso be prepared to share screen, audio and video with the assessor team if required;\nthis means that your device should be equipped with a microphone and a webcam."
         }
       ]
     },
@@ -1353,7 +1379,26 @@
           "source_id": "txt_000089"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000079",
+            "txt_000080",
+            "txt_000081",
+            "txt_000082",
+            "txt_000083",
+            "txt_000084",
+            "txt_000085",
+            "txt_000086",
+            "txt_000087",
+            "txt_000088",
+            "txt_000089"
+          ],
+          "text": "f)\nExtensions and Late Submission\nLate Submissions - Unless an extension has been approved, late submissions will result\nin a penalty. You will be penalised 10% of your achieved mark for each working day the\ntask is late, up to a maximum of 5 working days. After 5 working days a zero result will\nbe recorded. For example, a student achieves 90/100 on an assessment task but\nthe task was submitted two days late. A late penalty of 20% of the achieved mark is\napplied and the student’s mark is recorded as 72/100.\nIf you were unable to attend an on-campus or online assessment due to serious and\nunavoidable circumstances outside of your control, you may be able to apply for special\nconsideration (SPC). Please refer to Part C of this document for more information.\nStudents who completed the assessment on the original date will not be granted SPC.\nTherefore, if you are unfit to complete an assessment, you are advised to not attempt it\nand apply for SPC.\ng) Referencing\nTo avoid breaching academic integrity, you are required to provide references whenever\nyou include information from other sources in your work and acknowledge when you\nhave used Artificial Intelligence (AI) tools (such as ChatGPT). Further details regarding\nacademic integrity are available in Section C of this document.\nReferencing conventions required for this unit are the IEEE Citation Policy, more\ninformation at: http://www.ieee.org/documents/ieeecitationref.pdf\nHelpful information on referencing can be found at\nhttp://www.swinburne.edu.au/library/referencing/\nh) Groupwork Guidelines\nA group assignment is the collective responsibility of the entire group, and if one\nmember is temporarily unable to contribute, the group should be able to reallocate\nresponsibilities to keep to schedule. In the event of longer-term illness or other serious\nproblems involving a member of group, it is the responsibility of the other members to\nimmediately notify the Unit Convenor or relevant tutor.\nAll group members must be satisfied that the work has been correctly submitted. Any\npenalties for late submission will generally apply to all group members, not just the\nperson who submitted."
+        }
+      ]
     },
     {
       "page_num": 8,
@@ -1640,15 +1685,47 @@
           "id": "grp_000001",
           "type": "text_group",
           "element_ids": [
-            "txt_000095",
+            "txt_000095"
+          ],
+          "text": "FURTHER INFORMATION"
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000096",
             "txt_000097",
             "txt_000098",
-            "txt_000099",
-            "txt_000101",
-            "txt_000103",
+            "txt_000099"
+          ],
+          "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness: be inclusive, ethical and\nrespectful of others; and appropriately use University resources, information, equipment and facilities.\nAll students are expected to contribute to creating a work and study environment that is safe and free\nfrom bullying, violence, discrimination, sexual harassment, vilification and other forms of unacceptable\nbehaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy\na quality learning experience. The Charter also sets out what is expected of students with regards to\nyour studies and the way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to\nabide by these, including the Student Academic Misconduct Regulations, Student General\nMisconduct Regulations and the People, Culture and Integrity Policy. Any student found to be in\nbreach of these may be subject to disciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to\nothers\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by\nstaff/wardens in an emergency response"
+        },
+        {
+          "id": "grp_000003",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000100",
+            "txt_000101"
+          ],
+          "text": "Canvas\nYou should regularly access the Swinburne learning management system, Canvas, which is available\nvia the Current Students webpage or https://swinburne.instructure.com/ Canvas is updated regularly\nwith important unit information and communications."
+        },
+        {
+          "id": "grp_000004",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000102",
+            "txt_000103"
+          ],
+          "text": "Communication\nAll communication will be via your Swinburne email address. If you access your email through a\nprovider other than Swinburne, then it is your responsibility to ensure that your Swinburne email is\nredirected to your private email address."
+        },
+        {
+          "id": "grp_000005",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000104",
             "txt_000105"
           ],
-          "text": "FURTHER INFORMATION\nAll students are expected to: act with integrity, honesty and fairness: be inclusive, ethical and\nrespectful of others; and appropriately use University resources, information, equipment and facilities.\nAll students are expected to contribute to creating a work and study environment that is safe and free\nfrom bullying, violence, discrimination, sexual harassment, vilification and other forms of unacceptable\nbehaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy\na quality learning experience. The Charter also sets out what is expected of students with regards to\nyour studies and the way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to\nabide by these, including the Student Academic Misconduct Regulations, Student General\nMisconduct Regulations and the People, Culture and Integrity Policy. Any student found to be in\nbreach of these may be subject to disciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to\nothers\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by\nstaff/wardens in an emergency response\nYou should regularly access the Swinburne learning management system, Canvas, which is available\nvia the Current Students webpage or https://swinburne.instructure.com/ Canvas is updated regularly\nwith important unit information and communications.\nAll communication will be via your Swinburne email address. If you access your email through a\nprovider other than Swinburne, then it is your responsibility to ensure that your Swinburne email is\nredirected to your private email address.\nAcademic integrity is about taking responsibility for your learning and submitting work that is honestly\nyour own. It means acknowledging the ideas, contributions and work of others; referencing your\nsources and acknowledging the use of generative artificial intelligence ; contributing fairly to group\nwork; and completing tasks, tests and exams without cheating. Artificial intelligence tools should only\nbe used where approved by the Unit Convenor.\nSwinburne University uses the Turnitin system, which helps to identify inadequate citations, poor\nparaphrasing and unoriginal work in assignments that are submitted via Canvas. Your Unit Convenor\nwill provide further details."
+          "text": "Academic Integrity\nAcademic integrity is about taking responsibility for your learning and submitting work that is honestly\nyour own. It means acknowledging the ideas, contributions and work of others; referencing your\nsources and acknowledging the use of generative artificial intelligence ; contributing fairly to group\nwork; and completing tasks, tests and exams without cheating. Artificial intelligence tools should only\nbe used where approved by the Unit Convenor.\nSwinburne University uses the Turnitin system, which helps to identify inadequate citations, poor\nparaphrasing and unoriginal work in assignments that are submitted via Canvas. Your Unit Convenor\nwill provide further details."
         }
       ]
     },
@@ -1797,7 +1874,44 @@
           "source_id": "txt_000115"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000108",
+            "txt_000109"
+          ],
+          "text": "Student support\nYou should talk to your Unit Convenor or Student Services for information on academic support\nservices available for Swinburne students."
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000110",
+            "txt_000111"
+          ],
+          "text": "Special consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances outside of\nyour control (e.g. severe illness or unavoidable obligation), you may be able to apply for special\nconsideration (SPC).\nApplications for Special Consideration will be submitted via the SPC online tool no later than 5.00pm\non the third working day after the submission/sitting date for the relevant assessment component."
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000112",
+            "txt_000113"
+          ],
+          "text": "Accessibility needs\nSometimes students with a disability, a mental health or medical condition or significant carer\nresponsibilities require reasonable adjustments to enable full access to and participation in education.\nYour needs can be addressed by Swinburne's AccessAbility Services by negotiating and distributing\nan 'Education Access Plan'. The plan makes recommendations to university teaching and\nexamination staff. You must notify AccessAbility Services of your disability or condition within one\nweek after the commencement of your unit to allow the University to make reasonable adjustments."
+        },
+        {
+          "id": "grp_000003",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000114",
+            "txt_000115"
+          ],
+          "text": "Review of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a review of\nassessment is undertaken if your final result is between 45 and 49 or within 2 marks of any grade\nthreshold.\nIf you are not satisfied with the result of an assessment, you can ask the Unit Convenor to review the\nresult. Your request must be made in writing within 10 working days of receiving the result. The Unit\nConvenor will review your result to determine if your result is appropriate.\nIf you are dissatisfied with the outcomes of the review, you can lodge a formal complaint."
+        }
+      ]
     },
     {
       "page_num": 11,
@@ -1853,7 +1967,17 @@
           "source_id": "txt_000118"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000117",
+            "txt_000118"
+          ],
+          "text": "Advocacy\nShould you require assistance with any academic issues, University statutes, regulations, policies and\nprocedures, you are advised to seek advice from an Independent Advocacy Officer at Swinburne\nStudent Life (previously Swinburne Student Amenities Association (SSAA).\nFor an appointment, please call 03 9214 5445 or email advocacy@swin.edu.au\nFor more information, please see https://www.swinburne.edu.au/current-students/student-services-\nsupport/advocacy/"
+        }
+      ]
     }
   ],
   "page_content": {

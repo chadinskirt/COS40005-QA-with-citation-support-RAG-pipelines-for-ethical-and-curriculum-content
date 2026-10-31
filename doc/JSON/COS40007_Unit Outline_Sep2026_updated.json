@@ -1,5 +1,6 @@
 {
   "pdf_header": {
+    "version": "1.1",
     "doc_id": 6,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS40007_Unit Outline_Sep2026_updated.pdf",
     "title": null,
@@ -575,9 +576,10 @@
           "type": "text_group",
           "element_ids": [
             "txt_000017",
-            "txt_000018"
+            "txt_000018",
+            "txt_000019"
           ],
-          "text": "Unit Learning Outcomes\nStudents who successfully complete this unit can:"
+          "text": "Unit Learning Outcomes\nStudents who successfully complete this unit can:\n1. Design, develop, deploy, and maintain Machine Learning (ML)/Artificial Intelligence (AI) pipelines by\nselecting and training datasets to address complex, multidisciplinary engineering problems.\n2. Explain and compare a range of Artificial Intelligence (AI), Machine Learning (ML), & Deep Learning\n(DL) algorithms in terms of their structure, function, and real-world applicability.\n3. Evaluate and justify the selection of AI techniques based on computational efficiency, ethical\nimplications, and problem constraints for solving diverse computational engineering challenges.\n4. Communicate clearly and effectively technical concepts, project outcomes, and design decisions\nthrough written reports and oral presentations."
         }
       ]
     },
@@ -948,10 +950,11 @@
           "type": "text_group",
           "element_ids": [
             "txt_000036",
+            "txt_000037",
             "txt_000038",
             "txt_000039"
           ],
-          "text": "Assessment\n*Students can be asked to demo during On-Campus Studios with the tutor's discretion.\n* To be determined later."
+          "text": "Assessment\na) Assessment overview\n*Students can be asked to demo during On-Campus Studios with the tutor's discretion.\n* To be determined later."
         }
       ]
     },
@@ -1158,9 +1161,10 @@
           "type": "text_group",
           "element_ids": [
             "txt_000045",
-            "txt_000046"
+            "txt_000046",
+            "txt_000047"
           ],
-          "text": "Required Textbook(s)\nThe required textbook(s) can be purchased from bookshops and may be available through the Swinburne\nLibrary."
+          "text": "Required Textbook(s)\nThe required textbook(s) can be purchased from bookshops and may be available through the Swinburne\nLibrary.\n1. Huyen, C. (2024). AI engineering: Building applications with foundation models. \" O'Reilly Media, Inc.\"\n2. Goodfellow, I., Bengio, Y., Courville, A., & Bengio, Y. (2016). Deep learning (Vol. 1, No. 2, pp. 1-800).\nCambridge: MIT press.\n3. Bass, L., Lu, Q., Weber, I., & Zhu, L. (2025). Engineering AI systems: architecture and DevOps\nessentials. Addison-Wesley Professional.\n4. Raschka, S., Liu, Y. H., & Mirjalili, V. (2022). Machine Learning with PyTorch and Scikit-Learn: Develop\n5. machine learning and deep learning models with Python. Packt Publishing Ltd.\n6. Kapoor, A., Gulli, A., Pal, S., & Chollet, F. (2022). Deep Learning with TensorFlow and Keras: Build and\ndeploy supervised, unsupervised, deep, and reinforcement learning models. Packt Publishing Ltd."
         },
         {
           "id": "grp_000001",
@@ -1412,17 +1416,49 @@
           "id": "grp_000001",
           "type": "text_group",
           "element_ids": [
-            "txt_000056",
+            "txt_000056"
+          ],
+          "text": "FURTHER INFORMATION"
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000058",
             "txt_000059",
             "txt_000061",
             "txt_000063",
             "txt_000065",
-            "txt_000066",
-            "txt_000068",
-            "txt_000070",
+            "txt_000066"
+          ],
+          "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying,\nviolence, discrimination, sexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a\nquality learning experience. The Charter also sets out what is expected of students with regards to your\nstudies and the way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations\nand the People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens\nin an emergency response."
+        },
+        {
+          "id": "grp_000003",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000067",
+            "txt_000068"
+          ],
+          "text": "Canvas\nYou should regularly log on to the Swinburne learning management system, Canvas. You can access Canvas\nvia the Student login webpage or https://swinburne.instructure.com/ Canvas is updated regularly with\nimportant unit information and communications."
+        },
+        {
+          "id": "grp_000004",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000069",
+            "txt_000070"
+          ],
+          "text": "Communication\nAll communication will be via your Swinburne email address. If you access your email through a provider\nother than Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to\nyour private email address."
+        },
+        {
+          "id": "grp_000005",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000071",
             "txt_000072"
           ],
-          "text": "FURTHER INFORMATION\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying,\nviolence, discrimination, sexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a\nquality learning experience. The Charter also sets out what is expected of students with regards to your\nstudies and the way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations\nand the People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens\nin an emergency response.\nYou should regularly log on to the Swinburne learning management system, Canvas. You can access Canvas\nvia the Student login webpage or https://swinburne.instructure.com/ Canvas is updated regularly with\nimportant unit information and communications.\nAll communication will be via your Swinburne email address. If you access your email through a provider\nother than Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to\nyour private email address.\nAcademic integrity is about taking responsibility for your learning and submitting work that is honestly your\nown. It means acknowledging the ideas, contributions and work of others; referencing your sources and\nacknowledging the use of generative artificial intelligence; contributing fairly to group work; and\ncompleting tasks, tests and exams without cheating. Artificial intelligence tools should only be used where\napproved by the Unit Convenor."
+          "text": "Academic Integrity\nAcademic integrity is about taking responsibility for your learning and submitting work that is honestly your\nown. It means acknowledging the ideas, contributions and work of others; referencing your sources and\nacknowledging the use of generative artificial intelligence; contributing fairly to group work; and\ncompleting tasks, tests and exams without cheating. Artificial intelligence tools should only be used where\napproved by the Unit Convenor."
         }
       ]
     },
@@ -1556,7 +1592,19 @@
           "source_id": "txt_000083"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000079",
+            "txt_000080",
+            "txt_000081",
+            "txt_000083"
+          ],
+          "text": "Student support\nSwinburne offers a range of services and resources to help you complete your studies successfully, such as\nstudy and learning support and health and wellbeing services. Your Unit Convenor or studentHQ can\nprovide information about the study support and other services available for Swinburne students. For\nfurther information, see the Student support services web page.\nSpecial consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances outside of your\ncontrol (e.g. severe illness or unavoidable obligation), you may be able to apply for special consideration\n(SPC).\nApplications for Special Consideration are submitted via the SPC online tool normally no later than 5.00pm\non the third working day after the submission/sitting date for the relevant assessment component. See"
+        }
+      ]
     },
     {
       "page_num": 11,
@@ -1738,7 +1786,39 @@
           "source_id": "txt_000099"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000087",
+            "txt_000088",
+            "txt_000090",
+            "txt_000092"
+          ],
+          "text": "AccessAbility Services\nIf you are a student with a disability, medical or mental health condition or you have significant carer\nresponsibilities, you may require reasonable adjustments to fully access and participate in education.\nSwinburne's AccessAbility Services can develop an Education Access Plan (EAP) that includes the services\nand reasonable adjustments that you need.\nIt is recommended that you register with AccessAbility Services when you first commence your course, but\nyou can contact the service at any time during your studies to find out about reasonable adjustments.\nContact Accessibility Services to discuss further.\nOnce you have an approved EAP, you should contact the Unit Convenor as early as possible (e.g. beginning\nof semester) to discuss your adjustments so that we can better support your learning."
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000093",
+            "txt_000094",
+            "txt_000096"
+          ],
+          "text": "Review of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a review of\nassessment is undertaken if your final result is between 45 and 49 or within 2 marks of any grade\nthreshold.\nYou can ask the Unit Convenor to check the result for an assessment item or your final result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit Convenor\ncan discuss the marking criteria with you and check the aggregate marks of assessment components to\nidentify if an error has been made. This is known as local resolution. If you are dissatisfied with the\noutcome of the local resolution, you can lodge a formal complaint."
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000097",
+            "txt_000098",
+            "txt_000099"
+          ],
+          "text": "Feedback, complaints and suggestions\nIn the first instance, discuss any issues with your Unit Convenor. If your concerns are not resolved or you\nwould prefer not to deal with your Unit Convenor, then you can complete a feedback form. See\nhttps://www.swinburne.edu.au/corporate/feedback/\nAdvocacy\nShould you require assistance with any academic issues, University statutes, regulations, policies and\nprocedures, you are advised to seek advice from an Academic Student Support Officer at Swinburne\nStudent Life.\nFor an appointment, please call 19006412 or lodge a query via Student Portal at https://portal.swin.edu.vn"
+        }
+      ]
     }
   ],
   "page_content": {

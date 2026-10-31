@@ -114,12 +114,21 @@ def iterate_dir(source_dir, metadata_dir):
                     "elements": []
                 })
 
+                #parse tables data
                 tables.extend(extract_tables(page, page_num))
-
+            #add python text obj to json
             metadata["pages"] = pages
+
+            #add python tables obj to json tables
             metadata["tables"] = tables
+
+            #main parsing for text
             parse_text_obj(doc,metadata)
+
+            #cleanup left-over pdf lines
             remove_key_recursive(metadata["pages"], "lines")
+
+            #normalize text_groups and tables
             for page in metadata["pages"]:
                 page["groups"] = create_text_groups(page["elements"])
 
