@@ -1,0 +1,36 @@
+Student_ID,Completed_Courses,Target_Career,Study_Goal
+1000000,NONE,AI / Machine Learning Engineer,Industry Placement
+1000001,NONE,Cloud / Network Architect,Industry Placement
+1000002,NONE,Data Scientist,Industry Placement
+1000003,NONE,AI / Machine Learning Engineer,Startup / Entrepreneurship
+1000004,NONE,Research / Academic AI,Industry Placement
+1000005,NONE,Research / Academic AI,Academic Research
+1000006,"COS10009:51,SWE20004:95",Research / Academic AI,Academic Research
+1000007,"SWE20004:98,TNE10003:94",Software Architect,Academic Research
+1000008,"COS20007:72,COS10009:88,SWE20004:52",Software Architect,Startup / Entrepreneurship
+1000009,"SWE20004:52,COS10009:99,TNE10006:55,COS30018:56",Software Architect,Academic Research
+1000010,"TNE10003:94,COS10009:91,COS20007:40",Data Scientist,Startup / Entrepreneurship
+1000011,"COS20007:94,COS10009:93,SWE20004:99,TNE10003:64",AI / Machine Learning Engineer,Academic Research
+1000012,"TNE10003:91,COS10009:66,SWE20004:47,COS30018:66,SWE30003:77",Research / Academic AI,Academic Research
+1000013,"COS20007:7,COS10009:10,SWE20004:77",Research / Academic AI,Industry Placement
+1000014,"SWE20004:93,TNE10003:98,COS20007:91,SWE30003:68",Software Architect,Industry Placement
+1000015,"COS10009:90,TNE10003:90,COS20007:62,TNE10006:48",Data Scientist,Startup / Entrepreneurship
+1000016,"COS10009:69,TNE10003:65,COS20007:55,SWE20004:31",AI / Machine Learning Engineer,Startup / Entrepreneurship
+1000017,"COS20007:66,TNE10003:88",Software Architect,Industry Placement
+1000018,"COS20007:65,TNE10003:71,SWE20004:35,COS10009:64,COS20019:45,TNE10006:64",AI / Machine Learning Engineer,Industry Placement
+1000019,"COS10009:84,TNE10003:36,SWE20004:65",Software Architect,Academic Research
+1000020,"COS10009:96,SWE20004:41,COS20019:56,COS30019:46",Cloud / Network Architect,Industry Placement
+1000021,"COS20007:29,COS10009:54,COS20019:85",AI / Machine Learning Engineer,Industry Placement
+1000022,"COS10009:75,SWE20004:60,TNE10003:74,COS20007:100",Software Architect,Academic Research
+1000023,"SWE20004:87,COS10009:53,TNE10003:53",AI / Machine Learning Engineer,Startup / Entrepreneurship
+1000024,"COS20007:15,COS10009:86,TNE10003:88,TNE10006:5",Software Architect,Startup / Entrepreneurship
+1000025,"TNE10003:92,COS20007:79,COS10009:98,SWE20004:50",Software Architect,Startup / Entrepreneurship
+1000026,"COS10009:54,SWE20004:73,TNE10003:78,COS20007:95",Cloud / Network Architect,Startup / Entrepreneurship
+1000027,"COS10009:6,TNE10003:59,COS20007:88,SWE20004:71,COS10022:90",Cloud / Network Architect,Startup / Entrepreneurship
+1000028,"TNE10003:58,COS10009:66,SWE20004:28,COS40007:77,COS30019:57",AI / Machine Learning Engineer,Startup / Entrepreneurship
+1000029,"COS10009:19,COS20007:100,COS20019:52",Cloud / Network Architect,Industry Placement
+1000030,"COS20007:15,TNE10003:61,COS10009:51,SWE20004:21,TNE10006:76,SWE30003:97",Data Scientist,Academic Research
+1000031,"COS10009:79,COS20007:100,COS30018:64,COS30019:12",Software Architect,Academic Research
+1000032,"COS10009:51,COS20007:16,TNE10003:16,SWE30003:38,TNE10006:96",Cloud / Network Architect,Academic Research
+1000033,"COS10009:83,COS20007:84,SWE20004:97,TNE10003:62",Cloud / Network Architect,Academic Research
+1000034,"TNE10003:96,SWE20004:82",Cloud / Network Architect,Startup / Entrepreneurship
