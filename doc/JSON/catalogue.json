@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "topics": [
+    {
+      "id": "CS_NET",
+      "name": "Computer Networking",
+      "description": "Network architecture, communication protocols and network infrastructure.",
+      "parent": "CS"
+    },
+    {
+      "id": "CS_NET_SEC",
+      "name": "Network Security",
+      "description": "Security mechanisms, monitoring and protection of computer networks.",
+      "parent": "CS_NET",
+      "aliases": [
+        "Network Protection",
+        "Network Cybersecurity"
+      ]
+    },
+    {
+      "id": "CS_DS",
+      "name": "Data Structures",
+      "description": "Organization, storage and manipulation of data using structured representations.",
+      "parent": "CS"
+    }
+  ]
+}

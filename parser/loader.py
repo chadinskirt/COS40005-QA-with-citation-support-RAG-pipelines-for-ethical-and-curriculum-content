@@ -9,7 +9,7 @@ from pprint import pprint
 def make_document_metadata(doc, source, doc_id):
 
     header = {
-        "version": "1.0",
+        "version": "1.1",
         "doc_id": doc_id,
         "source": str(source),
         "title": None,

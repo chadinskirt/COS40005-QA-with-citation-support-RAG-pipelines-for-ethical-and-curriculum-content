@@ -1,0 +1,1959 @@
+{
+  "pdf_header": {
+    "version": "1.1",
+    "doc_id": 10,
+    "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/TNE30009_Unit Outline_Sep2026.pdf",
+    "title": null,
+    "document_type": "unit_outline",
+    "unit_code": "TNE30009",
+    "unit_name": "Network Security and Resilience",
+    "academic_year": 2026,
+    "period": "September",
+    "page_count": 10
+  },
+  "pdf_feature": {
+    "Type": "/Catalog",
+    "Pages": "107 0 R",
+    "Version": "/1.4"
+  },
+  "xml_feature": {
+    "available": false,
+    "raw": null
+  },
+  "property": {
+    "pages": 10,
+    "text_chars": 20965,
+    "images": 5,
+    "drawings": 5752,
+    "tables": 9
+  },
+  "pages": [
+    {
+      "page_num": 1,
+      "xref": 1,
+      "page_object": {
+        "page_num": 1,
+        "xref": 1,
+        "page_object": {
+          "Type": "/Page",
+          "Parent": "2 0 R",
+          "Resources": "4 0 R",
+          "Contents": "3 0 R"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000000",
+          "type": "text",
+          "bbox": [
+            74.69994354248047,
+            73.41938018798828,
+            219.8340301513672,
+            89.817138671875
+          ],
+          "text": "School of Engineering",
+          "role": "body",
+          "source_id": "txt_000000"
+        },
+        {
+          "id": "txt_000002",
+          "type": "text",
+          "bbox": [
+            71.94994354248047,
+            121.41603088378906,
+            120.98059844970703,
+            155.280029296875
+          ],
+          "text": "Unit Outline",
+          "role": "body",
+          "source_id": "txt_000002"
+        },
+        {
+          "id": "txt_000003",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            161.03761291503906,
+            394.69671630859375,
+            172.29698181152344
+          ],
+          "text": "This content is protected and may not be shared, uploaded, or distributed.",
+          "role": "body",
+          "source_id": "txt_000003"
+        },
+        {
+          "id": "txt_000004",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            182.37242126464844,
+            172.3021697998047,
+            204.62306213378906
+          ],
+          "text": "TNE30009",
+          "role": "section_heading",
+          "source_id": "txt_000004"
+        },
+        {
+          "id": "txt_000005",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            216.45240783691406,
+            384.54095458984375,
+            238.7030487060547
+          ],
+          "text": "Network Security and Resilience",
+          "role": "section_heading",
+          "source_id": "txt_000005"
+        },
+        {
+          "id": "txt_000006",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            247.76760864257812,
+            271.6343994140625,
+            265.7289733886719
+          ],
+          "text": "Semester September, 2026",
+          "role": "body",
+          "source_id": "txt_000006"
+        },
+        {
+          "id": "txt_000007",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            284.14801025390625,
+            167.04920959472656,
+            301.08001708984375
+          ],
+          "text": "Please read this Unit Outline carefully. It includes:",
+          "role": "body",
+          "source_id": "txt_000007"
+        },
+        {
+          "id": "txt_000008",
+          "type": "text",
+          "bbox": [
+            71.94994354248047,
+            306.51409912109375,
+            239.93170166015625,
+            326.15521240234375
+          ],
+          "text": "PART A\nUnit summary",
+          "role": "body",
+          "source_id": "txt_000008"
+        },
+        {
+          "id": "txt_000009",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            331.4740905761719,
+            300.04248046875,
+            351.1152038574219
+          ],
+          "text": "PART B\nYour Unit in more detail",
+          "role": "body",
+          "source_id": "txt_000009"
+        },
+        {
+          "id": "txt_000010",
+          "type": "text",
+          "bbox": [
+            71.94994354248047,
+            356.43408203125,
+            277.66485595703125,
+            376.0751953125
+          ],
+          "text": "PART C\nFurther information",
+          "role": "body",
+          "source_id": "txt_000010"
+        }
+      ],
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000004"
+          ],
+          "text": "TNE30009"
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000005",
+            "txt_000006",
+            "txt_000007",
+            "txt_000008",
+            "txt_000009",
+            "txt_000010"
+          ],
+          "text": "Network Security and Resilience\nSemester September, 2026\nPlease read this Unit Outline carefully. It includes:\nPART A\nUnit summary\nPART B\nYour Unit in more detail\nPART C\nFurther information"
+        }
+      ]
+    },
+    {
+      "page_num": 2,
+      "xref": 25,
+      "page_object": {
+        "page_num": 2,
+        "xref": 25,
+        "page_object": {
+          "Type": "/Page",
+          "Parent": "2 0 R",
+          "Resources": "27 0 R",
+          "Contents": "26 0 R"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000012",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            73.23410034179688,
+            262.35211181640625,
+            92.8752212524414
+          ],
+          "text": "PART A:\nUnit Summary",
+          "role": "body",
+          "source_id": "txt_000012"
+        },
+        {
+          "id": "txt_000014",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            401.5080261230469,
+            107.8062973022461,
+            418.4400329589844
+          ],
+          "text": "Aims",
+          "role": "body",
+          "source_id": "txt_000014"
+        },
+        {
+          "id": "txt_000015",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            424.89263916015625,
+            467.8794860839844,
+            436.76690673828125
+          ],
+          "text": "This unit of study aims to introduce you to the issues of security in modern networks.",
+          "role": "body",
+          "source_id": "txt_000015"
+        },
+        {
+          "id": "txt_000016",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            449.50799560546875,
+            96.48243713378906,
+            466.44000244140625
+          ],
+          "text": "Unit Learning Outcomes",
+          "role": "body",
+          "source_id": "txt_000016"
+        },
+        {
+          "id": "txt_000017",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            473.3726806640625,
+            303.325927734375,
+            485.2469177246094
+          ],
+          "text": "Students who successfully complete this unit can:",
+          "role": "body",
+          "source_id": "txt_000017"
+        },
+        {
+          "id": "txt_000018",
+          "type": "text",
+          "bbox": [
+            107.800048828125,
+            487.29266357421875,
+            115.52267456054688,
+            499.1669006347656
+          ],
+          "text": "1. Describe the threats to network security and their defences (K3)",
+          "role": "list_item",
+          "source_id": "txt_000018"
+        },
+        {
+          "id": "txt_000019",
+          "type": "text",
+          "bbox": [
+            107.800048828125,
+            501.45263671875,
+            115.52267456054688,
+            513.326904296875
+          ],
+          "text": "2. Formulate an organisational security policy (S1, S2, A2)",
+          "role": "list_item",
+          "source_id": "txt_000019"
+        },
+        {
+          "id": "txt_000020",
+          "type": "text",
+          "bbox": [
+            107.800048828125,
+            515.6126098632812,
+            453.11279296875,
+            541.4069213867188
+          ],
+          "text": "3. Plan the implementation of a security using technologies such as firewalls, VPNs,\nIntrusion Detection Systems, and authentication systems (S1, S2, A2)",
+          "role": "list_item",
+          "source_id": "txt_000020"
+        },
+        {
+          "id": "txt_000021",
+          "type": "text",
+          "bbox": [
+            107.800048828125,
+            543.45263671875,
+            204.41014099121094,
+            569.2468872070312
+          ],
+          "text": "4. Conduct encryption of simple messages using public key and secret key\ntechniques (K3)",
+          "role": "list_item",
+          "source_id": "txt_000021"
+        },
+        {
+          "id": "txt_000022",
+          "type": "text",
+          "bbox": [
+            107.800048828125,
+            571.5326538085938,
+            115.52267456054688,
+            583.4069213867188
+          ],
+          "text": "5. Describe techniques used in dealing with Denial of Service Attacks (K3)",
+          "role": "list_item",
+          "source_id": "txt_000022"
+        },
+        {
+          "id": "txt_000023",
+          "type": "text",
+          "bbox": [
+            107.800048828125,
+            585.45263671875,
+            115.52267456054688,
+            597.326904296875
+          ],
+          "text": "6. Describe the operation of the major security protocols (K3)",
+          "role": "list_item",
+          "source_id": "txt_000023"
+        },
+        {
+          "id": "txt_000024",
+          "type": "text",
+          "bbox": [
+            107.800048828125,
+            599.3726196289062,
+            115.52267456054688,
+            611.2468872070312
+          ],
+          "text": "7. Describe the security issues relating to wireless technologies (K3)",
+          "role": "list_item",
+          "source_id": "txt_000024"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "page_num": 3,
+      "xref": 35,
+      "page_object": {
+        "page_num": 3,
+        "xref": 35,
+        "page_object": {
+          "Type": "/Page",
+          "Parent": "2 0 R",
+          "Resources": "37 0 R",
+          "Contents": "36 0 R"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000025",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            71.46002197265625,
+            414.6911926269531,
+            84.86402130126953
+          ],
+          "text": "Swinburne Engineering Competencies for this Unit of Study",
+          "role": "section_heading",
+          "source_id": "txt_000025"
+        },
+        {
+          "id": "txt_000026",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            91.19762420654297,
+            355.86480712890625,
+            102.45698547363281
+          ],
+          "text": "Swinburne Engineering Competencies for this Unit of Study",
+          "role": "possible_heading",
+          "source_id": "txt_000026"
+        },
+        {
+          "id": "txt_000027",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            108.71762084960938,
+            516.3143920898438,
+            119.97698211669922
+          ],
+          "text": "This Unit of Study will contribute to you attaining the following Swinburne Engineering Competencies:",
+          "role": "body",
+          "source_id": "txt_000027"
+        },
+        {
+          "id": "txt_000028",
+          "type": "text",
+          "bbox": [
+            77.650146484375,
+            125.99762725830078,
+            490.03643798828125,
+            148.7769775390625
+          ],
+          "text": "K1\nBasic Science: Proficiently applies concepts, theories and techniques of the relevant\nnatural and physical sciences to the solution of complex engineering problems.",
+          "role": "possible_heading",
+          "source_id": "txt_000028"
+        },
+        {
+          "id": "txt_000029",
+          "type": "text",
+          "bbox": [
+            77.650146484375,
+            155.03761291503906,
+            477.5314025878906,
+            177.81698608398438
+          ],
+          "text": "K2\nMaths and IT as Tools: Proficiently uses relevant mathematics and computer and\ninformation science concepts as tools in complex engineering activities.",
+          "role": "possible_heading",
+          "source_id": "txt_000029"
+        },
+        {
+          "id": "txt_000030",
+          "type": "text",
+          "bbox": [
+            77.64990997314453,
+            184.07760620117188,
+            493.9543151855469,
+            206.8569793701172
+          ],
+          "text": "K3\nDiscipline Specific: Proficiently applies advanced technical knowledge of the specific\ndiscipline within that context.",
+          "role": "possible_heading",
+          "source_id": "txt_000030"
+        },
+        {
+          "id": "txt_000031",
+          "type": "text",
+          "bbox": [
+            77.650146484375,
+            213.11761474609375,
+            505.33892822265625,
+            235.656982421875
+          ],
+          "text": "K4\nEmerging Disciplinary Trends: Proficiently applies research principles and methods on\ncurrent or emerging complex problems of the specific discipline.",
+          "role": "possible_heading",
+          "source_id": "txt_000031"
+        },
+        {
+          "id": "txt_000032",
+          "type": "text",
+          "bbox": [
+            77.74999237060547,
+            241.43760681152344,
+            475.6341857910156,
+            264.21697998046875
+          ],
+          "text": "S1\nEngineering Methods: Applies engineering methods in practical applications and\ncomplex engineering problems.",
+          "role": "possible_heading",
+          "source_id": "txt_000032"
+        },
+        {
+          "id": "txt_000033",
+          "type": "text",
+          "bbox": [
+            77.650146484375,
+            270.23760986328125,
+            494.2347106933594,
+            304.7769775390625
+          ],
+          "text": "S2\nProblem Solving: Systematically uses current or emerging knowledge and research\nmethods to undertake independent research in solving complex engineering problems\nand as preparation for research higher degrees.",
+          "role": "possible_heading",
+          "source_id": "txt_000033"
+        },
+        {
+          "id": "txt_000034",
+          "type": "text",
+          "bbox": [
+            77.70018768310547,
+            310.797607421875,
+            486.2154846191406,
+            333.57696533203125
+          ],
+          "text": "S3\nDesign: Systematically uses engineering methods in designing solutions to complex\nengineering problems.",
+          "role": "possible_heading",
+          "source_id": "txt_000034"
+        },
+        {
+          "id": "txt_000035",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            345.3479919433594,
+            126.45674133300781,
+            362.2799987792969
+          ],
+          "text": "Graduate Attributes",
+          "role": "body",
+          "source_id": "txt_000035"
+        },
+        {
+          "id": "txt_000036",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            369.9288024902344,
+            486.7999267578125,
+            412.260498046875
+          ],
+          "text": "The Swinburne Graduate Attributes describe the capability of our graduates to use\nknowledge, skills and behaviours to contribute to society meaningfully and positively. They\ninclude professional, self-directed learning and future-ready skills.",
+          "role": "body",
+          "source_id": "txt_000036"
+        },
+        {
+          "id": "txt_000038",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            429.68878173828125,
+            494.3008728027344,
+            457.1405029296875
+          ],
+          "text": "Graduate attributes may be practised in the unit but are not formally taught or assessed as\npart of the unit content",
+          "role": "body",
+          "source_id": "txt_000038"
+        },
+        {
+          "id": "txt_000039",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            469.4280090332031,
+            127.24723815917969,
+            486.3600158691406
+          ],
+          "text": "Content",
+          "role": "body",
+          "source_id": "txt_000039"
+        },
+        {
+          "id": "txt_000040",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            494.2488098144531,
+            205.78001403808594,
+            611.46044921875
+          ],
+          "text": "Threats to network security\nSecurity policy\nFirewalls\nEncryption\nVirtual Private Networks\nIntrusion Detection Systems\nAuthentication Systems\nWireless Security",
+          "role": "body",
+          "source_id": "txt_000040"
+        }
+      ],
+      "groups": [
+        {
+          "id": "grp_000000",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000025"
+          ],
+          "text": "Swinburne Engineering Competencies for this Unit of Study"
+        },
+        {
+          "id": "grp_000001",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000026",
+            "txt_000027"
+          ],
+          "text": "Swinburne Engineering Competencies for this Unit of Study\nThis Unit of Study will contribute to you attaining the following Swinburne Engineering Competencies:"
+        },
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000028"
+          ],
+          "text": "K1\nBasic Science: Proficiently applies concepts, theories and techniques of the relevant\nnatural and physical sciences to the solution of complex engineering problems."
+        },
+        {
+          "id": "grp_000003",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000029"
+          ],
+          "text": "K2\nMaths and IT as Tools: Proficiently uses relevant mathematics and computer and\ninformation science concepts as tools in complex engineering activities."
+        },
+        {
+          "id": "grp_000004",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000030"
+          ],
+          "text": "K3\nDiscipline Specific: Proficiently applies advanced technical knowledge of the specific\ndiscipline within that context."
+        },
+        {
+          "id": "grp_000005",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000031"
+          ],
+          "text": "K4\nEmerging Disciplinary Trends: Proficiently applies research principles and methods on\ncurrent or emerging complex problems of the specific discipline."
+        },
+        {
+          "id": "grp_000006",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000032"
+          ],
+          "text": "S1\nEngineering Methods: Applies engineering methods in practical applications and\ncomplex engineering problems."
+        },
+        {
+          "id": "grp_000007",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000033"
+          ],
+          "text": "S2\nProblem Solving: Systematically uses current or emerging knowledge and research\nmethods to undertake independent research in solving complex engineering problems\nand as preparation for research higher degrees."
+        },
+        {
+          "id": "grp_000008",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000034",
+            "txt_000035",
+            "txt_000036",
+            "txt_000038",
+            "txt_000039",
+            "txt_000040"
+          ],
+          "text": "S3\nDesign: Systematically uses engineering methods in designing solutions to complex\nengineering problems.\nGraduate Attributes\nThe Swinburne Graduate Attributes describe the capability of our graduates to use\nknowledge, skills and behaviours to contribute to society meaningfully and positively. They\ninclude professional, self-directed learning and future-ready skills.\nGraduate attributes may be practised in the unit but are not formally taught or assessed as\npart of the unit content\nContent\nThreats to network security\nSecurity policy\nFirewalls\nEncryption\nVirtual Private Networks\nIntrusion Detection Systems\nAuthentication Systems\nWireless Security"
+        }
+      ]
+    },
+    {
+      "page_num": 4,
+      "xref": 44,
+      "page_object": {
+        "page_num": 4,
+        "xref": 44,
+        "page_object": {
+          "Type": "/Page",
+          "Parent": "2 0 R",
+          "Resources": "46 0 R",
+          "Contents": "45 0 R"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000041",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            67.23410034179688,
+            326.2300720214844,
+            86.8752212524414
+          ],
+          "text": "PART B:\nYour Unit in more detail",
+          "role": "body",
+          "source_id": "txt_000041"
+        },
+        {
+          "id": "txt_000042",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            96.9480209350586,
+            96.48243713378906,
+            113.88002014160156
+          ],
+          "text": "Unit Improvements",
+          "role": "body",
+          "source_id": "txt_000042"
+        },
+        {
+          "id": "txt_000044",
+          "type": "text",
+          "bbox": [
+            71.949951171875,
+            238.06800842285156,
+            95.01271057128906,
+            255.00001525878906
+          ],
+          "text": "Unit Teaching Staff",
+          "role": "body",
+          "source_id": "txt_000044"
+        },
+        {
+          "id": "txt_000046",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            406.7879943847656,
+            263.6826171875,
+            423.7200012207031
+          ],
+          "text": "Learning and Teaching Structure",
+          "role": "body",
+          "source_id": "txt_000046"
+        },
+        {
+          "id": "txt_000048",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            556.0680541992188,
+            104.27386474609375,
+            573.0
+          ],
+          "text": "Week by Week Schedule",
+          "role": "body",
+          "source_id": "txt_000048"
+        },
+        {
+          "id": "txt_000050",
+          "type": "text",
+          "bbox": [
+            81.02001190185547,
+            130.6526641845703,
+            486.1267395019531,
+            156.4468994140625
+          ],
+          "text": "Because network security is a constantly changing area, this unit is updated every year.\nStudent feedback is also considered during the update. Changes this year include:",
+          "role": "body",
+          "source_id": "txt_000050"
+        },
+        {
+          "id": "txt_000051",
+          "type": "text",
+          "bbox": [
+            99.12000274658203,
+            158.109619140625,
+            510.0537109375,
+            212.45762634277344
+          ],
+          "text": "-\nDiscussion of threat environment updated to include recent attacks and attack types\n-\nAdditional material on security protocols\n-\nUpdated material on cryptography\n-\nInternet of Things",
+          "role": "body",
+          "source_id": "txt_000051"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "page_num": 5,
+      "xref": 54,
+      "page_object": {
+        "page_num": 5,
+        "xref": 54,
+        "page_object": {
+          "Type": "/Page",
+          "Parent": "2 0 R",
+          "Resources": "56 0 R",
+          "Contents": "55 0 R"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000052",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            377.26800537109375,
+            154.93716430664062,
+            394.20001220703125
+          ],
+          "text": "Assessment",
+          "role": "body",
+          "source_id": "txt_000052"
+        },
+        {
+          "id": "txt_000053",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            399.4449768066406,
+            218.1311492919922,
+            415.02239990234375
+          ],
+          "text": "a)\nAssessment overview",
+          "role": "body",
+          "source_id": "txt_000053"
+        },
+        {
+          "id": "txt_000054",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            421.77264404296875,
+            201.14059448242188,
+            433.64691162109375
+          ],
+          "text": "To pass this unit, you must:",
+          "role": "body",
+          "source_id": "txt_000054"
+        },
+        {
+          "id": "txt_000055",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            488.01263427734375,
+            501.1324768066406,
+            513.326904296875
+          ],
+          "text": "Students who do not complete all portfolio items will receive a maximum of 45% as the total\nmark for the unit.",
+          "role": "body",
+          "source_id": "txt_000055"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "page_num": 6,
+      "xref": 61,
+      "page_object": {
+        "page_num": 6,
+        "xref": 61,
+        "page_object": {
+          "Type": "/Page",
+          "Parent": "2 0 R",
+          "Resources": "63 0 R",
+          "Contents": "62 0 R",
+          "Annots": "65 0 R"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000058",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            668.3880004882812,
+            124.6288833618164,
+            685.3199462890625
+          ],
+          "text": "Required Textbook(s)",
+          "role": "body",
+          "source_id": "txt_000058"
+        },
+        {
+          "id": "txt_000059",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            692.4926147460938,
+            296.0210266113281,
+            704.3668823242188
+          ],
+          "text": "There are no prescribed text books for this unit.",
+          "role": "body",
+          "source_id": "txt_000059"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "page_num": 7,
+      "xref": 67,
+      "page_object": {
+        "page_num": 7,
+        "xref": 67,
+        "page_object": {
+          "Type": "/Page",
+          "Parent": "2 0 R",
+          "Resources": "69 0 R",
+          "Contents": "68 0 R"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000060",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            71.02802276611328,
+            268.6090087890625,
+            87.96002197265625
+          ],
+          "text": "Recommended Reading Materials",
+          "role": "body",
+          "source_id": "txt_000060"
+        },
+        {
+          "id": "txt_000061",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            94.89266204833984,
+            507.3258972167969,
+            148.28689575195312
+          ],
+          "text": "Swinburne Library has a large collection of resources. Listed below are some references that\nwill provide valuable supplementary information to this unit. It is also recommended that you\nexplore other sources to broaden your understanding.\nThe following are good references:",
+          "role": "body",
+          "source_id": "txt_000061"
+        },
+        {
+          "id": "txt_000062",
+          "type": "text",
+          "bbox": [
+            90.0,
+            149.70962524414062,
+            509.79608154296875,
+            311.2469177246094
+          ],
+          "text": "-\nSchneier, “Applied Cryptography” Second Edition 1996\n-\nTrappe, Washington, “Introduction to Cryptography with Coding Theory”, 2006\n-\nAnderson, “Security Engineering”, 2009\n-\nMell, “What’s Special about Cloud Security?”, IEEE IT Professional, July/August 2012\n-\nKaufman, “Can Public-Cloud Security Meet Its Unique Challenges?”, IEEE Security and\nPrivacy, July/August 2010\n-\nGranjal, Monteiro and Sa Silva, “Security for the Internet of Things: A Survey of Existing\nProtocols and Open Research Issues”, IEEE Communications Surveys and Tutorials,\n17(3) 2015\n-\nTiburski, Amaral, deMatos, Azevedo, Hessel, “The Role of Lightweight Approaches\nTowards the Standardization of a Security Architecture for IoT Middleware Systems”,\nIEEE Communications, Dec 2016",
+          "role": "body",
+          "source_id": "txt_000062"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "page_num": 8,
+      "xref": 70,
+      "page_object": {
+        "page_num": 8,
+        "xref": 70,
+        "page_object": {
+          "Type": "/Page",
+          "Parent": "2 0 R",
+          "Resources": "72 0 R",
+          "Contents": "71 0 R",
+          "Annots": "73 0 R"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000063",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            67.23410034179688,
+            333.5277404785156,
+            86.8752212524414
+          ],
+          "text": "PART C:\nFURTHER INFORMATION",
+          "role": "body",
+          "source_id": "txt_000063"
+        },
+        {
+          "id": "txt_000064",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            159.9249725341797,
+            114.18968963623047,
+            175.50241088867188
+          ],
+          "text": "Student behaviour and wellbeing",
+          "role": "body",
+          "source_id": "txt_000064"
+        },
+        {
+          "id": "txt_000065",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            182.73265075683594,
+            506.8626403808594,
+            250.28689575195312
+          ],
+          "text": "All students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and\nrespectful of others; and appropriately use University resources, information, equipment and\nfacilities. All students are expected to contribute to creating a work and study environment\nthat is safe and free from bullying, violence, discrimination, sexual harassment, vilification\nand other forms of unacceptable behaviour.",
+          "role": "body",
+          "source_id": "txt_000065"
+        },
+        {
+          "id": "txt_000067",
+          "type": "text",
+          "bbox": [
+            71.85009002685547,
+            266.49267578125,
+            507.7342224121094,
+            320.3669128417969
+          ],
+          "text": "The Student Charter describes what students can reasonably expect from Swinburne in order\nto enjoy a quality learning experience. The Charter also sets out what is expected of students\nwith regards to your studies and the way you conduct yourself towards other people and\nproperty.",
+          "role": "body",
+          "source_id": "txt_000067"
+        },
+        {
+          "id": "txt_000069",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            336.3326416015625,
+            498.3141784667969,
+            389.9669189453125
+          ],
+          "text": "You are expected to familiarise yourself with University regulations and policies and are\nobliged to abide by these, including the Student Academic Misconduct Regulations, Student\nGeneral Misconduct Regulations and the People, Culture and Integrity Policy. Any student\nfound to be in breach of these may be subject to disciplinary processes.",
+          "role": "body",
+          "source_id": "txt_000069"
+        },
+        {
+          "id": "txt_000071",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            406.17266845703125,
+            250.01881408691406,
+            418.0469055175781
+          ],
+          "text": "Examples of expected behaviours are:",
+          "role": "body",
+          "source_id": "txt_000071"
+        },
+        {
+          "id": "txt_000072",
+          "type": "text",
+          "bbox": [
+            90.0,
+            419.7096252441406,
+            500.1130676269531,
+            529.8869018554688
+          ],
+          "text": "-\nconducting yourself in teaching areas in a manner that is professional and not\ndisruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing\nappropriate footwear and safety equipment, not acting in a manner which is\ndangerous or disruptive (e.g. playing computer games), and not bringing in food or\ndrink\n-\nfollowing emergency and evacuation procedures and following instructions given by\nstaff/wardens in an emergency response.",
+          "role": "body",
+          "source_id": "txt_000072"
+        },
+        {
+          "id": "txt_000073",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            541.7650146484375,
+            119.03105163574219,
+            557.3424682617188
+          ],
+          "text": "Canvas",
+          "role": "body",
+          "source_id": "txt_000073"
+        },
+        {
+          "id": "txt_000074",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            564.5726318359375,
+            509.4326171875,
+            604.5269165039062
+          ],
+          "text": "You should regularly log on to the Swinburne learning management system, Canvas. You can\naccess Canvas via the Student login webpage or https://swinburne.instructure.com/ Canvas is\nupdated regularly with important unit information and communications.",
+          "role": "body",
+          "source_id": "txt_000074"
+        },
+        {
+          "id": "txt_000075",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            616.64501953125,
+            168.4480438232422,
+            632.2224731445312
+          ],
+          "text": "Communication",
+          "role": "body",
+          "source_id": "txt_000075"
+        },
+        {
+          "id": "txt_000076",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            639.45263671875,
+            508.36749267578125,
+            679.1669311523438
+          ],
+          "text": "All communication will be via your Swinburne email address. If you access your email through\na provider other than Swinburne, then it is your responsibility to ensure that your Swinburne\nemail is redirected to your private email address.",
+          "role": "body",
+          "source_id": "txt_000076"
+        },
+        {
+          "id": "txt_000077",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            691.5249633789062,
+            122.8008041381836,
+            707.1024169921875
+          ],
+          "text": "Academic Integrity",
+          "role": "body",
+          "source_id": "txt_000077"
+        },
+        {
+          "id": "txt_000078",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            714.3326416015625,
+            503.5097351074219,
+            754.046875
+          ],
+          "text": "Academic integrity is about taking responsibility for your learning and submitting work that is\nhonestly your own. It means acknowledging the ideas, contributions and work of others;\nreferencing your sources and acknowledging the use of generative artificial intelligence;",
+          "role": "body",
+          "source_id": "txt_000078"
+        },
+        {
+          "id": "txt_000079",
+          "type": "text",
+          "bbox": [
+            165.83999633789062,
+            100.88882446289062,
+            490.0293273925781,
+            125.9405288696289
+          ],
+          "text": "For further information on any of these topics, refer to Swinburne’s\nStudent webpage http://www.swinburne.edu.au/student/",
+          "role": "body",
+          "source_id": "txt_000079"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "page_num": 9,
+      "xref": 88,
+      "page_object": {
+        "page_num": 9,
+        "xref": 88,
+        "page_object": {
+          "Type": "/Page",
+          "Parent": "89 0 R",
+          "Resources": "91 0 R",
+          "Contents": "90 0 R",
+          "Annots": "92 0 R"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000080",
+          "type": "text",
+          "bbox": [
+            71.89989471435547,
+            72.81266021728516,
+            494.69537353515625,
+            98.36689758300781
+          ],
+          "text": "contributing fairly to group work; and completing tasks, tests and exams without cheating.\nArtificial intelligence tools should only be used where approved by the Unit Convenor.",
+          "role": "body",
+          "source_id": "txt_000080"
+        },
+        {
+          "id": "txt_000082",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            114.57266235351562,
+            501.0455627441406,
+            154.5269012451172
+          ],
+          "text": "Swinburne University uses the Turnitin system, which helps to identify inadequate citations,\npoor paraphrasing and unoriginal work in assignments that are submitted via Canvas. Your\nUnit Convenor will provide further details.",
+          "role": "body",
+          "source_id": "txt_000082"
+        },
+        {
+          "id": "txt_000084",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            170.49266052246094,
+            508.32672119140625,
+            238.28689575195312
+          ],
+          "text": "Plagiarism, collusion, contract cheating, unauthorised file sharing, falsification, fabrication,\nmanipulation or misrepresentation of information, reuse of previous work and non-\ncompliance with instructions in an invigilated or non-invigilated assessment item are all\nbreaches of academic integrity and treated as academic misconduct. Examples of breaches of\nacademic integrity include, but are not limited to:",
+          "role": "body",
+          "source_id": "txt_000084"
+        },
+        {
+          "id": "txt_000085",
+          "type": "text",
+          "bbox": [
+            90.0,
+            240.66961669921875,
+            510.44830322265625,
+            573.326904296875
+          ],
+          "text": "-\nsubmitting work as your own for assessment that has been fully or partially\ncompleted by a third party, either paid or unpaid\n-\nusing output from artificial intelligence tools (e.g. ChatGPT) in whole or part without\nacknowledgement and/or without the approval of the Unit Convenor\n-\nusing another person’s work or ideas as though it is your own work, without\nappropriate attribution\n-\nworking closely with another student or group of students (either past or current), to\nsubmit for assessment, some or all of the other student or students’ work as your\nown work\n-\nsharing without permission of the Unit Convenor, Swinburne resources or other\nmaterial related to assessment to an entity or document repository site\n-\ncreating, intentionally modifying or inventing information that is intended to be\nsubmitted as part of an assessment item\n-\nusing the whole or part of a computer program written by another person as your\nown without appropriate acknowledgement\n-\npoorly paraphrasing somebody else’s work\n-\nusing a musical composition or audio, visual, graphic and photographic work created\nby another person without acknowledgment\n-\nenabling others to cheat, including letting another student copy your work or by\ngiving access to a draft or completed assignment\n-\nletting someone or something else impersonate you, or you impersonate someone else\nin an invigilated or non-invigilated assessment item\n-\naccessing, obtaining and/or providing to others unauthorised materials relating to an\ninvigilated or non-invigilated assessment item.",
+          "role": "body",
+          "source_id": "txt_000085"
+        },
+        {
+          "id": "txt_000086",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            588.3326416015625,
+            478.4788513183594,
+            628.0469360351562
+          ],
+          "text": "The penalties for academic misconduct can be severe, ranging from a zero grade for an\nassessment task through to exclusion from Swinburne. For further details, see\nhttps://www.swinburne.edu.au/student-login/academic-integrity/",
+          "role": "body",
+          "source_id": "txt_000086"
+        },
+        {
+          "id": "txt_000087",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            640.1649780273438,
+            114.18968963623047,
+            655.742431640625
+          ],
+          "text": "Student support",
+          "role": "body",
+          "source_id": "txt_000087"
+        },
+        {
+          "id": "txt_000088",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            662.9725952148438,
+            506.53546142578125,
+            716.846923828125
+          ],
+          "text": "Swinburne offers a range of services and resources to help you complete your studies\nsuccessfully. Your Unit Convenor or studentHQ can provide information about the study\nsupport and other services available for Swinburne students. For further information, see the\nCurrent students web page.",
+          "role": "body",
+          "source_id": "txt_000088"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "page_num": 10,
+      "xref": 95,
+      "page_object": {
+        "page_num": 10,
+        "xref": 95,
+        "page_object": {
+          "Type": "/Page",
+          "Parent": "89 0 R",
+          "Resources": "97 0 R",
+          "Contents": "96 0 R",
+          "Annots": "98 0 R"
+        }
+      },
+      "elements": [
+        {
+          "id": "txt_000089",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            70.88497924804688,
+            109.8233413696289,
+            86.46241760253906
+          ],
+          "text": "Special consideration",
+          "role": "body",
+          "source_id": "txt_000089"
+        },
+        {
+          "id": "txt_000090",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            93.69265747070312,
+            496.3359375,
+            133.4069061279297
+          ],
+          "text": "If your studies have been adversely affected due to serious and unavoidable circumstances\noutside of your control (e.g. severe illness or unavoidable obligation), you may be able to\napply for special consideration (SPC).",
+          "role": "body",
+          "source_id": "txt_000090"
+        },
+        {
+          "id": "txt_000092",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            149.61265563964844,
+            506.30255126953125,
+            203.24688720703125
+          ],
+          "text": "Applications for Special Consideration are submitted via the SPC online tool normally no later\nthan 5.00pm on the third working day after the submission/sitting date for the relevant\nassessment component. See https://www.swinburne.edu.au/life-at-swinburne/student-\nsupport-services/special-consideration-assistance/",
+          "role": "body",
+          "source_id": "txt_000092"
+        },
+        {
+          "id": "txt_000094",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            219.60385131835938,
+            506.835693359375,
+            259.9915466308594
+          ],
+          "text": "Note: Submitting fraudulent (fake or altered) medical certificates is considered misconduct and can\nlead to serious penalties from Swinburne. In addition, your doctor may report fraudulent medical\ncertificates as a prosecutable offence under the Victorian Crimes Act.",
+          "role": "body",
+          "source_id": "txt_000094"
+        },
+        {
+          "id": "txt_000095",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            271.7649841308594,
+            141.9785919189453,
+            287.3424072265625
+          ],
+          "text": "AccessAbility Services",
+          "role": "body",
+          "source_id": "txt_000095"
+        },
+        {
+          "id": "txt_000096",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            294.5726318359375,
+            504.5765380859375,
+            348.2069091796875
+          ],
+          "text": "If you are a student with a disability, medical or mental health condition or you have\nsignificant carer responsibilities, you may require reasonable adjustments to fully access and\nparticipate in education. Swinburne's AccessAbility Services can develop an Education Access\nPlan (EAP) that includes the services and reasonable adjustments that you need.",
+          "role": "body",
+          "source_id": "txt_000096"
+        },
+        {
+          "id": "txt_000098",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            364.41265869140625,
+            504.40582275390625,
+            404.12689208984375
+          ],
+          "text": "It is recommended that you register with AccessAbility Services when you first commence\nyour course but you can contact the service at any time during your studies to find out about\nreasonable adjustments. Contact Accessibility Services to discuss further.",
+          "role": "body",
+          "source_id": "txt_000098"
+        },
+        {
+          "id": "txt_000099",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            416.2449951171875,
+            160.6917724609375,
+            431.8224182128906
+          ],
+          "text": "Review of marks",
+          "role": "body",
+          "source_id": "txt_000099"
+        },
+        {
+          "id": "txt_000100",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            439.29266357421875,
+            509.5621643066406,
+            479.00689697265625
+          ],
+          "text": "An independent marker reviews all fail grades for major assessment tasks. In addition, a\nreview of assessment is undertaken if your final result is between 45 and 49 or within 2 marks\nof any grade threshold.",
+          "role": "body",
+          "source_id": "txt_000100"
+        },
+        {
+          "id": "txt_000102",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            494.97265625,
+            507.2855224609375,
+            576.9269409179688
+          ],
+          "text": "You can ask the Unit Convenor to check the result for an assessment item or your final result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit\nConvenor can discuss the marking criteria with you and check the aggregate marks of\nassessment components to identify if an error has been made. This is known as local\nresolution. If you are dissatisfied with the outcome of the local resolution, you can lodge a\nformal complaint.",
+          "role": "body",
+          "source_id": "txt_000102"
+        },
+        {
+          "id": "txt_000103",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            589.0449829101562,
+            280.7618713378906,
+            604.6224365234375
+          ],
+          "text": "Feedback, complaints and suggestions",
+          "role": "body",
+          "source_id": "txt_000103"
+        },
+        {
+          "id": "txt_000104",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            611.8526000976562,
+            498.7110900878906,
+            651.806884765625
+          ],
+          "text": "In the first instance, discuss any issues with your Unit Convenor. If your concerns are not\nresolved or you would prefer not to deal with your Unit Convenor, then you can complete a\nfeedback form. See https://www.swinburne.edu.au/corporate/feedback/",
+          "role": "body",
+          "source_id": "txt_000104"
+        },
+        {
+          "id": "txt_000105",
+          "type": "text",
+          "bbox": [
+            71.94993591308594,
+            663.9249877929688,
+            133.50466918945312,
+            679.50244140625
+          ],
+          "text": "Advocacy",
+          "role": "body",
+          "source_id": "txt_000105"
+        },
+        {
+          "id": "txt_000106",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            686.7326049804688,
+            505.5084228515625,
+            726.6868896484375
+          ],
+          "text": "Should you require assistance with any academic issues, University statutes, regulations,\npolicies and procedures, you are advised to seek advice from an Academic Student\nSupport Officer at Swinburne Student Life.",
+          "role": "body",
+          "source_id": "txt_000106"
+        },
+        {
+          "id": "txt_000107",
+          "type": "text",
+          "bbox": [
+            71.90013122558594,
+            736.172607421875,
+            464.7290344238281,
+            761.9669189453125
+          ],
+          "text": "For an appointment, please call 19006412 or lodge a query via Student Portal at\nhttps://portal.swin.edu.vn",
+          "role": "body",
+          "source_id": "txt_000107"
+        }
+      ],
+      "groups": []
+    }
+  ],
+  "page_content": {
+    "page_num": 1,
+    "xref": 1,
+    "object": {
+      "Type": "/Page",
+      "Parent": "2 0 R",
+      "Resources": "4 0 R",
+      "Contents": "3 0 R"
+    }
+  },
+  "pdf_metadata": {
+    "title": null,
+    "author": null,
+    "subject": null,
+    "keywords": null,
+    "creator": null,
+    "producer": "macOS Version 26.5.1 (Build 25F80) Quartz PDFContext",
+    "creation_date": "D:20260906163358Z00'00'",
+    "modification_date": "D:20260906163358Z00'00'"
+  },
+  "tables": [
+    {
+      "id": "tbl_002_000",
+      "type": "table",
+      "page_num": 2,
+      "bbox": [
+        72.87069755376771,
+        109.488037109375,
+        523.4560017903646,
+        388.9920288085938
+      ],
+      "rows": [
+        [
+          "Unit Code(s)",
+          null,
+          "TNE30009"
+        ],
+        [
+          "Unit Title",
+          null,
+          "Network Security and Resilience"
+        ],
+        [
+          "Duration",
+          null,
+          "12 weeks"
+        ],
+        [
+          "Total Contact Hours",
+          null,
+          "60"
+        ],
+        [
+          "Requisites:",
+          null,
+          "TNE10006 Networks and Switching OR COS20012 Communications and Security OR equivalent introduction to IP networking Basic understanding of IP networking"
+        ],
+        [
+          null,
+          "Pre-requisites",
+          null
+        ],
+        [
+          null,
+          "Co-requisites",
+          null
+        ],
+        [
+          null,
+          "Concurrent pre-",
+          null
+        ],
+        [
+          null,
+          "requisites",
+          null
+        ],
+        [
+          null,
+          "Anti-requisites",
+          null
+        ],
+        [
+          null,
+          "Assumed knowledge",
+          null
+        ],
+        [
+          "Credit Points",
+          null,
+          "12.5"
+        ],
+        [
+          "Campus/Location",
+          null,
+          "Swinburne Vietnam"
+        ],
+        [
+          "Mode of Delivery",
+          null,
+          "On campus"
+        ],
+        [
+          "Assessment Summary",
+          null,
+          "Portfolio 80%, Online quizzes 20%"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_004_000",
+      "type": "table",
+      "page_num": 4,
+      "bbox": [
+        72.81120086669922,
+        261.01499938964844,
+        512.1000175476074,
+        394.8400344848633
+      ],
+      "rows": [
+        [
+          "Name",
+          "Role",
+          "Location",
+          "Email / Teams",
+          "Consultation"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "Times"
+        ],
+        [
+          "Dr. Pham Van Dai",
+          "Lead Coordinator",
+          "Ha Noi",
+          "dvpham@swin. edu.au",
+          "By email appointment"
+        ],
+        [
+          "Dr. Sam Nguyen",
+          "Unit Coordinator",
+          "HCM City",
+          "sxnguyen@swin .edu.au",
+          "By email appointment"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_004_001",
+      "type": "table",
+      "page_num": 4,
+      "bbox": [
+        72.81120086669922,
+        429.7350244522095,
+        512.1000175476074,
+        544.1200510660807
+      ],
+      "rows": [
+        [
+          "Category",
+          "Activity",
+          "Total",
+          "Hours",
+          "Teaching Period"
+        ],
+        [
+          null,
+          null,
+          "Hours",
+          "per Week",
+          "Weeks"
+        ],
+        [
+          "In person",
+          "Lectures",
+          "36 hours",
+          "3 hours",
+          "Weeks 1 to 12"
+        ],
+        [
+          "In person",
+          "Class",
+          "11 hours",
+          "1 hour",
+          "Weeks 2 to 12"
+        ],
+        [
+          "In person",
+          "Lab",
+          "12 hours",
+          "1 hour (average)",
+          "Every second week from week 1"
+        ],
+        [
+          "Live Online or in person",
+          "Consultation",
+          "12 hour",
+          "1 hour",
+          "Weeks 1 to 12"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_004_002",
+      "type": "table",
+      "page_num": 4,
+      "bbox": [
+        72.81120086669922,
+        593.1600341796875,
+        504.74666680230035,
+        764.7000122070312
+      ],
+      "rows": [
+        [
+          "Week",
+          "Teaching and Learning Activity",
+          "Student Task or Assessment"
+        ],
+        [
+          "1",
+          "Lecture: Overview, networks and TCP review",
+          null
+        ],
+        [
+          "2",
+          "Lecture and Tutorial: Threats Lab 1: Tunnelling",
+          "Lab assessed via a short quiz at end of session"
+        ],
+        [
+          "3",
+          "Lecture and Tutorial: Threats",
+          null
+        ],
+        [
+          "4",
+          "Lecture and Tutorial: Security Policy, Authentication Lab 2: Firewalls",
+          "Lab assessed via a short quiz at end of session"
+        ],
+        [
+          "5",
+          "Lecture and Tutorial: Firewalls",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "tbl_005_000",
+      "type": "table",
+      "page_num": 5,
+      "bbox": [
+        72.69473788612767,
+        71.46002197265625,
+        504.75,
+        365.34002685546875
+      ],
+      "rows": [
+        [
+          "6",
+          "Lecture and Tutorial: VPNs, Intrusion Detection and Prevention Lab 3: VPNs",
+          "Lab assessed via a short quiz at end of session and report due in week 8"
+        ],
+        [
+          "7",
+          "Lecture and Tutorial: Denial of Service attacks and defences",
+          "Mid semester test"
+        ],
+        [
+          "8",
+          "Lecture and Tutorial: Cryptographic algorithms Lab 4: Authentication",
+          "Lab assessed via a short quiz at end of session Lab 3 report due"
+        ],
+        [
+          "9",
+          "Lecture: Cryptographic algorithms",
+          null
+        ],
+        [
+          "10",
+          "Lecture and Tutorial: Security protocols Lab 5: Cryptography",
+          "Lab assessed via a short quiz at end of session and report due in week 10"
+        ],
+        [
+          "11",
+          "Lecture and Tutorial: Security protocols, Wireless Security including IoT, Cloud Security",
+          null
+        ],
+        [
+          "12",
+          "Lecture and Tutorial: Wireless Security, Revision Lab 6: Cryptography",
+          "Lab 5 report due Lab assessed via a short report due in that week End of semester test worth 10%"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_005_001",
+      "type": "table",
+      "page_num": 5,
+      "bbox": [
+        90.0,
+        440.8800354003906,
+        482.1600036621094,
+        480.2400207519531
+      ],
+      "rows": [
+        [
+          "• Achieve an overall mark for the unit of 50% or more, and",
+          null,
+          null,
+          null
+        ],
+        [
+          "• Satisfactorily complete all portfolio assessment items. This includes the research",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "report and the case study. You must submit both to pass.",
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "id": "tbl_005_002",
+      "type": "table",
+      "page_num": 5,
+      "bbox": [
+        72.69473788612767,
+        538.4589972245066,
+        519.383984375,
+        759.394269670759
+      ],
+      "rows": [
+        [
+          null,
+          "Individu",
+          null,
+          "Mapped Unit",
+          "Mapped",
+          "Assessment"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "Graduate",
+          null
+        ],
+        [
+          "Tasks and Details",
+          "al or",
+          "Weight",
+          "Learning",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Due Date"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "Attributes",
+          null
+        ],
+        [
+          null,
+          "Group",
+          null,
+          "Outcomes",
+          null,
+          null
+        ],
+        [
+          "Research report of up to 2500 words",
+          "Individual",
+          "HD",
+          "1,2,3,4,5,6,7",
+          null,
+          "During the exam period"
+        ],
+        [
+          "Case study up to 2500 words",
+          "Individual",
+          "HD",
+          "1,2,3",
+          null,
+          "Last day of semester"
+        ],
+        [
+          "Short laboratory quiz upon completion (6)",
+          "Individual",
+          "P",
+          "1,3,4,6",
+          null,
+          "End of each lab session"
+        ],
+        [
+          "Laboratory reports (2)",
+          "Individual",
+          "P",
+          "1,3,4,6",
+          null,
+          "End of week two weeks after lab session"
+        ],
+        [
+          "Optional mid semester test (in-class)",
+          "Individual",
+          "10%",
+          "1,2,3,5",
+          null,
+          "Week 7"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_006_000",
+      "type": "table",
+      "page_num": 6,
+      "bbox": [
+        72.69600143432618,
+        71.52001953125,
+        518.952001953125,
+        114.00003051757812
+      ],
+      "rows": [
+        [
+          "Optional end of semester test (in-class)",
+          "Individual",
+          "10%",
+          "1,2,3,5",
+          null,
+          "Week 12"
+        ]
+      ]
+    },
+    {
+      "id": "tbl_006_001",
+      "type": "table",
+      "page_num": 6,
+      "bbox": [
+        72.69600143432618,
+        131.9200236002604,
+        518.952001953125,
+        656.2400309244791
+      ],
+      "rows": [
+        [
+          "Assessment Requirements",
+          "Details"
+        ],
+        [
+          "b) Use of generative AI (genAI) in this unit",
+          "The valid use of genAI in this unit is as follows: • genAI may be used for brainstorming, creating structures, and generating ideas for improving work. Any use of genAI must be acknowledged, with prompts and outputs included in an appendix."
+        ],
+        [
+          "c) Hurdle requirements",
+          "All assessments other than the online quizzes must be passed."
+        ],
+        [
+          "d) Final assessment period",
+          "You are expected to be available for the entire final assessment period including any Special Exam period."
+        ],
+        [
+          "e) Submission requirements",
+          "Assignments and other assessments are submitted online through the Canvas assessment submission system which integrates with the Turnitin . Please ensure you keep a copy of all assessments that are submitted."
+        ],
+        [
+          "f) Extensions and late submissions",
+          "Late Submissions - Unless an extension has been approved, late submissions will result in a penalty. You will be penalised 5% of total assessment value for each working day the task is late, up to a maximum of 7 working days. After 7 working days, a zero result will be recorded."
+        ],
+        [
+          "g) Referencing",
+          "To avoid breaching academic integrity, you are required to provide references whenever you include information from other sources in your work and acknowledge when you have used Artificial Intelligence (AI) tools (such as ChatGPT). Further details regarding academic integrity are available in Section C of this document. Referencing conventions required for this unit is IEEE. Helpful information on referencing can be found at http://www.swinburne.edu.au/library/referencing/"
+        ],
+        [
+          "h) Groupwork guidelines",
+          "There is no groupwork for this unit."
+        ]
+      ]
+    }
+  ]
+}
