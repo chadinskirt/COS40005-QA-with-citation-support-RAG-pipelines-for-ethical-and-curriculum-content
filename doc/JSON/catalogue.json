@@ -1,27 +1,204 @@
 {
-  "version": "1.0",
+  "catalogue_version": "1.0.0",
+  "schema_version": "1.0",
+  "description": "Starter academic topic catalogue for course classification and recommendation.",
   "topics": [
     {
-      "id": "CS_NET",
-      "name": "Computer Networking",
-      "description": "Network architecture, communication protocols and network infrastructure.",
-      "parent": "CS"
-    },
-    {
-      "id": "CS_NET_SEC",
-      "name": "Network Security",
-      "description": "Security mechanisms, monitoring and protection of computer networks.",
-      "parent": "CS_NET",
+      "id": "CS",
+      "name": "Computer Science",
+      "description": "Broad field covering computation, software, computer systems, data, and intelligent systems.",
+      "parent_id": null,
       "aliases": [
-        "Network Protection",
-        "Network Cybersecurity"
-      ]
+        "Computing",
+        "Computer Studies"
+      ],
+      "status": "active"
     },
     {
-      "id": "CS_DS",
+      "id": "CS_PROGRAMMING",
+      "name": "Programming",
+      "description": "Programming concepts, language fundamentals, and the implementation of software.",
+      "parent_id": "CS",
+      "aliases": [
+        "Computer Programming",
+        "Software Programming"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_ALGORITHMS",
+      "name": "Algorithms",
+      "description": "Design, analysis, and implementation of algorithms and computational problem-solving methods.",
+      "parent_id": "CS",
+      "aliases": [
+        "Algorithm Design",
+        "Algorithm Analysis"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_DATA_STRUCTURES",
       "name": "Data Structures",
-      "description": "Organization, storage and manipulation of data using structured representations.",
-      "parent": "CS"
+      "description": "Methods for organizing, storing, and accessing data, including arrays, trees, graphs, and hash tables.",
+      "parent_id": "CS",
+      "aliases": [
+        "Data Structure Design"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_SYSTEMS",
+      "name": "Computer Systems",
+      "description": "The organization and operation of computer hardware, operating systems, and low-level software.",
+      "parent_id": "CS",
+      "aliases": [
+        "Systems Computing",
+        "Computer System Fundamentals"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_OS",
+      "name": "Operating Systems",
+      "description": "Operating-system concepts including processes, threads, scheduling, memory management, and system interfaces.",
+      "parent_id": "CS_SYSTEMS",
+      "aliases": [
+        "OS",
+        "Operating System Concepts"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_CONCURRENCY",
+      "name": "Concurrency",
+      "description": "Concurrent execution, synchronization, coordination, and communication between tasks or threads.",
+      "parent_id": "CS_SYSTEMS",
+      "aliases": [
+        "Concurrent Programming",
+        "Multithreading",
+        "Synchronization"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_NETWORK",
+      "name": "Computer Networking",
+      "description": "Network architecture, communication protocols, network services, and data transmission.",
+      "parent_id": "CS",
+      "aliases": [
+        "Networking",
+        "Computer Networks"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_NETSEC",
+      "name": "Network Security",
+      "description": "Security of networked systems, including network threats, defensive controls, monitoring, and secure communication.",
+      "parent_id": "CS_NETWORK",
+      "aliases": [
+        "Network Cybersecurity",
+        "Network Protection"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_EMBEDDED",
+      "name": "Embedded Systems",
+      "description": "Computing systems built into devices, including microcontrollers, firmware, and hardware-software interaction.",
+      "parent_id": "CS_SYSTEMS",
+      "aliases": [
+        "Embedded Computing",
+        "Microcontroller Systems"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_IOT",
+      "name": "Internet of Things",
+      "description": "Connected physical devices and systems that sense, exchange, and act on data over networks.",
+      "parent_id": "CS",
+      "aliases": [
+        "IoT",
+        "Internet of Things Systems"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_AI",
+      "name": "Artificial Intelligence",
+      "description": "Computational methods for tasks associated with intelligent behaviour, reasoning, perception, and decision-making.",
+      "parent_id": "CS",
+      "aliases": [
+        "AI",
+        "Artificial Intelligence Systems"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_ML",
+      "name": "Machine Learning",
+      "description": "Methods that enable computational models to learn patterns from data for prediction, classification, or decision-making.",
+      "parent_id": "CS_AI",
+      "aliases": [
+        "ML",
+        "Statistical Learning"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_AI_ENGINEERING",
+      "name": "AI Engineering",
+      "description": "Engineering practices for building, integrating, deploying, and maintaining AI-powered applications and systems.",
+      "parent_id": "CS_AI",
+      "aliases": [
+        "AI Systems Engineering",
+        "Applied AI Engineering"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_DATA_SCIENCE",
+      "name": "Data Science",
+      "description": "Extracting knowledge and insights from data through data preparation, analysis, statistics, and visualization.",
+      "parent_id": "CS",
+      "aliases": [
+        "Data Analytics",
+        "Applied Data Science"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_CLOUD",
+      "name": "Cloud Computing",
+      "description": "Computing services and infrastructure delivered over networks, including cloud platforms, deployment, and resource management.",
+      "parent_id": "CS",
+      "aliases": [
+        "Cloud Infrastructure",
+        "Cloud Services"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_SOFTWARE",
+      "name": "Software Engineering",
+      "description": "Methods and practices for specifying, designing, developing, testing, and maintaining software systems.",
+      "parent_id": "CS",
+      "aliases": [
+        "Software Development Engineering"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "CS_SOFTWARE_ARCH",
+      "name": "Software Architecture",
+      "description": "The high-level structure of software systems, including components, interfaces, design decisions, and architectural styles.",
+      "parent_id": "CS_SOFTWARE",
+      "aliases": [
+        "Software System Architecture",
+        "Software Design Architecture"
+      ],
+      "status": "active"
     }
   ]
 }
