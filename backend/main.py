@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 
 # Import your newly built ML engines
-from recommender import generate_study_plan, CurriculumCycleError
+from service.recommender import generate_study_plan, CurriculumCycleError
 from rag_engine import get_chat_response
 
 app = FastAPI(title="Academic Advising Portal API", version="1.1")
