@@ -1,3 +1,4 @@
+import os
 import re
 import time
 import requests
@@ -9,6 +10,7 @@ CHROMA_DB_DIR = BASE_DIR / "doc" / "chroma_db"
 
 MAX_DISTANCE_THRESHOLD = 1.6
 LLM_MODEL = "qwen2.5:3b"
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 
 chroma_client = chromadb.PersistentClient(path=str(CHROMA_DB_DIR))
 collection = chroma_client.get_or_create_collection(name="syllabus_collection")
@@ -88,7 +90,7 @@ def get_chat_response(question: str, history: list = None) -> dict:
 
     try:
         llm_response = requests.post(
-            "http://localhost:11434/api/chat",
+            f"{OLLAMA_BASE_URL}/api/chat",
             json={
                 "model": LLM_MODEL,
                 "messages": [
