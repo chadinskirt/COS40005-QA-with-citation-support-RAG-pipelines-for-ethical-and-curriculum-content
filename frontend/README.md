@@ -1,6 +1,6 @@
 # Academic Advising Portal frontend (v1.1)
 
-React + Vite implementation of the Figma design v1.1. Owner: Vinh.
+React + Vite implementation of the Figma design v1.1.
 
 Two pages: Study profile (the form, with the recommended pathway below it) and Ask the syllabus. The Pathway and Major trends pages were removed at the team's request.
 
