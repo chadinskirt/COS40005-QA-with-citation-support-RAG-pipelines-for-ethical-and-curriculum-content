@@ -1,6 +1,7 @@
 import os
-from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey # type: ignore
+from sqlalchemy.orm import declarative_base, sessionmaker # type: ignore
+from dataclasses import dataclass
 
 # PostgreSQL connection string format: postgresql://user:password@host:port/dbname
 # Defaulting to local dev credentials if no environment variable is set
@@ -38,3 +39,17 @@ class Student(Base):
     student_id = Column(Integer, primary_key=True, index=True)
     target_career = Column(String)
     study_goal = Column(String)
+
+@dataclass
+class CatalogueResult:
+    weights: dict[str, float]
+    scores: dict[str, float]
+    contributions: dict[str, float]
+    score: float
+
+#@dataclass
+#class CourseFeatures:
+#    course_id: str
+#    catalogue: CatalogueResult
+#    academic: AcademicResult
+#    progression: ProgressionResult

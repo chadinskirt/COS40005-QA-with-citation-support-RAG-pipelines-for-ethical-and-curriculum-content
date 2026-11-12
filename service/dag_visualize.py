@@ -13,7 +13,8 @@ def build_course_graph(prerequisites: dict[str, list[str]]) -> nx.DiGraph:
 
 def main():
     # create students obj
-    students = load_students("/home/wonderboi/Swinburne/COS40005/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Dataset/Synthetic_Student_Profiles_v1.csv")
+    #students = load_students("/home/wonderboi/Swinburne/COS40005/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Dataset/Synthetic_Student_Profiles_v1.csv")
+    students = load_students("/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Dataset/Synthetic_Student_Profiles_v1.csv")
     
     # build graph (dummy data)
     G = build_course_graph({

@@ -12,6 +12,16 @@
         "Computing",
         "Computer Studies"
       ],
+      "children": ["CS_PROGRAMMING",
+                  "CS_ALGORITHMS",
+                  "CS_DATA_STRUCTURES",
+                  "CS_SYSTEMS",
+                  "CS_OS","CS_NETWORK",
+                  "CS_IOT",
+                  "CS_AI",
+                  "CS_DATA_SCIENCE",
+                  "CS_CLOUD",
+                  "CS_SOFTWARE"],
       "status": "active"
     },
     {
@@ -23,6 +33,7 @@
         "Computer Programming",
         "Software Programming"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -34,6 +45,7 @@
         "Algorithm Design",
         "Algorithm Analysis"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -44,6 +56,7 @@
       "aliases": [
         "Data Structure Design"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -55,6 +68,7 @@
         "Systems Computing",
         "Computer System Fundamentals"
       ],
+      "children": ["CS_CONCURRENCY", "CS_OS", "CS_EMBEDDED"],
       "status": "active"
     },
     {
@@ -66,6 +80,7 @@
         "OS",
         "Operating System Concepts"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -78,6 +93,7 @@
         "Multithreading",
         "Synchronization"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -89,6 +105,7 @@
         "Networking",
         "Computer Networks"
       ],
+      "children": ["CS_NETSEC"],
       "status": "active"
     },
     {
@@ -100,6 +117,7 @@
         "Network Cybersecurity",
         "Network Protection"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -111,6 +129,7 @@
         "Embedded Computing",
         "Microcontroller Systems"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -122,6 +141,7 @@
         "IoT",
         "Internet of Things Systems"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -133,6 +153,7 @@
         "AI",
         "Artificial Intelligence Systems"
       ],
+      "children": ["CS_ML", "CS_AI_ENGINEERING"],
       "status": "active"
     },
     {
@@ -144,6 +165,7 @@
         "ML",
         "Statistical Learning"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -155,6 +177,7 @@
         "AI Systems Engineering",
         "Applied AI Engineering"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -166,6 +189,7 @@
         "Data Analytics",
         "Applied Data Science"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -177,6 +201,7 @@
         "Cloud Infrastructure",
         "Cloud Services"
       ],
+      "children": [],
       "status": "active"
     },
     {
@@ -187,6 +212,7 @@
       "aliases": [
         "Software Development Engineering"
       ],
+      "children": ["CS_SOFTWARE_ARCH"],
       "status": "active"
     },
     {
@@ -198,6 +224,7 @@
         "Software System Architecture",
         "Software Design Architecture"
       ],
+      "children": [],
       "status": "active"
     }
   ]
