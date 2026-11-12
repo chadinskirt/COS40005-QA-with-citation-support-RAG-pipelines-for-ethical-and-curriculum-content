@@ -1,10 +1,12 @@
 import networkx as nx
 from typing import List, Dict, Any
-from models import SessionLocal, Course, Prerequisite # type: ignore
+from service.models import SessionLocal, Course, Prerequisite  # type: ignore
+
 
 class CurriculumCycleError(Exception):
     def __init__(self, cycle_nodes):
         self.cycle_nodes = cycle_nodes
+
 
 def build_curriculum_graph(db) -> nx.DiGraph:
     """Builds the prerequisite DAG dynamically from the PostgreSQL database."""
@@ -13,6 +15,7 @@ def build_curriculum_graph(db) -> nx.DiGraph:
     for p in prereqs:
         G.add_edge(p.prerequisite_code, p.dependent_code, rule_type=p.rule_type)
     return G
+
 
 # 1. Fetch live data from PostgreSQL and build DAG
 def load_curriculum(db, major_id):
@@ -29,39 +32,55 @@ def load_curriculum(db, major_id):
         for c in all_courses
     }
 
+    # Ensure standalone courses without prerequisite edges exist as nodes in the graph
+    G.add_nodes_from(catalog.keys())
+
     # TODO: Filter using the major-course mapping.
     major_curriculum = set(catalog.keys())
 
     return G, catalog, major_curriculum
+
 
 # 2. Cycle Detection (Risk 4 mitigation)
 def validate_curriculum(G, catalog):
     try:
         cycle = nx.find_cycle(G)
         raise CurriculumCycleError([u for u, v in cycle])
-
     except nx.NetworkXNoCycle:
         pass
 
     missing_metadata = set(G.nodes) - set(catalog)
-
     if missing_metadata:
-        raise ValueError(
-            f"Missing course metadata: {missing_metadata}"
-        )
+        raise ValueError(f"Missing course metadata: {missing_metadata}")
 
- # 3. Iterative Semester Scheduling
+
+# 3. Iterative Semester Scheduling (supports AND, OR, and ASSUMED rules)
 def generate_candidates(G, remaining, scheduled):
     eligible = []
 
     for unit in remaining:
-        prereqs = G.predecessors(unit)
+        prereqs = list(G.predecessors(unit))
+        if not prereqs:
+            eligible.append(unit)
+            continue
 
-        # Enforce prerequisite rules, all([]) within python also cover vacant cases
-        if all(p in scheduled for p in prereqs):
+        and_prereqs = [
+            p for p in prereqs
+            if (G[p][unit].get("rule_type") or "AND").upper() == "AND"
+        ]
+        or_prereqs = [
+            p for p in prereqs
+            if (G[p][unit].get("rule_type") or "AND").upper() == "OR"
+        ]
+
+        and_ok = all(p in scheduled for p in and_prereqs)
+        or_ok = any(p in scheduled for p in or_prereqs) if or_prereqs else True
+
+        if and_ok and or_ok:
             eligible.append(unit)
 
     return eligible
+
 
 # Rule 2: Rank by unlocked descendants / Rule 3: Tie-breaker by alphabetical code
 def rank_candidates(G, candidates, remaining):
@@ -77,10 +96,10 @@ def rank_candidates(G, candidates, remaining):
 
     return ranked, scores
 
+
 # Rule 4: Max 3 units per semester
 def allocate_semester(ranked, catalog, scores, semester_index):
     selected = ranked[:3]
-
     units = []
 
     for rank, unit in enumerate(selected, start=1):
@@ -104,22 +123,28 @@ def allocate_semester(ranked, catalog, scores, semester_index):
     return {
         "index": semester_index,
         "name": f"Semester {semester_index}",
-        "credit_points": sum(
-            catalog[u]["credit_points"] for u in selected
-        ),
+        "credit_points": sum(catalog[u]["credit_points"] for u in selected),
         "units": units
     }, selected
 
-# coverage for potential deadlock of remaining missing candidates
+
+# Coverage for potential deadlock of remaining missing candidates
 def get_blocked_units(G, remaining, scheduled, catalog):
     blocked = []
 
     for unit in sorted(remaining):
-        missing = [
-            p for p in G.predecessors(unit)
-            if p not in scheduled
+        prereqs = list(G.predecessors(unit))
+        and_missing = [
+            p for p in prereqs
+            if (G[p][unit].get("rule_type") or "AND").upper() == "AND" and p not in scheduled
         ]
+        or_prereqs = [
+            p for p in prereqs
+            if (G[p][unit].get("rule_type") or "AND").upper() == "OR"
+        ]
+        or_missing = or_prereqs if (or_prereqs and not any(p in scheduled for p in or_prereqs)) else []
 
+        missing = and_missing + or_missing
         details = catalog[unit]
 
         blocked.append({
@@ -132,26 +157,26 @@ def get_blocked_units(G, remaining, scheduled, catalog):
 
     return blocked
 
+
 def generate_study_plan(
     major_id: str,
     completed_codes: List[str]
 ) -> Dict[str, Any]:
-
     db = SessionLocal()
 
     try:
         # 1. Load data
-        G, catalog, major_curriculum = load_curriculum(
-            db, major_id
-        )
+        G, catalog, major_curriculum = load_curriculum(db, major_id)
 
         # 2. Validate curriculum
         validate_curriculum(G, catalog)
 
-        completed = set(completed_codes)
+        normalized_completed = [c.strip().upper() for c in completed_codes]
+        completed = set(normalized_completed)
 
         if not completed.issubset(catalog):
-            raise ValueError("Unknown completed course codes")
+            unknown = sorted(completed - set(catalog.keys()))
+            raise ValueError(f"Unknown completed course codes: {unknown}")
 
         remaining = major_curriculum - completed
         scheduled = completed.copy()
@@ -161,47 +186,31 @@ def generate_study_plan(
 
         # 3. Iterative scheduling
         while remaining:
-
-            # Candidate generation
-            candidates = generate_candidates(
-                G, remaining, scheduled
-            )
-
+            candidates = generate_candidates(G, remaining, scheduled)
             if not candidates:
                 break
 
-            # Ranking
-            ranked, scores = rank_candidates(
-                G, candidates, remaining
-            )
-
-            # Allocation
-            semester, selected = allocate_semester(
-                ranked, catalog, scores, semester_index
-            )
+            ranked, scores = rank_candidates(G, candidates, remaining)
+            semester, selected = allocate_semester(ranked, catalog, scores, semester_index)
 
             semesters.append(semester)
-
-            # Update state
             scheduled.update(selected)
             remaining.difference_update(selected)
-
             semester_index += 1
 
         # 4. Reporting
-        blocked = get_blocked_units(
-            G, remaining, scheduled, catalog
-        )
+        blocked = get_blocked_units(G, remaining, scheduled, catalog)
+        display_name = major_id.replace("-", " ").title()
 
         return {
             "major": {
                 "id": major_id,
-                "name": "Artificial Intelligence"
+                "name": display_name
             },
             "semesters": semesters,
             "blocked_units": blocked,
             "violations": 0,
-            "completed_units": completed_codes
+            "completed_units": normalized_completed
         }
 
     finally:
