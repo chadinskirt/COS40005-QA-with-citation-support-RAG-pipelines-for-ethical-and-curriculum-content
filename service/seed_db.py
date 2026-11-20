@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 from pathlib import Path
-from models import engine, Base, SessionLocal, Course, Prerequisite, CatalogueMapping, Student
+from service.models import engine, Base, SessionLocal, Course, Prerequisite, CatalogueMapping, Student
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATASET_DIR = BASE_DIR / "doc" / "Dataset"

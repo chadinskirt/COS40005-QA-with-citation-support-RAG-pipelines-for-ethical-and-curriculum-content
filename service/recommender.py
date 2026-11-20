@@ -1,12 +1,11 @@
 import networkx as nx
 from typing import List, Dict, Any
-from service.models import SessionLocal, Course, Prerequisite  # type: ignore
+from models import SessionLocal, Course, Prerequisite  # type: ignore
 
 
 class CurriculumCycleError(Exception):
     def __init__(self, cycle_nodes):
         self.cycle_nodes = cycle_nodes
-
 
 def build_curriculum_graph(db) -> nx.DiGraph:
     """Builds the prerequisite DAG dynamically from the PostgreSQL database."""
