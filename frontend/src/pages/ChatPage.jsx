@@ -14,12 +14,17 @@ const NO_ANSWER_TEXT = 'No answer found in the approved documents.';
 
 // Figma S3 and S4, plus the chat states of S6
 export default function ChatPage() {
-  const { messages, setMessages, selected, setSelected, newId } = useAppState();
+  const { mode, activeStudentId, studentId, messages, setMessages, selected, setSelected, newId } = useAppState();
   const [draft, setDraft] = useState('');
   const inputRef = useRef(null);
   const endRef = useRef(null);
   const busy = messages.some((m) => m.status === 'pending');
   const lastReply = [...messages].reverse().find((m) => m.role === 'assistant' && m.status === 'done');
+
+  const effectiveStudentId =
+    mode === 'current-student'
+      ? activeStudentId ?? (/^\d+$/.test(studentId?.trim() || '') ? Number(studentId.trim()) : null)
+      : null;
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ block: 'end' });
@@ -42,7 +47,8 @@ export default function ChatPage() {
     setMessages((ms) => [...ms, userMsg, reply]);
     setDraft('');
     try {
-      const result = await api.chat(q, history);
+      const result =
+        effectiveStudentId != null ? await api.chat(q, history, effectiveStudentId) : await api.chat(q, history);
       const done = { ...reply, status: 'done', result };
       setMessages((ms) => ms.map((m) => (m.id === reply.id ? done : m)));
       if (result.abstained || result.citations.length === 0) setSelected(null);
@@ -131,6 +137,9 @@ export default function ChatPage() {
             </button>
           </label>
           <p className="t-caption c-secondary">
+            {effectiveStudentId != null && (
+              <span className="c-brand">Personalized for Student #{effectiveStudentId} · </span>
+            )}
             Answers come only from approved syllabus documents. Confirm enrolment decisions with an academic advisor.
           </p>
         </form>

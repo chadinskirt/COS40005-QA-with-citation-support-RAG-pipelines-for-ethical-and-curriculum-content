@@ -1,8 +1,7 @@
 services:
   postgres:
-    image: postgres:16-alpine
+    image: pgvector/pgvector:pg16
     container_name: advising-postgres
-    restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -12,7 +11,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d academic_advising"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d advising_db"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -26,7 +25,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/academic_advising
+      DATABASE_URL: postgresql+psycopg://postgres:postgres@postgres:5432/academic_advising
       OLLAMA_BASE_URL: http://host.docker.internal:11434
     extra_hosts:
       - "host.docker.internal:host-gateway"

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { api } from '../api/client.js';
+import { getUnitCategory, mergeMajors } from '../data/csMajors.js';
 import { useRequest } from '../state/useRequest.js';
 import { useAppState } from '../state/AppState.jsx';
 import { MajorChip } from '../components/Chips.jsx';
@@ -8,10 +9,16 @@ import Button from '../components/Button.jsx';
 import Icon from '../components/Icon.jsx';
 import Banner from '../components/Banner.jsx';
 import PathwayResults from '../components/PathwayResults.jsx';
+import CurrentStudentProfile from '../components/CurrentStudentProfile.jsx';
 import { SystemError } from '../components/States.jsx';
 
 // Figma S1, with the recommended pathway (former S2) under the form
 export default function ProfilePage() {
+  const { mode } = useAppState();
+  return mode === 'current-student' ? <CurrentStudentProfile /> : <FirstYearProfile />;
+}
+
+function FirstYearProfile() {
   const { major, selectMajor, completed, toggleUnit, clearUnits, plan, setPlan } = useAppState();
   const [query, setQuery] = useState('');
   const resultsRef = useRef(null);
@@ -20,11 +27,15 @@ export default function ProfilePage() {
   const loadUnits = useCallback(() => api.getUnits(major), [major]);
   const units = useRequest(major ? loadUnits : null);
 
+  const majorList = useMemo(
+    () => (majors.data ? mergeMajors(majors.data.majors ?? []) : []),
+    [majors.data]
+  );
+
   // Pick the first major when none is chosen yet or the chosen one is not offered.
   useEffect(() => {
-    const list = majors.data?.majors;
-    if (list?.length && !list.some((m) => m.id === major)) selectMajor(list[0].id);
-  }, [majors.data, major, selectMajor]);
+    if (majorList.length && !majorList.some((m) => m.id === major)) selectMajor(majorList[0].id);
+  }, [majorList, major, selectMajor]);
 
   const profileKey = `${major}|${[...completed].sort().join(',')}`;
 
@@ -44,6 +55,16 @@ export default function ProfilePage() {
     const list = units.data?.units ?? [];
     return q ? list.filter((u) => u.code.toLowerCase().includes(q) || u.name.toLowerCase().includes(q)) : list;
   }, [units.data, query]);
+
+  const coreShown = useMemo(
+    () => shown.filter((u) => (u.category ?? getUnitCategory(u.code, major)) === 'core'),
+    [shown, major]
+  );
+  const majorShown = useMemo(
+    () => shown.filter((u) => (u.category ?? getUnitCategory(u.code, major)) !== 'core'),
+    [shown, major]
+  );
+  const selectedMajorName = majorList.find((m) => m.id === major)?.name || 'Selected';
 
   const generateLabel = { idle: 'Generate pathway', loading: 'Generating…' }[plan.status] ?? 'Update pathway';
 
@@ -68,7 +89,7 @@ export default function ProfilePage() {
             ) : (
               <div className="row wrap gap-2" aria-busy={majors.loading}>
                 {majors.loading && <p className="t-small c-secondary">Loading majors…</p>}
-                {(majors.data?.majors ?? []).map((m) => (
+                {majorList.map((m) => (
                   <MajorChip key={m.id} selected={m.id === major} onClick={() => selectMajor(m.id)}>
                     {m.name}
                   </MajorChip>
@@ -99,11 +120,34 @@ export default function ProfilePage() {
             {units.error ? (
               <SystemError error={units.error} onRetry={units.retry} />
             ) : (
-              <div className="unit-grid" aria-busy={units.loading}>
+              <div className="stack gap-6" aria-busy={units.loading}>
                 {units.loading && <p className="t-small c-secondary">Loading units…</p>}
-                {shown.map((u) => (
-                  <UnitSelect key={u.code} unit={u} checked={completed.has(u.code)} onToggle={toggleUnit} />
-                ))}
+                {coreShown.length > 0 && (
+                  <div className="unit-group">
+                    <div className="unit-group__header">
+                      <span className="t-label">Computer Science Core Units</span>
+                      <span className="cat-pill cat-pill--core t-caption">Core</span>
+                    </div>
+                    <div className="unit-grid">
+                      {coreShown.map((u) => (
+                        <UnitSelect key={u.code} unit={u} checked={completed.has(u.code)} onToggle={toggleUnit} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {majorShown.length > 0 && (
+                  <div className="unit-group">
+                    <div className="unit-group__header">
+                      <span className="t-label">{selectedMajorName} Major Units</span>
+                      <span className="cat-pill cat-pill--major t-caption">Major</span>
+                    </div>
+                    <div className="unit-grid">
+                      {majorShown.map((u) => (
+                        <UnitSelect key={u.code} unit={u} checked={completed.has(u.code)} onToggle={toggleUnit} />
+                      ))}
+                    </div>
+                  </div>
+                )}
                 {units.data && shown.length === 0 && (
                   <p className="t-small c-secondary">{`No unit matches "${query}".`}</p>
                 )}

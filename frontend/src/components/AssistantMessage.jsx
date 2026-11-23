@@ -1,6 +1,7 @@
 import Banner from './Banner.jsx';
 import Button from './Button.jsx';
 import Icon from './Icon.jsx';
+import MarkdownContent from './MarkdownContent.jsx';
 import { CitationChip } from './Chips.jsx';
 import { SystemError } from './States.jsx';
 import { ADVISOR_URL } from '../config.js';
@@ -48,7 +49,7 @@ export default function AssistantMessage({ msg, selected, onSelect, onRetry, onR
     const { answer, citations } = msg.result;
     body = (
       <>
-        <p className="t-body">{answer}</p>
+        <MarkdownContent text={answer} />
         <div className="row wrap gap-2">
           {citations.map((c, i) => (
             <CitationChip

@@ -4,6 +4,7 @@ import '@fontsource/inter/latin-400.css';
 import '@fontsource/inter/latin-500.css';
 import '@fontsource/inter/latin-600.css';
 import '@fontsource/inter/latin-700.css';
+import 'katex/dist/katex.min.css';
 import './styles/tokens.css';
 import './styles/app.css';
 import { AppStateProvider } from './state/AppState.jsx';
