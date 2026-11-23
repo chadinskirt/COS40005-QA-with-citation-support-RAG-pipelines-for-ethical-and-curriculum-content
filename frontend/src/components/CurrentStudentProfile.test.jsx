@@ -244,6 +244,52 @@ describe('Current Students Advising Module', () => {
     );
   });
 
+  it('classifies seeded units into CS Core, AI Major, and Elective Units (Choice) without injecting unseeded units', async () => {
+    api.getUnits.mockResolvedValue({
+      units: [
+        { code: 'COS40005', name: 'Computing Technology Project A', credit_points: 12.5 },
+        { code: 'COS10009', name: 'Introduction to Programming', credit_points: 12.5 },
+        { code: 'TNE10006', name: 'Networks and Switching', credit_points: 12.5 },
+        { code: 'COS20007', name: 'Object Oriented Programming', credit_points: 12.5 },
+        { code: 'COS40007', name: 'Artificial Intelligence Engineering', credit_points: 12.5 },
+        { code: 'COS20019', name: 'Cloud Computing Architecture', credit_points: 12.5 },
+        { code: 'COS30018', name: 'Intelligent Systems', credit_points: 12.5 },
+        { code: 'COS30019', name: 'Introduction to Artificial Intelligence', credit_points: 12.5 },
+        { code: 'COS30082', name: 'Applied Machine Learning', credit_points: 12.5 },
+        { code: 'SWE30003', name: 'Software Architectures and Design', credit_points: 12.5 },
+        { code: 'STA10003', name: 'Foundations of Statistics', credit_points: 12.5 },
+        { code: 'MTH10013', name: 'Linear Algebra and Applications', credit_points: 12.5 },
+        { code: 'COS10022', name: 'Data Science Principles', credit_points: 12.5 },
+        { code: 'COS40003', name: 'Concurrent Programming', credit_points: 12.5 },
+      ],
+    });
+
+    const user = userEvent.setup();
+    renderWithState(<App />);
+    await user.click(screen.getByRole('button', { name: 'Current Student' }));
+
+    const coreSection = await screen.findByRole('region', { name: 'Computer Science Core Units' });
+    const majorSection = screen.getByRole('region', { name: 'Artificial Intelligence Major Units' });
+    const electiveSection = screen.getByRole('region', { name: 'Elective Units (Choice)' });
+
+    for (const code of ['COS10009', 'TNE10006', 'COS20007', 'COS40005']) {
+      expect(within(coreSection).getByRole('group', { name: `Status for ${code}` })).toBeInTheDocument();
+    }
+
+    for (const code of ['COS20019', 'COS30018', 'COS30019', 'COS30082', 'SWE30003', 'COS40007']) {
+      expect(within(majorSection).getByRole('group', { name: `Status for ${code}` })).toBeInTheDocument();
+    }
+
+    for (const code of ['STA10003', 'MTH10013', 'COS10022', 'COS40003']) {
+      expect(within(electiveSection).getByRole('group', { name: `Status for ${code}` })).toBeInTheDocument();
+    }
+
+    // Unseeded curriculum codes must NOT be injected into the UI list
+    for (const unseeded of ['COS10025', 'COS40006', 'COS30049', 'LAW20019', 'MDA10018']) {
+      expect(screen.queryByRole('group', { name: `Status for ${unseeded}` })).not.toBeInTheDocument();
+    }
+  });
+
   it('strips raw CS_* taxonomy IDs and renders strictly the 5 canonical majors', async () => {
     api.getMajors.mockResolvedValue({
       majors: [

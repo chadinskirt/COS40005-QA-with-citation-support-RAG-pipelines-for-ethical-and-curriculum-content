@@ -194,7 +194,7 @@ function MermaidDiagram({ code }) {
           >
             <defs>
               <marker id="mmd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                <path d="M 0 1 L 10 5 L 0 9 z" fill="#2f5bd3" />
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--accent)" />
               </marker>
             </defs>
             {parsed.edges.map((e, i) => {
@@ -212,13 +212,13 @@ function MermaidDiagram({ code }) {
                     y1={y1}
                     x2={x2}
                     y2={y2}
-                    stroke="#2f5bd3"
+                    stroke="var(--accent)"
                     strokeWidth="1.5"
                     strokeDasharray={e.dashed ? '4 4' : undefined}
                     markerEnd="url(#mmd-arrow)"
                   />
                   {e.label && (
-                    <text x={(x1 + x2) / 2} y={(y1 + y2) / 2 - 4} fontSize="10" textAnchor="middle" fill="#5b6678">
+                    <text x={(x1 + x2) / 2} y={(y1 + y2) / 2 - 4} fontSize="10" textAnchor="middle" fill="var(--text-secondary)">
                       {e.label}
                     </text>
                   )}
@@ -230,8 +230,22 @@ function MermaidDiagram({ code }) {
               const label = n.label.length > 22 ? `${n.label.slice(0, 21)}…` : n.label;
               return (
                 <g key={n.id} transform={`translate(${p.x}, ${p.y})`}>
-                  <rect width={layout.W} height={layout.H} rx={8} fill="#e8eefc" stroke="#2f5bd3" strokeWidth="1.5" />
-                  <text x={layout.W / 2} y={layout.H / 2 + 4} fontSize="12" fontWeight="600" textAnchor="middle" fill="#1c2533">
+                  <rect
+                    width={layout.W}
+                    height={layout.H}
+                    rx={8}
+                    fill="var(--status-planned-bg)"
+                    stroke="var(--accent)"
+                    strokeWidth="1.5"
+                  />
+                  <text
+                    x={layout.W / 2}
+                    y={layout.H / 2 + 4}
+                    fontSize="12"
+                    fontWeight="600"
+                    textAnchor="middle"
+                    fill="var(--text-primary)"
+                  >
                     {label}
                   </text>
                 </g>

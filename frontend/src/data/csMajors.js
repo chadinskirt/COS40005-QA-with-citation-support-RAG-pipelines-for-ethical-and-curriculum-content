@@ -28,27 +28,58 @@ export const UNIT_CATALOG = {
   TNE30009: { name: 'Network Security and Resilience', credit_points: 12.5, prereqs: ['TNE10006'] },
 };
 
-export const CORE_UNIT_CODES = ['COS10009', 'COS20007', 'COS30008', 'COS40003', 'COS40005'];
+export const CS_CORE_CODES = [
+  'COS10004',
+  'COS10009',
+  'COS10025',
+  'COS10026',
+  'TNE10006',
+  'COS20007',
+  'COS40005',
+  'COS40006',
+];
+
+export const CORE_UNIT_CODES = CS_CORE_CODES;
 
 export const MAJOR_UNIT_CODES = {
-  'artificial-intelligence': ['COS30019', 'COS30018', 'COS30082', 'COS40007'],
+  'artificial-intelligence': [
+    'COS20019',
+    'COS20031',
+    'COS30018',
+    'COS30019',
+    'COS30049',
+    'COS30082',
+    'SWE30003',
+    'COS40007',
+  ],
   'data-science': ['COS10022', 'COS30082'],
   'software-development': ['SWE20004', 'COS20019', 'SWE30003'],
   'internet-of-things': ['TNE10006', 'TNE30009', 'COS20019'],
   'cyber-security': ['TNE10006', 'TNE10003', 'TNE30009'],
 };
 
+export const ELECTIVE_UNIT_CODES = [
+  'LAW20019',
+  'COS40003',
+  'MDA10018',
+  'STA10003',
+  'COS10022',
+  'MTH10013',
+];
+
 const MAJOR_ALIASES = {
   cybersecurity: 'cyber-security',
   ai: 'artificial-intelligence',
   sec: 'cyber-security',
+  'hs-csvietai': 'artificial-intelligence',
+  'mj-aiv': 'artificial-intelligence',
 };
 
 export function normalizeMajorId(majorId) {
-  return MAJOR_ALIASES[majorId] || majorId;
+  return MAJOR_ALIASES[majorId] || MAJOR_ALIASES[majorId?.toLowerCase?.()] || majorId;
 }
 
-const CORE_SET = new Set(CORE_UNIT_CODES);
+const CORE_SET = new Set(CS_CORE_CODES);
 
 /**
  * Merges API majors with the 5 canonical Computer Science majors,
@@ -76,20 +107,21 @@ export function mergeMajors(apiMajors = []) {
   return result;
 }
 
-/** Classifies a unit code as 'core' or 'major' for the given major. */
+/** Classifies a unit code as 'core', 'major', or 'elective' for the given major. */
 export function getUnitCategory(code, majorId) {
   const norm = normalizeMajorId(majorId);
   const majorList = MAJOR_UNIT_CODES[norm] ?? [];
   if (CORE_SET.has(code)) return 'core';
   if (majorList.includes(code)) return 'major';
-  return 'major';
+  return 'elective';
 }
 
 /**
- * Classifies live API units into Core vs. Major without injecting unseeded codes.
+ * Classifies and sorts live API units into Core, Major, and Elective without injecting unseeded codes.
  */
 export function mergeUnitsForMajor(majorId, apiUnits = []) {
   const norm = normalizeMajorId(majorId);
+  const majorList = MAJOR_UNIT_CODES[norm] ?? [];
   const seen = new Set();
   const result = [];
 
@@ -102,6 +134,27 @@ export function mergeUnitsForMajor(majorId, apiUnits = []) {
       category: u.category ?? getUnitCategory(u.code, norm),
     });
   }
+
+  const rankOf = (u) => {
+    if (u.category === 'core') {
+      const idx = CS_CORE_CODES.indexOf(u.code);
+      return [0, idx === -1 ? Number.MAX_SAFE_INTEGER : idx];
+    }
+    if (u.category === 'major') {
+      const idx = majorList.indexOf(u.code);
+      return [1, idx === -1 ? Number.MAX_SAFE_INTEGER : idx];
+    }
+    const elecIdx = ELECTIVE_UNIT_CODES.indexOf(u.code);
+    return [2, elecIdx === -1 ? Number.MAX_SAFE_INTEGER : elecIdx];
+  };
+
+  result.sort((a, b) => {
+    const [catA, idxA] = rankOf(a);
+    const [catB, idxB] = rankOf(b);
+    if (catA !== catB) return catA - catB;
+    if (idxA !== idxB) return idxA - idxB;
+    return a.code.localeCompare(b.code);
+  });
 
   return result;
 }

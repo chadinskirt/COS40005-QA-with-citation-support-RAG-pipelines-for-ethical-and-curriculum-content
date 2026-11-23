@@ -1,11 +1,36 @@
 import { useMemo, useState } from 'react';
 
 const STATUS_META = {
-  passed: { label: 'Passed', fill: '#e5f4ec', stroke: '#1e7a4b', text: '#1e7a4b' },
-  enrolled: { label: 'Enrolled', fill: '#e0f2fe', stroke: '#0369a1', text: '#0369a1' },
-  retake: { label: 'Retake Required', fill: '#fff4de', stroke: '#8a5300', text: '#8a5300' },
-  planned: { label: 'Planned', fill: '#e8eefc', stroke: '#2f5bd3', text: '#2f5bd3' },
-  blocked: { label: 'Blocked', fill: '#fdecea', stroke: '#b42318', text: '#b42318' },
+  passed: {
+    label: 'Passed',
+    fill: 'var(--status-passed-bg)',
+    stroke: 'var(--status-passed-border)',
+    text: 'var(--status-passed-text)',
+  },
+  enrolled: {
+    label: 'Enrolled',
+    fill: 'var(--status-enrolled-bg)',
+    stroke: 'var(--status-enrolled-border)',
+    text: 'var(--status-enrolled-text)',
+  },
+  retake: {
+    label: 'Retake Required',
+    fill: 'var(--status-retake-bg)',
+    stroke: 'var(--status-retake-border)',
+    text: 'var(--status-retake-text)',
+  },
+  planned: {
+    label: 'Planned',
+    fill: 'var(--status-planned-bg)',
+    stroke: 'var(--status-planned-border)',
+    text: 'var(--status-planned-text)',
+  },
+  blocked: {
+    label: 'Blocked',
+    fill: 'var(--status-blocked-bg)',
+    stroke: 'var(--status-blocked-border)',
+    text: 'var(--status-blocked-text)',
+  },
 };
 
 const NODE_W = 192;
@@ -84,6 +109,7 @@ function truncate(str, max = 24) {
 /** Color-coded prerequisite DAG visualization for dag_graph. */
 export default function DagGraph({ graph }) {
   const [activeId, setActiveId] = useState(null);
+  const [zoom, setZoom] = useState(1);
   const nodes = useMemo(() => graph?.nodes ?? [], [graph]);
   const edges = useMemo(() => graph?.edges ?? [], [graph]);
 
@@ -115,17 +141,47 @@ export default function DagGraph({ graph }) {
           <h3 className="t-h2">Prerequisite graph</h3>
           <p className="t-small c-secondary">Click any unit node to highlight its prerequisites and unlocked units.</p>
         </div>
-        <div className="dag-legend" aria-label="Graph status legend">
-          {Object.entries(STATUS_META).map(([key, meta]) => (
-            <span key={key} className="dag-legend__item t-caption">
-              <span
-                className="dag-legend__swatch"
-                style={{ backgroundColor: meta.fill, borderColor: meta.stroke }}
-                aria-hidden="true"
-              />
-              {meta.label}
-            </span>
-          ))}
+        <div className="row wrap gap-3">
+          <div className="dag-legend" aria-label="Graph status legend">
+            {Object.entries(STATUS_META).map(([key, meta]) => (
+              <span key={key} className="dag-legend__item t-caption">
+                <span
+                  className="dag-legend__swatch"
+                  style={{ backgroundColor: meta.fill, borderColor: meta.stroke }}
+                  aria-hidden="true"
+                />
+                {meta.label}
+              </span>
+            ))}
+          </div>
+          <div className="dag-zoom" role="group" aria-label="Graph zoom controls">
+            <button
+              type="button"
+              className="dag-zoom__btn t-caption t-mono"
+              aria-label="Zoom out"
+              disabled={zoom <= 0.7}
+              onClick={() => setZoom((z) => Math.max(0.7, Number((z - 0.15).toFixed(2))))}
+            >
+              −
+            </button>
+            <button
+              type="button"
+              className="dag-zoom__btn t-caption t-mono"
+              aria-label="Reset zoom"
+              onClick={() => setZoom(1)}
+            >
+              {Math.round(zoom * 100)}%
+            </button>
+            <button
+              type="button"
+              className="dag-zoom__btn t-caption t-mono"
+              aria-label="Zoom in"
+              disabled={zoom >= 1.45}
+              onClick={() => setZoom((z) => Math.min(1.45, Number((z + 0.15).toFixed(2))))}
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
 
@@ -133,14 +189,14 @@ export default function DagGraph({ graph }) {
         <svg
           className="dag-svg"
           viewBox={`0 0 ${layout.width} ${layout.height}`}
-          width={layout.width}
-          height={layout.height}
+          width={Math.round(layout.width * zoom)}
+          height={Math.round(layout.height * zoom)}
           role="img"
           aria-label={`Prerequisite graph with ${nodes.length} units and ${edges.length} dependencies`}
         >
           <defs>
             <marker id="dag-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-              <path d="M 0 1 L 10 5 L 0 9 z" fill="#7a8599" />
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--color-border-strong)" />
             </marker>
             <marker
               id="dag-arrow-active"
@@ -151,7 +207,7 @@ export default function DagGraph({ graph }) {
               markerHeight="6"
               orient="auto"
             >
-              <path d="M 0 1 L 10 5 L 0 9 z" fill="#2f5bd3" />
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--accent)" />
             </marker>
           </defs>
 
@@ -174,7 +230,7 @@ export default function DagGraph({ graph }) {
                 key={`${e.source}-${e.target}-${idx}`}
                 d={d}
                 fill="none"
-                stroke={isHighlighted ? '#2f5bd3' : '#94a3b8'}
+                stroke={isHighlighted ? 'var(--accent)' : 'var(--color-border-strong)'}
                 strokeWidth={isHighlighted ? 2.2 : 1.5}
                 strokeDasharray={isDashed ? '5 4' : undefined}
                 opacity={isDimmed ? 0.25 : 0.9}
@@ -216,17 +272,24 @@ export default function DagGraph({ graph }) {
                   height={NODE_H}
                   rx={10}
                   fill={meta.fill}
-                  stroke={isSelected ? '#1c2533' : meta.stroke}
+                  stroke={isSelected ? 'var(--text-primary)' : meta.stroke}
                   strokeWidth={isSelected ? 2.5 : 1.5}
                 />
-                <text x={12} y={22} fontSize="12" fontWeight="700" fill={meta.text}>
+                <text
+                  x={12}
+                  y={22}
+                  fontSize="12"
+                  fontWeight="700"
+                  fontFamily="var(--font-mono)"
+                  fill={meta.text}
+                >
                   {code}
                 </text>
                 <text x={NODE_W - 12} y={22} fontSize="10" fontWeight="600" textAnchor="end" fill={meta.text}>
                   {meta.label}
                 </text>
                 {title && (
-                  <text x={12} y={40} fontSize="12" fontWeight="500" fill="#1c2533">
+                  <text x={12} y={40} fontSize="12" fontWeight="500" fill="var(--text-primary)">
                     {truncate(title, 25)}
                   </text>
                 )}

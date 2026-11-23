@@ -154,9 +154,17 @@ export default function CurrentStudentProfile() {
   }, [allUnits, query]);
 
   const coreUnitsAll = useMemo(() => allUnits.filter((u) => u.category === 'core'), [allUnits]);
-  const majorUnitsAll = useMemo(() => allUnits.filter((u) => u.category !== 'core'), [allUnits]);
+  const majorUnitsAll = useMemo(() => allUnits.filter((u) => u.category === 'major'), [allUnits]);
+  const otherUnitsAll = useMemo(
+    () => allUnits.filter((u) => u.category !== 'core' && u.category !== 'major'),
+    [allUnits]
+  );
   const coreShown = useMemo(() => shownUnits.filter((u) => u.category === 'core'), [shownUnits]);
-  const majorShown = useMemo(() => shownUnits.filter((u) => u.category !== 'core'), [shownUnits]);
+  const majorShown = useMemo(() => shownUnits.filter((u) => u.category === 'major'), [shownUnits]);
+  const otherShown = useMemo(
+    () => shownUnits.filter((u) => u.category !== 'core' && u.category !== 'major'),
+    [shownUnits]
+  );
 
   const corePassedCount = useMemo(
     () => coreUnitsAll.filter((u) => passedUnits.has(u.code)).length,
@@ -165,6 +173,10 @@ export default function CurrentStudentProfile() {
   const majorPassedCount = useMemo(
     () => majorUnitsAll.filter((u) => passedUnits.has(u.code)).length,
     [majorUnitsAll, passedUnits]
+  );
+  const otherPassedCount = useMemo(
+    () => otherUnitsAll.filter((u) => passedUnits.has(u.code)).length,
+    [otherUnitsAll, passedUnits]
   );
   const selectedMajorName = majorList.find((m) => m.id === studentMajor)?.name || 'Selected';
 
@@ -303,9 +315,17 @@ export default function CurrentStudentProfile() {
               <h2 id="cs-step-units" className="t-label">
                 4. Unit history (mutually exclusive)
               </h2>
-              <span className="t-caption c-secondary" aria-live="polite">
-                {passedUnits.size} Passed · {enrolledUnits.size} Enrolled · {failedUnits.size} Failed / Retake
-              </span>
+              <div className="row wrap gap-2 t-caption" aria-live="polite">
+                <span className="summary-pill summary-pill--passed">
+                  <span className="t-mono">{passedUnits.size}</span> Passed
+                </span>
+                <span className="summary-pill summary-pill--enrolled">
+                  <span className="t-mono">{enrolledUnits.size}</span> Enrolled
+                </span>
+                <span className="summary-pill summary-pill--failed">
+                  <span className="t-mono">{failedUnits.size}</span> Failed / Retake
+                </span>
+              </div>
             </div>
             <label className="field field--search">
               <Icon name="search" size={18} className="c-secondary" />
@@ -341,19 +361,35 @@ export default function CurrentStudentProfile() {
                     total: majorUnitsAll.length,
                     alwaysShow: !query.trim() && units.data != null,
                   },
+                  {
+                    key: 'elective',
+                    title: 'Elective Units (Choice)',
+                    badge: 'Elective',
+                    list: otherShown,
+                    passed: otherPassedCount,
+                    total: otherUnitsAll.length,
+                    alwaysShow: false,
+                  },
                 ]
                   .filter((group) => group.list.length > 0 || group.alwaysShow)
-                  .map((group) => (
-                    <section key={group.key} className="unit-group" aria-label={group.title}>
-                      <div className="unit-group__header">
-                        <div className="row gap-2">
-                          <h3 className="t-label">{group.title}</h3>
-                          <span className={`cat-pill cat-pill--${group.key} t-caption`}>{group.badge}</span>
+                  .map((group) => {
+                    const pct = group.total > 0 ? Math.round((group.passed / group.total) * 100) : 0;
+                    return (
+                      <section key={group.key} className="unit-group" aria-label={group.title}>
+                        <div className="unit-group__header">
+                          <div className="row gap-2">
+                            <h3 className="t-label">{group.title}</h3>
+                            <span className={`cat-pill cat-pill--${group.key} t-caption`}>{group.badge}</span>
+                          </div>
+                          <div className="row gap-3">
+                            <div className="progress-track" aria-hidden="true">
+                              <div className="progress-fill" style={{ width: `${pct}%` }} />
+                            </div>
+                            <span className="t-caption c-secondary t-mono">
+                              {group.badge}: {group.passed}/{group.total} passed
+                            </span>
+                          </div>
                         </div>
-                        <span className="t-caption c-secondary">
-                          {group.badge}: {group.passed}/{group.total} passed
-                        </span>
-                      </div>
                       {group.list.length === 0 ? (
                         <p className="t-small c-secondary">
                           Additional major units will appear once added to the curriculum database.
@@ -366,7 +402,7 @@ export default function CurrentStudentProfile() {
                               <div key={u.code} className={`cs-unit-row${status ? ` cs-unit-row--${status}` : ''}`}>
                                 <div className="stack">
                                   <div className="row gap-2">
-                                    <span className="t-caption c-secondary">
+                                    <span className="t-caption t-mono c-secondary">
                                       {u.code} · {u.credit_points} cp
                                     </span>
                                     <span className={`cat-pill cat-pill--${group.key} t-caption`}>{group.badge}</span>
@@ -392,7 +428,8 @@ export default function CurrentStudentProfile() {
                         </div>
                       )}
                     </section>
-                  ))}
+                    );
+                  })}
                 {units.data && shownUnits.length === 0 && (
                   <p className="t-small c-secondary">{`No unit matches "${query}".`}</p>
                 )}

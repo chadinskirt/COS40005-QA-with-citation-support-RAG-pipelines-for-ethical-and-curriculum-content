@@ -80,4 +80,33 @@ describe('App routing', () => {
     expect(screen.getByText('Hello [1]')).toBeInTheDocument();
     expect(screen.getByText('Source [1]')).toBeInTheDocument();
   });
+
+  it('toggles dark mode and persists the theme to localStorage', async () => {
+    const store = new Map();
+    vi.stubGlobal('localStorage', {
+      getItem: (k) => store.get(k) ?? null,
+      setItem: (k, v) => store.set(k, String(v)),
+      removeItem: (k) => store.delete(k),
+    });
+    document.documentElement.dataset.theme = 'light';
+    try {
+      const { default: userEvent } = await import('@testing-library/user-event');
+      const user = userEvent.setup();
+      renderApp();
+      const toggle = await screen.findByRole('button', { name: 'Toggle dark mode' });
+      expect(toggle).toHaveAttribute('aria-pressed', 'false');
+
+      await user.click(toggle);
+      expect(document.documentElement.dataset.theme).toBe('dark');
+      expect(localStorage.getItem('theme')).toBe('dark');
+      expect(toggle).toHaveAttribute('aria-pressed', 'true');
+
+      await user.click(toggle);
+      expect(document.documentElement.dataset.theme).toBe('light');
+      expect(localStorage.getItem('theme')).toBe('light');
+      expect(toggle).toHaveAttribute('aria-pressed', 'false');
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
 });

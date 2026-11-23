@@ -17,14 +17,21 @@ export default function AssistantMessage({ msg, selected, onSelect, onRetry, onR
   let body;
   if (msg.status === 'pending') {
     body = (
-      <p className="t-body c-secondary">
-        Searching approved documents
-        <span className="dots" aria-hidden="true">
-          <span />
-          <span />
-          <span />
-        </span>
-      </p>
+      <div className="stack gap-3">
+        <p className="t-body c-secondary">
+          Searching approved documents
+          <span className="dots" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
+        </p>
+        <div className="stack gap-2" aria-hidden="true">
+          <div className="skeleton skeleton-line skeleton-line--long" />
+          <div className="skeleton skeleton-line skeleton-line--medium" />
+          <div className="skeleton skeleton-line skeleton-line--short" />
+        </div>
+      </div>
     );
   } else if (msg.status === 'error') {
     body = <SystemError error={msg.error} onRetry={onRetry} />;
@@ -61,7 +68,7 @@ export default function AssistantMessage({ msg, selected, onSelect, onRetry, onR
             />
           ))}
         </div>
-        <p className="row gap-1 t-caption c-success">
+        <p className="grounded-badge row gap-1 t-caption c-success">
           <Icon name="circleCheck" size={14} />
           Grounded in {citations.length} approved {citations.length === 1 ? 'document' : 'documents'}
         </p>

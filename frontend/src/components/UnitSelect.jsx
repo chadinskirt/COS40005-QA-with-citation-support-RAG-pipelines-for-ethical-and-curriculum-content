@@ -9,7 +9,7 @@ export default function UnitSelect({ unit, checked, onToggle }) {
         <Icon name="check" size={14} />
       </span>
       <span className="stack">
-        <span className="t-caption c-secondary">{unit.code}</span>
+        <span className="t-caption t-mono c-secondary">{unit.code}</span>
         <span className="t-small">{unit.name}</span>
       </span>
     </label>

@@ -7,17 +7,17 @@ export default function UnitCard({ status = 'planned', code, name, note, rank, b
     <div className={`unit-card unit-card--${status}`}>
       <div className="unit-card__head">
         <div className="row gap-1">
-          <span className={`t-caption ${color}`}>{code}</span>
+          <span className={`t-caption t-mono unit-card__code ${color}`}>{code}</span>
           {category && (
             <span className={`cat-pill cat-pill--${category} t-caption`}>
-              {category === 'core' ? 'Core' : 'Major'}
+              {category === 'core' ? 'Core' : category === 'major' ? 'Major' : 'Elective'}
             </span>
           )}
         </div>
         <div className="row gap-1">
           {badge && <span className="retake-badge t-caption">{badge}</span>}
           {rank != null && (
-            <span className="rank-badge t-caption" aria-label={`Rank ${rank} in this semester`}>
+            <span className="rank-badge t-caption t-mono" aria-label={`Rank ${rank} in this semester`}>
               #{rank}
             </span>
           )}

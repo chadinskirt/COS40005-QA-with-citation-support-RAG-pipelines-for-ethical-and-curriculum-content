@@ -5,7 +5,8 @@ import requests
 from sentence_transformers import SentenceTransformer
 from sqlalchemy import select
 
-from service.models import SessionLocal, SyllabusChunk, Student, Prerequisite
+from service.models import SessionLocal, SyllabusChunk, Student, Prerequisite, Course
+from service.recommender import generate_study_plan
 
 MAX_DISTANCE_THRESHOLD = 1.6
 LLM_MODEL = os.getenv("LLM_MODEL", "qwen2.5:3b")
@@ -59,10 +60,12 @@ def _build_student_context(db, student_id: int | None, target_unit: str | None) 
 
     passed = set(student.passed_units or [])
     failed = set(student.failed_units or [])
+    enrolled = set(student.enrolled_units or [])
     lines = [
         f"Student Profile (ID {student.student_id}):",
         f"- Major: {student.major_code or 'Undeclared'} | Career Goal: {student.target_career or 'Not set'}",
         f"- Passed Units: {', '.join(sorted(passed)) if passed else 'None'}",
+        f"- Currently Enrolled Units: {', '.join(sorted(enrolled)) if enrolled else 'None'}",
         f"- Failed Units (Need Retake): {', '.join(sorted(failed)) if failed else 'None'}",
     ]
 
@@ -73,11 +76,85 @@ def _build_student_context(db, student_id: int | None, target_unit: str | None) 
         if prereq_rows:
             status_notes = []
             for p in prereq_rows:
-                met = "MET" if p.prerequisite_code in passed else "NOT MET"
+                if p.prerequisite_code in passed:
+                    met = "MET"
+                elif p.prerequisite_code in enrolled:
+                    met = "IN PROGRESS (ENROLLED)"
+                else:
+                    met = "NOT MET"
                 status_notes.append(f"{p.prerequisite_code} ({p.rule_type}: {met})")
             lines.append(f"- Prerequisite Check for {target_unit}: {', '.join(status_notes)}")
 
+    try:
+        plan = generate_study_plan(
+            major_id=student.major_code or "artificial-intelligence",
+            completed_codes=sorted(passed),
+            failed_codes=sorted(failed),
+            enrolled_codes=sorted(enrolled),
+        )
+        semesters = plan.get("semesters") or []
+        if semesters:
+            next_sem = semesters[0]
+            rec_units = []
+            for u in next_sem.get("units", []):
+                tag = " [RETAKE REQUIRED]" if u.get("is_retake") else ""
+                rec_units.append(f"{u['code']} ({u['name']}){tag} — {u.get('reason', '')}")
+            lines.append(f"- Next Recommended Semester ({next_sem.get('name', 'Semester 1')}): {'; '.join(rec_units)}")
+        else:
+            lines.append("- Next Recommended Semester: None (all major units completed or enrolled)")
+    except Exception:
+        pass
+
     return "\n".join(lines)
+
+
+def _validate_and_clean_answer(answer: str, valid_codes: set[str]) -> str:
+    """
+    Post-generation closed-world validator: strips any hallucinated course-code-like
+    tokens (e.g. COSC10006, ENGR10007) not present in the PostgreSQL courses table
+    or retrieved syllabus chunks.
+    """
+    if not answer or not valid_codes:
+        return answer
+
+    unverified: list[str] = []
+
+    def _replace(match: re.Match) -> str:
+        code = match.group(1)
+        if code in valid_codes:
+            return code
+        if code not in unverified:
+            unverified.append(code)
+        return "[unverified unit removed]"
+
+    cleaned = re.sub(r"\b([A-Z]{3,4}\d{4,5})\b", _replace, answer)
+    if unverified:
+        cleaned += (
+            "\n\n> Note: Unverified unit code(s) not present in the curriculum database "
+            "were removed from this response."
+        )
+    return cleaned
+
+
+def _build_curriculum_context(db) -> str:
+    """
+    Fetches the authoritative course catalog and prerequisite DAG from PostgreSQL
+    so prerequisite explanations and Mermaid diagrams never invent or copy unverified unit codes.
+    """
+    courses = db.execute(select(Course).order_by(Course.code)).scalars().all()
+    prereqs = db.execute(
+        select(Prerequisite).order_by(Prerequisite.dependent_code, Prerequisite.prerequisite_code)
+    ).scalars().all()
+
+    course_lines = [f"- {c.code}: {c.name}" for c in courses]
+    edge_lines = [f"- {p.prerequisite_code} -> {p.dependent_code} ({p.rule_type})" for p in prereqs]
+
+    return (
+        "Verified Course Catalog:\n"
+        + ("\n".join(course_lines) if course_lines else "- None")
+        + "\n\nVerified Prerequisite Edges (prerequisite_code -> dependent_code):\n"
+        + ("\n".join(edge_lines) if edge_lines else "- None")
+    )
 
 
 def get_chat_response(
@@ -161,15 +238,20 @@ def get_chat_response(
                 )
 
         student_context = _build_student_context(db, student_id, target_unit)
+        curriculum_context = _build_curriculum_context(db)
+        valid_codes = {c.upper() for c in db.execute(select(Course.code)).scalars().all()}
+        valid_codes.update(c.course_code.upper() for c, _ in rows if c.course_code)
     finally:
         db.close()
 
     context_prompt = "\n\n".join(context_chunks)
     student_block = f"\n\nStudent Academic Record:\n{student_context}" if student_context else ""
+    curriculum_block = f"\n\nVerified Curriculum & Prerequisite Graph:\n{curriculum_context}"
 
     full_prompt = (
-        f"Answer the student's question using the official unit outline below.{student_block}\n\n"
-        f"Unit Outline:\n{context_prompt}\n\n"
+        f"Answer the student's question using the official unit outline and verified curriculum graph below."
+        f"{curriculum_block}{student_block}\n\n"
+        f"Retrieved Syllabus Chunks:\n{context_prompt}\n\n"
         f"Question: {question}"
     )
 
@@ -183,10 +265,24 @@ def get_chat_response(
                         "role": "system",
                         "content": (
                             "You are a helpful academic advisor speaking directly to university students. "
-                            "Answer using ONLY the provided Unit Outline and Student Academic Record. "
+                            "You MUST ONLY mention unit codes and exact unit titles that appear in the "
+                            "Verified Course Catalog or Retrieved Syllabus Chunks below. "
+                            "Do NOT invent course codes (such as COSC10006 or COSC20007), do NOT alter unit names, "
+                            "and do NOT fabricate contact hours, assessment breakdowns, or prerequisites not explicitly "
+                            "stated in the retrieved chunks. "
                             "NEVER mention 'JSON', 'JSON structure', 'database', 'pgvector', 'context', or 'provided text'—"
                             "refer to it naturally as 'the unit outline' or 'the syllabus'. "
                             "Do not confuse enrolment prerequisites with passing/assessment hurdles. "
+                            "When the student asks which units to enroll in this semester, directly recommend the units "
+                            "from their Next Recommended Semester in the Student Academic Record (prioritizing any "
+                            "RETAKE REQUIRED units first) and NEVER recommend units already in Passed Units or "
+                            "Currently Enrolled Units. "
+                            "When explaining prerequisites or generating ```mermaid``` flowchart diagrams, ONLY use course codes "
+                            "and edges that exist in the Verified Curriculum & Prerequisite Graph or the Student Academic Record. "
+                            "NEVER include external or alternative unit codes mentioned in passing inside syllabus prose "
+                            "(such as ENGR10007) if they do not exist in the Verified Curriculum & Prerequisite Graph. "
+                            "Label Mermaid nodes cleanly using verified course codes and names "
+                            "(e.g., COS10009[\"COS10009: Introduction to Programming\"]). "
                             "When presenting assessments, unit comparisons, or study steps, include a clean Markdown table. "
                             "When explaining prerequisite chains, include a compact ```mermaid graph TD``` diagram."
                         ),
@@ -200,7 +296,8 @@ def get_chat_response(
             },
             timeout=60,
         )
-        llm_answer = llm_response.json().get("message", {}).get("content", "Error reading LLM response.")
+        raw_answer = llm_response.json().get("message", {}).get("content", "Error reading LLM response.")
+        llm_answer = _validate_and_clean_answer(raw_answer, valid_codes)
     except Exception as e:
         llm_answer = f"LLM connection failed. Error: {str(e)}"
 

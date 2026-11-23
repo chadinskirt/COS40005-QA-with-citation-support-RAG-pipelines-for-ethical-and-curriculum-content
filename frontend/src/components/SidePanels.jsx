@@ -21,7 +21,7 @@ export function SourcePanel({ selected: { citation, index, threshold } }) {
         <p className="t-small">{citation.snippet}</p>
       </blockquote>
       {citation.similarity != null && (
-        <p className="row gap-2 t-caption c-success">
+        <p className="row gap-2 t-caption t-mono c-success">
           <Icon name="gauge" size={16} />
           Similarity {citation.similarity.toFixed(2)}
           {threshold != null && ` · above threshold ${threshold.toFixed(2)}`}
@@ -50,15 +50,15 @@ export function WhyNoAnswer({ result }) {
       <h2 className="t-h2">Why no answer?</h2>
       <div className="kv">
         <span className="t-small c-secondary">Top similarity</span>
-        <span className="t-label">{score(result.top_similarity)}</span>
+        <span className="t-label t-mono">{score(result.top_similarity)}</span>
       </div>
       <div className="kv">
         <span className="t-small c-secondary">Threshold</span>
-        <span className="t-label">{score(result.threshold)}</span>
+        <span className="t-label t-mono">{score(result.threshold)}</span>
       </div>
       <div className="kv">
         <span className="t-small c-secondary">Sources passing gate</span>
-        <span className="t-label">
+        <span className="t-label t-mono">
           {result.sources_passed} of {result.sources_checked}
         </span>
       </div>

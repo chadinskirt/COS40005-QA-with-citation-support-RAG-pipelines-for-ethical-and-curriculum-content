@@ -25,7 +25,8 @@ export function CitationChip({ citation, index, selected, onSelect }) {
       aria-label={`Source ${index}: ${citationSource(citation, 'page ')}`}
       onClick={onSelect}
     >
-      <Icon name="file" size={14} />[{index}] {citationSource(citation)}
+      <Icon name="file" size={14} />
+      <span className="t-mono">[{index}]</span> {citationSource(citation)}
     </button>
   );
 }

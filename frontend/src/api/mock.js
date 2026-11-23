@@ -2,8 +2,9 @@
 // URL switches: ?mock=down (503 on every call), ?mock=cycle (409 on /recommend).
 import { ApiError } from './errors.js';
 import {
-  CORE_UNIT_CODES,
+  CS_CORE_CODES,
   CS_MAJORS,
+  ELECTIVE_UNIT_CODES,
   MAJOR_UNIT_CODES,
   UNIT_CATALOG,
   getUnitCategory,
@@ -22,11 +23,18 @@ const MAJORS = CS_MAJORS;
 const UNITS = {
   ...UNIT_CATALOG,
   COS10004: { name: 'Computer Systems', credit_points: 12.5, prereqs: [] },
+  COS10025: { name: 'Technology in an Indigenous Context Project', credit_points: 12.5, prereqs: [] },
+  COS10026: { name: 'Web Technology Project', credit_points: 12.5, prereqs: [] },
   MAT10004: { name: 'Discrete Mathematics', credit_points: 12.5, prereqs: [] },
   COS20015: { name: 'Fundamentals of Data Management', credit_points: 12.5, prereqs: [] },
   COS30049: { name: 'Computing Technology Innovation Project', credit_points: 12.5, prereqs: ['COS30019'] },
   COS30043: { name: 'Interface Design and Development', credit_points: 12.5, prereqs: ['COS20007'] },
   COS30015: { name: 'IT Security', credit_points: 12.5, prereqs: ['COS10004'] },
+  COS40006: { name: 'Computing Technology Project B', credit_points: 12.5, prereqs: ['COS40005'] },
+  LAW20019: { name: 'Law of Commerce', credit_points: 12.5, prereqs: [] },
+  MDA10018: { name: 'Content Creator Lab', credit_points: 12.5, prereqs: [] },
+  MTH10013: { name: 'Linear Algebra and Applications', credit_points: 12.5, prereqs: [] },
+  STA10003: { name: 'Foundations of Statistics', credit_points: 12.5, prereqs: [] },
   STA20010: { name: 'Statistics for Data Science', credit_points: 12.5, prereqs: ['MAT10004'] },
 };
 const FOUNDATION = ['COS10009', 'COS10004', 'MAT10004', 'COS20015'];
@@ -60,7 +68,7 @@ export async function getMajors() {
 export async function getUnits(major) {
   await gate(250);
   const m = majorOf(major);
-  const codes = [...new Set([...CORE_UNIT_CODES, ...(MAJOR_UNIT_CODES[m.id] ?? [])])];
+  const codes = [...new Set([...CS_CORE_CODES, ...(MAJOR_UNIT_CODES[m.id] ?? []), ...ELECTIVE_UNIT_CODES])];
   return { units: codes.map((c) => unit(c, m.id)) };
 }
 

@@ -89,7 +89,8 @@ export default function ChatPage() {
               </p>
               <div className="row wrap gap-2">
                 {SUGGESTIONS.map((s) => (
-                  <button key={s} type="button" className="major-chip" onClick={() => ask(s)}>
+                  <button key={s} type="button" className="major-chip starter-chip" onClick={() => ask(s)}>
+                    <Icon name="chat" size={14} className="c-brand" />
                     {s}
                   </button>
                 ))}
@@ -138,7 +139,9 @@ export default function ChatPage() {
           </label>
           <p className="t-caption c-secondary">
             {effectiveStudentId != null && (
-              <span className="c-brand">Personalized for Student #{effectiveStudentId} · </span>
+              <span className="c-brand">
+                Personalized for <span className="t-mono">Student #{effectiveStudentId}</span> ·{' '}
+              </span>
             )}
             Answers come only from approved syllabus documents. Confirm enrolment decisions with an academic advisor.
           </p>
