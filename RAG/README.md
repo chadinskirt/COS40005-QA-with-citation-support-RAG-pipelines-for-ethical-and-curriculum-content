@@ -4,4 +4,5 @@ git submodule add https://github.com/mlc-ai/tokenizers-cpp.git external/tokenize
 ## for building execution environment for tokenizer
 cd RAG/
 cmake -S . -B build
-cmake --build build -j$(nproc)
+cmake --build build --target RAG -j$(nproc)
+./build/RAG

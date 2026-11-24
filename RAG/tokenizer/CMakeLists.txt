@@ -11,4 +11,6 @@ target_include_directories(tokenizer
 target_link_libraries(tokenizer
     PRIVATE
         nlohmann_json::nlohmann_json
+        tokenizers_cpp
 )
+

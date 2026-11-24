@@ -41,6 +41,46 @@ def clean_text(text):
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
+def is_body_only_page(elements):
+    return not any(
+        e.get("role") in {"section_heading", "possible_heading"}
+        for e in elements
+        if e["type"] == "text"
+    )
+
+def group_body_only(metadata):
+    elements = [
+        e for e in metadata["elements"]
+        if e["type"] == "text"
+        and e.get("role") == "body"
+        and e["text"].strip()
+    ]
+
+    if not elements:
+        metadata["groups"] = []
+        return metadata
+
+    elements.sort(key=lambda e: (e["bbox"][1], e["bbox"][0]))
+
+    bbox = [
+        min(e["bbox"][0] for e in elements),
+        min(e["bbox"][1] for e in elements),
+        max(e["bbox"][2] for e in elements),
+        max(e["bbox"][3] for e in elements),
+    ]
+
+    group = {
+        "type": "text_group",
+        "page_num": metadata["page_num"],
+        "bbox": bbox,
+        "text": "\n".join(e["text"].strip() for e in elements),
+        "element_ids": [e["id"] for e in elements],
+    }
+
+    metadata["groups"] = [group]
+
+    return metadata
+
 def is_new_list_item(text):
     NUMBERED_ITEM = re.compile(r"^\s*\d+[.)]\s+")
     LETTERED_ITEM = re.compile(r"^\s*[a-zA-Z][.)]\s+")
@@ -328,11 +368,14 @@ def parse_text_obj(doc, metadata):
 
             page_record["elements"].append(obj)
             next_id += 1
-            page_record = classify_text_elements(
-                page_record,
-                body_font_size=11.04
-            )
+        page_record = classify_text_elements(
+            page_record,
+            body_font_size=11.04
+        )
 
+        if is_body_only_page(page_record["elements"]):
+            page_record = group_body_only(page_record)
+        else:
             page_record = group_page_elements(page_record)
 
 def parse_links(page):
@@ -366,7 +409,6 @@ def is_header_or_footer(bbox, page_rect, top_ratio=0.10,
 
     return near_top or near_bottom
 
-
 def group_page_elements(metadata, gap_threshold=12, x_tolerance=20):
     groups = []
     current = None
@@ -377,6 +419,8 @@ def group_page_elements(metadata, gap_threshold=12, x_tolerance=20):
         metadata["elements"],
         key=lambda obj: (obj["bbox"][1], obj["bbox"][0])
     )
+    #if is_body_only_page(elements):
+    #    return group_body_only(metadata)
 
     for element in elements:
         if element["type"] != "text":
@@ -476,37 +520,53 @@ def is_in_margin(bbox, page_rect, margin_ratio=0.08):
 
     return bbox[3] <= top_limit or bbox[1] >= bottom_limit
 
-def create_text_groups(blocks):
+def create_text_groups(blocks, start_id = 0):
 
     groups = []
     current_group = []
 
-    group_counter = 0
+    has_heading = any(
+        block.get("role") in {
+            "section_heading",
+            "possible_heading"
+        }
+        for block in blocks
+    )
 
-    for block in blocks:
-        role = block.get("role")
+    # Body-only page
+    if not has_heading:
+        body_elements = [
+            block for block in blocks
+            if block.get("role") == "body"
+        ]
 
-        if role == "section_heading" or role == "possible_heading":
+        if body_elements:
+            groups.append(body_elements)
 
-            if current_group:
-                groups.append(current_group)
+    else:
+        for block in blocks:
+            role = block.get("role")
 
-            current_group = [block]
+            if role in {"section_heading", "possible_heading"}:
 
-        elif role == "body" or role == "list_item":
+                if current_group:
+                    groups.append(current_group)
 
-            if current_group:
-                current_group.append(block)
+                current_group = [block]
 
-    if current_group:
-        groups.append(current_group)
+            elif role in {"body", "list_item"}:
+
+                if current_group:
+                    current_group.append(block)
+
+        if current_group:
+            groups.append(current_group)
 
     result = []
 
     for i, elements in enumerate(groups):
-
         result.append({
-            "id": f"grp_{i:06d}",
+            "id": f"grp_{start_id + i:06d}",
             "type": "text_group",
             "element_ids": [
                 element["id"] for element in elements
@@ -516,7 +576,7 @@ def create_text_groups(blocks):
             )
         })
 
-    return result
+    return result, start_id + len(result)
 
 NULL_VALUES = {
     "",

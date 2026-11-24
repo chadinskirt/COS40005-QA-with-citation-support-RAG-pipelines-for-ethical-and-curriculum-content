@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "version": "1.1",
+    "version": "1.2",
     "doc_id": 6,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS40003_Unit Outline_Sep2026 -1.pdf",
     "title": "COS40003_Unit Outline_Jan 2026",
@@ -433,7 +433,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000004",
           "type": "text_group",
           "element_ids": [
             "txt_000013"
@@ -441,7 +441,7 @@
           "text": "PART A: Unit Summary"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000005",
           "type": "text_group",
           "element_ids": [
             "txt_000015",
@@ -687,7 +687,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000006",
           "type": "text_group",
           "element_ids": [
             "txt_000022",
@@ -697,7 +697,7 @@
           "text": "Graduate Attributes\nThis unit may contribute to the development of the following Swinburne Graduate Attributes:\n- Communication skills\n- Teamwork skills\n- Digital literacies"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000007",
           "type": "text_group",
           "element_ids": [
             "txt_000025",
@@ -707,7 +707,7 @@
           "text": "Content\n- Concurrency mechanisms\n- Concurrency control primitives\n- Concurrency control utilities\n- Design forces related to concurrent software development"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000008",
           "type": "text_group",
           "element_ids": [
             "txt_000028"
@@ -715,7 +715,7 @@
           "text": "PART B: Your Unit in more detail"
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000009",
           "type": "text_group",
           "element_ids": [
             "txt_000029",
@@ -726,7 +726,7 @@
           "text": "Unit Improvements\nFeedback provided by previous students through the Student Survey has resulted in\nimprovements that have been made to this unit. Recent improvements include:\n- Extension and late submission rules updated\n- Assessments have been re-evaluated."
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000010",
           "type": "text_group",
           "element_ids": [
             "txt_000033"
@@ -789,7 +789,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000011",
           "type": "text_group",
           "element_ids": [
             "txt_000035"
@@ -797,7 +797,7 @@
           "text": "Learning and Teaching Structure"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000012",
           "type": "text_group",
           "element_ids": [
             "txt_000037"
@@ -1079,7 +1079,28 @@
           "source_id": "txt_000059"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000013",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000042",
+            "txt_000043",
+            "txt_000045",
+            "txt_000047",
+            "txt_000048",
+            "txt_000049",
+            "txt_000050",
+            "txt_000051",
+            "txt_000052",
+            "txt_000053",
+            "txt_000055",
+            "txt_000056",
+            "txt_000057"
+          ],
+          "text": "To pass this unit, you must:\n- achieve an overall mark for the unit of 50% or more, and\nIf the unit you are enrolled in has an official examination, you will be expected to be\navailable for the entire examination period including any Special Exam period.\nAssignments and other assessments are generally submitted online through the Canvas\nassessment submission system which integrates with the Turnitin plagiarism checking\nservice.\nPlease ensure you keep a copy of all assessments that are submitted.\nIn cases where a hard copy submission is required an Assessment Cover Sheet must be\nsubmitted with your assignment. The standard Assessment Cover Sheet is available from\nthe Current Students web site (see Part C).\nIn this unit:\nReports and Test code need to be submitted online through the Canvas assessment\nsubmission system which integrates with the Turnitin plagiarism checking service.\nPlease ensure you keep a copy of all assessments that are submitted.\nLate Submissions - Unless an extension has been approved, late submissions will not be\naccepted or result in a penalty.\nFor Report I and Report II, you will be penalised 5% of total assessment value for each\nworking day the task is late, up to a maximum of 7 working days. After 7 working days, a\nzero result will be recorded.\nFor Question Test and Programming Test, late submissions are not accepted."
+        }
+      ]
     },
     {
       "page_num": 6,
@@ -1143,7 +1164,18 @@
           "source_id": "txt_000062"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000014",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000060",
+            "txt_000061",
+            "txt_000062"
+          ],
+          "text": "information from other sources in your work. Further details regarding plagiarism are\navailable in Section C of this document.\nReferencing conventions required for this unit are: any of your choice. Helpful information on\nreferencing can be found at http://www.swinburne.edu.au/library/referencing/"
+        }
+      ]
     },
     {
       "page_num": 7,
@@ -1395,7 +1427,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000015",
           "type": "text_group",
           "element_ids": [
             "txt_000063",
@@ -1406,7 +1438,7 @@
           "text": "Recommended Reading Materials\nThe Library has a large collection of resource materials, both texts and current journals. Listed\nbelow are some references that will provide valuable supplementary information to this unit. It\nis also recommended that you explore other sources to broaden your understanding.\n- Remzi Arpaci-Dusseau,Andrea Arpaci-Dusseau: Operating Systems: Three Easy Pieces.\nFree Online Textbook. http://pages.cs.wisc.edu/~remzi/OSTEP/\n- Brian Göetz, Tim Peierls, Joshua Bloch, Joseph Bowbeer, David Holmes, Doug Lea: Java\nConcurrency in Practice. Addition-Wesley Professional. 2005."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000016",
           "type": "text_group",
           "element_ids": [
             "txt_000067"
@@ -1414,7 +1446,7 @@
           "text": "PART C: FURTHER INFORMATION"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000017",
           "type": "text_group",
           "element_ids": [
             "txt_000071",
@@ -1428,7 +1460,7 @@
           "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful\nof others; and appropriately use University resources, information, equipment and facilities. All students\nare expected to contribute to creating a work and study environment that is safe and free from bullying,\nviolence, discrimination, sexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy\na quality learning experience. The Charter also sets out what is expected of students with regards to\nyour studies and the way you conduct yourself towards other people and property. You are expected to\nfamiliarise yourself with University regulations and policies and are obliged to abide by these, including\nthe Student Academic Misconduct Regulations, Student General Misconduct Regulations and the\nPeople, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:\n- conducting yourself in teaching areas in a manner that is professional and not disruptive to others\n- following specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n- following emergency and evacuation procedures and following instructions given by staff/wardens\nin an emergency response"
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000018",
           "type": "text_group",
           "element_ids": [
             "txt_000079",
@@ -1437,7 +1469,7 @@
           "text": "Canvas\nYou should regularly access the Swinburne learning management system, Canvas, which is available\nvia the Current Students webpage or https://swinburne.instructure.com/ Canvas is updated regularly\nwith important unit information and communications."
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000019",
           "type": "text_group",
           "element_ids": [
             "txt_000081",
@@ -1670,7 +1702,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000020",
           "type": "text_group",
           "element_ids": [
             "txt_000091",
@@ -1679,7 +1711,7 @@
           "text": "Student support\nSwinburne offers a range of services and resources to help you complete your studies successfully.\nYour Unit Convenor or studentHQ can provide information about the study support and other services\navailable for Swinburne students."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000021",
           "type": "text_group",
           "element_ids": [
             "txt_000093",
@@ -1690,7 +1722,7 @@
           "text": "Special consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances outside of\nyour control (e.g. severe illness or unavoidable obligation), you may be able to apply for special\nconsideration (SPC).\nApplications for Special Consideration will be submitted via the SPC online tool normally no later than\n5.00pm on the third working day after the submission/sitting date for the relevant assessment\ncomponent."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000022",
           "type": "text_group",
           "element_ids": [
             "txt_000097",
@@ -1817,7 +1849,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000023",
           "type": "text_group",
           "element_ids": [
             "txt_000102",

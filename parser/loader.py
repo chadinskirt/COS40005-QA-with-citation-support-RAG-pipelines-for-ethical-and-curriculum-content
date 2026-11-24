@@ -129,8 +129,13 @@ def iterate_dir(source_dir, metadata_dir):
             remove_key_recursive(metadata["pages"], "lines")
 
             #normalize text_groups and tables
+            group_counter = 0
+
             for page in metadata["pages"]:
-                page["groups"] = create_text_groups(page["elements"])
+                page["groups"], group_counter = create_text_groups(
+                    page["elements"],
+                    group_counter
+                )
 
             metadata["tables"] = normalize_tables(metadata["tables"])
             # compute the file directory    

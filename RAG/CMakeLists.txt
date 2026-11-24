@@ -16,3 +16,20 @@ FetchContent_MakeAvailable(json)
 
 add_subdirectory(external/tokenizers-cpp)
 add_subdirectory(tokenizer)
+
+add_executable(RAG
+    main.cpp
+)
+
+target_link_libraries(RAG PRIVATE
+    tokenizer
+)
+
+target_include_directories(tokenizer
+    PUBLIC
+        ${PROJECT_SOURCE_DIR}/external/tokenizers-cpp/include
+)
+target_include_directories(tokenizer
+    PUBLIC
+        ${PROJECT_SOURCE_DIR}/external/tokenizers-cpp/src
+)

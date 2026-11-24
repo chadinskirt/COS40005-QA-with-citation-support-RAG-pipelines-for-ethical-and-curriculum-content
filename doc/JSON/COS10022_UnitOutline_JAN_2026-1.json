@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "version": "1.1",
+    "version": "1.2",
     "doc_id": 1,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS10022_UnitOutline_JAN_2026-1.pdf",
     "title": "COS10022_UnitOutline_JAN_2026",
@@ -292,7 +292,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000002",
           "type": "text_group",
           "element_ids": [
             "txt_000017",
@@ -526,7 +526,31 @@
           "source_id": "txt_000036"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000003",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000020",
+            "txt_000021",
+            "txt_000022",
+            "txt_000023",
+            "txt_000024",
+            "txt_000025",
+            "txt_000026",
+            "txt_000027",
+            "txt_000028",
+            "txt_000030",
+            "txt_000031",
+            "txt_000032",
+            "txt_000033",
+            "txt_000034",
+            "txt_000035",
+            "txt_000036"
+          ],
+          "text": "Graduate Attributes\nThe Swinburne Graduate Attributes describe the capability of our graduates to use\nknowledge, skills and behaviours to contribute to society meaningfully and positively.\nThey include professional, self-directed learning and future-ready skills.\nThis unit may contribute to the development of the following Swinburne Graduate Attributes:\n§\nCommunication 1 - Verbal communication\n§\nCommunication 2 - Communicating using different media\n§\nTeamwork 1 - Collaboration and negotiation\n§\nTeamwork 2 - Teamwork roles and processes\n§\nDigital literacies 1 – Information literacy\n§\nDigital Literacies 2 – Technical literacy\nThis unit contributes to the development of the following Swinburne Graduate Attributes:\n§\nGA2 Communication - Communicating using different media: Students in this unit\nmust use texts, images, tables, graphs or even videos to communicate findings to\nthe audience. (Week 01, Week 07, Week 08, and Week 09, Week 11, assignment 1\nand assignment 2)\n§\nGA5 Digital literacies– Information literacy: Recognising when information is\nneeded, locating, evaluating, and effectively using information, and responsibly\ncreating and sharing information in various formats. Students are trained to gain\nskills, including critical thinking, problem-solving, research, and communication,\nthat allow individuals to navigate the vast amount of information available in\ntoday's digital age. (Week 02, Week 07, Week 08, Week 09, Week 11, assignment 1\nand assignment 2)\n§\nGA6 Digital Literacies– Technical literacy: Understanding, using, and interacting\nwith technology effectively. Students are trained to have the knowledge, skills,\nand competencies necessary to navigate and utilize various technological tools,\ndevices, and systems in different contexts. (Week 01, Week 02, Week 03, Week\n04, Week 05, Week 06, Week 10, and assignment 2).\nOther graduate attributes may be practised in the unit but are not formally taught as part\nof the unit content, nor incorporated within formal assessment.\nContent\n§ Introduction to Data Science and Big Data Analytics\n§ Roles of Data Science for Business\n§ Contemporary data structures and management\n§ Data Science tools, techniques and technologies\n§ The Data Analytics Lifecycle\n§ Analytical techniques and methods\n§ Analytics plan development"
+        }
+      ]
     },
     {
       "page_num": 4,
@@ -621,7 +645,21 @@
           "source_id": "txt_000044"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000004",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000037",
+            "txt_000038",
+            "txt_000039",
+            "txt_000040",
+            "txt_000042",
+            "txt_000044"
+          ],
+          "text": "Feedback provided by previous students through the Student Survey has resulted in\nimprovements that have been made to this unit. Recent improvements include:\n-\nAdjusting the level of assignments and lab tasks.\n-\nIncluding the content of Data Ethics and Security.\n-\nAdjusting the question types and contents in the tests.\n-\nAdjusting lab activities and delivery sequences.\nPART B:\nYour Unit in more detail\nUnit Improvements\nUnit Teaching Staff\nLearning and Teaching Structure"
+        }
+      ]
     },
     {
       "page_num": 5,
@@ -651,7 +689,16 @@
           "source_id": "txt_000047"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000005",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000047"
+          ],
+          "text": "Week by Week Schedule"
+        }
+      ]
     },
     {
       "page_num": 6,
@@ -710,7 +757,16 @@
           "source_id": "txt_000052"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000006",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000051"
+          ],
+          "text": "Assessment"
+        }
+      ]
     },
     {
       "page_num": 8,
@@ -928,7 +984,28 @@
           "source_id": "txt_000067"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000007",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000055",
+            "txt_000056",
+            "txt_000057",
+            "txt_000058",
+            "txt_000059",
+            "txt_000060",
+            "txt_000061",
+            "txt_000062",
+            "txt_000063",
+            "txt_000064",
+            "txt_000065",
+            "txt_000066",
+            "txt_000067"
+          ],
+          "text": "Required Textbook(s)\nThe required textbook(s) can be purchased from bookshops and may be available through the\nSwinburne Library.\n-\nJoel Grus, 2019. Data Science from Scratch – First Principles with Python, 2nd Edition,\nO’Reilly Media, Inc.\n-\nDietrich, D. ed., 2015. Data Science & Big Data Analytics: Discovering, Analyzing,\nVisualizing and Presenting Data. EMC Education Services.\n-\nSchutt, R. and O’Neil, C., 2013. Doing data science: Straight talk from the frontline.\nO’Reilly Media, Inc.\n-\nPierson, L., Data Science for Dummies, 2nd Edition, John Wiley & Sons © 2017\n-\nMueller, J. P. and Massaron, L., Python for Data Science for Dummies, 2nd Edition,\nJohn Wiley & Sons © 2019 (432 pages), ISBN:9781119547624\nRecommended Reading Materials\nSwinburne Library has a large collection of resources. Listed below are some references that\nwill provide valuable supplementary information to this unit. It is also recommended that you\nexplore other sources to broaden your understanding.\n-\nHan, J., Pei, J., & Kamber, M. (2011). Data mining: concepts and techniques. Elsevier.\n-\nD. Lucy. (2005). Introduction to Statistics for Forensic Scientists Chichester: Wiley.\n-\nKNIME® Beginner’s Luck: A Guide to KNIME analytics Platform for Beginners by\nRosaria Silipo\n-\nKNIME® Advanced Luck: A Guide to KNIME Analytics Platform for Advanced Users by\nRosaria Silipo and Jeanette Prinz\n-\nKNIME® A Collection of Case Studies: Practicing Data Science by Rosaria Silipo\n-\nMore recommended readings are listed in the lecture slides."
+        }
+      ]
     },
     {
       "page_num": 11,
@@ -1127,7 +1204,29 @@
           "source_id": "txt_000085"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000008",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000068",
+            "txt_000069",
+            "txt_000071",
+            "txt_000072",
+            "txt_000074",
+            "txt_000076",
+            "txt_000078",
+            "txt_000079",
+            "txt_000080",
+            "txt_000081",
+            "txt_000082",
+            "txt_000083",
+            "txt_000084",
+            "txt_000085"
+          ],
+          "text": "For further information on any of these topics, refer to Swinburne’s\nStudent webpage http://www.swinburne.edu.au/student/\nPART C:\nFURTHER INFORMATION\nStudent behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and\nrespectful of others; and appropriately use University resources, information, equipment and\nfacilities. All students are expected to contribute to creating a work and study environment\nthat is safe and free from bullying, violence, discrimination, sexual harassment, vilification\nand other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order\nto enjoy a quality learning experience. The Charter also sets out what is expected of students\nwith regards to your studies and the way you conduct yourself towards other people and\nproperty.\nYou are expected to familiarise yourself with University regulations and policies and are\nobliged to abide by these, including the Student Academic Misconduct Regulations, Student\nGeneral Misconduct Regulations and the People, Culture and Integrity Policy. Any student\nfound to be in breach of these may be subject to disciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not\ndisruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing\nappropriate footwear and safety equipment, not acting in a manner which is\ndangerous or disruptive (e.g. playing computer games), and not bringing in food or\ndrink\n-\nfollowing emergency and evacuation procedures and following instructions given by\nstaff/wardens in an emergency response.\nCanvas\nYou should regularly log on to the Swinburne learning management system, Canvas. You can\naccess Canvas via the Student login webpage or https://swinburne.instructure.com/ Canvas is\nupdated regularly with important unit information and communications.\nCommunication\nAll communication will be via your Swinburne email address. If you access your email through\na provider other than Swinburne, then it is your responsibility to ensure that your Swinburne\nemail is redirected to your private email address.\nAcademic Integrity\nAcademic integrity is about taking responsibility for your learning and submitting work that is\nhonestly your own. It means acknowledging the ideas, contributions and work of others;\nreferencing your sources and acknowledging the use of generative artificial intelligence;"
+        }
+      ]
     },
     {
       "page_num": 12,
@@ -1235,7 +1334,22 @@
           "source_id": "txt_000094"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000009",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000086",
+            "txt_000088",
+            "txt_000090",
+            "txt_000091",
+            "txt_000092",
+            "txt_000093",
+            "txt_000094"
+          ],
+          "text": "contributing fairly to group work; and completing tasks, tests and exams without cheating.\nArtificial intelligence tools should only be used where approved by the Unit Convenor.\nSwinburne University uses the Turnitin system, which helps to identify inadequate citations,\npoor paraphrasing and unoriginal work in assignments that are submitted via Canvas. Your\nUnit Convenor will provide further details.\nPlagiarism, collusion, contract cheating, unauthorised file sharing, falsification, fabrication,\nmanipulation or misrepresentation of information, reuse of previous work and non-\ncompliance with instructions in an invigilated or non-invigilated assessment item are all\nbreaches of academic integrity and treated as academic misconduct. Examples of breaches of\nacademic integrity include, but are not limited to:\n-\nsubmitting work as your own for assessment that has been fully or partially\ncompleted by a third party, either paid or unpaid\n-\nusing output from artificial intelligence tools (e.g. ChatGPT) in whole or part without\nacknowledgement and/or without the approval of the Unit Convenor\n-\nusing another person’s work or ideas as though it is your own work, without\nappropriate attribution\n-\nworking closely with another student or group of students (either past or current), to\nsubmit for assessment, some or all of the other student or students’ work as your\nown work\n-\nsharing without permission of the Unit Convenor, Swinburne resources or other\nmaterial related to assessment to an entity or document repository site\n-\ncreating, intentionally modifying or inventing information that is intended to be\nsubmitted as part of an assessment item\n-\nusing the whole or part of a computer program written by another person as your\nown without appropriate acknowledgement\n-\npoorly paraphrasing somebody else’s work\n-\nusing a musical composition or audio, visual, graphic and photographic work created\nby another person without acknowledgment\n-\nenabling others to cheat, including letting another student copy your work or by\ngiving access to a draft or completed assignment\n-\nletting someone or something else impersonate you, or you impersonate someone else\nin an invigilated or non-invigilated assessment item\n-\naccessing, obtaining and/or providing to others unauthorised materials relating to an\ninvigilated or non-invigilated assessment item.\nThe penalties for academic misconduct can be severe, ranging from a zero grade for an\nassessment task through to exclusion from Swinburne. For further details, see\nhttps://www.swinburne.edu.au/student-login/academic-integrity/\nStudent support\nSwinburne offers a range of services and resources to help you complete your studies\nsuccessfully. Your Unit Convenor or studentHQ can provide information about the study\nsupport and other services available for Swinburne students. For further information, see the\nCurrent students web page."
+        }
+      ]
     },
     {
       "page_num": 13,
@@ -1434,7 +1548,29 @@
           "source_id": "txt_000112"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000010",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000095",
+            "txt_000096",
+            "txt_000098",
+            "txt_000100",
+            "txt_000101",
+            "txt_000102",
+            "txt_000104",
+            "txt_000105",
+            "txt_000106",
+            "txt_000108",
+            "txt_000109",
+            "txt_000110",
+            "txt_000111",
+            "txt_000112"
+          ],
+          "text": "Special consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances\noutside of your control (e.g. severe illness or unavoidable obligation), you may be able to\napply for special consideration (SPC).\nApplications for Special Consideration are submitted via the SPC online tool normally no later\nthan 5.00pm on the third working day after the submission/sitting date for the relevant\nassessment component. See https://www.swinburne.edu.au/life-at-swinburne/student-\nsupport-services/special-consideration-assistance/\nNote: Submitting fraudulent (fake or altered) medical certificates is considered misconduct and can\nlead to serious penalties from Swinburne. In addition, your doctor may report fraudulent medical\ncertificates as a prosecutable offence under the Victorian Crimes Act.\nAccessAbility Services\nIf you are a student with a disability, medical or mental health condition or you have\nsignificant carer responsibilities, you may require reasonable adjustments to fully access and\nparticipate in education. Swinburne's AccessAbility Services can develop an Education Access\nPlan (EAP) that includes the services and reasonable adjustments that you need.\nIt is recommended that you register with AccessAbility Services when you first commence\nyour course but you can contact the service at any time during your studies to find out about\nreasonable adjustments. Contact Accessibility Services to discuss further.\nReview of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a\nreview of assessment is undertaken if your final result is between 45 and 49 or within 2 marks\nof any grade threshold.\nYou can ask the Unit Convenor to check the result for an assessment item or your final result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit\nConvenor can discuss the marking criteria with you and check the aggregate marks of\nassessment components to identify if an error has been made. This is known as local\nresolution. If you are dissatisfied with the outcome of the local resolution, you can lodge a\nformal complaint.\nFeedback, complaints and suggestions\nIn the first instance, discuss any issues with your Unit Convenor. If your concerns are not\nresolved or you would prefer not to deal with your Unit Convenor, then you can complete a\nfeedback form. See https://www.swinburne.edu.au/corporate/feedback/\nAdvocacy\nIf you require assistance with any academic issues, University statutes, regulations, policies\nand procedures, you are advised to seek advice from an Independent Advocacy Officer at the\nSwinburne Student Association. Talking to an Advocacy Officer is free, independent and\nconfidential. For more information and booking an appointment, please see\nhttps://www.swinburne.edu.au/current-students/student-services-support/advocacy/"
+        }
+      ]
     }
   ],
   "page_content": {

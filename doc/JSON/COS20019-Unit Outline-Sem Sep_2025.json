@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "version": "1.1",
+    "version": "1.2",
     "doc_id": 2,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS20019-Unit Outline-Sem Sep_2025.pdf",
     "title": "COS20019-Unit Outline-Sem Sep_2025",
@@ -339,7 +339,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000005",
           "type": "text_group",
           "element_ids": [
             "txt_000016",
@@ -348,7 +348,7 @@
           "text": "Aims\nStudents will use a cloud platform to create well-architected deployments of distributed applications that\nare secure, scalable, reliable and cost optimised."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000006",
           "type": "text_group",
           "element_ids": [
             "txt_000018",
@@ -358,7 +358,7 @@
           "text": "Unit Learning Outcomes\nStudents who successfully complete this unit can:\n1. Describe the features and value of Cloud Computing\n2. Create and manage cloud services using a cloud management platform 3. Design and implement a\ncloud-based web site that is reliable, scalable, secure and cost effective\n4. Compare and contrast architectural solutions for common Web applications"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000007",
           "type": "text_group",
           "element_ids": [
             "txt_000021",
@@ -518,7 +518,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000008",
           "type": "text_group",
           "element_ids": [
             "txt_000027",
@@ -530,7 +530,7 @@
           "text": "Content\n- Cloud Computing features, models of deployment and platforms\n- Cloud services for computation, data storage, security and networking ▪ Using a cloud management\nconsole to configure cloud services on a distributed cloud platform\n- Setting up virtual servers and files systems on a cloud platform\n- Creating a secure network of services in a Virtual Private Cloud\n- User identity management and access control\n- Data storage and database services in the cloud\n- Automated monitoring, scaling and load balancing of services\n- Infrastructure setup automation\n- Web content distribution and caching\n- Server-less cloud computing\n- Architectures for highly available solutions\nAWS Academy\nThis unit uses materials and infrastructure provided by Amazon Web Services (AWS) and partners. It\ncovers knowledge required for AWS Cloud Practitioner and Solutions Architect (Associate)\ncertifications. Swinburne is accredited to run this unit as part of the AWS Academy Program.\nPassing the Certification exams may require additional knowledge of AWS services for which additional\nstudy and exam preparation is recommended.\nStudents may be eligible for AWS certification discount vouchers. For further details, please refer to\nprovided instructions on Swinburne Canvas page.ed."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000009",
           "type": "text_group",
           "element_ids": [
             "txt_000032"
@@ -538,7 +538,7 @@
           "text": "PART B: Your Unit in more detail"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000010",
           "type": "text_group",
           "element_ids": [
             "txt_000033",
@@ -592,7 +592,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000011",
           "type": "text_group",
           "element_ids": [
             "txt_000039"
@@ -600,7 +600,7 @@
           "text": "Learning and Teaching Structure"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000012",
           "type": "text_group",
           "element_ids": [
             "txt_000041"
@@ -694,7 +694,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000013",
           "type": "text_group",
           "element_ids": [
             "txt_000042",
@@ -814,7 +814,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000014",
           "type": "text_group",
           "element_ids": [
             "txt_000050",
@@ -823,7 +823,7 @@
           "text": "II. Multiple Choice Questions Test 1 (MCQ Test 1):\nResit for this assessment is available only to students who have achieved less than 40% in their\nfirst attempt AND have NOT submitted assignment 1b.\nAnswer keys will not be published to students after the test."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000015",
           "type": "text_group",
           "element_ids": [
             "txt_000052",
@@ -915,7 +915,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000016",
           "type": "text_group",
           "element_ids": [
             "txt_000055",
@@ -924,7 +924,7 @@
           "text": "Required Textbook(s)\nNA"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000017",
           "type": "text_group",
           "element_ids": [
             "txt_000057",
@@ -1108,7 +1108,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000018",
           "type": "text_group",
           "element_ids": [
             "txt_000063"
@@ -1116,7 +1116,7 @@
           "text": "PART C: FURTHER INFORMATION"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000019",
           "type": "text_group",
           "element_ids": [
             "txt_000064",
@@ -1129,7 +1129,7 @@
           "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of others;\nand appropriately use University resources, information, equipment and facilities. All students are expected to\ncontribute to creating a work and study environment that is safe and free from bullying, violence, discrimination,\nsexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a quality\nlearning experience. The Charter also sets out what is expected of students with regards to your studies and the way\nyou conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by these,\nincluding the Student Academic Misconduct Regulations, Student General Misconduct Regulations and the People,\nCulture and Integrity Policy. Any student found to be in breach of these may be subject to disciplinary processes.\nExamples of expected behaviours are:\n- conducting yourself in teaching areas in a manner that is professional and not disruptive to others\n- following specific safety procedures in Swinburne laboratories, such as wearing appropriate footwear and\nsafety equipment, not acting in a manner which is dangerous or disruptive (e.g. playing computer games),\nand not bringing in food or drink\n- following emergency and evacuation procedures and following instructions given by staff/wardens in an\nemergency response."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000020",
           "type": "text_group",
           "element_ids": [
             "txt_000071",
@@ -1138,7 +1138,7 @@
           "text": "Canvas\nYou should regularly log on to the Swinburne learning management system, Canvas. You can access Canvas via the\nStudent login webpage or https://swinburne.instructure.com/ Canvas is updated regularly with important unit\ninformation and communications."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000021",
           "type": "text_group",
           "element_ids": [
             "txt_000073",
@@ -1147,7 +1147,7 @@
           "text": "Communication\nAll communication will be via your Swinburne email address. If you access your email through a provider other than\nSwinburne, then it is your responsibility to ensure that your Swinburne email is redirected to your private email\naddress."
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000022",
           "type": "text_group",
           "element_ids": [
             "txt_000075"
@@ -1316,7 +1316,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000023",
           "type": "text_group",
           "element_ids": [
             "txt_000081",
@@ -1325,7 +1325,7 @@
           "text": "Student support\nSwinburne offers a range of services and resources to help you complete your studies successfully. Your Unit\nConvenor or studentHQ can provide information about the study support and other services available for Swinburne\nstudents. For further information, see the Current students web page."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000024",
           "type": "text_group",
           "element_ids": [
             "txt_000083",
@@ -1484,7 +1484,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000025",
           "type": "text_group",
           "element_ids": [
             "txt_000089",
@@ -1495,7 +1495,7 @@
           "text": "Review of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a review of assessment is\nundertaken if your final result is between 45 and 49 or within 2 marks of any grade threshold.\nYou can ask the Unit Convenor to check the result for an assessment item or your final result. Your request must be\nmade in writing within 10 working days of receiving the result. The Unit Convenor can discuss the marking criteria\nwith you and check the aggregate marks of assessment components to identify if an error has been made. This is\nknown as local resolution. If you are dissatisfied with the outcome of the local resolution, you can lodge a formal\ncomplaint."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000026",
           "type": "text_group",
           "element_ids": [
             "txt_000093",
@@ -1504,7 +1504,7 @@
           "text": "Feedback, complaints and suggestions\nIn the first instance, discuss any issues with your Unit Convenor. If your concerns are not resolved or you would\nprefer not to deal with your Unit Convenor, then you can complete a feedback form. See\nhttps://www.swinburne.edu.au/corporate/feedback/"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000027",
           "type": "text_group",
           "element_ids": [
             "txt_000095",

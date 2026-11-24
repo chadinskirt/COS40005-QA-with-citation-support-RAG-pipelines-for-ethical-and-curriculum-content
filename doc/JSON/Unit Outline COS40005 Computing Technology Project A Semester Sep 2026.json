@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "version": "1.1",
+    "version": "1.2",
     "doc_id": 11,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/Unit Outline COS40005 Computing Technology Project A Semester Sep 2026.pdf",
     "title": "Unit Outline Template",
@@ -611,7 +611,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000007",
           "type": "text_group",
           "element_ids": [
             "txt_000010"
@@ -619,7 +619,7 @@
           "text": "PART A:"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000008",
           "type": "text_group",
           "element_ids": [
             "txt_000010"
@@ -627,7 +627,7 @@
           "text": "Unit Summary"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000009",
           "type": "text_group",
           "element_ids": [
             "txt_000011",
@@ -636,7 +636,7 @@
           "text": "Aims\nThis is a project-based unit in which students work individually, or in teams if the project is\na large industry project, to provide students with the skills to generate a computing\ntechnology solution to solve one or more industry challenges specifically designed and\noriented towards computing technologies. Having an overall focus on computing\ntechnology innovation, students will be focusing on the research and development stages of\na year-long project, this being the first part. Students will be able to select a project from a\nrange of industry-oriented projects aligned to their chosen computing major. Teams of\nstudents will have a staff member as a ‘facilitator’ to guide their learning whilst working on\ntheir projects."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000010",
           "type": "text_group",
           "element_ids": [
             "txt_000013",
@@ -769,7 +769,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000011",
           "type": "text_group",
           "element_ids": [
             "txt_000017",
@@ -781,7 +781,7 @@
           "text": "Graduate Attributes\nThe Swinburne Graduate Attributes describe the capability of our graduates to use\nknowledge, skills and behaviours to contribute to society meaningfully and positively. They\ninclude professional, self-directed learning and future-ready skills.\nThis unit contributes to the development of the following Swinburne Graduate Attributes:\n\nGA3 Teamwork - Collaboration and negotiation\n\nGA4 Teamwork – Teamwork roles and processes\nOther graduate attributes may be practised in the unit but are not formally taught as part of\nthe unit content, nor incorporated within formal assessment."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000012",
           "type": "text_group",
           "element_ids": [
             "txt_000022",
@@ -914,7 +914,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000013",
           "type": "text_group",
           "element_ids": [
             "txt_000024"
@@ -922,7 +922,7 @@
           "text": "PART B:"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000014",
           "type": "text_group",
           "element_ids": [
             "txt_000024"
@@ -930,7 +930,7 @@
           "text": "Your Unit in more detail"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000015",
           "type": "text_group",
           "element_ids": [
             "txt_000025"
@@ -938,7 +938,7 @@
           "text": "Unit Improvements"
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000016",
           "type": "text_group",
           "element_ids": [
             "txt_000026"
@@ -946,7 +946,7 @@
           "text": "Unit Teaching Staff"
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000017",
           "type": "text_group",
           "element_ids": [
             "txt_000027"
@@ -954,7 +954,7 @@
           "text": "Learning and Teaching Structure"
         },
         {
-          "id": "grp_000005",
+          "id": "grp_000018",
           "type": "text_group",
           "element_ids": [
             "txt_000028",
@@ -1009,7 +1009,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000019",
           "type": "text_group",
           "element_ids": [
             "txt_000031"
@@ -1017,7 +1017,7 @@
           "text": "Assessment"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000020",
           "type": "text_group",
           "element_ids": [
             "txt_000032"
@@ -1148,7 +1148,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000021",
           "type": "text_group",
           "element_ids": [
             "txt_000033",
@@ -1157,7 +1157,7 @@
           "text": "Required Textbook(s)\nThere is no textbook for this unit."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000022",
           "type": "text_group",
           "element_ids": [
             "txt_000035",
@@ -1382,7 +1382,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000023",
           "type": "text_group",
           "element_ids": [
             "txt_000037"
@@ -1390,7 +1390,7 @@
           "text": "PART C:"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000024",
           "type": "text_group",
           "element_ids": [
             "txt_000037"
@@ -1398,7 +1398,7 @@
           "text": "FURTHER INFORMATION"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000025",
           "type": "text_group",
           "element_ids": [
             "txt_000038",
@@ -1411,7 +1411,7 @@
           "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying,\nviolence, discrimination, sexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a\nquality learning experience. The Charter also sets out what is expected of students with regards to your\nstudies and the way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations\nand the People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens\nin an emergency response."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000026",
           "type": "text_group",
           "element_ids": [
             "txt_000044",
@@ -1420,7 +1420,7 @@
           "text": "Canvas\nYou should regularly log on to the Swinburne learning management system, Canvas. You can access Canvas\nvia the Student login webpage or https://swinburne.instructure.com/ Canvas is updated regularly with\nimportant unit information and communications."
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000027",
           "type": "text_group",
           "element_ids": [
             "txt_000046",
@@ -1429,7 +1429,7 @@
           "text": "Communication\nAll communication will be via your Swinburne email address. If you access your email through a provider\nother than Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to your\nprivate email address."
         },
         {
-          "id": "grp_000005",
+          "id": "grp_000028",
           "type": "text_group",
           "element_ids": [
             "txt_000048",
@@ -1576,7 +1576,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000029",
           "type": "text_group",
           "element_ids": [
             "txt_000055",
@@ -1585,7 +1585,7 @@
           "text": "Student support\nSwinburne offers a range of services and resources to help you complete your studies successfully, such as\nstudy and learning support and health and wellbeing services. Your Unit Convenor or studentHQ can\nprovide information about the study support and other services available for Swinburne students. For further\ninformation, see the Student support services web page."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000030",
           "type": "text_group",
           "element_ids": [
             "txt_000057",
@@ -1771,7 +1771,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000031",
           "type": "text_group",
           "element_ids": [
             "txt_000061",
@@ -1782,7 +1782,7 @@
           "text": "AccessAbility Services\nIf you are a student with a disability, medical or mental health condition or you have significant carer\nresponsibilities, you may require reasonable adjustments to fully access and participate in education.\nSwinburne's AccessAbility Services can develop an Education Access Plan (EAP) that includes the services\nand reasonable adjustments that you need.\nIt is recommended that you register with AccessAbility Services when you first commence your course, but\nyou can contact the service at any time during your studies to find out about reasonable adjustments. Contact\nAccessibility Services to discuss further.\nOnce you have an approved EAP, you should contact the Unit Convenor as early as possible (e.g. beginning\nof semester) to discuss your adjustments so that we can better support your learning."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000032",
           "type": "text_group",
           "element_ids": [
             "txt_000065",
@@ -1792,7 +1792,7 @@
           "text": "Review of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a review of\nassessment is undertaken if your final result is between 45 and 49 or within 2 marks of any grade threshold.\nYou can ask the Unit Convenor to check the result for an assessment item or your final result. Your request\nmust be made in writing within 10 working days of receiving the result. The Unit Convenor can discuss the\nmarking criteria with you and check the aggregate marks of assessment components to identify if an error\nhas been made. This is known as local resolution. If you are dissatisfied with the outcome of the local\nresolution, you can lodge a formal complaint."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000033",
           "type": "text_group",
           "element_ids": [
             "txt_000068",
@@ -1801,7 +1801,7 @@
           "text": "Feedback, complaints and suggestions\nIn the first instance, discuss any issues with your Unit Convenor. If your concerns are not resolved or you\nwould prefer not to deal with your Unit Convenor, then you can complete a feedback form. See\nhttps://www.swinburne.edu.au/corporate/feedback/"
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000034",
           "type": "text_group",
           "element_ids": [
             "txt_000070",

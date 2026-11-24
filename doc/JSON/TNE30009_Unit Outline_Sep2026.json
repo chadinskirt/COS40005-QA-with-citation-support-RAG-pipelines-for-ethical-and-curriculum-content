@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "version": "1.1",
+    "version": "1.2",
     "doc_id": 10,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/TNE30009_Unit Outline_Sep2026.pdf",
     "title": null,
@@ -368,7 +368,20 @@
           "source_id": "txt_000024"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000002",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000012",
+            "txt_000014",
+            "txt_000015",
+            "txt_000016",
+            "txt_000017"
+          ],
+          "text": "PART A:\nUnit Summary\nAims\nThis unit of study aims to introduce you to the issues of security in modern networks.\nUnit Learning Outcomes\nStudents who successfully complete this unit can:"
+        }
+      ]
     },
     {
       "page_num": 3,
@@ -582,7 +595,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000003",
           "type": "text_group",
           "element_ids": [
             "txt_000025"
@@ -590,7 +603,7 @@
           "text": "Swinburne Engineering Competencies for this Unit of Study"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000004",
           "type": "text_group",
           "element_ids": [
             "txt_000026",
@@ -599,7 +612,7 @@
           "text": "Swinburne Engineering Competencies for this Unit of Study\nThis Unit of Study will contribute to you attaining the following Swinburne Engineering Competencies:"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000005",
           "type": "text_group",
           "element_ids": [
             "txt_000028"
@@ -607,7 +620,7 @@
           "text": "K1\nBasic Science: Proficiently applies concepts, theories and techniques of the relevant\nnatural and physical sciences to the solution of complex engineering problems."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000006",
           "type": "text_group",
           "element_ids": [
             "txt_000029"
@@ -615,7 +628,7 @@
           "text": "K2\nMaths and IT as Tools: Proficiently uses relevant mathematics and computer and\ninformation science concepts as tools in complex engineering activities."
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000007",
           "type": "text_group",
           "element_ids": [
             "txt_000030"
@@ -623,7 +636,7 @@
           "text": "K3\nDiscipline Specific: Proficiently applies advanced technical knowledge of the specific\ndiscipline within that context."
         },
         {
-          "id": "grp_000005",
+          "id": "grp_000008",
           "type": "text_group",
           "element_ids": [
             "txt_000031"
@@ -631,7 +644,7 @@
           "text": "K4\nEmerging Disciplinary Trends: Proficiently applies research principles and methods on\ncurrent or emerging complex problems of the specific discipline."
         },
         {
-          "id": "grp_000006",
+          "id": "grp_000009",
           "type": "text_group",
           "element_ids": [
             "txt_000032"
@@ -639,7 +652,7 @@
           "text": "S1\nEngineering Methods: Applies engineering methods in practical applications and\ncomplex engineering problems."
         },
         {
-          "id": "grp_000007",
+          "id": "grp_000010",
           "type": "text_group",
           "element_ids": [
             "txt_000033"
@@ -647,7 +660,7 @@
           "text": "S2\nProblem Solving: Systematically uses current or emerging knowledge and research\nmethods to undertake independent research in solving complex engineering problems\nand as preparation for research higher degrees."
         },
         {
-          "id": "grp_000008",
+          "id": "grp_000011",
           "type": "text_group",
           "element_ids": [
             "txt_000034",
@@ -767,7 +780,22 @@
           "source_id": "txt_000051"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000012",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000041",
+            "txt_000042",
+            "txt_000044",
+            "txt_000046",
+            "txt_000048",
+            "txt_000050",
+            "txt_000051"
+          ],
+          "text": "PART B:\nYour Unit in more detail\nUnit Improvements\nUnit Teaching Staff\nLearning and Teaching Structure\nWeek by Week Schedule\nBecause network security is a constantly changing area, this unit is updated every year.\nStudent feedback is also considered during the update. Changes this year include:\n-\nDiscussion of threat environment updated to include recent attacks and attack types\n-\nAdditional material on security protocols\n-\nUpdated material on cryptography\n-\nInternet of Things"
+        }
+      ]
     },
     {
       "page_num": 5,
@@ -836,7 +864,19 @@
           "source_id": "txt_000055"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000013",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000052",
+            "txt_000053",
+            "txt_000054",
+            "txt_000055"
+          ],
+          "text": "Assessment\na)\nAssessment overview\nTo pass this unit, you must:\nStudents who do not complete all portfolio items will receive a maximum of 45% as the total\nmark for the unit."
+        }
+      ]
     },
     {
       "page_num": 6,
@@ -880,7 +920,17 @@
           "source_id": "txt_000059"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000014",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000058",
+            "txt_000059"
+          ],
+          "text": "Required Textbook(s)\nThere are no prescribed text books for this unit."
+        }
+      ]
     },
     {
       "page_num": 7,
@@ -936,7 +986,18 @@
           "source_id": "txt_000062"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000015",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000060",
+            "txt_000061",
+            "txt_000062"
+          ],
+          "text": "Recommended Reading Materials\nSwinburne Library has a large collection of resources. Listed below are some references that\nwill provide valuable supplementary information to this unit. It is also recommended that you\nexplore other sources to broaden your understanding.\nThe following are good references:\n-\nSchneier, “Applied Cryptography” Second Edition 1996\n-\nTrappe, Washington, “Introduction to Cryptography with Coding Theory”, 2006\n-\nAnderson, “Security Engineering”, 2009\n-\nMell, “What’s Special about Cloud Security?”, IEEE IT Professional, July/August 2012\n-\nKaufman, “Can Public-Cloud Security Meet Its Unique Challenges?”, IEEE Security and\nPrivacy, July/August 2010\n-\nGranjal, Monteiro and Sa Silva, “Security for the Internet of Things: A Survey of Existing\nProtocols and Open Research Issues”, IEEE Communications Surveys and Tutorials,\n17(3) 2015\n-\nTiburski, Amaral, deMatos, Azevedo, Hessel, “The Role of Lightweight Approaches\nTowards the Standardization of a Security Architecture for IoT Middleware Systems”,\nIEEE Communications, Dec 2016"
+        }
+      ]
     },
     {
       "page_num": 8,
@@ -1136,7 +1197,29 @@
           "source_id": "txt_000079"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000016",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000063",
+            "txt_000064",
+            "txt_000065",
+            "txt_000067",
+            "txt_000069",
+            "txt_000071",
+            "txt_000072",
+            "txt_000073",
+            "txt_000074",
+            "txt_000075",
+            "txt_000076",
+            "txt_000077",
+            "txt_000078",
+            "txt_000079"
+          ],
+          "text": "PART C:\nFURTHER INFORMATION\nStudent behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and\nrespectful of others; and appropriately use University resources, information, equipment and\nfacilities. All students are expected to contribute to creating a work and study environment\nthat is safe and free from bullying, violence, discrimination, sexual harassment, vilification\nand other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order\nto enjoy a quality learning experience. The Charter also sets out what is expected of students\nwith regards to your studies and the way you conduct yourself towards other people and\nproperty.\nYou are expected to familiarise yourself with University regulations and policies and are\nobliged to abide by these, including the Student Academic Misconduct Regulations, Student\nGeneral Misconduct Regulations and the People, Culture and Integrity Policy. Any student\nfound to be in breach of these may be subject to disciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not\ndisruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing\nappropriate footwear and safety equipment, not acting in a manner which is\ndangerous or disruptive (e.g. playing computer games), and not bringing in food or\ndrink\n-\nfollowing emergency and evacuation procedures and following instructions given by\nstaff/wardens in an emergency response.\nCanvas\nYou should regularly log on to the Swinburne learning management system, Canvas. You can\naccess Canvas via the Student login webpage or https://swinburne.instructure.com/ Canvas is\nupdated regularly with important unit information and communications.\nCommunication\nAll communication will be via your Swinburne email address. If you access your email through\na provider other than Swinburne, then it is your responsibility to ensure that your Swinburne\nemail is redirected to your private email address.\nAcademic Integrity\nAcademic integrity is about taking responsibility for your learning and submitting work that is\nhonestly your own. It means acknowledging the ideas, contributions and work of others;\nreferencing your sources and acknowledging the use of generative artificial intelligence;\nFor further information on any of these topics, refer to Swinburne’s\nStudent webpage http://www.swinburne.edu.au/student/"
+        }
+      ]
     },
     {
       "page_num": 9,
@@ -1245,7 +1328,22 @@
           "source_id": "txt_000088"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000017",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000080",
+            "txt_000082",
+            "txt_000084",
+            "txt_000085",
+            "txt_000086",
+            "txt_000087",
+            "txt_000088"
+          ],
+          "text": "contributing fairly to group work; and completing tasks, tests and exams without cheating.\nArtificial intelligence tools should only be used where approved by the Unit Convenor.\nSwinburne University uses the Turnitin system, which helps to identify inadequate citations,\npoor paraphrasing and unoriginal work in assignments that are submitted via Canvas. Your\nUnit Convenor will provide further details.\nPlagiarism, collusion, contract cheating, unauthorised file sharing, falsification, fabrication,\nmanipulation or misrepresentation of information, reuse of previous work and non-\ncompliance with instructions in an invigilated or non-invigilated assessment item are all\nbreaches of academic integrity and treated as academic misconduct. Examples of breaches of\nacademic integrity include, but are not limited to:\n-\nsubmitting work as your own for assessment that has been fully or partially\ncompleted by a third party, either paid or unpaid\n-\nusing output from artificial intelligence tools (e.g. ChatGPT) in whole or part without\nacknowledgement and/or without the approval of the Unit Convenor\n-\nusing another person’s work or ideas as though it is your own work, without\nappropriate attribution\n-\nworking closely with another student or group of students (either past or current), to\nsubmit for assessment, some or all of the other student or students’ work as your\nown work\n-\nsharing without permission of the Unit Convenor, Swinburne resources or other\nmaterial related to assessment to an entity or document repository site\n-\ncreating, intentionally modifying or inventing information that is intended to be\nsubmitted as part of an assessment item\n-\nusing the whole or part of a computer program written by another person as your\nown without appropriate acknowledgement\n-\npoorly paraphrasing somebody else’s work\n-\nusing a musical composition or audio, visual, graphic and photographic work created\nby another person without acknowledgment\n-\nenabling others to cheat, including letting another student copy your work or by\ngiving access to a draft or completed assignment\n-\nletting someone or something else impersonate you, or you impersonate someone else\nin an invigilated or non-invigilated assessment item\n-\naccessing, obtaining and/or providing to others unauthorised materials relating to an\ninvigilated or non-invigilated assessment item.\nThe penalties for academic misconduct can be severe, ranging from a zero grade for an\nassessment task through to exclusion from Swinburne. For further details, see\nhttps://www.swinburne.edu.au/student-login/academic-integrity/\nStudent support\nSwinburne offers a range of services and resources to help you complete your studies\nsuccessfully. Your Unit Convenor or studentHQ can provide information about the study\nsupport and other services available for Swinburne students. For further information, see the\nCurrent students web page."
+        }
+      ]
     },
     {
       "page_num": 10,
@@ -1458,7 +1556,30 @@
           "source_id": "txt_000107"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000018",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000089",
+            "txt_000090",
+            "txt_000092",
+            "txt_000094",
+            "txt_000095",
+            "txt_000096",
+            "txt_000098",
+            "txt_000099",
+            "txt_000100",
+            "txt_000102",
+            "txt_000103",
+            "txt_000104",
+            "txt_000105",
+            "txt_000106",
+            "txt_000107"
+          ],
+          "text": "Special consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances\noutside of your control (e.g. severe illness or unavoidable obligation), you may be able to\napply for special consideration (SPC).\nApplications for Special Consideration are submitted via the SPC online tool normally no later\nthan 5.00pm on the third working day after the submission/sitting date for the relevant\nassessment component. See https://www.swinburne.edu.au/life-at-swinburne/student-\nsupport-services/special-consideration-assistance/\nNote: Submitting fraudulent (fake or altered) medical certificates is considered misconduct and can\nlead to serious penalties from Swinburne. In addition, your doctor may report fraudulent medical\ncertificates as a prosecutable offence under the Victorian Crimes Act.\nAccessAbility Services\nIf you are a student with a disability, medical or mental health condition or you have\nsignificant carer responsibilities, you may require reasonable adjustments to fully access and\nparticipate in education. Swinburne's AccessAbility Services can develop an Education Access\nPlan (EAP) that includes the services and reasonable adjustments that you need.\nIt is recommended that you register with AccessAbility Services when you first commence\nyour course but you can contact the service at any time during your studies to find out about\nreasonable adjustments. Contact Accessibility Services to discuss further.\nReview of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a\nreview of assessment is undertaken if your final result is between 45 and 49 or within 2 marks\nof any grade threshold.\nYou can ask the Unit Convenor to check the result for an assessment item or your final result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit\nConvenor can discuss the marking criteria with you and check the aggregate marks of\nassessment components to identify if an error has been made. This is known as local\nresolution. If you are dissatisfied with the outcome of the local resolution, you can lodge a\nformal complaint.\nFeedback, complaints and suggestions\nIn the first instance, discuss any issues with your Unit Convenor. If your concerns are not\nresolved or you would prefer not to deal with your Unit Convenor, then you can complete a\nfeedback form. See https://www.swinburne.edu.au/corporate/feedback/\nAdvocacy\nShould you require assistance with any academic issues, University statutes, regulations,\npolicies and procedures, you are advised to seek advice from an Academic Student\nSupport Officer at Swinburne Student Life.\nFor an appointment, please call 19006412 or lodge a query via Student Portal at\nhttps://portal.swin.edu.vn"
+        }
+      ]
     }
   ],
   "page_content": {

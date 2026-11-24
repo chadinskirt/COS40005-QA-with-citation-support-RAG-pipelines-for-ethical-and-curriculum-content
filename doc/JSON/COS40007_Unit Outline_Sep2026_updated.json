@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "version": "1.1",
+    "version": "1.2",
     "doc_id": 7,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS40007_Unit Outline_Sep2026_updated.pdf",
     "title": null,
@@ -555,7 +555,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000007",
           "type": "text_group",
           "element_ids": [
             "txt_000014"
@@ -563,7 +563,7 @@
           "text": "PART A:"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000008",
           "type": "text_group",
           "element_ids": [
             "txt_000014",
@@ -572,7 +572,7 @@
           "text": "Unit Summary\nThis unit of study aims to equip engineers with both theoretical knowledge and practical skills to design,\nimplement, and evaluate Artificial Intelligence (AI) and Machine Learning (ML) solutions for complex\nengineering challenges. It emphasises developing proficiency in selecting suitable algorithms, optimising\nsystem performance, and considering ethical aspects, while bridging the gap between Artificial Intelligence\n(AI) theory and engineering applications. The course prepares professionals to deploy intelligent systems\nefficiently and communicate technical solutions across multidisciplinary teams."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000009",
           "type": "text_group",
           "element_ids": [
             "txt_000017",
@@ -755,7 +755,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000010",
           "type": "text_group",
           "element_ids": [
             "txt_000027",
@@ -764,7 +764,7 @@
           "text": "Content\n-\nUtilising Machine Learning (ML) paradigms such as Supervised, Unsupervised, and Reinforcement\nLearning.\n-\nUnderstanding foundation models vs traditional machine learning trade-offs.\n-\nData-Centric Artificial Intelligence (AI) Development.\n-\nAutomated Data Pipelines and Machine Learning Operations (MLOps) for reproducibility.\n-\nAlgorithm Selection Frameworks for Production-Grade Machine Learning (ML) Specifications.\n-\nArtificial Intelligence (AI) for Emerging Engineering Applications & Technologies."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000011",
           "type": "text_group",
           "element_ids": [
             "txt_000030"
@@ -772,7 +772,7 @@
           "text": "PART B:"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000012",
           "type": "text_group",
           "element_ids": [
             "txt_000030"
@@ -780,7 +780,7 @@
           "text": "Your Unit in more detail"
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000013",
           "type": "text_group",
           "element_ids": [
             "txt_000031"
@@ -788,7 +788,7 @@
           "text": "Unit Improvements"
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000014",
           "type": "text_group",
           "element_ids": [
             "txt_000032"
@@ -849,7 +849,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000015",
           "type": "text_group",
           "element_ids": [
             "txt_000033"
@@ -857,7 +857,7 @@
           "text": "Learning and Teaching Structure"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000016",
           "type": "text_group",
           "element_ids": [
             "txt_000035"
@@ -946,7 +946,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000017",
           "type": "text_group",
           "element_ids": [
             "txt_000036",
@@ -1157,7 +1157,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000018",
           "type": "text_group",
           "element_ids": [
             "txt_000045",
@@ -1167,7 +1167,7 @@
           "text": "Required Textbook(s)\nThe required textbook(s) can be purchased from bookshops and may be available through the Swinburne\nLibrary.\n1. Huyen, C. (2024). AI engineering: Building applications with foundation models. \" O'Reilly Media, Inc.\"\n2. Goodfellow, I., Bengio, Y., Courville, A., & Bengio, Y. (2016). Deep learning (Vol. 1, No. 2, pp. 1-800).\nCambridge: MIT press.\n3. Bass, L., Lu, Q., Weber, I., & Zhu, L. (2025). Engineering AI systems: architecture and DevOps\nessentials. Addison-Wesley Professional.\n4. Raschka, S., Liu, Y. H., & Mirjalili, V. (2022). Machine Learning with PyTorch and Scikit-Learn: Develop\n5. machine learning and deep learning models with Python. Packt Publishing Ltd.\n6. Kapoor, A., Gulli, A., Pal, S., & Chollet, F. (2022). Deep Learning with TensorFlow and Keras: Build and\ndeploy supervised, unsupervised, deep, and reinforcement learning models. Packt Publishing Ltd."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000019",
           "type": "text_group",
           "element_ids": [
             "txt_000049",
@@ -1405,7 +1405,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000020",
           "type": "text_group",
           "element_ids": [
             "txt_000056"
@@ -1413,7 +1413,7 @@
           "text": "PART C:"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000021",
           "type": "text_group",
           "element_ids": [
             "txt_000056"
@@ -1421,7 +1421,7 @@
           "text": "FURTHER INFORMATION"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000022",
           "type": "text_group",
           "element_ids": [
             "txt_000058",
@@ -1434,7 +1434,7 @@
           "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying,\nviolence, discrimination, sexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a\nquality learning experience. The Charter also sets out what is expected of students with regards to your\nstudies and the way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations\nand the People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens\nin an emergency response."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000023",
           "type": "text_group",
           "element_ids": [
             "txt_000067",
@@ -1443,7 +1443,7 @@
           "text": "Canvas\nYou should regularly log on to the Swinburne learning management system, Canvas. You can access Canvas\nvia the Student login webpage or https://swinburne.instructure.com/ Canvas is updated regularly with\nimportant unit information and communications."
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000024",
           "type": "text_group",
           "element_ids": [
             "txt_000069",
@@ -1452,7 +1452,7 @@
           "text": "Communication\nAll communication will be via your Swinburne email address. If you access your email through a provider\nother than Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to\nyour private email address."
         },
         {
-          "id": "grp_000005",
+          "id": "grp_000025",
           "type": "text_group",
           "element_ids": [
             "txt_000071",
@@ -1594,7 +1594,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000026",
           "type": "text_group",
           "element_ids": [
             "txt_000079",
@@ -1788,7 +1788,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000027",
           "type": "text_group",
           "element_ids": [
             "txt_000087",
@@ -1799,7 +1799,7 @@
           "text": "AccessAbility Services\nIf you are a student with a disability, medical or mental health condition or you have significant carer\nresponsibilities, you may require reasonable adjustments to fully access and participate in education.\nSwinburne's AccessAbility Services can develop an Education Access Plan (EAP) that includes the services\nand reasonable adjustments that you need.\nIt is recommended that you register with AccessAbility Services when you first commence your course, but\nyou can contact the service at any time during your studies to find out about reasonable adjustments.\nContact Accessibility Services to discuss further.\nOnce you have an approved EAP, you should contact the Unit Convenor as early as possible (e.g. beginning\nof semester) to discuss your adjustments so that we can better support your learning."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000028",
           "type": "text_group",
           "element_ids": [
             "txt_000093",
@@ -1809,7 +1809,7 @@
           "text": "Review of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a review of\nassessment is undertaken if your final result is between 45 and 49 or within 2 marks of any grade\nthreshold.\nYou can ask the Unit Convenor to check the result for an assessment item or your final result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit Convenor\ncan discuss the marking criteria with you and check the aggregate marks of assessment components to\nidentify if an error has been made. This is known as local resolution. If you are dissatisfied with the\noutcome of the local resolution, you can lodge a formal complaint."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000029",
           "type": "text_group",
           "element_ids": [
             "txt_000097",

@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "version": "1.1",
+    "version": "1.2",
     "doc_id": 9,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/TNE10006_Unit Outline_Jan_2025 V1-1.pdf",
     "title": "TNE10006_Unit_Outline",
@@ -435,7 +435,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000007",
           "type": "text_group",
           "element_ids": [
             "txt_000020"
@@ -443,7 +443,7 @@
           "text": "PART A: Unit Summary"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000008",
           "type": "text_group",
           "element_ids": [
             "txt_000022",
@@ -452,7 +452,7 @@
           "text": "Aims\nThis unit of study aims to introduce you to the field of data networking and to provide you\nwith the necessary skills to design and successfully deploy a small network."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000009",
           "type": "text_group",
           "element_ids": [
             "txt_000024",
@@ -707,7 +707,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000010",
           "type": "text_group",
           "element_ids": [
             "txt_000033",
@@ -717,7 +717,7 @@
           "text": "Graduate Attributes\nThis unit may contribute to the development of the following Swinburne Graduate Attributes:\n§\nGA5 Digital Literacies - Information Literacy"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000011",
           "type": "text_group",
           "element_ids": [
             "txt_000036",
@@ -834,7 +834,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000012",
           "type": "text_group",
           "element_ids": [
             "txt_000050"
@@ -842,7 +842,7 @@
           "text": "PART B: Your Unit in more detail"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000013",
           "type": "text_group",
           "element_ids": [
             "txt_000051",
@@ -852,7 +852,7 @@
           "text": "Unit Improvements\nFeedback provided by previous students through the Student Survey has resulted in\nimprovements that have been made to this unit. Recent improvements include:\n-\nLecture Revision Quizzes"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000014",
           "type": "text_group",
           "element_ids": [
             "txt_000054"
@@ -860,7 +860,7 @@
           "text": "Unit Teaching Staff"
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000015",
           "type": "text_group",
           "element_ids": [
             "txt_000055"
@@ -899,7 +899,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000016",
           "type": "text_group",
           "element_ids": [
             "txt_000057"
@@ -1107,7 +1107,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000017",
           "type": "text_group",
           "element_ids": [
             "txt_000058"
@@ -1115,7 +1115,7 @@
           "text": "Assessments"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000018",
           "type": "text_group",
           "element_ids": [
             "txt_000059",
@@ -1127,7 +1127,7 @@
           "text": "a)\nAssessment Overview\nb) Minimum requirements to pass this Unit\nTo pass this Unit, you must:\n(i)\nachieve an overall mark for the unit of 50% or more, and\n(ii) obtain at least 40% in the Final Written Assessments, and\n(iii) must pass the Final Skills Assessment.\nStudents who do not meet (i), (ii) and (iii), will score a maximum of 45% as the total mark\nfor the Unit."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000019",
           "type": "text_group",
           "element_ids": [
             "txt_000065",
@@ -1381,7 +1381,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000020",
           "type": "text_group",
           "element_ids": [
             "txt_000079",
@@ -1469,7 +1469,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000021",
           "type": "text_group",
           "element_ids": [
             "txt_000090",
@@ -1478,7 +1478,7 @@
           "text": "Required Textbook(s)\nThe official textbook is available for purchase as an eBook. Details are available on Canvas."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000022",
           "type": "text_group",
           "element_ids": [
             "txt_000092",
@@ -1674,7 +1674,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000023",
           "type": "text_group",
           "element_ids": [
             "txt_000095"
@@ -1682,7 +1682,7 @@
           "text": "PART C:"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000024",
           "type": "text_group",
           "element_ids": [
             "txt_000095"
@@ -1690,7 +1690,7 @@
           "text": "FURTHER INFORMATION"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000025",
           "type": "text_group",
           "element_ids": [
             "txt_000096",
@@ -1701,7 +1701,7 @@
           "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness: be inclusive, ethical and\nrespectful of others; and appropriately use University resources, information, equipment and facilities.\nAll students are expected to contribute to creating a work and study environment that is safe and free\nfrom bullying, violence, discrimination, sexual harassment, vilification and other forms of unacceptable\nbehaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy\na quality learning experience. The Charter also sets out what is expected of students with regards to\nyour studies and the way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to\nabide by these, including the Student Academic Misconduct Regulations, Student General\nMisconduct Regulations and the People, Culture and Integrity Policy. Any student found to be in\nbreach of these may be subject to disciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to\nothers\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by\nstaff/wardens in an emergency response"
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000026",
           "type": "text_group",
           "element_ids": [
             "txt_000100",
@@ -1710,7 +1710,7 @@
           "text": "Canvas\nYou should regularly access the Swinburne learning management system, Canvas, which is available\nvia the Current Students webpage or https://swinburne.instructure.com/ Canvas is updated regularly\nwith important unit information and communications."
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000027",
           "type": "text_group",
           "element_ids": [
             "txt_000102",
@@ -1719,7 +1719,7 @@
           "text": "Communication\nAll communication will be via your Swinburne email address. If you access your email through a\nprovider other than Swinburne, then it is your responsibility to ensure that your Swinburne email is\nredirected to your private email address."
         },
         {
-          "id": "grp_000005",
+          "id": "grp_000028",
           "type": "text_group",
           "element_ids": [
             "txt_000104",
@@ -1876,7 +1876,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000029",
           "type": "text_group",
           "element_ids": [
             "txt_000108",
@@ -1885,7 +1885,7 @@
           "text": "Student support\nYou should talk to your Unit Convenor or Student Services for information on academic support\nservices available for Swinburne students."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000030",
           "type": "text_group",
           "element_ids": [
             "txt_000110",
@@ -1894,7 +1894,7 @@
           "text": "Special consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances outside of\nyour control (e.g. severe illness or unavoidable obligation), you may be able to apply for special\nconsideration (SPC).\nApplications for Special Consideration will be submitted via the SPC online tool no later than 5.00pm\non the third working day after the submission/sitting date for the relevant assessment component."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000031",
           "type": "text_group",
           "element_ids": [
             "txt_000112",
@@ -1903,7 +1903,7 @@
           "text": "Accessibility needs\nSometimes students with a disability, a mental health or medical condition or significant carer\nresponsibilities require reasonable adjustments to enable full access to and participation in education.\nYour needs can be addressed by Swinburne's AccessAbility Services by negotiating and distributing\nan 'Education Access Plan'. The plan makes recommendations to university teaching and\nexamination staff. You must notify AccessAbility Services of your disability or condition within one\nweek after the commencement of your unit to allow the University to make reasonable adjustments."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000032",
           "type": "text_group",
           "element_ids": [
             "txt_000114",
@@ -1969,7 +1969,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000033",
           "type": "text_group",
           "element_ids": [
             "txt_000117",

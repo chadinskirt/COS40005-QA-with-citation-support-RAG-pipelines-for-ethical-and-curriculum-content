@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "version": "1.1",
+    "version": "1.2",
     "doc_id": 8,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/SWE30003 Unit Outline_May 2026.pdf",
     "title": "Microsoft Word - SWE30003 Unit Outline_2025_S2.docx",
@@ -504,7 +504,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000007",
           "type": "text_group",
           "element_ids": [
             "txt_000011"
@@ -512,7 +512,7 @@
           "text": "PART A:"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000008",
           "type": "text_group",
           "element_ids": [
             "txt_000011"
@@ -520,7 +520,7 @@
           "text": "Unit Summary"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000009",
           "type": "text_group",
           "element_ids": [
             "txt_000012",
@@ -529,7 +529,7 @@
           "text": "Aims\nThe unit aims to facilitate an in-depth study of state-of-the-art approaches and techniques for\nsystem design with a special focus on the relationship between non-functional requirements\nand software architectures."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000010",
           "type": "text_group",
           "element_ids": [
             "txt_000014",
@@ -673,7 +673,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000011",
           "type": "text_group",
           "element_ids": [
             "txt_000016",
@@ -688,7 +688,7 @@
           "text": "Graduate Attributes\nThe Swinburne Graduate Attributes describe the capability of our graduates to use\nknowledge, skills and behaviours to contribute to society meaningfully and positively. They\ninclude professional, self-directed learning and future-ready skills.\nThis unit contributes to the development of the following Swinburne Graduate Attributes:\n\nGA2 Communication 2 - Communicating using different media\n\nGA3 Teamwork 1 - Collaboration and negotiation\n\nGA5 Digital literacies 1 – Information literacy\n\nGA6 Digital Literacies 2 – Technical literacy\nOther graduate attributes may be practised in the unit but are not formally taught as part of\nthe unit content, nor incorporated within formal assessment."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000012",
           "type": "text_group",
           "element_ids": [
             "txt_000024"
@@ -764,7 +764,19 @@
           "source_id": "txt_000028"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000013",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000025",
+            "txt_000026",
+            "txt_000027",
+            "txt_000028"
+          ],
+          "text": "Software Architectures\n\nDecisions vs. structures\n\nArchitectural patterns\n\nDocumentation and communication\nArchitectural Styles\n\nMessage-driven architectures\n\nClient-server architectures\n\nLayered Architectures"
+        }
+      ]
     },
     {
       "page_num": 5,
@@ -887,7 +899,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000014",
           "type": "text_group",
           "element_ids": [
             "txt_000029"
@@ -895,7 +907,7 @@
           "text": "PART B:"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000015",
           "type": "text_group",
           "element_ids": [
             "txt_000029"
@@ -903,7 +915,7 @@
           "text": "Your Unit in more detail"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000016",
           "type": "text_group",
           "element_ids": [
             "txt_000030"
@@ -911,7 +923,7 @@
           "text": "Unit Improvements"
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000017",
           "type": "text_group",
           "element_ids": [
             "txt_000031"
@@ -919,7 +931,7 @@
           "text": "Unit Teaching Staff"
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000018",
           "type": "text_group",
           "element_ids": [
             "txt_000032"
@@ -927,7 +939,7 @@
           "text": "Learning and Teaching Structure"
         },
         {
-          "id": "grp_000005",
+          "id": "grp_000019",
           "type": "text_group",
           "element_ids": [
             "txt_000033",
@@ -981,7 +993,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000020",
           "type": "text_group",
           "element_ids": [
             "txt_000036"
@@ -989,7 +1001,7 @@
           "text": "Assessment"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000021",
           "type": "text_group",
           "element_ids": [
             "txt_000037"
@@ -1229,7 +1241,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000022",
           "type": "text_group",
           "element_ids": [
             "txt_000038",
@@ -1463,7 +1475,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000023",
           "type": "text_group",
           "element_ids": [
             "txt_000052"
@@ -1471,7 +1483,7 @@
           "text": "PART C:"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000024",
           "type": "text_group",
           "element_ids": [
             "txt_000052"
@@ -1479,7 +1491,7 @@
           "text": "FURTHER INFORMATION"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000025",
           "type": "text_group",
           "element_ids": [
             "txt_000053",
@@ -1492,7 +1504,7 @@
           "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and\nrespectful of others; and appropriately use University resources, information, equipment and\nfacilities. All students are expected to contribute to creating a work and study environment\nthat is safe and free from bullying, violence, discrimination, sexual harassment, vilification\nand other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order\nto enjoy a quality learning experience. The Charter also sets out what is expected of students\nwith regards to your studies and the way you conduct yourself towards other people and\nproperty.\nYou are expected to familiarise yourself with University regulations and policies and are\nobliged to abide by these, including the Student Academic Misconduct Regulations, Student\nGeneral Misconduct Regulations and the People, Culture and Integrity Policy. Any student\nfound to be in breach of these may be subject to disciplinary processes.\nExamples of expected behaviours are:\n\nconducting yourself in teaching areas in a manner that is professional and not\ndisruptive to others\n\nfollowing specific safety procedures in Swinburne laboratories, such as wearing\nappropriate footwear and safety equipment, not acting in a manner which is\ndangerous or disruptive (e.g. playing computer games), and not bringing in food or\ndrink\n\nfollowing emergency and evacuation procedures and following instructions given by\nstaff/wardens in an emergency response."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000026",
           "type": "text_group",
           "element_ids": [
             "txt_000059",
@@ -1501,7 +1513,7 @@
           "text": "Canvas\nYou should regularly log on to the Swinburne learning management system, Canvas. You can\naccess Canvas via the Student login webpage or https://swinburne.instructure.com/ Canvas is\nupdated regularly with important unit information and communications."
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000027",
           "type": "text_group",
           "element_ids": [
             "txt_000061",
@@ -1510,7 +1522,7 @@
           "text": "Communication\nAll communication will be via your Swinburne email address. If you access your email through\na provider other than Swinburne, then it is your responsibility to ensure that your Swinburne\nemail is redirected to your private email address."
         },
         {
-          "id": "grp_000005",
+          "id": "grp_000028",
           "type": "text_group",
           "element_ids": [
             "txt_000063",
@@ -1629,7 +1641,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000029",
           "type": "text_group",
           "element_ids": [
             "txt_000071",
@@ -1838,7 +1850,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000030",
           "type": "text_group",
           "element_ids": [
             "txt_000073",
@@ -1849,7 +1861,7 @@
           "text": "Special consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances\noutside of your control (e.g. severe illness or unavoidable obligation), you may be able to\napply for special consideration (SPC).\nApplications for Special Consideration are submitted via the SPC online tool normally no later\nthan 5.00pm on the third working day after the submission/sitting date for the relevant\nassessment component. See https://www.swinburne.edu.au/life-at-swinburne/student-\nsupport-services/special-consideration-assistance/\nNote: Submitting fraudulent (fake or altered) medical certificates is considered misconduct and can\nlead to serious penalties from Swinburne. In addition, your doctor may report fraudulent medical\ncertificates as a prosecutable offence under the Victorian Crimes Act."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000031",
           "type": "text_group",
           "element_ids": [
             "txt_000077",
@@ -1859,7 +1871,7 @@
           "text": "AccessAbility Services\nIf you are a student with a disability, medical or mental health condition or you have\nsignificant carer responsibilities, you may require reasonable adjustments to fully access and\nparticipate in education. Swinburne's AccessAbility Services can develop an Education Access\nPlan (EAP) that includes the services and reasonable adjustments that you need.\nIt is recommended that you register with AccessAbility Services when you first commence\nyour course but you can contact the service at any time during your studies to find out about\nreasonable adjustments. Contact Accessibility Services to discuss further."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000032",
           "type": "text_group",
           "element_ids": [
             "txt_000080",
@@ -1869,7 +1881,7 @@
           "text": "Review of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a\nreview of assessment is undertaken if your final result is between 45 and 49 or within 2 marks\nof any grade threshold.\nYou can ask the Unit Convenor to check the result for an assessment item or your final result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit\nConvenor can discuss the marking criteria with you and check the aggregate marks of\nassessment components to identify if an error has been made. This is known as local\nresolution. If you are dissatisfied with the outcome of the local resolution, you can lodge a\nformal complaint."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000033",
           "type": "text_group",
           "element_ids": [
             "txt_000083",
@@ -1878,7 +1890,7 @@
           "text": "Feedback, complaints and suggestions\nIn the first instance, discuss any issues with your Unit Convenor. If your concerns are not\nresolved or you would prefer not to deal with your Unit Convenor, then you can complete a\nfeedback form. See https://www.swinburne.edu.au/corporate/feedback/"
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000034",
           "type": "text_group",
           "element_ids": [
             "txt_000085",

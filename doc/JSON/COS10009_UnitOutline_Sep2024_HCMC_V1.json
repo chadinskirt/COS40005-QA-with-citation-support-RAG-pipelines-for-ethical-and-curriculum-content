@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "version": "1.1",
+    "version": "1.2",
     "doc_id": 0,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS10009_UnitOutline_Sep2024_HCMC_V1.pdf",
     "title": "COS10009_UnitOutline_Sep2024_HCMC_V1",
@@ -398,7 +398,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000004",
           "type": "text_group",
           "element_ids": [
             "txt_000010"
@@ -406,7 +406,7 @@
           "text": "PART A: Unit Summary"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000005",
           "type": "text_group",
           "element_ids": [
             "txt_000011",
@@ -415,7 +415,7 @@
           "text": "Aims\nThis unit of study aims to introduce students to structured procedural programming and design."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000006",
           "type": "text_group",
           "element_ids": [
             "txt_000011",
@@ -425,7 +425,7 @@
           "text": "Unit Learning Outcomes\nStudents who successfully complete this Unit should be able to:\n1. Apply code reading and debugging techniques to analyze, interpret, and describe the\npurpose of program code, and locate within this code errors in syntax, logic, style and/or\ngood practice.\n2. Describe the principles of structured programming and relate these to the syntactical\nelements of the programming language used and the way programs are developed.\n3. Construct small programs, using the programming languages covered, that include the\nuse of arrays, functions and procedures, parameter passing with call by value and call\nby reference, custom data types, and pointers.\n4. Use modular and functional decomposition to break problems down functionally,\nrepresent the resulting structures diagrammatically, and implement these structures in\ncode as functions and procedures."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000007",
           "type": "text_group",
           "element_ids": [
             "txt_000014",
@@ -437,7 +437,7 @@
           "text": "Graduate Attributes\nThis unit may contribute to the development of the following Swinburne Graduate Attributes:\n-\nCommunication skills\n-\nTeamwork skills\n-\nDigital literacies"
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000008",
           "type": "text_group",
           "element_ids": [
             "txt_000018",
@@ -647,7 +647,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000009",
           "type": "text_group",
           "element_ids": [
             "txt_000022",
@@ -658,7 +658,7 @@
           "text": "Swinburne Engineering Competencies for this Unit of Study\nThis Unit of Study will contribute to you attaining the following Swinburne Engineering\nCompetencies:\n-\nK1 Basic Science: Proficiently applies concepts, theories and techniques of the\nrelevant natural and physical sciences to the solution of complex engineering problems.\n-\nK2 Maths and IT as Tools: Proficiently uses relevant mathematics and computer and\ninformation science concepts as tools in complex engineering activities.\n-\nK3 Discipline Specific: Proficiently applies advanced technical knowledge of the\nspecific discipline within that context.\n-\nK6 Professional Practice: Appreciates the principles of professional engineering\npractice in a sustainable context.\n-\nS1 Engineering Methods: Applies engineering methods in practical applications and\ncomplex engineering problems.\n-\nS2 Problem Solving: Systematically uses current or emerging knowledge and\nresearch methods to undertake independent research in solving complex engineering\nproblems and as preparation for research higher degrees.\n-\nS3 Design: Systematically uses engineering methods in designing solutions to\ncomplex engineering problems.\n-\nA2 Communication: Demonstrates effective communication to professional and wider\naudiences including in complex engineering activities.\nA4 Information Management: Demonstrates seeking, using, assessing and managing\ninformation."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000010",
           "type": "text_group",
           "element_ids": [
             "txt_000026"
@@ -666,7 +666,7 @@
           "text": "PART B: Your Unit in more detail"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000011",
           "type": "text_group",
           "element_ids": [
             "txt_000027",
@@ -680,7 +680,7 @@
           "text": "Unit Improvements\nFeedback provided by previous students through the Student Survey has resulted in\nimprovements that have been made to this unit. Recent improvements include:\n-\nChanged sequence of lecture materials to better introduce concepts in a logical\norder.\n-\nRemoved some tasks and added others to focus on main concepts.\n-\nIntroduced Python tasks."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000012",
           "type": "text_group",
           "element_ids": [
             "txt_000034"
@@ -852,7 +852,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000013",
           "type": "text_group",
           "element_ids": [
             "txt_000041",
@@ -1092,7 +1092,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000014",
           "type": "text_group",
           "element_ids": [
             "txt_000056",
@@ -1320,7 +1320,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000015",
           "type": "text_group",
           "element_ids": [
             "txt_000065"
@@ -1328,7 +1328,7 @@
           "text": "PART C: FURTHER INFORMATION"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000016",
           "type": "text_group",
           "element_ids": [
             "txt_000066",
@@ -1340,7 +1340,7 @@
           "text": "Student behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of\nothers; and appropriately use University resources, information, equipment and facilities. All students are\nexpected to contribute to creating a work and study environment that is safe and free from bullying, violence,\ndiscrimination, sexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a quality\nlearning experience. The Charter also sets out what is expected of students with regards to your studies and\nthe way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations and\nthe People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to others\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate footwear\nand safety equipment, not acting in a manner which is dangerous or disruptive (e.g. playing computer\ngames), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by staff/wardens in\nan emergency response"
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000017",
           "type": "text_group",
           "element_ids": [
             "txt_000071",
@@ -1349,7 +1349,7 @@
           "text": "Canvas\nYou should regularly access the Swinburne learning management system, Canvas, which is available via the\nCurrent Students webpage or https://swinburne.instructure.com/ Canvas is updated regularly with important\nunit information and communications."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000018",
           "type": "text_group",
           "element_ids": [
             "txt_000073",
@@ -1358,7 +1358,7 @@
           "text": "Communication\nAll communication will be via your Swinburne email address. If you access your email through a provider other\nthan Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to your private\nemail address."
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000019",
           "type": "text_group",
           "element_ids": [
             "txt_000075",
@@ -1544,7 +1544,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000020",
           "type": "text_group",
           "element_ids": [
             "txt_000082",
@@ -1553,7 +1553,7 @@
           "text": "Student support\nSwinburne offers a range of services and resources to help you complete your studies successfully. Your Unit\nConvenor or studentHQ can provide information about the study support and other services available for\nSwinburne students."
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000021",
           "type": "text_group",
           "element_ids": [
             "txt_000084",
@@ -1562,7 +1562,7 @@
           "text": "Special consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances outside of your\ncontrol (e.g. severe illness or unavoidable obligation), you may be able to apply for special consideration (SPC).\nApplications for Special Consideration will be submitted via the SPC online tool normally no later than 5.00pm\non the third working day after the submission/sitting date for the relevant assessment component."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000022",
           "type": "text_group",
           "element_ids": [
             "txt_000086",
@@ -1571,7 +1571,7 @@
           "text": "Accessibility needs\nSometimes students with a disability, a mental health or medical condition or significant carer responsibilities\nrequire reasonable adjustments to enable full access to and participation in education. Your needs can be\naddressed by Swinburne's AccessAbility Services by negotiating and distributing an 'Education Access Plan'.\nThe plan makes recommendations to University teaching and examination staff. You must notify AccessAbility\nServices of your disability or condition within one week after the commencement of your unit to allow the\nUniversity to make reasonable adjustments."
         },
         {
-          "id": "grp_000003",
+          "id": "grp_000023",
           "type": "text_group",
           "element_ids": [
             "txt_000088",
@@ -1580,7 +1580,7 @@
           "text": "Review of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a review of assessment\nis undertaken if your final result is between 45 and 49 or within 2 marks of any grade threshold.\nIf you are not satisfied with the result of an assessment, you can ask the Unit Convenor to review the result.\nYour request must be made in writing within 10 working days of receiving the result. The Unit Convenor will\nreview your result to determine if your result is appropriate. If you are dissatisfied with the outcomes\nof the review, you can lodge a formal complaint."
         },
         {
-          "id": "grp_000004",
+          "id": "grp_000024",
           "type": "text_group",
           "element_ids": [
             "txt_000090",
@@ -1589,7 +1589,7 @@
           "text": "Feedback, complaints and suggestions\nIn the first instance, discuss any issues with your Unit Convenor. If you are dissatisfied with the outcome of the\ndiscussion or would prefer not to deal with your Unit Convenor, then you can complete a feedback form. See\nhttps://www.swinburne.edu.au/corporate/feedback/"
         },
         {
-          "id": "grp_000005",
+          "id": "grp_000025",
           "type": "text_group",
           "element_ids": [
             "txt_000092"

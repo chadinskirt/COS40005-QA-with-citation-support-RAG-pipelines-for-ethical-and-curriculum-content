@@ -1,6 +1,6 @@
 {
   "pdf_header": {
-    "version": "1.1",
+    "version": "1.2",
     "doc_id": 4,
     "source": "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/Archive/COS30019_Unit Outline_JAN_2026-1.pdf",
     "title": "COS30019_Unit Outline_JAN_2026",
@@ -375,7 +375,22 @@
           "source_id": "txt_000012"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000008",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000006",
+            "txt_000007",
+            "txt_000008",
+            "txt_000009",
+            "txt_000010",
+            "txt_000011",
+            "txt_000012"
+          ],
+          "text": "Describe and interpret the fundamental concepts of Artificial Intelligence (AI) and\ngeneric problem-solving techniques\nIdentify and explain the ethical principles and frameworks applicable to AI and the security risks\nassociated with AI\nApply advanced algorithms and data structures to solve complex computing problems\nDesign software that implements AI concepts and algorithms in a project-based\ncontext"
+        }
+      ]
     },
     {
       "page_num": 3,
@@ -823,7 +838,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000009",
           "type": "text_group",
           "element_ids": [
             "txt_000033",
@@ -913,7 +928,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000010",
           "type": "text_group",
           "element_ids": [
             "txt_000049"
@@ -921,7 +936,7 @@
           "text": "Unit Improvements"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000011",
           "type": "text_group",
           "element_ids": [
             "txt_000051"
@@ -1113,7 +1128,7 @@
       ],
       "groups": [
         {
-          "id": "grp_000000",
+          "id": "grp_000012",
           "type": "text_group",
           "element_ids": [
             "txt_000055",
@@ -1122,7 +1137,7 @@
           "text": "Course Notes:\nLecture Notes, 2025 (Available from the subject website during the teaching period)"
         },
         {
-          "id": "grp_000001",
+          "id": "grp_000013",
           "type": "text_group",
           "element_ids": [
             "txt_000058",
@@ -1131,7 +1146,7 @@
           "text": "Text Book:\nRussell, S.J. and Norvig, P., “Artificial Intelligence: A Modern Approach,” 3rd edition,\nPrentice-Hall, 2010, OR 4th edition, Pearson Education Limited, 2022."
         },
         {
-          "id": "grp_000002",
+          "id": "grp_000014",
           "type": "text_group",
           "element_ids": [
             "txt_000061",
@@ -1339,7 +1354,29 @@
           "source_id": "txt_000077"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000015",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000064",
+            "txt_000065",
+            "txt_000066",
+            "txt_000067",
+            "txt_000068",
+            "txt_000069",
+            "txt_000070",
+            "txt_000071",
+            "txt_000072",
+            "txt_000073",
+            "txt_000074",
+            "txt_000075",
+            "txt_000076",
+            "txt_000077"
+          ],
+          "text": "For further information on any of these topics, refer to Swinburne’s\nStudent webpage http://www.swinburne.edu.au/student/\nStudent behaviour and wellbeing\nAll students are expected to: act with integrity, honesty and fairness; be inclusive, ethical and respectful of others;\nand appropriately use University resources, information, equipment and facilities. All students are expected to\ncontribute to creating a work and study environment that is safe and free from bullying, violence, discrimination,\nsexual harassment, vilification and other forms of unacceptable behaviour.\nThe Student Charter describes what students can reasonably expect from Swinburne in order to enjoy a quality\nlearning experience. The Charter also sets out what is expected of students with regards to your studies and\nthe way you conduct yourself towards other people and property.\nYou are expected to familiarise yourself with University regulations and policies and are obliged to abide by\nthese, including the Student Academic Misconduct Regulations, Student General Misconduct Regulations and\nthe People, Culture and Integrity Policy. Any student found to be in breach of these may be subject to\ndisciplinary processes.\nExamples of expected behaviours are:\n-\nconducting yourself in teaching areas in a manner that is professional and not disruptive to\nothers\n-\nfollowing specific safety procedures in Swinburne laboratories, such as wearing appropriate\nfootwear and safety equipment, not acting in a manner which is dangerous or disruptive (e.g.\nplaying computer games), and not bringing in food or drink\n-\nfollowing emergency and evacuation procedures and following instructions given by\nstaff/wardens in an emergency response.\nCanvas\nYou should regularly log on to the Swinburne learning management system, Canvas. You can access Canvas\nvia the Student login webpage or https://swinburne.instructure.com/ Canvas is updated regularly with important\nunit information and communications.\nCommunication\nAll communication will be via your Swinburne email address. If you access your email through a provider other\nthan Swinburne, then it is your responsibility to ensure that your Swinburne email is redirected to your private\nemail address.\nAcademic Integrity\nAcademic integrity is about taking responsibility for your learning and submitting work that is honestly your own. It\nmeans acknowledging the ideas, contributions and work of others; referencing your sources and acknowledging\nthe use of generative artificial intelligence;\ncontributing fairly to group work; and completing tasks, tests and exams without cheating.\nArtificial intelligence tools should only be used where approved by the Unit Convenor.\nSwinburne University uses the Turnitin system, which helps to identify inadequate citations, poor paraphrasing\nand unoriginal work in assignments that are submitted via Canvas. Your Unit Convenor will provide further\ndetails."
+        }
+      ]
     },
     {
       "page_num": 10,
@@ -1486,7 +1523,25 @@
           "source_id": "txt_000089"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000016",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000080",
+            "txt_000081",
+            "txt_000082",
+            "txt_000083",
+            "txt_000084",
+            "txt_000085",
+            "txt_000086",
+            "txt_000087",
+            "txt_000088",
+            "txt_000089"
+          ],
+          "text": "Plagiarism, collusion, contract cheating, unauthorised file sharing, falsification, fabrication, manipulation or\nmisrepresentation of information, reuse of previous work and non- compliance with instructions in an invigilated or\nnon-invigilated assessment item are all breaches of academic integrity and treated as academic misconduct.\nExamples of breaches of academic integrity include, but are not limited to:\n-\nsubmitting work as your own for assessment that has been fully or partially\ncompleted by a third party, either paid or unpaid\n-\nusing output from artificial intelligence tools (e.g. ChatGPT) in whole or part without acknowledgement\nand/or without the approval of the Unit Convenor\n-\nusing another person’s work or ideas as though it is your own work, without\nappropriate attribution\n-\nworking closely with another student or group of students (either past or current), to submit for\nassessment, some or all of the other student or students’ work as your own work\n-\nsharing without permission of the Unit Convenor, Swinburne resources or other material related to\nassessment to an entity or document repository site\n-\ncreating, intentionally modifying or inventing information that is intended to be submitted as part of\nan assessment item\n-\nusing the whole or part of a computer program written by another person as your\nown without appropriate acknowledgement\n-\npoorly paraphrasing somebody else’s work\n-\nusing a musical composition or audio, visual, graphic and photographic work created\nby another person without acknowledgment\n-\nenabling others to cheat, including letting another student copy your work or by\ngiving access to a draft or completed assignment\n-\nletting someone or something else impersonate you, or you impersonate someone else in an invigilated\nor non-invigilated assessment item\n-\naccessing, obtaining and/or providing to others unauthorised materials relating to an\ninvigilated or non-invigilated assessment item.\nThe penalties for academic misconduct can be severe, ranging from a zero grade for an assessment task\nthrough to exclusion from Swinburne. For further details, see https://www.swinburne.edu.au/student-\nlogin/academic-integrity/\nStudent support\nSwinburne offers a range of services and resources to help you complete your studies successfully. Your Unit\nConvenor or studentHQ can provide information about the study support and other services available for\nSwinburne students. For further information, see the Current students web page.\nSpecial consideration\nIf your studies have been adversely affected due to serious and unavoidable circumstances outside of your\ncontrol (e.g. severe illness or unavoidable obligation), you may be able to apply for special consideration\n(SPC).\nApplications for Special Consideration are submitted via the SPC online tool normally no later than 5.00pm on\nthe third working day after the submission/sitting date for the relevant assessment component. See\nhttps://www.swinburne.edu.au/life-at-swinburne/student- support-services/special-consideration-assistance/\nNote: Submitting fraudulent (fake or altered) medical certificates is considered misconduct and can lead to\nserious penalties from Swinburne. In addition, your doctor may report fraudulent medical certificates as a\nprosecutable offence under the Victorian Crimes Act.\nAccessAbility Services\nIf you are a student with a disability, medical or mental health condition or you have significant carer\nresponsibilities, you may require reasonable adjustments to fully access and participate in education.\nSwinburne's AccessAbility Services can develop an Education Access Plan (EAP) that includes the services\nand reasonable adjustments that you need."
+        }
+      ]
     },
     {
       "page_num": 11,
@@ -1594,7 +1649,22 @@
           "source_id": "txt_000096"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "grp_000017",
+          "type": "text_group",
+          "element_ids": [
+            "txt_000090",
+            "txt_000091",
+            "txt_000092",
+            "txt_000093",
+            "txt_000094",
+            "txt_000095",
+            "txt_000096"
+          ],
+          "text": "It is recommended that you register with AccessAbility Services when you first commence your course but you\ncan contact the service at any time during your studies to find out about reasonable adjustments. Contact\nAccessibility Services to discuss further.\nReview of marks\nAn independent marker reviews all fail grades for major assessment tasks. In addition, a review of assessment\nis undertaken if your final result is between 45 and 49 or within 2 marks of any grade threshold.\nYou can ask the Unit Convenor to check the result for an assessment item or your final result. Your request must\nbe made in writing within 10 working days of receiving the result. The Unit Convenor can discuss the marking\ncriteria with you and check the aggregate marks of assessment components to identify if an error has been\nmade. This is known as local resolution. If you are dissatisfied with the outcome of the local resolution, you can\nlodge a formal complaint.\nFeedback, complaints and suggestions\nIn the first instance, discuss any issues with your Unit Convenor. If your concerns are not resolved or you\nwould prefer not to deal with your Unit Convenor, then you can complete a feedback form. See\nhttps://www.swinburne.edu.au/corporate/feedback/\nAdvocacy\nIf you require assistance with any academic issues, University statutes, regulations, policies and procedures,\nyou are advised to seek advice from an Independent Advocacy Officer at the Swinburne Student Association.\nTalking to an Advocacy Officer is free, independent and confidential. For more information and booking an\nappointment, please see https://www.swinburne.edu.au/current-students/student-services-support/advocacy/"
+        }
+      ]
     }
   ],
   "page_content": {
