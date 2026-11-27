@@ -124,7 +124,7 @@ For a rejected request (4xx), the system error banner shows the backend's `messa
 
 ## Privacy
 
-The app never asks for a name, email or student ID. The plan (units, optional grades, term and load) is written to this browser's localStorage only when the student presses Save plan. Share with advisor sends the same plan, without any identity, to get a short code. The chat lives in memory and is gone when the tab closes; it sends the plan only while "My plan" is on, and grades only while "Past grades" is on.
+The app never asks for a name, email or student ID. The plan (units, optional grades, term and load) is written to this browser's localStorage only when the student presses Save plan. Share with advisor sends the same plan, swaps included and without any identity, to get a short code. The chat lives in memory and is gone when the tab closes. It sends the plan only while "My plan" is on. Grades go with the plan, so "Past grades" only works while "My plan" is on too.
 
 ## Tests
 
@@ -141,3 +141,4 @@ The app never asks for a name, email or student ID. The plan (units, optional gr
 - Mock data is sample data. Answers in the mock are fixed text.
 - The backend does not read the chat's `plan` yet, and has no `POST /api/plans`. See `docs/BACKEND_HANDOFF.md`.
 - Answers are not streamed.
+- `doc/Dataset/Course_Prerequisites.csv` has no prerequisites for COS30008 or SWE20004, so the planner can put them in the same term as a COS20007 retake. That needs fixing in the dataset.
