@@ -21,7 +21,6 @@ export const UNIT_CATALOG = {
   COS40003: { name: 'Concurrent Data Structures', credit_points: 12.5, prereqs: ['COS30008'] },
   COS40005: { name: 'Computing Technology Project A', credit_points: 12.5, prereqs: ['COS20007'] },
   COS40007: { name: 'Artificial Intelligence Engineering', credit_points: 12.5, prereqs: ['COS10009'] },
-  SWE20004: { name: 'Technical Software Development', credit_points: 12.5, prereqs: ['COS20007'] },
   SWE30003: { name: 'Software Architectures and Design', credit_points: 12.5, prereqs: ['COS20007'] },
   TNE10003: { name: 'Introduction to Network Administration', credit_points: 12.5, prereqs: [] },
   TNE10006: { name: 'Networks and Switching', credit_points: 12.5, prereqs: [] },
@@ -53,7 +52,7 @@ export const MAJOR_UNIT_CODES = {
     'COS40007',
   ],
   'data-science': ['COS10022', 'COS30082'],
-  'software-development': ['SWE20004', 'COS20019', 'SWE30003'],
+  'software-development': ['COS20019', 'SWE30003'],
   'internet-of-things': ['TNE10006', 'TNE30009', 'COS20019'],
   'cyber-security': ['TNE10006', 'TNE10003', 'TNE30009'],
 };

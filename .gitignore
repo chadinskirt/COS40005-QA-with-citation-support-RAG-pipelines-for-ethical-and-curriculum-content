@@ -2,4 +2,4 @@
 __pycache__/
 *.pyc
 /RAG/external/tokenizers-cpp
-
+.agents/

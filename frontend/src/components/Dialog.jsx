@@ -56,6 +56,8 @@ export default function Dialog({ title, description, onClose, children, footer, 
         aria-labelledby={titleId}
         aria-describedby={description ? descId : undefined}
         tabIndex={-1}
+        onClick={(e) => e.stopPropagation()}
+        onMouseDown={(e) => e.stopPropagation()}
       >
         <div className="dialog__head">
           <div>

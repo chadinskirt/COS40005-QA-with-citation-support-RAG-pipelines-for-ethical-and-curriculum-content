@@ -52,6 +52,7 @@ const PATHS = {
   ),
   chevronDown: <path d="m6 9 6 6 6-6" />,
   chevronUp: <path d="m18 15-6-6-6 6" />,
+  chevronLeft: <path d="m15 18-6-6 6-6" />,
   chevronRight: <path d="m9 18 6-6-6-6" />,
   arrowRight: <path d="M5 12h14M12 5l7 7-7 7" />,
   arrowUp: <path d="m5 12 7-7 7 7M12 19V5" />,
@@ -75,6 +76,19 @@ const PATHS = {
     </>
   ),
   x: <path d="M18 6 6 18M6 6l12 12" />,
+  close: (
+    <>
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </>
+  ),
+  moon: <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />,
+  sun: (
+    <>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+    </>
+  ),
   copy: (
     <>
       <rect x="8" y="8" width="14" height="14" rx="2" />
@@ -116,7 +130,7 @@ const PATHS = {
   download: <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />,
 };
 
-export default function Icon({ name, size = 16, className = '', title, strokeWidth = 1.75 }) {
+export default function Icon({ name, size = 16, className = '', title, strokeWidth = 1.5 }) {
   return (
     <svg
       className={`icon ${className}`}

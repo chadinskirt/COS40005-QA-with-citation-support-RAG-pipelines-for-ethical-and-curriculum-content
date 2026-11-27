@@ -21,7 +21,7 @@ export default function LaterPage({ route }) {
       <div className="content content--narrow">
         <div className="card state-card">
           <span className="icon-tile">
-            <Icon name={route.icon} size={18} />
+            <Icon name={route.icon} size={16} />
           </span>
           <h1 className="t-h3">{copy.title}</h1>
           <p className="t-small c-secondary">{copy.body}</p>

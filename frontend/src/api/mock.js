@@ -68,7 +68,28 @@ const MAPPED = {
   'cyber-security': ['TNE10006', 'TNE10003', 'TNE30009', 'COS10009', 'COS20007', 'SWE20004'],
 };
 
-const unit = (code) => ({ code, name: CATALOG[code] ?? `Unit ${code}`, credit_points: 12.5 });
+const UNIT_DESCRIPTIONS = {
+  COS10004: 'Covers digital logic, computer architecture, assembly programming, and hardware-software interaction.',
+  COS10009: 'Introduces procedural and structured programming fundamentals, control flow, and problem solving.',
+  COS10025: 'Explores ethical technology design and engineering projects within Indigenous Australian contexts.',
+  COS10026: 'Builds foundational full-stack web development skills using HTML, CSS, JavaScript, and PHP.',
+  COS20007: 'Focuses on object-oriented design principles, inheritance, polymorphism, and software testing.',
+  COS20019: 'Explores cloud computing architectures, virtualization, containers, and distributed deployment.',
+  COS30008: 'Covers algorithms, data structures, complexity analysis, and efficient problem solving.',
+  COS30018: 'Applies heuristic search, planning, and intelligent agent techniques to complex problems.',
+  COS30019: 'Introduces foundational artificial intelligence concepts, search, knowledge representation, and reasoning.',
+  COS30049: 'Delivers a team-based computing innovation project using agile development and prototyping.',
+  COS30082: 'Covers supervised and unsupervised machine learning, neural networks, and model evaluation.',
+  TNE10006: 'Introduces TCP/IP networking, routing, switching, and network protocol fundamentals.',
+  TNE30009: 'Covers network security, cryptography, firewalls, and intrusion detection systems.',
+};
+
+const unit = (code) => ({
+  code,
+  name: CATALOG[code] ?? `Unit ${code}`,
+  credit_points: 12.5,
+  description: UNIT_DESCRIPTIONS[code] ?? `${CATALOG[code] ?? `Unit ${code}`} (12.5 credit points).`,
+});
 
 const majorOf = (id) => {
   const m = CS_MAJORS.find((x) => x.id === normalizeMajorId(id));

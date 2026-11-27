@@ -1,6 +1,7 @@
+import re
 import networkx as nx
 from typing import List, Dict, Any, Optional, Set
-from service.models import SessionLocal, Course, Prerequisite, CatalogueMapping
+from service.models import SessionLocal, Course, Prerequisite, CatalogueMapping, SyllabusChunk
 
 
 class CurriculumCycleError(Exception):
@@ -60,7 +61,7 @@ MAJOR_UNIT_CODES = {
         "COS40007",
     },
     "data-science": {"COS10022", "COS30082"},
-    "software-development": {"SWE20004", "COS20019", "SWE30003"},
+    "software-development": {"COS20019", "SWE30003"},
     "internet-of-things": {"TNE10006", "TNE30009", "COS20019"},
     "cyber-security": {"TNE10006", "TNE10003", "TNE30009"},
     "cybersecurity": {"TNE10006", "TNE10003", "TNE30009"},
@@ -76,19 +77,37 @@ ELECTIVE_UNIT_CODES = {
 }
 
 
-def build_curriculum_graph(db) -> nx.DiGraph:
-    """Builds the prerequisite DAG dynamically from the PostgreSQL database."""
+def get_ingested_unit_codes(db) -> Set[str]:
+    """Returns the exact set of unit codes having at least 1 indexed SyllabusChunk row in PostgreSQL."""
+    rows = db.query(SyllabusChunk.course_code).distinct().all()
+    codes: Set[str] = set()
+    for r in rows:
+        val = r[0] if isinstance(r, (tuple, list)) else getattr(r, "course_code", r)
+        if isinstance(val, str) and val.strip():
+            codes.add(val.strip().upper())
+    return codes
+
+
+def build_curriculum_graph(db, ingested_codes: Optional[Set[str]] = None) -> nx.DiGraph:
+    """Builds the prerequisite DAG dynamically from PostgreSQL, pruning uningested external units."""
     G = nx.DiGraph()
     prereqs = db.query(Prerequisite).all()
     for p in prereqs:
+        prereq_code = (p.prerequisite_code or "").strip().upper()
+        dep_code = (p.dependent_code or "").strip().upper()
+        if ingested_codes is not None and (
+            prereq_code not in ingested_codes or dep_code not in ingested_codes
+        ):
+            continue
         G.add_edge(p.prerequisite_code, p.dependent_code, rule_type=p.rule_type)
     return G
 
 
 # 1. Fetch live data from PostgreSQL and build DAG
 def load_curriculum(db, major_id: str):
-    """Builds the prerequisite DAG and filters curriculum units by major_id."""
-    G = build_curriculum_graph(db)
+    """Builds the prerequisite DAG and filters curriculum units strictly to ingested syllabi."""
+    ingested_codes = get_ingested_unit_codes(db)
+    G = build_curriculum_graph(db, ingested_codes=ingested_codes)
 
     all_courses = db.query(Course).all()
     catalog = {
@@ -97,6 +116,7 @@ def load_curriculum(db, major_id: str):
             "credit_points": c.credit_points,
         }
         for c in all_courses
+        if c.code and c.code.strip().upper() in ingested_codes
     }
 
     # Ensure standalone courses without prerequisite edges exist as nodes in the graph
@@ -189,6 +209,124 @@ def rank_candidates(
     return ranked, scores
 
 
+SECTION_PRIORITY = ["overview", "aims", "description", "summary", "learning_outcomes", "content"]
+
+
+def _is_table_or_json_chunk(section: str, content: str) -> bool:
+    """Returns True for raw table/JSON chunks that must never be used as unit card descriptions."""
+    if (section or "").strip().lower() in {"tables", "table"}:
+        return True
+    stripped = (content or "").lstrip()
+    if stripped.startswith(("{", "[")):
+        return True
+    if any(tok in stripped for tok in ('{"id":', '"bbox":', '"rows":', '"cells":', '"headers":')):
+        return True
+    return False
+
+
+def _default_unit_description(unit_name: str) -> str:
+    return f"Covers core concepts, practical techniques, and applied problem-solving in {unit_name}."
+
+
+def _summarize_chunk_text(raw_text: str, unit_code: str = "", unit_name: str = "") -> str:
+    """Strips ingestion headers, JSON, and table markup to extract 1-2 clean English sentences."""
+    if not raw_text:
+        return ""
+    text = raw_text
+    # Remove markdown table lines and embedded JSON objects (including nested)
+    text = re.sub(r"(?m)^\s*\|.*\|\s*$", " ", text)
+    for _ in range(3):
+        updated = re.sub(r"\{[^{}]*(?:\"id\"|\"bbox\"|\"rows\"|\"cells\"|\"headers\"|\":)[^{}]*\}", " ", text)
+        if updated == text:
+            break
+        text = updated
+
+    # Strip ingestion prefixes & PDF page/outline boilerplate
+    boilerplate_patterns = [
+        r"^\s*(?:Unit\s+)?[A-Z]{3,4}\d{4,5}\s*[-–—]\s*[^:\n(]+(?:\([^)]+\))?\s*:?\s*",
+        r"\[Page\s+\d+\]",
+        r"\bPage\s+\d+(?:\s+of\s+\d+)?\b",
+        r"\bSchool\s+of\s+Science,\s*Computing\s+and\s+Engineering\s+Technologies\b",
+        r"\bSwinburne\s+University\s+of\s+Technology\b",
+        r"\bUnit\s+Outline\b[^\n.!?]*(?:Semester|Term|20\d{2})[^\n.!?]*",
+        r"Please\s+read\s+this\s+Unit\s+Outline\s+carefully\.\s*It\s+includes:\s*PART\s+[A-Z]\b[^.]*\.?",
+        r"^\s*(?:#+\s*)?(?:unit\s+summary|unit\s+overview|unit\s+description|overview|aims|description|summary)\s*:?\s*",
+    ]
+    for pat in boilerplate_patterns:
+        text = re.sub(pat, " ", text, flags=re.IGNORECASE)
+
+    text = re.sub(r"[*_`#]+", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    if not text:
+        return ""
+
+    # Jump to descriptive prose marker if residual header text precedes it
+    marker = re.search(r"\b(?:Unit\s+Overview|Unit\s+Description|Unit\s+Summary|Aims)\s*:?\s*", text, flags=re.IGNORECASE)
+    if marker and marker.start() < len(text) // 2:
+        text = text[marker.end():].strip()
+    else:
+        prose_start = re.search(r"\b(This\s+unit|Students\s+will)\b", text)
+        if prose_start and prose_start.start() > 0 and "." not in text[:prose_start.start()]:
+            text = text[prose_start.start():].strip()
+
+    sentences = [
+        s.strip()
+        for s in re.split(r"(?<=[.!?])\s+", text)
+        if len(s.strip()) >= 20
+        and not re.search(r"\bPART\s+[A-Z]\b|Unit\s+Outline\b", s, flags=re.IGNORECASE)
+    ]
+    if not sentences:
+        return ""
+
+    first = sentences[0]
+    if not first.endswith((".", "!", "?")):
+        first = first.rstrip(".,;:") + "."
+    if len(first) > 220:
+        return first[:217].rsplit(" ", 1)[0].rstrip(".,;:") + "."
+
+    if len(sentences) > 1:
+        second = sentences[1]
+        if not second.endswith((".", "!", "?")):
+            second = second.rstrip(".,;:") + "."
+        combined = f"{first} {second}"
+        if len(combined) <= 220:
+            return combined
+
+    return first
+
+
+def _load_unit_descriptions(db, unit_codes: List[str], catalog: Dict[str, Any]) -> Dict[str, str]:
+    """Loads brief 1-2 sentence descriptions for recommended units from SyllabusChunk with catalog fallback."""
+    if not unit_codes:
+        return {}
+    priority_map = {sec: idx for idx, sec in enumerate(SECTION_PRIORITY)}
+    chunks = (
+        db.query(SyllabusChunk)
+        .filter(SyllabusChunk.course_code.in_(unit_codes))
+        .order_by(SyllabusChunk.course_code, SyllabusChunk.chunk_index)
+        .all()
+    )
+    grouped: Dict[str, List[Any]] = {code: [] for code in unit_codes}
+    for chunk in chunks:
+        if chunk.course_code in grouped and not _is_table_or_json_chunk(chunk.section or "", chunk.content or ""):
+            grouped[chunk.course_code].append(chunk)
+
+    descriptions: Dict[str, str] = {}
+    for code in unit_codes:
+        unit_name = catalog.get(code, {}).get("name", code)
+        candidates = sorted(
+            grouped.get(code, []),
+            key=lambda c: (priority_map.get((c.section or "").strip().lower(), len(SECTION_PRIORITY)), c.chunk_index),
+        )
+        summary = ""
+        for chunk in candidates:
+            summary = _summarize_chunk_text(chunk.content or "", unit_code=code, unit_name=unit_name)
+            if summary:
+                break
+        descriptions[code] = summary or _default_unit_description(unit_name)
+    return descriptions
+
+
 # Rule 4: Allocate up to max_units_per_semester (default 3)
 def allocate_semester(
     ranked: List[str],
@@ -197,8 +335,10 @@ def allocate_semester(
     semester_index: int,
     max_units: int = 3,
     failed_set: Optional[Set[str]] = None,
+    descriptions: Optional[Dict[str, str]] = None,
 ):
     failed_set = failed_set or set()
+    descriptions = descriptions or {}
     selected = ranked[:max_units]
     units = []
 
@@ -224,15 +364,16 @@ def allocate_semester(
             "code": unit,
             "name": details["name"],
             "credit_points": details["credit_points"],
+            "description": descriptions.get(unit, f"{details['name']} ({details['credit_points']} credit points)."),
             "rank": rank,
             "is_retake": is_retake,
-            "status": "Retake Required" if is_retake else "Planned",
+            "status": "Retake Required" if is_retake else "Recommended",
             "reason": reason,
         })
 
     return {
         "index": semester_index,
-        "name": f"Semester {semester_index}",
+        "name": "Current Semester Recommendations" if semester_index == 1 else f"Semester {semester_index}",
         "credit_points": sum(catalog[u]["credit_points"] for u in selected),
         "units": units,
     }, selected
@@ -359,31 +500,29 @@ def generate_study_plan(
         scheduled = already_satisfied.copy()
 
         semesters = []
-        semester_index = 1
 
-        # 3. Iterative scheduling
-        while remaining:
+        # 3. Cap recommendations to the current / immediate next semester only
+        if remaining:
             candidates = generate_candidates(G, remaining, scheduled)
-            if not candidates:
-                break
+            if candidates:
+                ranked, scores = rank_candidates(G, candidates, remaining, failed_set=failed_set)
+                max_units = max(1, units_per_semester)
+                descriptions = _load_unit_descriptions(db, ranked[:max_units], catalog)
+                semester, selected = allocate_semester(
+                    ranked,
+                    catalog,
+                    scores,
+                    1,
+                    max_units=max_units,
+                    failed_set=failed_set,
+                    descriptions=descriptions,
+                )
+                semesters.append(semester)
+                scheduled.update(selected)
+                remaining.difference_update(selected)
 
-            ranked, scores = rank_candidates(G, candidates, remaining, failed_set=failed_set)
-            semester, selected = allocate_semester(
-                ranked,
-                catalog,
-                scores,
-                semester_index,
-                max_units=max(1, units_per_semester),
-                failed_set=failed_set,
-            )
-
-            semesters.append(semester)
-            scheduled.update(selected)
-            remaining.difference_update(selected)
-            semester_index += 1
-
-        # 4. Reporting
-        blocked = get_blocked_units(G, remaining, scheduled, catalog)
+        # 4. Reporting (evaluate blocked status against already_satisfied so downstream units stay visible)
+        blocked = get_blocked_units(G, remaining, already_satisfied, catalog)
         blocked_codes = {b["code"] for b in blocked}
         display_name = MAJOR_DISPLAY_NAMES.get(major_id, major_id.replace("-", " ").title())
 

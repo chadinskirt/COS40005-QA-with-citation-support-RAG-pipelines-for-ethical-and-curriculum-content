@@ -1,6 +1,7 @@
 import { createContext, Fragment, useContext, useMemo } from 'react';
 import katex from 'katex';
 import { UnitCode } from './Badge.jsx';
+import Icon from './Icon.jsx';
 import PrereqMap from './PrereqMap.jsx';
 
 // Answer text is Markdown from the LLM: paragraphs, headings, lists, tables, quotes, code, KaTeX math
@@ -10,7 +11,7 @@ const CiteCtx = createContext({ onCite: null, active: null });
 const renderMath = (expr, displayMode) => katex.renderToString(expr.trim(), { displayMode, throwOnError: false });
 
 const INLINE =
-  /(`[^`]+`|\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\)|(?<!\\)\$(?!\s)(?:\\.|[^$\n])+?(?<!\s)\$|\*\*[^*]+\*\*|\*[^*\s][^*]*\*|\[\d{1,2}\](?!\())/g;
+  /(`[^`]+`|\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\)|(?<!\\)\$(?!\s)(?:\\.|[^$\n])+?(?<!\s)\$|\*\*[^*]+\*\*|\*[^*\s][^*]*\*|\[[^\]\n]+\]\([^)\s]+\)|\[\d{1,2}(?:\s*,\s*\d{1,2})*\])/g;
 
 function CiteRef({ n }) {
   const { onCite, active } = useContext(CiteCtx);
@@ -28,7 +29,42 @@ function CiteRef({ n }) {
   );
 }
 
-function renderInline(text) {
+function renderCitationPill(citIndex, citations, onSelect, key) {
+  const citation = citations?.[citIndex - 1];
+  const label = citation?.unit_code
+    ? `${citation.unit_code}${citation.section ? ` · ${citation.section}` : ''}`
+    : String(citIndex);
+  const rawExcerpt = (citation?.content || citation?.snippet || citation?.text_snippet || '').trim();
+  const previewLines = rawExcerpt.split(/\r?\n/).slice(0, 2).join(' ').slice(0, 140);
+
+  return (
+    <span key={key} className="cite-pill-wrap">
+      <button
+        type="button"
+        className="cite-pill t-caption"
+        aria-label={`Open source ${citIndex}${citation?.unit_code ? `: ${citation.unit_code}` : ''}`}
+        onClick={(e) => {
+          e.preventDefault();
+          onSelect?.(citIndex, citation);
+        }}
+      >
+        <Icon name="file" size={12} />
+        <span>{label}</span>
+      </button>
+      {citation && (
+        <span className="cite-tooltip" role="tooltip">
+          <strong>
+            [{citIndex}] {citation.unit_code || citation.doc}
+            {citation.section ? ` · ${citation.section}` : ''}
+          </strong>
+          {previewLines && <span className="cite-tooltip__excerpt">{previewLines}</span>}
+        </span>
+      )}
+    </span>
+  );
+}
+
+function renderInline(text, onCitationClick, citations = []) {
   const parts = [];
   let last = 0;
   let key = 0;
@@ -49,9 +85,38 @@ function renderInline(text) {
       parts.push(
         <span key={k} className="md-math" dangerouslySetInnerHTML={{ __html: renderMath(t.slice(1, -1), false) }} />
       );
-    else if (t.startsWith('**')) parts.push(<strong key={k}>{renderInline(t.slice(2, -2))}</strong>);
-    else if (t.startsWith('[')) parts.push(<CiteRef key={k} n={Number(t.slice(1, -1))} />);
-    else parts.push(<em key={k}>{t.slice(1, -1)}</em>);
+    else if (t.startsWith('**')) parts.push(<strong key={k}>{renderInline(t.slice(2, -2), onCitationClick, citations)}</strong>);
+    else if (t.startsWith('[')) {
+      const linkMatch = t.match(/^\[([^\]\n]+)\]\(([^)\s]+)\)$/);
+      const numMatch = !linkMatch && t.match(/^\[(\d+(?:\s*,\s*\d+)*)\]$/);
+      if (linkMatch) {
+        const [, label, href] = linkMatch;
+        const citMatch = href.match(/^#citation-(\d+)$/i);
+        if (citMatch) {
+          parts.push(renderCitationPill(Number(citMatch[1]), citations, onCitationClick, k));
+        } else if (/^https?:\/\//i.test(href)) {
+          parts.push(
+            <a key={k} href={href} target="_blank" rel="noreferrer" className="md-link">
+              {label}
+            </a>
+          );
+        } else {
+          parts.push(label);
+        }
+      } else if (numMatch) {
+        const nums = numMatch[1].split(',').map((n) => Number(n.trim()));
+        if (nums.length > 1 || onCitationClick) {
+          nums.forEach((citIndex, ni) => {
+            if (ni > 0) parts.push(' ');
+            parts.push(renderCitationPill(citIndex, citations, onCitationClick, `${k}-${ni}`));
+          });
+        } else {
+          parts.push(<CiteRef key={k} n={nums[0]} />);
+        }
+      } else {
+        parts.push(t);
+      }
+    } else parts.push(<em key={k}>{t.slice(1, -1)}</em>);
     last = match.index + t.length;
   }
   if (last < text.length) parts.push(text.slice(last));
@@ -242,9 +307,26 @@ function Table({ head, rows }) {
  * @param focus       the unit the question is about; highlighted in the map
  * @param mapCite     citation number of the requisites page, shown beside the map title
  */
-export default function MarkdownContent({ text, onCite, activeCite, unitStatus, focus, mapCite }) {
+export default function MarkdownContent({
+  text,
+  onCite,
+  activeCite,
+  unitStatus,
+  focus,
+  mapCite,
+  citations = [],
+  onCitationClick,
+  onOpenDocumentViewer,
+}) {
   const blocks = useMemo(() => parseBlocks(text || ''), [text]);
   const cite = useMemo(() => ({ onCite, active: activeCite }), [onCite, activeCite]);
+  const handleCitation =
+    onOpenDocumentViewer || onCitationClick
+      ? (citIndex, citation) => {
+          if (onOpenDocumentViewer && citation) onOpenDocumentViewer(citation, citIndex);
+          else onCitationClick?.(citIndex);
+        }
+      : null;
   return (
     <CiteCtx.Provider value={cite}>
       <div className="md">
@@ -280,14 +362,14 @@ export default function MarkdownContent({ text, onCite, activeCite, unitStatus, 
               const Tag = `h${Math.min(b.level + 1, 6)}`;
               return (
                 <Tag key={idx} className={b.level <= 2 ? 't-h2' : 't-h3'}>
-                  {renderInline(b.content)}
+                  {renderInline(b.content, handleCitation, citations)}
                 </Tag>
               );
             }
             case 'quote':
               return (
                 <blockquote key={idx} className="quote">
-                  {renderInline(b.content)}
+                  {renderInline(b.content, handleCitation, citations)}
                 </blockquote>
               );
             case 'ul':
@@ -296,7 +378,7 @@ export default function MarkdownContent({ text, onCite, activeCite, unitStatus, 
               return (
                 <Tag key={idx} className={`md-list md-list--${b.type}`}>
                   {b.items.map((item, ii) => (
-                    <li key={ii}>{renderInline(item)}</li>
+                    <li key={ii}>{renderInline(item, handleCitation, citations)}</li>
                   ))}
                 </Tag>
               );
@@ -304,7 +386,7 @@ export default function MarkdownContent({ text, onCite, activeCite, unitStatus, 
             default:
               return (
                 <Fragment key={idx}>
-                  <p className={idx === 0 ? 'md-lead' : undefined}>{renderInline(b.content)}</p>
+                  <p className={idx === 0 ? 'md-lead' : undefined}>{renderInline(b.content, handleCitation, citations)}</p>
                 </Fragment>
               );
           }

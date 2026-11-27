@@ -292,7 +292,7 @@ function RecommendedUnits({ view, onShare, selected, onSelect }) {
 }
 
 function UnitRow({ unit: u, index, view, selected, onSelect }) {
-  const { addSwap, profile } = useAppState();
+  const { addSwap, profile, discussUnitInChat } = useAppState();
   const [open, setOpen] = useState(false);
   const [swapping, setSwapping] = useState(false);
   const status = (c) =>
@@ -369,6 +369,9 @@ function UnitRow({ unit: u, index, view, selected, onSelect }) {
       </div>
       <span className="unit-row__cp hide-mobile">{cp(u.cp)}</span>
       <div className="unit-row__actions hide-mobile">
+        <Button variant="ghost" onClick={() => discussUnitInChat(u.code, u.name)}>
+          Discuss in Chat
+        </Button>
         <Button variant="ghost" onClick={() => setSwapping((v) => !v)} aria-expanded={swapping}>
           Swap
         </Button>

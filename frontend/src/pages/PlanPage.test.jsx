@@ -138,4 +138,25 @@ describe('PlanPage', () => {
     await user.click(screen.getByRole('button', { name: 'Share with advisor' }));
     expect(await screen.findByText(/Plan sharing is not available on this server yet\./)).toBeInTheDocument();
   });
+
+  it('keeps EditUnitsDialog open when toggling statuses inside and closes on outer backdrop click', async () => {
+    const user = userEvent.setup();
+    renderWithState(<PlanPage />);
+    await user.click(screen.getByRole('button', { name: 'Add my units' }));
+    const dialog = screen.getByRole('dialog', { name: 'Edit my units' });
+    await within(dialog).findByText('Introduction to Programming');
+
+    const group = within(dialog).getByRole('radiogroup', { name: 'Status of COS10009' });
+    await user.click(within(group).getByText('Passed'));
+    expect(screen.getByRole('dialog', { name: 'Edit my units' })).toBeInTheDocument();
+    await user.click(within(group).getByText('Retake'));
+    expect(screen.getByRole('dialog', { name: 'Edit my units' })).toBeInTheDocument();
+    await user.click(within(group).getByText('Enrolled'));
+    expect(within(dialog).getByText('0 passed · 0 to retake · 1 enrolled')).toBeInTheDocument();
+    expect(screen.getByRole('dialog', { name: 'Edit my units' })).toBeInTheDocument();
+
+    const scrim = document.querySelector('.dialog-layer > .scrim');
+    await user.click(scrim);
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+  });
 });

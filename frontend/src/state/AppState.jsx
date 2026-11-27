@@ -37,6 +37,8 @@ export function AppStateProvider({ children }) {
   const [scope, setScope] = useState(['outlines', 'plan']);
   const [pendingQuestion, setPendingQuestion] = useState(null); // sent from Home or search
   const [draft, setDraft] = useState('');
+  const [selected, setSelected] = useState(null); // source open in the chat side panel
+  const [pendingUnitPrompt, setPendingUnitPrompt] = useState(null);
   const lastId = useRef(0);
   const newId = useCallback(() => ++lastId.current, []);
 
@@ -112,6 +114,25 @@ export function AppStateProvider({ children }) {
     setPlan({ status: 'idle' });
   }, []);
 
+  const discussUnitInChat = useCallback(
+    (code, name) => {
+      if (pendingUnitPrompt || messages.some((m) => m.status === 'pending')) return;
+      const unitName = name && name.trim() ? name.trim() : code;
+      const id =
+        typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function'
+          ? crypto.randomUUID()
+          : `${Date.now()}-${Math.random()}`;
+      setPendingUnitPrompt({
+        id,
+        code,
+        name: unitName,
+        prompt: `Give me a detailed brief summary of ${code} (${unitName}), including an overview, key topics, prerequisites, assessment breakdown table, and contact hours with inline citation links.`,
+      });
+      window.location.hash = '#ask';
+    },
+    [pendingUnitPrompt, messages]
+  );
+
   const value = useMemo(
     () => ({
       profile,
@@ -140,6 +161,11 @@ export function AppStateProvider({ children }) {
       setPendingQuestion,
       draft,
       setDraft,
+      selected,
+      setSelected,
+      pendingUnitPrompt,
+      setPendingUnitPrompt,
+      discussUnitInChat,
       newId,
     }),
     [
@@ -161,6 +187,9 @@ export function AppStateProvider({ children }) {
       scope,
       pendingQuestion,
       draft,
+      selected,
+      pendingUnitPrompt,
+      discussUnitInChat,
       newId,
     ]
   );

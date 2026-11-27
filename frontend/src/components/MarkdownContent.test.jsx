@@ -67,4 +67,24 @@ describe('MarkdownContent', () => {
     expect(g.nodes.map((n) => n.label)).toEqual(['X', 'Y: two', 'Z']);
     expect(g.edges.map((e) => e.dashed)).toEqual([false, true]);
   });
+
+  it('renders Gemini-style citation pills for #citation-N and [1, 2] markers and triggers callbacks', async () => {
+    const onCitationClick = vi.fn();
+    const user = userEvent.setup();
+    const citations = [
+      { unit_code: 'COS30082', section: 'overview', content: 'ML overview excerpt.' },
+      { unit_code: 'COS30082', section: 'assessments', content: 'Final exam 50%.' },
+    ];
+    const md = 'See [COS30082 Unit Outline](#citation-2) and [1, 2].';
+    render(<MarkdownContent text={md} citations={citations} onCitationClick={onCitationClick} />);
+
+    const pills = screen.getAllByRole('button', { name: /Open source/i });
+    expect(pills).toHaveLength(3);
+
+    await user.click(pills[0]);
+    expect(onCitationClick).toHaveBeenCalledWith(2);
+
+    await user.click(pills[1]);
+    expect(onCitationClick).toHaveBeenCalledWith(1);
+  });
 });

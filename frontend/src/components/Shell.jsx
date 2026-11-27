@@ -9,11 +9,32 @@ import { useAppState } from '../state/AppState.jsx';
 // Hash links drive the router, so the skip link moves focus instead of changing the hash.
 const skipToMain = () => document.getElementById('main')?.focus();
 
+const THEME_KEY = 'advising-portal:theme';
+
+function readTheme() {
+  try {
+    return localStorage.getItem(THEME_KEY) === 'dark' ? 'dark' : 'light';
+  } catch {
+    return 'light';
+  }
+}
+
 // Figma: App/Sidebar (Role = Student). Below 768 px it becomes a top bar with a menu.
 export default function Shell({ page, children }) {
   const { start } = useAppState();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(readTheme);
   const label = ROUTES.find((r) => r.id === page)?.label;
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch {
+      // ignore storage errors
+    }
+  }, [theme]);
+  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
 
   useEffect(() => setMenuOpen(false), [page]);
   useEffect(() => {
@@ -34,6 +55,16 @@ export default function Shell({ page, children }) {
           AP
         </span>
         <span className="mobile-bar__title">{page === 'home' ? 'Advising Portal' : label}</span>
+        <button
+          type="button"
+          className="theme-toggle"
+          aria-label="Toggle dark mode"
+          aria-pressed={theme === 'dark'}
+          onClick={toggleTheme}
+          title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+        >
+          <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={16} />
+        </button>
         <button
           type="button"
           className="icon-btn"
@@ -86,6 +117,16 @@ export default function Shell({ page, children }) {
             <span className="dot dot--pass" aria-hidden="true" />
             {OUTLINE_COUNT} unit outlines · synced {OUTLINES_SYNCED}
             {USE_MOCK && <Badge tone="caution">Demo data</Badge>}
+            <button
+              type="button"
+              className="theme-toggle"
+              aria-label="Toggle dark mode"
+              aria-pressed={theme === 'dark'}
+              onClick={toggleTheme}
+              title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={14} />
+            </button>
           </p>
         </div>
       </nav>

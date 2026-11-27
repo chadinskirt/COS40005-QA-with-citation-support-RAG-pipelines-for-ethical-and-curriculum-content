@@ -101,6 +101,57 @@ describe('ChatPage', () => {
     expect(api.chat.mock.calls[2][2].plan).toBeFalsy();
   });
 
+  it('opens DocumentViewerDrawer with PDF iframe when an inline citation pill is clicked and closes cleanly', async () => {
+    api.chat.mockResolvedValue(
+      normalizeChat({
+        ...ANSWER,
+        citations: [
+          {
+            id: 'c1',
+            index: 1,
+            unit_code: 'COS30019',
+            section: 'assessments',
+            source_file: 'COS30019_Unit Outline_JAN_2026-1.pdf',
+            document_url: '/api/documents/COS30019_Unit%20Outline_JAN_2026-1.pdf',
+            similarity: 0.86,
+            content: 'Passage c1',
+          },
+          {
+            id: 'c2',
+            index: 2,
+            unit_code: 'COS30019',
+            section: 'overview',
+            source_file: 'COS30019_Unit Outline_JAN_2026-1.pdf',
+            document_url: '/api/documents/COS30019_Unit%20Outline_JAN_2026-1.pdf',
+            similarity: 0.83,
+            content: 'Passage c2',
+          },
+        ],
+        answer: ['| Task | Weight |', '| --- | --- |', '| Exam | 50% |', '', 'Details in [2].'].join('\n'),
+      })
+    );
+    const user = userEvent.setup();
+    renderWithState(<ChatPage />);
+    await ask(user, 'Show breakdown');
+    expect(await screen.findByRole('table')).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Close document viewer' }));
+    expect(screen.queryByText('Source [1] Excerpt')).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Source 2' }));
+    expect(screen.getByText('Source [2] Excerpt')).toBeInTheDocument();
+    const iframe = screen
+      .getAllByTitle('COS30019_Unit Outline_JAN_2026-1.pdf')
+      .find((el) => el.tagName === 'IFRAME');
+    expect(iframe).toHaveAttribute(
+      'src',
+      expect.stringContaining('/api/documents/COS30019_Unit%20Outline_JAN_2026-1.pdf#toolbar=1&navpanes=0')
+    );
+
+    await user.click(screen.getByRole('button', { name: 'Close document viewer' }));
+    expect(screen.queryByText('Source [2] Excerpt')).not.toBeInTheDocument();
+  });
+
   it('shows the out-of-scope card, not an error, and lets the student rephrase', async () => {
     api.chat.mockResolvedValue(ABSTAIN('OUT_OF_SCOPE'));
     const user = userEvent.setup();

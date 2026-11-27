@@ -4,6 +4,7 @@ import AssistantMessage from '../components/AssistantMessage.jsx';
 import Button, { IconButton } from '../components/Button.jsx';
 import Composer from '../components/Composer.jsx';
 import { useModal } from '../components/Dialog.jsx';
+import DocumentViewerDrawer from '../components/DocumentViewerDrawer.jsx';
 import Icon from '../components/Icon.jsx';
 import SourcesPanel from '../components/SourcesPanel.jsx';
 import { TopBar } from '../components/Shell.jsx';
@@ -15,6 +16,8 @@ import { useAppState } from '../state/AppState.jsx';
 const SUGGESTIONS = ['Can I take COS30019 next semester?', 'How do I pass the AI unit?', 'Compare Data Science and AI'];
 const NO_ANSWER = 'No answer found in the approved documents.';
 const topicOf = (q) => (q.length > 48 ? `${q.slice(0, 46).trimEnd()}…` : q);
+// Module-level guard survives React StrictMode unmount/remount cycles.
+let lastHandledPromptId = null;
 
 // Figma: Ask the assistant, Rich answer, and the chat states in System states.
 export default function ChatPage() {
@@ -30,12 +33,15 @@ export default function ChatPage() {
     view,
     pendingQuestion,
     setPendingQuestion,
+    pendingUnitPrompt,
+    setPendingUnitPrompt,
     draft,
     setDraft,
     major,
   } = useAppState();
   const [selected, setSelected] = useState(null); // { msgId, n }
   const [drawer, setDrawer] = useState(false);
+  const [viewerOpen, setViewerOpen] = useState(true);
   const input = useRef(null);
   const endRef = useRef(null);
   const busy = messages.some((m) => m.status === 'pending');
@@ -83,7 +89,10 @@ export default function ChatPage() {
         const result = await api.chat(q, history, { scope: reply.scope, plan });
         setMessages((ms) => ms.map((m) => (m.id === reply.id ? { ...reply, status: 'done', result } : m)));
         // An answer without sources leaves the panel on the last one that had some.
-        if (result.citations.length) setSelected({ msgId: reply.id, n: 1 });
+        if (result.citations.length) {
+          setSelected({ msgId: reply.id, n: 1 });
+          setViewerOpen(true);
+        }
       } catch (error) {
         setMessages((ms) => ms.map((m) => (m.id === reply.id ? { ...reply, status: 'error', error } : m)));
       }
@@ -100,6 +109,16 @@ export default function ChatPage() {
     setPendingQuestion(null);
     askRef.current(pendingQuestion);
   }, [pendingQuestion, busy, setPendingQuestion]);
+
+  // Auto-send "Discuss in Chat" prompt once, guarded against React StrictMode double-fires.
+  useEffect(() => {
+    if (!pendingUnitPrompt || busy) return;
+    if (lastHandledPromptId === pendingUnitPrompt.id) return;
+    lastHandledPromptId = pendingUnitPrompt.id;
+    const { prompt } = pendingUnitPrompt;
+    setPendingUnitPrompt(null);
+    askRef.current(prompt);
+  }, [pendingUnitPrompt, busy, setPendingUnitPrompt]);
 
   const focusComposer = (text) => {
     setDraft(text);
@@ -122,6 +141,7 @@ export default function ChatPage() {
 
   const openCite = (msg) => (n) => {
     setSelected((s) => (s?.msgId === msg.id && s.n === n ? { msgId: msg.id, n: null } : { msgId: msg.id, n }));
+    setViewerOpen(true);
     if (window.matchMedia?.('(max-width: 1279px)').matches) setDrawer(true);
   };
 
@@ -150,13 +170,45 @@ export default function ChatPage() {
   const lastAssistant = [...messages].reverse().find((m) => m.role === 'assistant');
   const grades = Boolean(profile) && scope.includes('plan') && scope.includes('grades');
   const toggle = (s) => setScope((cur) => (cur.includes(s) ? cur.filter((x) => x !== s) : [...cur, s]));
+  const selectedCitation = openN ? citations[openN - 1] : null;
+  const hasViewerContent = Boolean(
+    selectedCitation &&
+      (selectedCitation.document_url ||
+        selectedCitation.url ||
+        selectedCitation.content ||
+        selectedCitation.snippet ||
+        selectedCitation.quote)
+  );
 
   const sources = (
-    <SourcesPanel
-      citations={citations}
-      open={openN}
-      onToggle={(n) => setSelected({ msgId: shownMsg.id, n: openN === n ? null : n })}
-    />
+    <>
+      <SourcesPanel
+        citations={citations}
+        open={openN}
+        onToggle={(n) => {
+          const next = openN === n ? null : n;
+          setSelected({ msgId: shownMsg.id, n: next });
+          if (next) setViewerOpen(true);
+        }}
+        onViewPdf={(n) => {
+          setSelected({ msgId: shownMsg.id, n });
+          setViewerOpen(true);
+        }}
+      />
+      {viewerOpen && hasViewerContent && (
+        <DocumentViewerDrawer
+          citation={selectedCitation}
+          index={openN}
+          citations={citations}
+          threshold={shownMsg?.result?.threshold}
+          onSelectCitation={(_, idx) => {
+            setSelected({ msgId: shownMsg.id, n: idx });
+            setViewerOpen(true);
+          }}
+          onClose={() => setViewerOpen(false)}
+        />
+      )}
+    </>
   );
 
   return (

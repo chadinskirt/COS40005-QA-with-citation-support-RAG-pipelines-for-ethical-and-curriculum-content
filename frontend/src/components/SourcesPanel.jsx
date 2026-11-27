@@ -6,7 +6,7 @@ import { Cite } from './Badge.jsx';
 export const sourceMeta = (c) => [c.date, c.page != null ? `p.${c.page}` : null, c.section].filter(Boolean).join(' · ');
 
 // Figma: SourceCard, collapsed and expanded. The expanded card shows the quoted passage and a link to the page.
-export function SourceCard({ citation: c, n, open, onToggle }) {
+export function SourceCard({ citation: c, n, open, onToggle, onViewPdf }) {
   const ref = useRef(null);
   useEffect(() => {
     if (open) ref.current?.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' });
@@ -25,7 +25,9 @@ export function SourceCard({ citation: c, n, open, onToggle }) {
       >
         <Cite n={n} />
         <span className="source__text">
-          <span className="source__title">{c.doc}</span>
+          <span className="source__title" title={c.doc}>
+            {c.doc}
+          </span>
           {sourceMeta(c) && <span className="source__meta">{sourceMeta(c)}</span>}
         </span>
         {canOpen && <Icon name={open ? 'chevronUp' : 'chevronDown'} size={16} className="source__chev" />}
@@ -33,20 +35,28 @@ export function SourceCard({ citation: c, n, open, onToggle }) {
       {open && canOpen && (
         <div id={id} className="source__body">
           {c.quote && <blockquote className="quote">&quot;{c.quote}&quot;</blockquote>}
-          {c.url && (
-            <a className="source__link" href={c.url} target="_blank" rel="noreferrer">
-              {c.page != null ? `Open at page ${c.page}` : 'Open the document'}
-              <Icon name="external" size={13} />
-              <span className="sr-only">(opens in a new tab)</span>
-            </a>
-          )}
+          <div className="source__actions">
+            {onViewPdf && (
+              <button type="button" className="btn btn--secondary btn--s" onClick={() => onViewPdf(n)}>
+                <Icon name="file" size={14} />
+                View PDF
+              </button>
+            )}
+            {c.url && (
+              <a className="source__link" href={c.url} target="_blank" rel="noreferrer">
+                {c.page != null ? `Open at page ${c.page}` : 'Open the document'}
+                <Icon name="external" size={13} />
+                <span className="sr-only">(opens in a new tab)</span>
+              </a>
+            )}
+          </div>
         </div>
       )}
     </li>
   );
 }
 
-export default function SourcesPanel({ citations, open, onToggle, heading = true }) {
+export default function SourcesPanel({ citations, open, onToggle, onViewPdf, heading = true }) {
   return (
     <div className="sources">
       {heading && (
@@ -62,7 +72,14 @@ export default function SourcesPanel({ citations, open, onToggle, heading = true
       {citations.length ? (
         <ol className="sources__list">
           {citations.map((c, i) => (
-            <SourceCard key={i} citation={c} n={i + 1} open={open === i + 1} onToggle={onToggle} />
+            <SourceCard
+              key={i}
+              citation={c}
+              n={i + 1}
+              open={open === i + 1}
+              onToggle={onToggle}
+              onViewPdf={onViewPdf}
+            />
           ))}
         </ol>
       ) : (

@@ -19,7 +19,7 @@ const ROLES = [
     title: "I haven't chosen a major",
     body: 'Match what you enjoy and the job you want to a major, along with the units and careers it leads to.',
     short: 'Match your interests and the job you want to a major.',
-    meta: 'About 5 minutes',
+    meta: '5 minutes',
     cta: 'Explore majors',
     href: '#majors',
   },
@@ -91,7 +91,7 @@ export default function HomePage() {
               <article key={r.href} className="card role-card">
                 <div className="role-card__top">
                   <span className="icon-tile">
-                    <Icon name={r.icon} size={18} />
+                    <Icon name={r.icon} size={16} />
                   </span>
                   <span className="t-caption c-muted hide-mobile">{r.who}</span>
                 </div>

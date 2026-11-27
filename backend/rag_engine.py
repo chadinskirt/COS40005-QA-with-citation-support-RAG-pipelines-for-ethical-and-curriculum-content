@@ -1,3 +1,4 @@
+import json
 import os
 import re
 import time
@@ -6,7 +7,15 @@ from sentence_transformers import SentenceTransformer
 from sqlalchemy import select
 
 from service.models import SessionLocal, SyllabusChunk, Student, Prerequisite, Course
-from service.recommender import generate_study_plan
+from service.recommender import generate_study_plan, get_ingested_unit_codes
+from service.recommender_agent import (
+    AGENT_TOOLS,
+    build_document_url,
+    detect_tool_intents,
+    find_archive_document,
+    tool_get_current_semester_recommendations,
+    tool_lookup_unit_syllabus,
+)
 
 MAX_DISTANCE_THRESHOLD = 1.6
 LLM_MODEL = os.getenv("LLM_MODEL", "qwen2.5:3b")
@@ -70,9 +79,11 @@ def _build_student_context(db, student_id: int | None, target_unit: str | None) 
     ]
 
     if target_unit:
+        ingested_codes = get_ingested_unit_codes(db)
         prereq_rows = db.execute(
             select(Prerequisite).where(Prerequisite.dependent_code == target_unit)
         ).scalars().all()
+        prereq_rows = [p for p in prereq_rows if p.prerequisite_code and p.prerequisite_code.upper() in ingested_codes]
         if prereq_rows:
             status_notes = []
             for p in prereq_rows:
@@ -138,13 +149,22 @@ def _validate_and_clean_answer(answer: str, valid_codes: set[str]) -> str:
 
 def _build_curriculum_context(db) -> str:
     """
-    Fetches the authoritative course catalog and prerequisite DAG from PostgreSQL
-    so prerequisite explanations and Mermaid diagrams never invent or copy unverified unit codes.
+    Fetches the authoritative syllabi-backed course catalog and prerequisite DAG from PostgreSQL
+    so prerequisite explanations and Mermaid diagrams never invent or copy unverified/uningested unit codes.
     """
-    courses = db.execute(select(Course).order_by(Course.code)).scalars().all()
-    prereqs = db.execute(
-        select(Prerequisite).order_by(Prerequisite.dependent_code, Prerequisite.prerequisite_code)
-    ).scalars().all()
+    ingested_codes = get_ingested_unit_codes(db)
+    courses = [
+        c for c in db.execute(select(Course).order_by(Course.code)).scalars().all()
+        if c.code and c.code.upper() in ingested_codes
+    ]
+    prereqs = [
+        p for p in db.execute(
+            select(Prerequisite).order_by(Prerequisite.dependent_code, Prerequisite.prerequisite_code)
+        ).scalars().all()
+        if p.prerequisite_code and p.dependent_code
+        and p.prerequisite_code.upper() in ingested_codes
+        and p.dependent_code.upper() in ingested_codes
+    ]
 
     course_lines = [f"- {c.code}: {c.name}" for c in courses]
     edge_lines = [f"- {p.prerequisite_code} -> {p.dependent_code} ({p.rule_type})" for p in prereqs]
@@ -157,100 +177,224 @@ def _build_curriculum_context(db) -> str:
     )
 
 
+def _route_agent_tools(
+    question: str,
+    student_id: int | None = None,
+    major_code: str | None = None,
+) -> list[dict]:
+    """
+    Advising Orchestrator Agent Router:
+    Uses deterministic intent/entity detection first, and invokes Ollama tool-calling
+    when no deterministic tool matched so small local models remain 100% reliable.
+    """
+    calls = detect_tool_intents(question, student_id=student_id, major_code=major_code)
+    if calls:
+        return calls
+
+    try:
+        resp = requests.post(
+            f"{OLLAMA_BASE_URL}/api/chat",
+            json={
+                "model": LLM_MODEL,
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are an advising router. Call tools if the user asks for course "
+                            "recommendations or a specific unit syllabus; otherwise reply directly."
+                        ),
+                    },
+                    {"role": "user", "content": question},
+                ],
+                "tools": AGENT_TOOLS,
+                "stream": False,
+            },
+            timeout=15,
+        )
+        raw_calls = resp.json().get("message", {}).get("tool_calls") or []
+        for tc in raw_calls:
+            fn = tc.get("function") or {}
+            name = fn.get("name")
+            args = fn.get("arguments") or {}
+            if isinstance(args, str):
+                try:
+                    args = json.loads(args)
+                except Exception:
+                    args = {}
+            if name in ("tool_get_current_semester_recommendations", "tool_lookup_unit_syllabus"):
+                calls.append({"name": name, "arguments": args})
+    except Exception:
+        pass
+
+    return calls
+
+
 def get_chat_response(
     question: str,
     history: list | None = None,
     student_id: int | None = None,
+    major_code: str | None = None,
 ) -> dict:
     start_time = time.time()
 
-    # 1. Extract unit code from the question if present (e.g., COS30018, SWE30003, TNE10006)
     unit_code_match = re.search(r"[A-Za-z]{3}\d{5}", question, re.IGNORECASE)
     target_unit = unit_code_match.group(0).upper() if unit_code_match else None
+    routed_calls = _route_agent_tools(question, student_id=student_id, major_code=major_code)
 
     expanded_query, preferred_sections = _detect_query_intent(question)
-    query_vec = _get_embedder().encode(expanded_query).tolist()
+    tool_calls_used: list[str] = []
+    rec_payload: dict | None = None
+    merged_citations: list[dict] = []
+    seen_citation_keys: set[tuple[str, str, str]] = set()
+    distances: list[float] = []
+
+    def _add_citation(cit: dict) -> None:
+        key = (
+            (cit.get("unit_code") or "").upper(),
+            (cit.get("section") or "").lower(),
+            (cit.get("content") or "").strip(),
+        )
+        if key in seen_citation_keys:
+            return
+        seen_citation_keys.add(key)
+        idx = len(merged_citations) + 1
+        merged_citations.append(
+            {
+                **cit,
+                "id": f"c{idx}",
+                "index": idx,
+            }
+        )
 
     db = SessionLocal()
     try:
-        distance_col = SyllabusChunk.embedding.l2_distance(query_vec).label("distance")
-        stmt = select(SyllabusChunk, distance_col)
+        ingested_codes = get_ingested_unit_codes(db)
+        courses = db.execute(select(Course).order_by(Course.code)).scalars().all()
+        course_names = {
+            c.code.upper(): c.name for c in courses if c.code and c.code.upper() in ingested_codes
+        }
 
-        if target_unit:
-            stmt = stmt.where(SyllabusChunk.course_code == target_unit)
-        if preferred_sections:
-            stmt = stmt.where(SyllabusChunk.section.in_(preferred_sections))
+        # 1. Execute Sub-Agent Tools
+        for call in routed_calls:
+            name = call.get("name")
+            args = call.get("arguments") or {}
+            if name == "tool_get_current_semester_recommendations":
+                rec_payload = tool_get_current_semester_recommendations(
+                    db,
+                    student_id=args.get("student_id") if args.get("student_id") is not None else student_id,
+                    major_code=args.get("major_code") or major_code,
+                    units_per_semester=int(args.get("units_per_semester") or 4),
+                )
+                if "Recommender Agent" not in tool_calls_used:
+                    tool_calls_used.append("Recommender Agent")
+            elif name == "tool_lookup_unit_syllabus":
+                code = (args.get("unit_code") or target_unit or "").strip().upper()
+                if code:
+                    res = tool_lookup_unit_syllabus(
+                        db,
+                        unit_code=code,
+                        embedder=_get_embedder(),
+                        top_k=int(args.get("top_k") or 6),
+                    )
+                    if res.get("found") and "Syllabus Retriever" not in tool_calls_used:
+                        tool_calls_used.append("Syllabus Retriever")
+                    for cit in res.get("citations") or []:
+                        _add_citation(cit)
 
-        rows = db.execute(stmt.order_by(distance_col).limit(5)).all()
+        # 2. pgvector semantic search (always run if no exact unit citations found yet; skip if target_unit is uningested)
+        if not merged_citations and (not target_unit or target_unit in ingested_codes):
+            query_vec = _get_embedder().encode(expanded_query).tolist()
+            distance_col = SyllabusChunk.embedding.l2_distance(query_vec).label("distance")
+            stmt = select(SyllabusChunk, distance_col)
 
-        # Fallback if section-filtered query returned no rows for that unit
-        if not rows and target_unit and preferred_sections:
-            fallback_stmt = (
-                select(SyllabusChunk, distance_col)
-                .where(SyllabusChunk.course_code == target_unit)
-                .order_by(distance_col)
-                .limit(5)
-            )
-            rows = db.execute(fallback_stmt).all()
+            if target_unit:
+                stmt = stmt.where(SyllabusChunk.course_code == target_unit)
+            if preferred_sections:
+                stmt = stmt.where(SyllabusChunk.section.in_(preferred_sections))
 
-        if not rows:
+            rows = db.execute(stmt.order_by(distance_col).limit(5)).all()
+
+            if not rows and target_unit and preferred_sections:
+                fallback_stmt = (
+                    select(SyllabusChunk, distance_col)
+                    .where(SyllabusChunk.course_code == target_unit)
+                    .order_by(distance_col)
+                    .limit(5)
+                )
+                rows = db.execute(fallback_stmt).all()
+
+            distances = [float(dist) for _, dist in rows]
+            for chunk, dist in rows:
+                dist_val = float(dist)
+                if dist_val <= MAX_DISTANCE_THRESHOLD:
+                    unit_code = (chunk.course_code or "").upper()
+                    unit_name = course_names.get(unit_code, unit_code)
+                    archive_file = find_archive_document(unit_code)
+                    _add_citation(
+                        {
+                            "unit_code": unit_code,
+                            "unit_name": unit_name,
+                            "section": chunk.section,
+                            "doc": f"{unit_code} Unit Outline",
+                            "source_file": archive_file or f"{unit_code} ({chunk.section})",
+                            "document_url": build_document_url(archive_file),
+                            "page_number": None,
+                            "similarity": round(dist_val, 2),
+                            "similarity_score": round(dist_val, 2),
+                            "snippet": chunk.content,
+                            "text_snippet": chunk.content,
+                            "content": chunk.content,
+                        }
+                    )
+            if merged_citations and "Syllabus Retriever" not in tool_calls_used:
+                tool_calls_used.append("Syllabus Retriever")
+
+        # Abstain when BOTH syllabus retrieval AND recommender sub-agent produced zero grounded records
+        if not merged_citations and rec_payload is None:
+            best_dist = min(distances) if distances else 999.0
+            reason = "LOW_SIMILARITY" if distances else "UNIT_NOT_FOUND"
             return {
-                "answer": f"I could not find any syllabus records matching unit code {target_unit or ''}.",
+                "answer": None if distances else f"No syllabus document is available for {target_unit or 'this unit'} yet.",
                 "citations": [],
+                "tool_calls_used": tool_calls_used,
                 "abstained": True,
-                "abstain_reason": "UNIT_NOT_FOUND",
-                "top_similarity": 999.0,
-                "threshold": MAX_DISTANCE_THRESHOLD,
-                "sources_checked": 0,
-                "sources_passed": 0,
-                "latency_ms": int((time.time() - start_time) * 1000),
-            }
-
-        distances = [float(dist) for _, dist in rows]
-        best_match_distance = min(distances)
-
-        if best_match_distance > MAX_DISTANCE_THRESHOLD:
-            return {
-                "answer": None,
-                "citations": [],
-                "abstained": True,
-                "abstain_reason": "LOW_SIMILARITY",
-                "top_similarity": round(best_match_distance, 2),
+                "abstain_reason": reason,
+                "top_similarity": round(best_dist, 2),
                 "threshold": MAX_DISTANCE_THRESHOLD,
                 "sources_checked": len(distances),
                 "sources_passed": 0,
                 "latency_ms": int((time.time() - start_time) * 1000),
             }
 
-        citations = []
-        context_chunks = []
-
-        for chunk, dist in rows:
-            dist_val = float(dist)
-            if dist_val <= MAX_DISTANCE_THRESHOLD:
-                context_chunks.append(chunk.content)
-                citations.append(
-                    {
-                        "source_file": f"{chunk.course_code} ({chunk.section})",
-                        "text_snippet": chunk.content,
-                        "similarity_score": round(dist_val, 2),
-                    }
-                )
-
         student_context = _build_student_context(db, student_id, target_unit)
         curriculum_context = _build_curriculum_context(db)
-        valid_codes = {c.upper() for c in db.execute(select(Course.code)).scalars().all()}
-        valid_codes.update(c.course_code.upper() for c, _ in rows if c.course_code)
+        valid_codes = set(ingested_codes)
+        valid_codes.update(c.get("unit_code", "").upper() for c in merged_citations if c.get("unit_code"))
+        if rec_payload:
+            valid_codes.update(
+                u["code"].upper() for u in rec_payload.get("current_semester_recommendations", []) if u.get("code")
+            )
     finally:
         db.close()
 
-    context_prompt = "\n\n".join(context_chunks)
+    context_chunks = [
+        f"[Citation {c['index']}] Unit: {c['unit_code']} ({c['unit_name']}) | Section: {c['section']}\n{c['content']}"
+        for c in merged_citations
+    ]
+    context_prompt = "\n\n".join(context_chunks) if context_chunks else "No syllabus chunks retrieved."
     student_block = f"\n\nStudent Academic Record:\n{student_context}" if student_context else ""
+    recommender_block = (
+        "\n\nCourse Recommender Sub-Agent Output (authoritative JSON — do NOT invent or override these units):\n"
+        + json.dumps(rec_payload, indent=2)
+        if rec_payload
+        else ""
+    )
     curriculum_block = f"\n\nVerified Curriculum & Prerequisite Graph:\n{curriculum_context}"
 
     full_prompt = (
-        f"Answer the student's question using the official unit outline and verified curriculum graph below."
-        f"{curriculum_block}{student_block}\n\n"
+        "Answer the student's question using the Course Recommender Sub-Agent output, official unit outlines, "
+        "and verified curriculum graph below."
+        f"{curriculum_block}{student_block}{recommender_block}\n\n"
         f"Retrieved Syllabus Chunks:\n{context_prompt}\n\n"
         f"Question: {question}"
     )
@@ -264,27 +408,19 @@ def get_chat_response(
                     {
                         "role": "system",
                         "content": (
-                            "You are a helpful academic advisor speaking directly to university students. "
-                            "You MUST ONLY mention unit codes and exact unit titles that appear in the "
-                            "Verified Course Catalog or Retrieved Syllabus Chunks below. "
-                            "Do NOT invent course codes (such as COSC10006 or COSC20007), do NOT alter unit names, "
-                            "and do NOT fabricate contact hours, assessment breakdowns, or prerequisites not explicitly "
-                            "stated in the retrieved chunks. "
-                            "NEVER mention 'JSON', 'JSON structure', 'database', 'pgvector', 'context', or 'provided text'—"
-                            "refer to it naturally as 'the unit outline' or 'the syllabus'. "
-                            "Do not confuse enrolment prerequisites with passing/assessment hurdles. "
-                            "When the student asks which units to enroll in this semester, directly recommend the units "
-                            "from their Next Recommended Semester in the Student Academic Record (prioritizing any "
-                            "RETAKE REQUIRED units first) and NEVER recommend units already in Passed Units or "
-                            "Currently Enrolled Units. "
-                            "When explaining prerequisites or generating ```mermaid``` flowchart diagrams, ONLY use course codes "
-                            "and edges that exist in the Verified Curriculum & Prerequisite Graph or the Student Academic Record. "
-                            "NEVER include external or alternative unit codes mentioned in passing inside syllabus prose "
-                            "(such as ENGR10007) if they do not exist in the Verified Curriculum & Prerequisite Graph. "
-                            "Label Mermaid nodes cleanly using verified course codes and names "
-                            "(e.g., COS10009[\"COS10009: Introduction to Programming\"]). "
-                            "When presenting assessments, unit comparisons, or study steps, include a clean Markdown table. "
-                            "When explaining prerequisite chains, include a compact ```mermaid graph TD``` diagram."
+                            "You are an Academic Advising Orchestrator speaking directly to university students. "
+                            "You MUST ONLY reference or list unit codes present in the provided [Citation N] chunks, "
+                            "Course Recommender Sub-Agent Output, or Verified Course Catalog below. "
+                            "Omit or strip any uningested external prerequisite codes (such as SWE20004) mentioned inside raw syllabus prose. "
+                            "NEVER invent course codes, NEVER override the Recommender Sub-Agent's list of recommended units, "
+                            "and NEVER fabricate contact hours, assessment breakdowns, or prerequisites not explicitly stated. "
+                            "NEVER mention 'JSON', 'database', 'pgvector', 'context', or 'provided text'—refer naturally to 'the unit outline' or 'your academic profile'. "
+                            "Format every unit summary or multi-part answer strictly with: "
+                            "(1) concise **bullet points** for key takeaways, learning outcomes, and prerequisites; "
+                            "(2) **GFM Markdown tables** whenever presenting structured breakdowns (Assessment Tasks & Weightings, Contact Hours, Weekly Syllabus Topics, or Recommended Units); and "
+                            "(3) clean inline **numeric citation markers** (`[1]`, `[2]`, `[1, 2]`) at the end of claims or table rows mapped strictly to the 1-indexed `[Citation N]` numbers in Retrieved Syllabus Chunks (never output verbose raw URLs). "
+                            "NEVER invent external URLs or citation numbers beyond the retrieved chunks. "
+                            "When explaining prerequisite chains, include a compact ```mermaid graph TD``` diagram using only verified codes."
                         ),
                     },
                     {
@@ -301,14 +437,16 @@ def get_chat_response(
     except Exception as e:
         llm_answer = f"LLM connection failed. Error: {str(e)}"
 
+    best_sim = max((c.get("similarity", 0.0) for c in merged_citations), default=1.0)
     return {
         "answer": llm_answer,
-        "citations": citations,
+        "citations": merged_citations,
+        "tool_calls_used": tool_calls_used,
         "abstained": False,
         "abstain_reason": None,
-        "top_similarity": round(best_match_distance, 2),
+        "top_similarity": round(float(best_sim), 2),
         "threshold": MAX_DISTANCE_THRESHOLD,
-        "sources_checked": len(distances),
-        "sources_passed": len(citations),
+        "sources_checked": len(distances) if distances else len(merged_citations),
+        "sources_passed": len(merged_citations),
         "latency_ms": int((time.time() - start_time) * 1000),
     }

@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request, HTTPException, status
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
@@ -11,8 +11,10 @@ from service.recommender import (
     CANONICAL_MAJORS,
     MAJOR_TO_CATALOGUE_IDS,
     generate_study_plan,
+    get_ingested_unit_codes,
     CurriculumCycleError,
 )
+from service.recommender_agent import get_archive_dir
 from backend.rag_engine import get_chat_response
 
 app = FastAPI(title="Academic Advising Portal API", version="2.0")
@@ -79,6 +81,7 @@ class ChatRequest(BaseModel):
     question: str
     history: Optional[List[ChatMessage]] = []
     student_id: Optional[int] = None
+    major_code: Optional[str] = None
 
 
 class RecommendRequest(BaseModel):
@@ -167,6 +170,7 @@ async def get_majors():
 async def get_units(major: Optional[str] = None):
     db = SessionLocal()
     try:
+        ingested = get_ingested_unit_codes(db)
         courses = db.execute(select(Course).order_by(Course.code)).scalars().all()
         return {
             "units": [
@@ -176,6 +180,7 @@ async def get_units(major: Optional[str] = None):
                     "credit_points": c.credit_points,
                 }
                 for c in courses
+                if c.code and c.code.upper() in ingested
             ]
         }
     finally:
@@ -295,6 +300,38 @@ async def chat_rag(request: ChatRequest):
         question=request.question,
         history=history_dicts,
         student_id=request.student_id,
+        major_code=request.major_code,
+    )
+
+
+@app.get("/api/documents/{filename:path}")
+async def get_document(filename: str):
+    archive_root = get_archive_dir().resolve()
+    try:
+        target = (archive_root / filename).resolve()
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid document path.")
+
+    if target == archive_root or not target.is_relative_to(archive_root):
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Access denied.")
+
+    if not target.is_file():
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Document not found.")
+
+    suffix = target.suffix.lower()
+    if suffix == ".pdf":
+        media_type = "application/pdf"
+    elif suffix == ".md":
+        media_type = "text/markdown; charset=utf-8"
+    elif suffix == ".txt":
+        media_type = "text/plain; charset=utf-8"
+    else:
+        media_type = "application/octet-stream"
+
+    return FileResponse(
+        path=target,
+        media_type=media_type,
+        headers={"Content-Disposition": f'inline; filename="{target.name}"'},
     )
 
 
