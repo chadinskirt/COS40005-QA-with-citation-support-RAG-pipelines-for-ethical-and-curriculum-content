@@ -1,59 +1,85 @@
-import Banner from './Banner.jsx';
+import { useState } from 'react';
+import Badge from './Badge.jsx';
 import Button from './Button.jsx';
+import Icon from './Icon.jsx';
 import { ADVISOR_URL } from '../config.js';
 
-// System failure. Not an abstention. A 4xx shows the backend's own message, since it says what was wrong.
-export function SystemError({ error, onRetry }) {
-  const rejected = error?.status >= 400 && error.status < 500 && Boolean(error.message);
-  let detail = 'The service is not responding. Your entries are still here. Try again in a moment.';
-  if (error?.code === 'NETWORK_ERROR') detail = `${error.message} Your entries are still here. Try again in a moment.`;
-  else if (rejected) detail = `${error.message} Your entries are still here.`;
+// Figma: System states. A labelled card with an icon tile, a title, a message and next steps.
+export function StateCard({ label, tone = 'neutral', icon, title, children, actions, className = '', role }) {
   return (
-    <div className="stack gap-4">
-      <Banner tone="danger" title="Something went wrong on our side">
-        {detail}
-      </Banner>
-      {onRetry && (
-        <div>
-          <Button onClick={onRetry}>Try again</Button>
-        </div>
+    <div className={`state-card state-card--${tone} ${className}`} role={role}>
+      {label && <Badge tone={tone}>{label}</Badge>}
+      {icon && (
+        <span className={`icon-tile icon-tile--${tone}`}>
+          <Icon name={icon} size={18} />
+        </span>
       )}
+      <p className="state-card__title">{title}</p>
+      {children && <div className="state-card__body">{children}</div>}
+      {actions && <div className="row wrap gap-8">{actions}</div>}
     </div>
   );
 }
 
-// Circular prerequisite in the curriculum data.
+const pad = (n) => String(n).padStart(2, '0');
+
+// A system failure, never an abstention. A 4xx shows the backend's message, since it says what was wrong.
+export function ServiceError({ error, onRetry, what = 'Your question' }) {
+  const [at] = useState(() => new Date());
+  const [copied, setCopied] = useState(false);
+  const rejected = error?.status >= 400 && error.status < 500 && Boolean(error.message);
+  const id = `svc-${error?.status || 0} · ${pad(at.getHours())}:${pad(at.getMinutes())}`;
+  const copy = () =>
+    navigator.clipboard?.writeText(`${id} ${error?.code ?? ''}`.trim()).then(
+      () => setCopied(true),
+      () => setCopied(false)
+    );
+  return (
+    <StateCard
+      label="Service error"
+      tone="danger"
+      icon="alert"
+      role="alert"
+      title={rejected ? 'The service turned this request down' : "We couldn't reach the advising service"}
+    >
+      <p>
+        {rejected ? `${error.message} ` : `${what} wasn't answered. `}
+        Your plan and this chat are still here.
+      </p>
+      <div className="row wrap gap-8">
+        {onRetry && (
+          <Button variant="primary" size="m" onClick={onRetry}>
+            Try again
+          </Button>
+        )}
+        <Button variant="ghost" size="m" onClick={copy}>
+          {copied ? 'Copied' : 'Copy error ID'}
+        </Button>
+      </div>
+      <p className="error-id">
+        <span className="c-muted">Error ID</span> <code>{id}</code>
+      </p>
+    </StateCard>
+  );
+}
+
+// A circular prerequisite in the curriculum data: the plan can't be built until the data is fixed.
 export function CurriculumError({ error }) {
   const cycle = error?.details?.cycle;
   return (
-    <div className="stack gap-4">
-      <Banner tone="danger" title="Curriculum data error">
-        {cycle
-          ? `A circular prerequisite was found (${cycle.join(' → ')}) in the source data, so no plan was generated.`
-          : error.message}
-      </Banner>
-      <div>
+    <StateCard
+      label="Curriculum data error"
+      tone="danger"
+      icon="alert"
+      role="alert"
+      title="The course data has a loop, so no plan was made"
+      actions={
         <Button variant="secondary" as="a" href={ADVISOR_URL}>
-          Contact an academic advisor
+          Contact an advisor
         </Button>
-      </div>
-    </div>
-  );
-}
-
-export function PathwaySkeleton() {
-  return (
-    <div className="stack gap-4" aria-busy="true" aria-live="polite">
-      <span className="sr-only">Checking every prerequisite rule</span>
-      <div className="skeleton skeleton-line skeleton-line--short" />
-      <div className="skeleton skeleton-line skeleton-line--long" />
-      <div className="skeleton skeleton-line skeleton-line--medium" />
-      <div className="semesters">
-        {[0, 1, 2, 3].map((i) => (
-          <div key={i} className="skeleton skeleton-card" />
-        ))}
-      </div>
-      <p className="t-caption c-secondary">Checking every prerequisite rule… usually under 3 seconds.</p>
-    </div>
+      }
+    >
+      <p>{cycle ? `These units require each other: ${cycle.join(' → ')}.` : error.message}</p>
+    </StateCard>
   );
 }

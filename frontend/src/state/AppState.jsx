@@ -1,174 +1,167 @@
-// In-memory only: nothing goes to localStorage or cookies.
-import { createContext, useCallback, useContext, useMemo, useRef, useState } from 'react';
+// App-wide state. The plan is saved to this browser only when the student presses Save plan;
+// the chat lives in memory and is gone when the tab closes.
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { api } from '../api/client.js';
+import { getUnitCategory } from '../data/csMajors.js';
+import { buildPlanView, STANDARD_LOAD } from '../lib/plan.js';
+import { nextTerm, parseTermKey, termKey } from '../lib/terms.js';
+
+export const STORAGE_KEY = 'advising-portal:plan';
+const DEFAULT_MAJOR = 'artificial-intelligence';
+
+function readSaved() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    return saved?.profile?.units ? saved : null;
+  } catch {
+    return null;
+  }
+}
 
 const Ctx = createContext(null);
 
 export function AppStateProvider({ children }) {
-  // First-Year mode state
-  const [major, setMajor] = useState('');
-  const [completed, setCompleted] = useState(() => new Set());
+  const saved = useRef(readSaved()).current;
+  // profile: { major, units: { CODE: { status: 'passed' | 'failed' | 'enrolled', grade? } } } or null
+  const [profile, setProfile] = useState(saved?.profile ?? null);
+  const [start, setStart] = useState(() => parseTermKey(saved?.start) ?? nextTerm());
+  const [load, setLoad] = useState([2, 3, 4].includes(saved?.load) ? saved.load : STANDARD_LOAD);
+  const [swaps, setSwaps] = useState(saved?.swaps ?? []);
+  const [savedAt, setSavedAt] = useState(saved ? JSON.stringify(saved) : null);
   const [plan, setPlan] = useState({ status: 'idle' });
+  const [attempt, setAttempt] = useState(0);
+  const [catalog, setCatalog] = useState([]);
+
+  // Chat
   const [messages, setMessages] = useState([]);
-  const [selected, setSelected] = useState(null); // source open in the chat side panel
+  const [scope, setScope] = useState(['outlines', 'plan']);
+  const [pendingQuestion, setPendingQuestion] = useState(null); // sent from Home or search
+  const [draft, setDraft] = useState('');
   const lastId = useRef(0);
-
-  // Mode toggle: 'first-year' | 'current-student'
-  const [mode, setMode] = useState('first-year');
-
-  // Current Student mode state
-  const [studentId, setStudentId] = useState('');
-  const [activeStudentId, setActiveStudentId] = useState(null);
-  const [studentLookup, setStudentLookup] = useState({ status: 'idle' });
-  const [studentSave, setStudentSave] = useState({ status: 'idle' });
-  const [studentMajor, setStudentMajor] = useState('');
-  const [targetCareer, setTargetCareer] = useState('');
-  const [studyGoal, setStudyGoal] = useState('');
-  const [unitsPerSemester, setUnitsPerSemester] = useState(4);
-  const [passedUnits, setPassedUnits] = useState(() => new Set());
-  const [failedUnits, setFailedUnits] = useState(() => new Set());
-  const [enrolledUnits, setEnrolledUnits] = useState(() => new Set());
-  const [studentPlan, setStudentPlan] = useState({ status: 'idle' });
-
-  // Units differ per major, so changing major clears the selection.
-  const selectMajor = useCallback(
-    (id) => {
-      if (id === major) return;
-      setMajor(id);
-      setCompleted(new Set());
-    },
-    [major]
-  );
-  const toggleUnit = useCallback((code) => {
-    setCompleted((prev) => {
-      const next = new Set(prev);
-      if (!next.delete(code)) next.add(code);
-      return next;
-    });
-  }, []);
-  const clearUnits = useCallback(() => setCompleted(new Set()), []);
   const newId = useCallback(() => ++lastId.current, []);
 
-  // Preserve passed/enrolled/failed units when switching majors in Current Student mode.
-  const selectStudentMajor = useCallback(
-    (id) => {
-      if (id === studentMajor) return;
-      setStudentMajor(id);
-    },
-    [studentMajor]
-  );
+  const major = profile?.major ?? DEFAULT_MAJOR;
+  const planKey = profile ? JSON.stringify([profile.major, profile.units, load]) : null;
+  const lastKey = useRef(planKey);
 
-  // Mutually exclusive assignment into passed | enrolled | failed (clicking active status unassigns)
-  const assignUnitStatus = useCallback((code, targetStatus) => {
-    setPassedUnits((prevPassed) => {
-      const wasPassed = prevPassed.has(code);
-      const next = new Set(prevPassed);
-      next.delete(code);
-      if (targetStatus === 'passed' && !wasPassed) next.add(code);
-      return next;
-    });
-    setEnrolledUnits((prevEnrolled) => {
-      const wasEnrolled = prevEnrolled.has(code);
-      const next = new Set(prevEnrolled);
-      next.delete(code);
-      if (targetStatus === 'enrolled' && !wasEnrolled) next.add(code);
-      return next;
-    });
-    setFailedUnits((prevFailed) => {
-      const wasFailed = prevFailed.has(code);
-      const next = new Set(prevFailed);
-      next.delete(code);
-      if (targetStatus === 'failed' && !wasFailed) next.add(code);
-      return next;
-    });
-  }, []);
+  // Unit names for the search box, the unit editor and the roadmap.
+  useEffect(() => {
+    let live = true;
+    api.getUnits(major).then(
+      (d) => live && setCatalog(d.units ?? []),
+      () => live && setCatalog([])
+    );
+    return () => {
+      live = false;
+    };
+  }, [major]);
 
-  const clearStudentUnits = useCallback(() => {
-    setPassedUnits(new Set());
-    setFailedUnits(new Set());
-    setEnrolledUnits(new Set());
-  }, []);
+  // Re-plan whenever the units or the load change. Swaps belong to the old plan, so they go.
+  useEffect(() => {
+    if (!planKey) return undefined;
+    if (lastKey.current !== planKey) setSwaps([]);
+    lastKey.current = planKey;
+    let live = true;
+    const [m, units, l] = JSON.parse(planKey);
+    setPlan((p) => ({ status: 'loading', data: p.data, key: planKey }));
+    api.recommend({ major: m, units }, l).then(
+      (data) => live && setPlan({ status: 'done', data, key: planKey }),
+      (error) => live && setPlan({ status: 'error', error, key: planKey })
+    );
+    return () => {
+      live = false;
+    };
+  }, [planKey, attempt]);
 
-  const hydrateStudentProfile = useCallback((data) => {
-    if (data.student_id != null) {
-      setStudentId(String(data.student_id));
-      setActiveStudentId(Number(data.student_id));
+  const retryPlan = useCallback(() => setAttempt((n) => n + 1), []);
+
+  const names = useMemo(() => Object.fromEntries(catalog.map((u) => [u.code, u.name])), [catalog]);
+  const view = useMemo(() => {
+    // While a new plan loads the last one stays on screen, marked as updating.
+    if (!plan.data || plan.status === 'error' || !profile) return null;
+    return buildPlanView(plan.data, profile, {
+      start,
+      load,
+      swaps,
+      names,
+      category: (code) => getUnitCategory(code, profile.major),
+    });
+  }, [plan, profile, start, load, swaps, names]);
+
+  const snapshot = profile ? JSON.stringify({ profile, start: termKey(start), load, swaps }) : null;
+  const savePlan = useCallback(() => {
+    if (!snapshot) return false;
+    try {
+      localStorage.setItem(STORAGE_KEY, snapshot);
+      setSavedAt(snapshot);
+      return true;
+    } catch {
+      return false;
     }
-    if (data.major_code) setStudentMajor(data.major_code);
-    setTargetCareer(data.target_career ?? '');
-    setStudyGoal(data.study_goal ?? '');
-    setPassedUnits(new Set(data.passed_units ?? []));
-    setFailedUnits(new Set(data.failed_units ?? []));
-    setEnrolledUnits(new Set(data.enrolled_units ?? []));
+  }, [snapshot]);
+
+  const forgetPlan = useCallback(() => {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // storage can be blocked; nothing was saved then
+    }
+    setSavedAt(null);
+    setProfile(null);
+    setSwaps([]);
+    setPlan({ status: 'idle' });
   }, []);
 
   const value = useMemo(
     () => ({
+      profile,
+      setProfile,
       major,
-      selectMajor,
-      completed,
-      toggleUnit,
-      clearUnits,
+      start,
+      setStart,
+      load,
+      setLoad,
+      swaps,
+      addSwap: (a, b) => setSwaps((s) => [...s, [a, b]]),
       plan,
-      setPlan,
+      retryPlan,
+      view,
+      catalog,
+      names,
+      saved: snapshot !== null && snapshot === savedAt,
+      hasSaved: savedAt !== null,
+      savePlan,
+      forgetPlan,
       messages,
       setMessages,
-      selected,
-      setSelected,
+      scope,
+      setScope,
+      pendingQuestion,
+      setPendingQuestion,
+      draft,
+      setDraft,
       newId,
-      mode,
-      setMode,
-      studentId,
-      setStudentId,
-      activeStudentId,
-      setActiveStudentId,
-      studentLookup,
-      setStudentLookup,
-      studentSave,
-      setStudentSave,
-      studentMajor,
-      selectStudentMajor,
-      targetCareer,
-      setTargetCareer,
-      studyGoal,
-      setStudyGoal,
-      unitsPerSemester,
-      setUnitsPerSemester,
-      passedUnits,
-      failedUnits,
-      enrolledUnits,
-      assignUnitStatus,
-      clearStudentUnits,
-      studentPlan,
-      setStudentPlan,
-      hydrateStudentProfile,
     }),
     [
+      profile,
       major,
-      selectMajor,
-      completed,
-      toggleUnit,
-      clearUnits,
+      start,
+      load,
+      swaps,
       plan,
+      retryPlan,
+      view,
+      catalog,
+      names,
+      snapshot,
+      savedAt,
+      savePlan,
+      forgetPlan,
       messages,
-      selected,
+      scope,
+      pendingQuestion,
+      draft,
       newId,
-      mode,
-      studentId,
-      activeStudentId,
-      studentLookup,
-      studentSave,
-      studentMajor,
-      selectStudentMajor,
-      targetCareer,
-      studyGoal,
-      unitsPerSemester,
-      passedUnits,
-      failedUnits,
-      enrolledUnits,
-      assignUnitStatus,
-      clearStudentUnits,
-      studentPlan,
-      hydrateStudentProfile,
     ]
   );
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

@@ -1,148 +1,109 @@
 import { useEffect, useState } from 'react';
 import Icon from './Icon.jsx';
-import { USE_MOCK } from '../config.js';
-import { APP_TITLE, ROUTES } from '../routes.js';
+import Badge from './Badge.jsx';
+import SearchUnits from './SearchUnits.jsx';
+import { OUTLINE_COUNT, OUTLINES_SYNCED, USE_MOCK } from '../config.js';
+import { ROUTES } from '../routes.js';
 import { useAppState } from '../state/AppState.jsx';
-import { version } from '../../package.json';
-
-function getInitialTheme() {
-  const attr = document.documentElement.dataset.theme;
-  if (attr === 'dark' || attr === 'light') return attr;
-  try {
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || saved === 'light') return saved;
-  } catch {
-    // ignore storage errors
-  }
-  return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-}
 
 // Hash links drive the router, so the skip link moves focus instead of changing the hash.
 const skipToMain = () => document.getElementById('main')?.focus();
 
-// Figma: TopBar and Sidebar
+// Figma: App/Sidebar (Role = Student). Below 768 px it becomes a top bar with a menu.
 export default function Shell({ page, children }) {
-  const appState = useAppState();
-  const mode = appState?.mode ?? 'first-year';
-  const setMode = appState?.setMode;
-  const activeStudentId = appState?.activeStudentId;
-  const passedCount = appState?.passedUnits?.size ?? 0;
-  const enrolledCount = appState?.enrolledUnits?.size ?? 0;
-  const failedCount = appState?.failedUnits?.size ?? 0;
-  const completedCount = appState?.completed?.size ?? 0;
-  const [theme, setTheme] = useState(getInitialTheme);
+  const { start } = useAppState();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const label = ROUTES.find((r) => r.id === page)?.label;
 
+  useEffect(() => setMenuOpen(false), [page]);
   useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-  }, [theme]);
-
-  const toggleTheme = () => {
-    const next = theme === 'dark' ? 'light' : 'dark';
-    setTheme(next);
-    document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem('theme', next);
-    } catch {
-      // ignore storage errors
-    }
-  };
+    if (!menuOpen) return undefined;
+    const onKey = (e) => e.key === 'Escape' && setMenuOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [menuOpen]);
 
   return (
-    <div className="shell">
-      <button type="button" className="skip-link t-label" onClick={skipToMain}>
+    <div className="app">
+      <button type="button" className="skip-link" onClick={skipToMain}>
         Skip to content
       </button>
-      <header className="topbar">
-        <a className="brand" href="#profile">
-          <span className="brand__logo t-label" aria-hidden="true">
-            A
-          </span>
-          <span className="t-h2">{APP_TITLE}</span>
-        </a>
-        <div className="row gap-3">
-          {USE_MOCK && <span className="mock-pill t-caption">Demo data</span>}
-          {mode === 'current-student' ? (
-            <span className="mode-pill t-caption">
-              Current Student
-              {activeStudentId ? (
-                <>
-                  {' '}
-                  · <span className="t-mono">ID #{activeStudentId}</span>
-                </>
-              ) : (
-                ''
-              )}
-            </span>
-          ) : (
-            <span className="privacy-pill t-caption">
-              <Icon name="lock" size={14} />
-              Session only · no name or student ID stored
-            </span>
-          )}
-          <button
-            type="button"
-            className="theme-toggle"
-            aria-label="Toggle dark mode"
-            aria-pressed={theme === 'dark'}
-            onClick={toggleTheme}
-            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={16} />
-          </button>
-        </div>
+
+      <header className="mobile-bar">
+        <span className="avatar" aria-hidden="true">
+          AP
+        </span>
+        <span className="mobile-bar__title">{page === 'home' ? 'Advising Portal' : label}</span>
+        <button
+          type="button"
+          className="icon-btn"
+          aria-label="Menu"
+          aria-expanded={menuOpen}
+          aria-controls="sidebar"
+          onClick={() => setMenuOpen((o) => !o)}
+        >
+          <Icon name={menuOpen ? 'x' : 'menu'} size={20} />
+        </button>
       </header>
-      <nav className="sidebar" aria-label="Main">
-        <div className="stack gap-6">
-          <div className="stack gap-2">
-            <span className="t-caption c-secondary sidebar__label">Advising mode</span>
-            <div className="mode-switch" role="group" aria-label="Student mode">
-              <button
-                type="button"
-                className="mode-switch__btn"
-                aria-pressed={mode === 'first-year'}
-                onClick={() => setMode?.('first-year')}
+
+      <nav className="sidebar" id="sidebar" aria-label="Main" data-open={menuOpen}>
+        <a className="brand" href="#home">
+          <span className="avatar" aria-hidden="true">
+            AP
+          </span>
+          <span className="brand__text">
+            <span className="brand__name">Advising Portal</span>
+            <span className="brand__sub">Computer Science · {start.year}</span>
+          </span>
+        </a>
+        <SearchUnits onPick={() => setMenuOpen(false)} />
+        <ul className="nav">
+          {ROUTES.map((r) => (
+            <li key={r.id}>
+              <a
+                href={`#${r.id}`}
+                className="nav__item"
+                aria-current={page === r.id ? 'page' : undefined}
+                title={r.label}
               >
-                First-Year
-              </button>
-              <button
-                type="button"
-                className="mode-switch__btn"
-                aria-pressed={mode === 'current-student'}
-                onClick={() => setMode?.('current-student')}
-              >
-                Current Student
-              </button>
-            </div>
-          </div>
-          <div className="nav">
-            {ROUTES.map((n) => (
-              <a key={n.id} href={`#${n.id}`} className="nav-item" aria-current={page === n.id ? 'page' : undefined}>
-                {n.label}
+                <Icon name={r.icon} size={16} />
+                <span className="nav__label">{r.label}</span>
               </a>
-            ))}
-          </div>
-        </div>
+            </li>
+          ))}
+        </ul>
         <div className="sidebar__foot">
-          <div className="sidebar__summary">
-            <span className="t-caption c-secondary sidebar__label">Progress</span>
-            {mode === 'current-student' ? (
-              <div className="sidebar__stats t-caption">
-                <span className="c-success t-mono">{passedCount}P</span>
-                <span className="c-enrolled t-mono">{enrolledCount}E</span>
-                <span className="c-warning t-mono">{failedCount}R</span>
-              </div>
-            ) : (
-              <span className="t-caption c-secondary">
-                <span className="t-mono c-brand">{completedCount}</span> units completed
-              </span>
-            )}
+          <div className="storage-note">
+            <p className="storage-note__title">
+              <Icon name="lock" size={14} />
+              Saved on this device only
+            </p>
+            <p className="storage-note__body">
+              Your plan stays on this device. Share it with an advisor using a plan code.
+            </p>
           </div>
-          <span className="t-caption c-secondary t-mono">v{version}</span>
+          <p className="sync">
+            <span className="dot dot--pass" aria-hidden="true" />
+            {OUTLINE_COUNT} unit outlines · synced {OUTLINES_SYNCED}
+            {USE_MOCK && <Badge tone="caution">Demo data</Badge>}
+          </p>
         </div>
       </nav>
+      {menuOpen && <div className="scrim" aria-hidden="true" onClick={() => setMenuOpen(false)} />}
+
       <main className="main" id="main" tabIndex={-1}>
         {children}
       </main>
+    </div>
+  );
+}
+
+// Figma: Topbar. Title on the left, page actions on the right.
+export function TopBar({ children, actions }) {
+  return (
+    <div className="topbar">
+      <div className="topbar__title">{children}</div>
+      {actions && <div className="topbar__actions">{actions}</div>}
     </div>
   );
 }

@@ -1,156 +1,62 @@
-/* Design tokens — Academic-Engineering Palette & Semantic Status System */
+/* Design tokens. Names follow the "Tokens in code" table in Figma v1.2 (Foundations). */
 :root {
   color-scheme: light;
 
-  /* colour: background & surfaces */
-  --color-bg-canvas: #f4f6f9;
+  /* surfaces */
+  --color-bg-canvas: #f7f7f5;
   --color-bg-surface: #ffffff;
-  --color-bg-elevated: #fcfcfd;
-  --color-bg-subtle: #eef1f6;
-  --color-bg-brand: #2f5bd3;
-  --color-bg-brand-hover: #2347ad;
-  --color-bg-brand-subtle: #e8eefc;
-  --color-bg-brand-subtle-hover: #d9e3fa;
-  --color-bg-success: #e5f4ec;
-  --color-bg-warning: #fff4de;
-  --color-bg-danger: #fdecea;
-  --color-bg-enrolled: #e0f2fe;
+  --color-bg-subtle: #f2f1ed;
+  --color-bg-sunken: #fafaf8; /* table heads, side panel, card footers */
+  --color-bg-brand: #2a4b8d;
+  --color-bg-brand-hover: #213d74;
+  --color-bg-brand-subtle: #eef2f9;
 
-  /* colour: text */
-  --color-text-primary: #182230;
-  --color-text-secondary: #525f73;
-  --color-text-muted: #66748a;
+  /* text */
+  --color-text-primary: #17191e;
+  --color-text-secondary: #4d5361;
+  --color-text-muted: #686d77;
   --color-text-on-brand: #ffffff;
-  --color-text-brand: #2f5bd3;
-  --color-text-success: #166534;
-  --color-text-warning: #8a5300;
-  --color-text-danger: #b42318;
-  --color-text-enrolled: #0369a1;
+  --color-text-brand: #2a4b8d;
+  --color-text-source: #62498f;
 
-  /* colour: border */
-  --color-border-default: #dce2eb;
-  --color-border-strong: #7a8599; /* >=3.7:1 on white, WCAG 1.4.11 */
-  --color-border-brand: #2f5bd3;
-  --color-border-danger: #b42318;
+  /* borders */
+  --color-border-default: #e7e5e0;
+  --color-border-strong: #d3d0c8;
+  --color-border-brand: #c9d5ea;
+  --color-border-source: #ddd4ec;
 
-  /* semantic aliases */
-  --bg: var(--color-bg-canvas);
-  --surface: var(--color-bg-surface);
-  --surface-elevated: var(--color-bg-elevated);
-  --surface-muted: var(--color-bg-subtle);
-  --border: var(--color-border-default);
-  --text-primary: var(--color-text-primary);
-  --text-secondary: var(--color-text-secondary);
-  --text-muted: var(--color-text-muted);
-  --accent: var(--color-bg-brand);
-  --accent-hover: var(--color-bg-brand-hover);
-  --accent-soft: var(--color-bg-brand-subtle);
-  --topbar-bg: rgba(255, 255, 255, 0.92);
-  --dag-dot: #dce2eb;
+  /* status: colour always comes with a word or icon */
+  --status-passed-text: #2d7452;
+  --status-passed-bg: #eaf3ed;
+  --status-passed-border: #c7dfd0;
+  --status-retake-text: #97600e;
+  --status-retake-bg: #fcf4e4;
+  --status-retake-border: #edd9b0;
+  --status-blocked-text: #a6432f;
+  --status-blocked-bg: #faedea;
+  --status-blocked-border: #ebcbc3;
+  --color-bg-source: #f4f1f9;
 
-  /* semantic status tokens */
-  --status-passed-bg: #e5f4ec;
-  --status-passed-row-bg: #f6fcf9;
-  --status-passed-border: #1e7a4b;
-  --status-passed-text: #166534;
-  --status-enrolled-bg: #e0f2fe;
-  --status-enrolled-row-bg: #f5faff;
-  --status-enrolled-border: #0369a1;
-  --status-enrolled-text: #0369a1;
-  --status-retake-bg: #fff4de;
-  --status-retake-row-bg: #fffcf4;
-  --status-retake-border: #b45309;
-  --status-retake-text: #8a5300;
-  --status-planned-bg: #e8eefc;
-  --status-planned-border: #2f5bd3;
-  --status-planned-text: #2347ad;
-  --status-blocked-bg: #fdecea;
-  --status-blocked-border: #b42318;
-  --status-blocked-text: #b42318;
-
-  /* spacing (4/8 px scale) */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --space-12: 48px;
+  /* chart series (assessment weights) */
+  --chart-1: #2a4b8d;
+  --chart-2: #6a82b8;
+  --chart-3: #a9b8d9;
 
   /* radius */
-  --radius-sm: 6px;
+  --radius-xs: 5px;
+  --radius-sm: 8px;
   --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-pill: 999px;
+  --radius-lg: 12px;
+  --radius-xl: 14px;
 
-  /* elevation & motion */
-  --shadow: 0 1px 3px rgba(24, 34, 48, 0.05), 0 4px 12px rgba(24, 34, 48, 0.04);
-  --elevation-1: var(--shadow);
-  --elevation-2: 0 4px 16px rgba(24, 34, 48, 0.08), 0 1px 3px rgba(24, 34, 48, 0.05);
+  /* elevation */
+  --shadow-sm: 0 1px 2px rgba(23, 26, 31, 0.04), 0 4px 12px rgba(23, 26, 31, 0.05);
+  --shadow-lg: 0 12px 40px rgba(23, 26, 31, 0.16), 0 2px 6px rgba(23, 26, 31, 0.06);
+
   --transition-fast: 150ms cubic-bezier(0.2, 0.8, 0.2, 1);
 
-  /* focus ring (WCAG 2.4.7) */
-  --focus-ring: 0 0 0 3px var(--surface), 0 0 0 5px var(--accent);
-
-  /* typography */
+  /* type */
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-}
-
-[data-theme='dark'] {
-  color-scheme: dark;
-
-  --color-bg-canvas: #0d131f;
-  --color-bg-surface: #141c2c;
-  --color-bg-elevated: #1a2438;
-  --color-bg-subtle: #1e293d;
-  --color-bg-brand: #5b86ff;
-  --color-bg-brand-hover: #7398ff;
-  --color-bg-brand-subtle: rgba(91, 134, 255, 0.16);
-  --color-bg-brand-subtle-hover: rgba(91, 134, 255, 0.26);
-  --color-bg-success: rgba(34, 197, 94, 0.16);
-  --color-bg-warning: rgba(245, 158, 11, 0.16);
-  --color-bg-danger: rgba(248, 113, 113, 0.16);
-  --color-bg-enrolled: rgba(56, 189, 248, 0.16);
-
-  --color-text-primary: #e6ecf5;
-  --color-text-secondary: #a1aec4;
-  --color-text-muted: #7f8ea6;
-  --color-text-on-brand: #ffffff;
-  --color-text-brand: #88a9ff;
-  --color-text-success: #4ade80;
-  --color-text-warning: #fbbf24;
-  --color-text-danger: #f87171;
-  --color-text-enrolled: #38bdf8;
-
-  --color-border-default: #263248;
-  --color-border-strong: #475775;
-  --color-border-brand: #5b86ff;
-  --color-border-danger: #f87171;
-
-  --topbar-bg: rgba(20, 28, 44, 0.9);
-  --dag-dot: #263248;
-
-  --status-passed-bg: rgba(34, 197, 94, 0.16);
-  --status-passed-row-bg: rgba(34, 197, 94, 0.08);
-  --status-passed-border: #34d399;
-  --status-passed-text: #4ade80;
-  --status-enrolled-bg: rgba(56, 189, 248, 0.16);
-  --status-enrolled-row-bg: rgba(56, 189, 248, 0.08);
-  --status-enrolled-border: #38bdf8;
-  --status-enrolled-text: #7dd3fc;
-  --status-retake-bg: rgba(245, 158, 11, 0.16);
-  --status-retake-row-bg: rgba(245, 158, 11, 0.08);
-  --status-retake-border: #fbbf24;
-  --status-retake-text: #fcd34d;
-  --status-planned-bg: rgba(91, 134, 255, 0.16);
-  --status-planned-border: #6c93ff;
-  --status-planned-text: #9db8ff;
-  --status-blocked-bg: rgba(248, 113, 113, 0.15);
-  --status-blocked-border: #f87171;
-  --status-blocked-text: #fca5a5;
-
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.25);
-  --elevation-1: var(--shadow);
-  --elevation-2: 0 8px 24px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }

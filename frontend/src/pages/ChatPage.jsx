@@ -1,154 +1,313 @@
-import { useEffect, useRef, useState } from 'react';
-import { api } from '../api/client.js';
-import { useAppState } from '../state/AppState.jsx';
-import Icon from '../components/Icon.jsx';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { api, planBody } from '../api/client.js';
 import AssistantMessage from '../components/AssistantMessage.jsx';
-import { SourcePanel, SourcesHint, WhyNoAnswer } from '../components/SidePanels.jsx';
+import Button, { IconButton } from '../components/Button.jsx';
+import Composer from '../components/Composer.jsx';
+import { useModal } from '../components/Dialog.jsx';
+import Icon from '../components/Icon.jsx';
+import SourcesPanel from '../components/SourcesPanel.jsx';
+import { TopBar } from '../components/Shell.jsx';
+import { categoryLabel } from '../components/Badge.jsx';
+import { getUnitCategory } from '../data/csMajors.js';
+import { termLabel } from '../lib/terms.js';
+import { useAppState } from '../state/AppState.jsx';
 
-const SUGGESTIONS = [
-  'What is the prerequisite for COS30019?',
-  'How is COS20007 assessed?',
-  'What do I need to pass COS30019?',
-];
-const NO_ANSWER_TEXT = 'No answer found in the approved documents.';
+const SUGGESTIONS = ['Can I take COS30019 next semester?', 'How do I pass the AI unit?', 'Compare Data Science and AI'];
+const NO_ANSWER = 'No answer found in the approved documents.';
+const topicOf = (q) => (q.length > 48 ? `${q.slice(0, 46).trimEnd()}…` : q);
 
-// Figma S3 and S4, plus the chat states of S6
+// Figma: Ask the assistant, Rich answer, and the chat states in System states.
 export default function ChatPage() {
-  const { mode, activeStudentId, studentId, messages, setMessages, selected, setSelected, newId } = useAppState();
-  const [draft, setDraft] = useState('');
-  const inputRef = useRef(null);
+  const {
+    messages,
+    setMessages,
+    newId,
+    scope,
+    setScope,
+    profile,
+    load,
+    start,
+    view,
+    pendingQuestion,
+    setPendingQuestion,
+    draft,
+    setDraft,
+    major,
+  } = useAppState();
+  const [selected, setSelected] = useState(null); // { msgId, n }
+  const [drawer, setDrawer] = useState(false);
+  const input = useRef(null);
   const endRef = useRef(null);
   const busy = messages.some((m) => m.status === 'pending');
-  const lastReply = [...messages].reverse().find((m) => m.role === 'assistant' && m.status === 'done');
-
-  const effectiveStudentId =
-    mode === 'current-student'
-      ? activeStudentId ?? (/^\d+$/.test(studentId?.trim() || '') ? Number(studentId.trim()) : null)
-      : null;
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ block: 'end' });
-  }, [messages]);
+  }, [messages.length]);
 
-  const select = (msg, citation, index) =>
-    setSelected({ msgId: msg.id, citation, index, threshold: msg.result.threshold });
+  const ask = useCallback(
+    async (question, msgs = messages) => {
+      const q = question.trim();
+      if (!q) return;
+      const history = msgs
+        .filter((m) => m.role === 'assistant' && m.status === 'done')
+        .flatMap((m) => [
+          { role: 'user', content: m.question },
+          { role: 'assistant', content: m.result.answer ?? NO_ANSWER },
+        ]);
+      const usePlan = scope.includes('plan') && profile;
+      // Grades travel inside the plan, so they are only sent when the plan is.
+      const useGrades = usePlan && scope.includes('grades');
+      const plan = usePlan && {
+        ...planBody(profile, load),
+        start_term: termLabel(start),
+        ...(useGrades && {
+          grades: Object.fromEntries(
+            Object.entries(profile.units)
+              .filter(([, u]) => u.grade)
+              .map(([c, u]) => [c, u.grade])
+          ),
+        }),
+      };
+      const user = { id: newId(), role: 'user', text: q };
+      const reply = {
+        id: newId(),
+        userId: user.id,
+        role: 'assistant',
+        question: q,
+        status: 'pending',
+        scope: scope.filter((s) => (s === 'plan' ? usePlan : s === 'grades' ? useGrades : true)),
+      };
+      setMessages([...msgs, user, reply]);
+      setDraft('');
+      try {
+        const result = await api.chat(q, history, { scope: reply.scope, plan });
+        setMessages((ms) => ms.map((m) => (m.id === reply.id ? { ...reply, status: 'done', result } : m)));
+        // An answer without sources leaves the panel on the last one that had some.
+        if (result.citations.length) setSelected({ msgId: reply.id, n: 1 });
+      } catch (error) {
+        setMessages((ms) => ms.map((m) => (m.id === reply.id ? { ...reply, status: 'error', error } : m)));
+      }
+    },
+    [messages, scope, profile, load, start, newId, setMessages, setDraft]
+  );
 
-  async function ask(question) {
-    const q = question.trim();
-    if (!q || busy) return;
-    const history = messages
-      .filter((m) => m.role === 'assistant' && m.status === 'done')
-      .flatMap((m) => [
-        { role: 'user', content: m.question },
-        { role: 'assistant', content: m.result.answer ?? NO_ANSWER_TEXT },
-      ]);
-    const userMsg = { id: newId(), role: 'user', text: q };
-    const reply = { id: newId(), role: 'assistant', userId: userMsg.id, question: q, status: 'pending' };
-    setMessages((ms) => [...ms, userMsg, reply]);
-    setDraft('');
-    try {
-      const result =
-        effectiveStudentId != null ? await api.chat(q, history, effectiveStudentId) : await api.chat(q, history);
-      const done = { ...reply, status: 'done', result };
-      setMessages((ms) => ms.map((m) => (m.id === reply.id ? done : m)));
-      if (result.abstained || result.citations.length === 0) setSelected(null);
-      else select(done, result.citations[0], 1);
-    } catch (error) {
-      setMessages((ms) => ms.map((m) => (m.id === reply.id ? { ...reply, status: 'error', error } : m)));
-    }
-  }
+  // A question sent from Home or the unit search. The ref keeps this effect tied to the question only.
+  const askRef = useRef(ask);
+  askRef.current = ask;
+  // While an answer is still loading the question waits, then goes once it is done.
+  useEffect(() => {
+    if (!pendingQuestion || busy) return;
+    setPendingQuestion(null);
+    askRef.current(pendingQuestion);
+  }, [pendingQuestion, busy, setPendingQuestion]);
+
+  const focusComposer = (text) => {
+    setDraft(text);
+    requestAnimationFrame(() => {
+      const el = input.current;
+      el?.focus();
+      el?.setSelectionRange(text.length, text.length);
+    });
+  };
 
   function retry(msg) {
-    setMessages((ms) => ms.filter((m) => m.id !== msg.id && m.id !== msg.userId));
-    ask(msg.question);
+    const rest = messages.filter((m) => m.id !== msg.id && m.id !== msg.userId);
+    ask(msg.question, rest);
   }
 
-  function rephrase(question) {
-    setDraft(question);
-    inputRef.current?.focus();
-  }
+  const answers = messages.filter((m) => m.role === 'assistant' && m.status === 'done' && m.result.citations.length);
+  const shownMsg = messages.find((m) => m.id === selected?.msgId) ?? answers[answers.length - 1];
+  const citations = shownMsg?.result.citations ?? [];
+  const openN = shownMsg && selected?.msgId === shownMsg.id ? selected.n : null;
 
-  let panel = <SourcesHint />;
-  if (selected) panel = <SourcePanel selected={selected} />;
-  else if (lastReply?.result.abstained) panel = <WhyNoAnswer result={lastReply.result} />;
+  const openCite = (msg) => (n) => {
+    setSelected((s) => (s?.msgId === msg.id && s.n === n ? { msgId: msg.id, n: null } : { msgId: msg.id, n }));
+    if (window.matchMedia?.('(max-width: 1279px)').matches) setDrawer(true);
+  };
+
+  // Colours the prerequisite map from the student's own plan.
+  const unitStatus = (code) => {
+    const rec = profile?.units[code];
+    const term = view?.termOf[code];
+    const first = view?.semesters[0]?.includes(code);
+    if (rec?.status === 'passed') return { status: 'passed', label: 'Passed' };
+    if (rec?.status === 'enrolled') return { status: 'enrolled', label: 'Enrolled now' };
+    if (rec?.status === 'failed') return { status: 'retake', label: term ? `Retake, ${termLabel(term)}` : 'Retake' };
+    if (term) return { status: first ? 'now' : 'planned', label: termLabel(term) };
+    return {};
+  };
+  const unitNote = (o) => {
+    const term = view?.termOf[o.code];
+    const kind = `${categoryLabel(getUnitCategory(o.code, profile?.major ?? major))} unit`;
+    return term
+      ? `${kind} · ${termLabel(term)} in your plan`
+      : o.note && o.note !== kind
+        ? `${kind} · ${o.note}`
+        : kind;
+  };
+
+  const firstQuestion = messages.find((m) => m.role === 'user')?.text;
+  const lastAssistant = [...messages].reverse().find((m) => m.role === 'assistant');
+  const grades = Boolean(profile) && scope.includes('plan') && scope.includes('grades');
+  const toggle = (s) => setScope((cur) => (cur.includes(s) ? cur.filter((x) => x !== s) : [...cur, s]));
+
+  const sources = (
+    <SourcesPanel
+      citations={citations}
+      open={openN}
+      onToggle={(n) => setSelected({ msgId: shownMsg.id, n: openN === n ? null : n })}
+    />
+  );
 
   return (
-    <div className="chat-layout">
-      <section className="card card--flat chat" aria-label="Ask the syllabus">
-        <div className="thread" role="log">
-          {messages.length === 0 && (
-            <div className="stack gap-4 empty">
-              <div className="row gap-2">
-                <span className="c-brand">
-                  <Icon name="chat" size={24} />
-                </span>
-                <h1 className="t-h2">Ask anything about your units</h1>
-              </div>
-              <p className="t-small c-secondary">
-                Answers come from approved syllabus documents and always show their sources.
-              </p>
-              <div className="row wrap gap-2">
-                {SUGGESTIONS.map((s) => (
-                  <button key={s} type="button" className="major-chip starter-chip" onClick={() => ask(s)}>
-                    <Icon name="chat" size={14} className="c-brand" />
-                    {s}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {messages.map((m) =>
-            m.role === 'user' ? (
-              <p key={m.id} className="msg-user t-body">
-                {m.text}
-              </p>
-            ) : (
-              <AssistantMessage
-                key={m.id}
-                msg={m}
-                selected={selected}
-                onSelect={(citation, index) => select(m, citation, index)}
-                onRetry={() => retry(m)}
-                onRephrase={() => rephrase(m.question)}
-              />
-            )
-          )}
-          <div ref={endRef} />
-        </div>
-
-        <form
-          className="composer"
-          onSubmit={(e) => {
-            e.preventDefault();
-            ask(draft);
-          }}
-        >
-          <label className="field">
-            <span className="sr-only">Your question</span>
-            <input
-              ref={inputRef}
-              value={draft}
-              onChange={(e) => setDraft(e.target.value)}
-              placeholder="Ask about units and prerequisites…"
-              maxLength={500}
-            />
-            <button type="submit" className="send-btn" disabled={!draft.trim() || busy} aria-label="Send question">
-              <Icon name="send" size={18} />
-            </button>
-          </label>
-          <p className="t-caption c-secondary">
-            {effectiveStudentId != null && (
-              <span className="c-brand">
-                Personalized for <span className="t-mono">Student #{effectiveStudentId}</span> ·{' '}
-              </span>
+    <>
+      <TopBar
+        actions={
+          <>
+            {citations.length > 0 && (
+              <Button variant="ghost" className="show-narrow-desktop" onClick={() => setDrawer(true)}>
+                <Icon name="file" size={16} className="c-source" />
+                Sources ({citations.length})
+              </Button>
             )}
-            Answers come only from approved syllabus documents. Confirm enrolment decisions with an academic advisor.
-          </p>
-        </form>
-      </section>
+            <Button variant="secondary" onClick={() => setMessages([])} disabled={!messages.length || busy}>
+              New chat
+            </Button>
+          </>
+        }
+      >
+        <nav aria-label="Breadcrumb" className="crumbs">
+          {firstQuestion ? (
+            <>
+              <span className="c-muted">Ask the assistant</span>
+              <Icon name="chevronRight" size={14} className="c-muted" />
+              <span aria-current="page">{topicOf(firstQuestion)}</span>
+            </>
+          ) : (
+            <span aria-current="page">Ask the assistant</span>
+          )}
+        </nav>
+      </TopBar>
 
-      <aside className="side-panel">{panel}</aside>
+      <div className="chat">
+        <section className="chat__main" aria-label="Conversation">
+          <h1 className="sr-only">Ask the assistant</h1>
+          <div className="thread" role="log" aria-live="polite">
+            {messages.length === 0 && (
+              <div className="chat-empty">
+                <p className="t-h2">Ask about a unit, a prerequisite or your plan</p>
+                <p className="t-small c-secondary">
+                  Answers come from the approved unit outlines and link to the page they used. If the outlines
+                  don&apos;t cover a question, the assistant says so.
+                </p>
+                <div className="row wrap gap-8">
+                  {SUGGESTIONS.map((s) => (
+                    <button key={s} type="button" className="chip" onClick={() => ask(s)}>
+                      {s}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+            {messages.map((m) =>
+              m.role === 'user' ? (
+                <p key={m.id} className="bubble">
+                  {m.text}
+                </p>
+              ) : (
+                <AssistantMessage
+                  key={m.id}
+                  msg={m}
+                  scope={scope}
+                  activeCite={selected?.msgId === m.id ? selected.n : null}
+                  onCite={openCite(m)}
+                  onRetry={() => retry(m)}
+                  onRephrase={() => focusComposer(m.question)}
+                  onChoose={(o) => ask(`Yes, ${o.code} ${o.name}`)}
+                  onAnother={() => focusComposer('I mean ')}
+                  answered={m !== lastAssistant}
+                  unitStatus={unitStatus}
+                  unitNote={unitNote}
+                  onOpenSources={() => {
+                    setSelected({ msgId: m.id, n: selected?.msgId === m.id ? selected.n : null });
+                    setDrawer(true);
+                  }}
+                />
+              )
+            )}
+            <div ref={endRef} />
+          </div>
+
+          <div className="chat__composer">
+            <Composer
+              ref={input}
+              value={draft}
+              onChange={setDraft}
+              onSubmit={(q) => ask(q)}
+              disabled={busy}
+              placeholder={
+                messages.length ? 'Ask a follow-up, for example "What if I fail COS20007 again?"' : 'Ask a question'
+              }
+            >
+              <span className="scope scope--on" title="Answers always use the approved unit outlines">
+                <Icon name="book" size={13} />
+                Unit outlines
+              </span>
+              <button
+                type="button"
+                className="scope"
+                aria-pressed={scope.includes('plan') && Boolean(profile)}
+                disabled={!profile}
+                title={profile ? 'Let the assistant read your plan' : 'Make a plan first to use it here'}
+                onClick={() => toggle('plan')}
+              >
+                <Icon name="calendar" size={13} />
+                My plan
+              </button>
+              <button
+                type="button"
+                className="scope"
+                aria-pressed={grades}
+                disabled={!profile || !scope.includes('plan')}
+                title={scope.includes('plan') ? 'Off unless you turn it on' : 'Turn on My plan to share grades'}
+                onClick={() => toggle('grades')}
+              >
+                <Icon name={grades ? 'check' : 'plus'} size={13} />
+                Past grades
+              </button>
+            </Composer>
+            <p className="chat__disclaimer">
+              Answers use the approved unit outlines, the course structure and your plan. Check enrolment decisions with
+              your advisor.
+            </p>
+          </div>
+        </section>
+
+        <aside className="chat__sources" aria-label="Sources">
+          {sources}
+        </aside>
+      </div>
+
+      {drawer && <SourcesDrawer onClose={() => setDrawer(false)}>{sources}</SourcesDrawer>}
+    </>
+  );
+}
+
+// Figma: Sources drawer, below 1280 px.
+function SourcesDrawer({ onClose, children }) {
+  const panel = useRef(null);
+  useModal(panel, onClose);
+  return (
+    <div className="drawer-layer">
+      <div className="scrim" aria-hidden="true" onClick={onClose} />
+      <div ref={panel} className="drawer" role="dialog" aria-modal="true" aria-label="Sources" tabIndex={-1}>
+        <div className="drawer__close">
+          <IconButton label="Close sources" onClick={onClose} data-autofocus>
+            <Icon name="x" size={16} />
+          </IconButton>
+        </div>
+        {children}
+      </div>
     </div>
   );
 }

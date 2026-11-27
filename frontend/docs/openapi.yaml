@@ -1,35 +1,16 @@
 openapi: 3.1.0
 info:
   title: Academic Advising Portal API
-  version: 1.1.0
+  version: 1.2.0
   description: >
-    Contract between the React frontend and the FastAPI backend (COS40005).
-    Rules and examples are in API_CONTRACT.md. Requests never contain personal data.
+    What the React frontend (Figma v1.2) sends and expects from the FastAPI backend (COS40005).
+    Rules and examples are in API_CONTRACT.md. Requests never contain a name or student ID.
 servers:
   - url: http://localhost:8000
 paths:
-  /api/health:
-    get:
-      summary: Service and engine status (monitoring only, not called by the UI)
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                required: [status]
-                properties:
-                  status: { type: string, enum: [ok, degraded] }
-                  version: { type: string }
-                  engines:
-                    type: object
-                    properties:
-                      rag: { type: string }
-                      dag: { type: string }
   /api/majors:
     get:
-      summary: In-scope computing majors
+      summary: Computer Science majors
       responses:
         '200':
           description: OK
@@ -43,12 +24,9 @@ paths:
         default: { $ref: '#/components/responses/Error' }
   /api/units:
     get:
-      summary: Units for the completed-units checklist
+      summary: Seeded units (search, Edit my units, roadmap names)
       parameters:
-        - name: major
-          in: query
-          required: true
-          schema: { type: string }
+        - { name: major, in: query, required: false, schema: { type: string } }
       responses:
         '200':
           description: OK
@@ -62,34 +40,22 @@ paths:
         default: { $ref: '#/components/responses/Error' }
   /api/recommend:
     post:
-      summary: Recommended units for a major, grouped into prerequisite-valid semesters (Engine 1, NetworkX DAG)
+      summary: Semester plan for a profile (Plan semester)
       requestBody:
         required: true
         content:
           application/json:
-            schema:
-              type: object
-              required: [major, completed_units]
-              properties:
-                major: { type: string, example: artificial-intelligence }
-                completed_units:
-                  type: array
-                  items: { type: string, example: COS10009 }
+            schema: { $ref: '#/components/schemas/PlanRequest' }
       responses:
         '200':
-          description: Plan generated
+          description: OK
           content:
             application/json:
-              schema: { $ref: '#/components/schemas/PathwayResponse' }
-        '409':
-          description: Cycle detected in curriculum data (code CURRICULUM_CYCLE, details.cycle)
-          content:
-            application/json:
-              schema: { $ref: '#/components/schemas/Error' }
+              schema: { $ref: '#/components/schemas/Plan' }
         default: { $ref: '#/components/responses/Error' }
   /api/chat:
     post:
-      summary: Grounded syllabus answer with citations, or an abstention (Engine 2, RAG)
+      summary: Answer from the approved unit outlines (Ask the assistant)
       requestBody:
         required: true
         content:
@@ -107,131 +73,203 @@ paths:
                     properties:
                       role: { type: string, enum: [user, assistant] }
                       content: { type: string }
+                scope: { type: array, items: { type: string, enum: [outlines, plan, grades] } }
+                plan:
+                  description: Sent only when the "My plan" chip is on.
+                  allOf:
+                    - { $ref: '#/components/schemas/PlanRequest' }
+                    - type: object
+                      properties:
+                        start_term: { type: string, examples: ['January 2027'] }
+                        grades:
+                          description: Sent only when the "Past grades" chip is on.
+                          type: object
+                          additionalProperties: { type: string, enum: [HD, D, C, P] }
       responses:
         '200':
-          description: Answered or abstained (abstention is not an error)
+          description: Answered, clarifying question, or abstained
           content:
             application/json:
               schema: { $ref: '#/components/schemas/ChatResponse' }
         default: { $ref: '#/components/responses/Error' }
+  /api/plans:
+    post:
+      summary: Share a plan with an advisor by code (not in the backend yet)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [major, units]
+              properties:
+                major: { type: string }
+                units:
+                  type: object
+                  additionalProperties:
+                    type: object
+                    required: [status]
+                    properties:
+                      status: { type: string, enum: [passed, failed, enrolled] }
+                      grade: { type: string, enum: [HD, D, C, P] }
+                start: { type: string, description: 'Term key, year-index: 2027-0 is January 2027' }
+                load: { type: integer, minimum: 1, maximum: 4 }
+                swaps:
+                  type: array
+                  description: 'Unit pairs the student swapped in the planner, applied in order'
+                  items: { type: array, items: { type: string }, minItems: 2, maxItems: 2 }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [code]
+                properties:
+                  code: { type: string, examples: ['A7-3K'] }
+        default: { $ref: '#/components/responses/Error' }
 components:
-  responses:
-    Error:
-      description: Any failure
-      content:
-        application/json:
-          schema: { $ref: '#/components/schemas/Error' }
   schemas:
     Major:
       type: object
       required: [id, name]
       properties:
-        id: { type: string, example: artificial-intelligence }
-        name: { type: string, example: Artificial Intelligence }
+        id: { type: string }
+        name: { type: string }
     Unit:
       type: object
-      required: [code, name, credit_points]
+      required: [code, name]
       properties:
-        code: { type: string, example: COS20007 }
-        name: { type: string, example: Object Oriented Programming }
-        credit_points: { type: number, example: 12.5 }
-    Semester:
-      type: object
-      required: [index, name, credit_points, units]
-      properties:
-        index: { type: integer, minimum: 1 }
-        name: { type: string, example: Semester 1 }
+        code: { type: string, pattern: '^[A-Z]{3}[0-9]{5}$' }
+        name: { type: string }
         credit_points: { type: number }
-        units:
-          type: array
-          description: Sorted by rank, rank 1 first
-          items: { $ref: '#/components/schemas/RankedUnit' }
-    RankedUnit:
-      allOf:
-        - $ref: '#/components/schemas/Unit'
-        - type: object
-          required: [rank, reason]
-          properties:
-            rank:
-              type: integer
-              minimum: 1
-              description: Position in the semester. A unit that unlocks more later units ranks higher (len(nx.descendants(G.subgraph(remaining), unit)))
-            reason: { type: string, example: unlocks 5 later units }
-    BlockedUnit:
-      allOf:
-        - $ref: '#/components/schemas/Unit'
-        - type: object
-          required: [missing_prereqs, available_after]
-          properties:
-            missing_prereqs: { type: array, items: { type: string } }
-            available_after:
-              type: [string, 'null']
-              example: Semester 2
-              description: Semester of the last missing prerequisite. null if any missing prerequisite is not planned, or if missing_prereqs is empty
-    PathwayResponse:
+    PlanRequest:
       type: object
-      required: [major, semesters, blocked_units, violations, completed_units]
+      required: [major, completed_units]
+      properties:
+        major: { type: string }
+        completed_units: { type: array, items: { type: string } }
+        failed_units: { type: array, items: { type: string } }
+        enrolled_units: { type: array, items: { type: string } }
+        units_per_semester: { type: integer, default: 3 }
+    Plan:
+      type: object
+      required: [major, semesters, blocked_units]
       properties:
         major: { $ref: '#/components/schemas/Major' }
-        semesters: { type: array, items: { $ref: '#/components/schemas/Semester' } }
-        blocked_units: { type: array, items: { $ref: '#/components/schemas/BlockedUnit' } }
-        violations: { type: integer, minimum: 0, description: 'Must be 0 (target: 0.0% violation rate)' }
+        semesters:
+          type: array
+          items:
+            type: object
+            required: [index, units]
+            properties:
+              index: { type: integer }
+              name: { type: string }
+              credit_points: { type: number }
+              units:
+                type: array
+                items:
+                  allOf:
+                    - { $ref: '#/components/schemas/Unit' }
+                    - type: object
+                      properties:
+                        rank: { type: integer }
+                        is_retake: { type: boolean }
+                        reason: { type: string }
+        blocked_units:
+          type: array
+          items:
+            allOf:
+              - { $ref: '#/components/schemas/Unit' }
+              - type: object
+                properties:
+                  missing_prereqs: { type: array, items: { type: string } }
+                  available_after: { type: [string, 'null'] }
+        violations: { type: integer }
         completed_units: { type: array, items: { type: string } }
+        failed_units: { type: array, items: { type: string } }
+        enrolled_units: { type: array, items: { type: string } }
+        dag_graph:
+          type: object
+          properties:
+            nodes:
+              type: array
+              items:
+                type: object
+                properties:
+                  id: { type: string }
+                  label: { type: string }
+                  status: { type: string, enum: [passed, enrolled, retake, planned, blocked] }
+            edges:
+              type: array
+              items:
+                type: object
+                required: [source, target]
+                properties:
+                  source: { type: string }
+                  target: { type: string }
+                  rule_type: { type: string, enum: [AND, OR, ASSUMED] }
     Citation:
       type: object
-      required: [id, doc, section, page, snippet, similarity]
+      description: v1.2 shape. The backend's current { source_file, text_snippet, similarity_score } is also accepted.
       properties:
-        id: { type: string, description: Chunk id in the vector store, example: chunk_0142 }
-        doc: { type: string, example: COS30019 Unit Outline }
-        section: { type: string, example: §4 Assessment }
-        page: { type: [integer, 'null'], example: 6 }
-        snippet: { type: string }
-        similarity: { type: number, minimum: 0, maximum: 1 }
-        url: { type: [string, 'null'], description: Full source document; null hides the link }
+        doc: { type: string }
+        section: { type: [string, 'null'] }
+        page: { type: [integer, 'null'] }
+        outline_date: { type: [string, 'null'], examples: ['Jan 2026'] }
+        quote: { type: [string, 'null'] }
+        url: { type: [string, 'null'] }
+        table:
+          type: object
+          properties:
+            head: { type: array, items: { type: string } }
+            rows: { type: array, items: { type: array, items: { type: string } } }
+            highlight: { type: array, items: { type: integer } }
     ChatResponse:
       type: object
-      required:
-        [
-          answer,
-          citations,
-          abstained,
-          abstain_reason,
-          top_similarity,
-          threshold,
-          sources_checked,
-          sources_passed,
-          latency_ms,
-        ]
+      required: [answer, citations, abstained]
       properties:
-        answer: { type: [string, 'null'], description: null when abstained }
-        citations: { type: array, items: { $ref: '#/components/schemas/Citation' }, description: Empty when abstained }
+        answer: { type: [string, 'null'], description: 'Markdown; [n] refers to citations[n-1]' }
+        citations: { type: array, items: { $ref: '#/components/schemas/Citation' } }
+        steps:
+          type: array
+          items:
+            type: object
+            required: [label]
+            properties:
+              label: { type: string }
+              detail: { type: string }
+        needs_clarification: { type: boolean }
+        options:
+          type: array
+          items:
+            type: object
+            required: [code, name]
+            properties:
+              code: { type: string }
+              name: { type: string }
+              note: { type: string }
         abstained: { type: boolean }
-        abstain_reason: { type: [string, 'null'], enum: [LOW_SIMILARITY, OUT_OF_SCOPE, null] }
+        abstain_reason: { type: [string, 'null'], enum: [OUT_OF_SCOPE, LOW_SIMILARITY, UNIT_NOT_FOUND, null] }
         top_similarity: { type: number }
-        threshold: { type: number, example: 0.7 }
+        threshold: { type: number }
         sources_checked: { type: integer }
         sources_passed: { type: integer }
         latency_ms: { type: integer }
+  responses:
     Error:
-      type: object
-      required: [error]
-      properties:
-        error:
-          type: object
-          required: [code, message]
-          properties:
-            code:
-              type: string
-              enum:
-                [
-                  UNKNOWN_MAJOR,
-                  UNKNOWN_UNIT,
-                  VALIDATION_ERROR,
-                  CURRICULUM_CYCLE,
-                  NOT_FOUND,
-                  METHOD_NOT_ALLOWED,
-                  SERVICE_UNAVAILABLE,
-                  INTERNAL_ERROR,
-                ]
-            message: { type: string }
-            details: { type: object }
+      description: Error
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [error]
+            properties:
+              error:
+                type: object
+                required: [code, message]
+                properties:
+                  code: { type: string }
+                  message: { type: string }
+                  details: { type: object }

@@ -1,12 +1,13 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { act, render, screen } from '@testing-library/react';
+import { act, render, screen, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { api } from './api/client.js';
 import { AppStateProvider } from './state/AppState.jsx';
 import App from './App.jsx';
-import { version } from '../package.json';
 
-vi.mock('./api/client.js', () => ({
-  api: { getMajors: vi.fn(), getUnits: vi.fn(), recommend: vi.fn(), chat: vi.fn() },
+vi.mock('./api/client.js', async (orig) => ({
+  ...(await orig()),
+  api: { getUnits: vi.fn(), recommend: vi.fn(), chat: vi.fn(), sharePlan: vi.fn() },
 }));
 
 const renderApp = () =>
@@ -23,90 +24,83 @@ const goTo = (hash) =>
   });
 
 beforeEach(() => {
-  api.getMajors.mockResolvedValue({ majors: [{ id: 'ai', name: 'Artificial Intelligence' }] });
-  api.getUnits.mockResolvedValue({ units: [] });
+  api.getUnits.mockResolvedValue({
+    units: [{ code: 'COS30019', name: 'Introduction to Artificial Intelligence', credit_points: 12.5 }],
+  });
+  // The empty plan asks the planner for a first semester.
+  api.recommend.mockResolvedValue({ semesters: [], blocked_units: [], dag_graph: { edges: [] } });
 });
 afterEach(() => {
   window.location.hash = '';
+  localStorage.clear();
+  vi.resetAllMocks();
 });
 
-describe('App routing', () => {
-  it('opens the study profile by default and marks it as the current page', async () => {
+describe('App', () => {
+  it('opens Home by default with the sidebar from Figma', async () => {
     renderApp();
-    expect(await screen.findByText('Your study profile')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Study profile' })).toHaveAttribute('aria-current', 'page');
-    expect(document.title).toBe('Study profile · Academic Advising Portal');
+    expect(await screen.findByRole('heading', { name: /Plan your degree/ })).toBeInTheDocument();
+    const nav = within(screen.getByRole('navigation', { name: 'Main' }));
+    expect(nav.getByRole('link', { name: 'Home' })).toHaveAttribute('aria-current', 'page');
+    for (const name of ['Explore majors', 'Plan semester', 'Unit outlines', 'Ask the assistant']) {
+      expect(nav.getByRole('link', { name })).toBeInTheDocument();
+    }
+    expect(screen.getByText('Saved on this device only')).toBeInTheDocument();
+    expect(document.title).toBe('Academic Advising Portal');
   });
 
-  it('switches to the chat page and updates the title', async () => {
+  it('routes by hash, keeps the v1.1 #profile link working and updates the title', async () => {
     renderApp();
-    await goTo('#ask');
-    expect(screen.getByText('Ask anything about your units')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Ask the syllabus' })).toHaveAttribute('aria-current', 'page');
-    expect(document.title).toBe('Ask the syllabus · Academic Advising Portal');
+    await goTo('#profile');
+    expect(screen.getByRole('link', { name: 'Plan semester' })).toHaveAttribute('aria-current', 'page');
+    expect(document.title).toBe('Plan semester · Academic Advising Portal');
+    await goTo('#outlines');
+    expect(screen.getByRole('heading', { name: 'Unit outlines are coming next' })).toBeInTheDocument();
+    await goTo('#nope');
+    expect(screen.getByRole('link', { name: 'Home' })).toHaveAttribute('aria-current', 'page');
   });
 
-  it.each(['#nope', '#constructor', '#toString', '#main'])('falls back to the profile for %s', async (hash) => {
-    window.location.hash = hash;
+  it('sends a question from Home to the assistant', async () => {
+    api.chat.mockResolvedValue({ answer: 'Sure.', citations: [], abstained: false, steps: [], options: [] });
+    const user = userEvent.setup();
     renderApp();
-    expect(await screen.findByText('Your study profile')).toBeInTheDocument();
+    await user.click(await screen.findByRole('button', { name: 'How do I pass COS30019?' }));
+    expect(await screen.findByText('Sure.')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Ask the assistant' })).toHaveAttribute('aria-current', 'page');
+    expect(api.chat).toHaveBeenCalledWith('How do I pass COS30019?', [], { scope: ['outlines'], plan: null });
   });
 
-  it('shows the package version in the sidebar', async () => {
-    renderApp();
-    expect(await screen.findByText(`v${version}`)).toBeInTheDocument();
-  });
-
-  it('keeps the chat thread when moving away and back', async () => {
+  it('keeps the chat when moving away and back', async () => {
     api.chat.mockResolvedValue({
       answer: 'Hello [1]',
-      citations: [{ id: 'c1', doc: 'D', section: 'S', page: 1, snippet: 'x', similarity: 0.9, url: null }],
+      citations: [{ doc: 'D', quote: 'x' }],
       abstained: false,
-      abstain_reason: null,
-      top_similarity: 0.9,
-      threshold: 0.7,
-      sources_checked: 1,
-      sources_passed: 1,
+      options: [],
     });
-    const { default: userEvent } = await import('@testing-library/user-event');
     const user = userEvent.setup();
     renderApp();
     await goTo('#ask');
-    await user.type(screen.getByLabelText('Your question'), 'Hi');
-    await user.click(screen.getByRole('button', { name: 'Send question' }));
-    await screen.findByText('Hello [1]');
-    await goTo('#profile');
+    await user.type(screen.getByLabelText('Your question'), 'Hi{Enter}');
+    expect(await screen.findByText(/Hello/)).toBeInTheDocument();
+    await goTo('#plan');
     await goTo('#ask');
-    expect(screen.getByText('Hello [1]')).toBeInTheDocument();
-    expect(screen.getByText('Source [1]')).toBeInTheDocument();
+    expect(screen.getByText(/Hello/)).toBeInTheDocument();
+    expect(screen.getAllByText('D').length).toBeGreaterThan(0);
   });
 
-  it('toggles dark mode and persists the theme to localStorage', async () => {
-    const store = new Map();
-    vi.stubGlobal('localStorage', {
-      getItem: (k) => store.get(k) ?? null,
-      setItem: (k, v) => store.set(k, String(v)),
-      removeItem: (k) => store.delete(k),
-    });
-    document.documentElement.dataset.theme = 'light';
-    try {
-      const { default: userEvent } = await import('@testing-library/user-event');
-      const user = userEvent.setup();
-      renderApp();
-      const toggle = await screen.findByRole('button', { name: 'Toggle dark mode' });
-      expect(toggle).toHaveAttribute('aria-pressed', 'false');
-
-      await user.click(toggle);
-      expect(document.documentElement.dataset.theme).toBe('dark');
-      expect(localStorage.getItem('theme')).toBe('dark');
-      expect(toggle).toHaveAttribute('aria-pressed', 'true');
-
-      await user.click(toggle);
-      expect(document.documentElement.dataset.theme).toBe('light');
-      expect(localStorage.getItem('theme')).toBe('light');
-      expect(toggle).toHaveAttribute('aria-pressed', 'false');
-    } finally {
-      vi.unstubAllGlobals();
-    }
+  it('searches units with Ctrl K and starts a question about the one picked', async () => {
+    const user = userEvent.setup();
+    renderApp();
+    await user.keyboard('{Control>}k{/Control}');
+    expect(screen.getByRole('combobox', { name: 'Search units' })).toHaveFocus();
+    await user.keyboard('artificial');
+    await user.click(await screen.findByRole('option', { name: /COS30019/ }));
+    expect(screen.getByLabelText('Your question')).toHaveValue(
+      'Tell me about COS30019 Introduction to Artificial Intelligence'
+    );
+    await user.type(screen.getByRole('combobox', { name: 'Search units' }), 'COS4099');
+    expect(screen.getByText('No units match "COS4099"')).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Clear search' }));
+    expect(screen.getByRole('combobox', { name: 'Search units' })).toHaveValue('');
   });
 });

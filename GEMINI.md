@@ -3,7 +3,7 @@
 ## 1. Architecture & Stack
 - **Database:** PostgreSQL 16 + `pgvector` (`academic_advising`), managed via SQLAlchemy (`service/models.py`).
 - **Backend (`backend/`, `service/`):** FastAPI v2.0 (`http://localhost:8000`), RAG engine (`backend/rag_engine.py`) with `all-MiniLM-L6-v2` embeddings and local Ollama (`qwen2.5:3b`), and DAG-based study plan recommender (`service/recommender.py`).
-- **Frontend (`frontend/`):** Vite + React (`http://localhost:5173`), plain CSS (`frontend/src/styles/app.css`), KaTeX math rendering (`\[...\]`, `\(...\)`, `$$...$$`, `$...$`), Mermaid flowchart rendering, interactive SVG prerequisite DAG (`DagGraph.jsx`), and Vitest + React Testing Library (`*.test.jsx`).
+- **Frontend (`frontend/`):** Vite + React (`http://localhost:5173`), plain CSS (`frontend/src/styles/app.css`), KaTeX math rendering (`\[...\]`, `\(...\)`, `$$...$$`, `$...$`), Mermaid prerequisite flowcharts drawn as a prerequisite map (`PrereqMap.jsx`), and Vitest + React Testing Library (`*.test.jsx`).
 
 ## 2. Default Active Skills
 - **`ponytail`:** Keep changes minimal, direct, and free of speculative abstractions or unnecessary files.
