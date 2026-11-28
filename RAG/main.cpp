@@ -7,49 +7,44 @@
 #include <vector>
 
 namespace fs = std::filesystem;
+using tokenizers::Tokenizer;
 
 int main() {
     JsonLoader loader;
+    std::vector<Chunk> chunks;
+    chunkWriter writer;
+    std::string path = "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/chunks/tokenizer.json";
+    fs::path chunk_path = "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/chunks/chunk.jsonl";
 
     std::vector<fs::path> files{
-        "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/JSON/COS20019-Unit Outline-Sem Sep_2025.json",
-        "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/JSON/COS10009_UnitOutline_Sep2024_HCMC_V1.json"
+        "/mnt/d/COS40005-QA-with-citation-support-RAG-pipelines-for-ethical-and-curriculum-content/doc/JSON"
     };
 
-    // Test 1: Load files
-    for (const auto& path : files) {
-        loader.load(path);
-    }
+    loader.loadDirectory(files);
+    loader.parse_pagetext();
+    loader.extract_tables();
+    //loader.print();
+    std::cerr << "Loading tokenizer...\n";
 
-    std::cout << "[PASS] File loading\n";
+    auto blob = file_load(path);
 
-    // Test 2: Validate loaded documents
-    const auto& documents = loader.getData();
+    std::cerr << "Tokenizer JSON loaded: "
+            << blob.size() << " bytes\n";
 
-    assert(documents.size() == files.size());
+    auto token = Tokenizer::FromBlobJSON(blob);
 
-    std::cout << "[PASS] Document count\n";
+    std::cerr << "Tokenizer initialized\n";
 
-    // Test 3: Validate JSON content
-    for (const auto& doc : documents) {
-        assert(doc.content != nullptr);
+    Chunker chunk(std::move(token));
 
-        const nlohmann::json& data = doc.get();
+    std::cout << "Extracted: " << loader.getcontent().size() << '\n';
 
-        assert(!data.is_discarded());
-        assert(!data.is_null());
-
-        std::cout << "File: " << doc.path.filename() << '\n';
-        std::cout << "JSON Type: " << data.type_name() << '\n';
-        std::cout << "Top-level size: " << data.size() << '\n';
-    }
-
-    std::cout << "[PASS] JSON parsing\n";
-
-    // Test 4: Print loader summary
-    loader.print();
-
-    std::cout << "\nAll tests passed!\n";
+    chunk.chunk_split(loader.getcontent(), chunks);
+    std::cout << "Chunked: " << chunks.size() << '\n';
+    writer.init_chunk(chunks);
+    writer.open(chunk_path);
+    writer.write();
+    writer.close();
 
     return 0;
 }

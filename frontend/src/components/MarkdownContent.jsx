@@ -1,12 +1,16 @@
 import { createContext, Fragment, useContext, useMemo } from 'react';
 import katex from 'katex';
 import { UnitCode } from './Badge.jsx';
+<<<<<<< Updated upstream
 import Icon from './Icon.jsx';
+=======
+>>>>>>> Stashed changes
 import PrereqMap from './PrereqMap.jsx';
 
 // Answer text is Markdown from the LLM: paragraphs, headings, lists, tables, quotes, code, KaTeX math
 // and Mermaid flowcharts. [n] markers become buttons that open source n.
 const CiteCtx = createContext({ onCite: null, active: null });
+<<<<<<< Updated upstream
 
 const renderMath = (expr, displayMode) => katex.renderToString(expr.trim(), { displayMode, throwOnError: false });
 
@@ -123,6 +127,60 @@ function renderInline(text, onCitationClick, citations = []) {
   return parts;
 }
 
+=======
+
+const renderMath = (expr, displayMode) => katex.renderToString(expr.trim(), { displayMode, throwOnError: false });
+
+const INLINE =
+  /(`[^`]+`|\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\)|(?<!\\)\$(?!\s)(?:\\.|[^$\n])+?(?<!\s)\$|\*\*[^*]+\*\*|\*[^*\s][^*]*\*|\[\d{1,2}\](?!\())/g;
+
+function CiteRef({ n }) {
+  const { onCite, active } = useContext(CiteCtx);
+  if (!onCite) return <span className="cite-ref">[{n}]</span>;
+  return (
+    <button
+      type="button"
+      className="cite-ref"
+      aria-label={`Source ${n}`}
+      aria-pressed={active === n}
+      onClick={() => onCite(n)}
+    >
+      [{n}]
+    </button>
+  );
+}
+
+function renderInline(text) {
+  const parts = [];
+  let last = 0;
+  let key = 0;
+  for (const match of text.matchAll(INLINE)) {
+    if (match.index > last) parts.push(text.slice(last, match.index));
+    const t = match[0];
+    const k = key++;
+    if (t.startsWith('`')) parts.push(<code key={k}>{t.slice(1, -1)}</code>);
+    else if (t.startsWith('$$') || t.startsWith('\\['))
+      parts.push(
+        <span key={k} className="md-math" dangerouslySetInnerHTML={{ __html: renderMath(t.slice(2, -2), true) }} />
+      );
+    else if (t.startsWith('\\('))
+      parts.push(
+        <span key={k} className="md-math" dangerouslySetInnerHTML={{ __html: renderMath(t.slice(2, -2), false) }} />
+      );
+    else if (t.startsWith('$'))
+      parts.push(
+        <span key={k} className="md-math" dangerouslySetInnerHTML={{ __html: renderMath(t.slice(1, -1), false) }} />
+      );
+    else if (t.startsWith('**')) parts.push(<strong key={k}>{renderInline(t.slice(2, -2))}</strong>);
+    else if (t.startsWith('[')) parts.push(<CiteRef key={k} n={Number(t.slice(1, -1))} />);
+    else parts.push(<em key={k}>{t.slice(1, -1)}</em>);
+    last = match.index + t.length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+}
+
+>>>>>>> Stashed changes
 const isRow = (l) => l.trim().startsWith('|') && l.trim().endsWith('|');
 const isSep = (l) => /^\|(?:\s*:?-{3,}:?\s*\|)+$/.test(l.trim());
 const cells = (l) =>
@@ -307,6 +365,7 @@ function Table({ head, rows }) {
  * @param focus       the unit the question is about; highlighted in the map
  * @param mapCite     citation number of the requisites page, shown beside the map title
  */
+<<<<<<< Updated upstream
 export default function MarkdownContent({
   text,
   onCite,
@@ -327,6 +386,11 @@ export default function MarkdownContent({
           else onCitationClick?.(citIndex);
         }
       : null;
+=======
+export default function MarkdownContent({ text, onCite, activeCite, unitStatus, focus, mapCite }) {
+  const blocks = useMemo(() => parseBlocks(text || ''), [text]);
+  const cite = useMemo(() => ({ onCite, active: activeCite }), [onCite, activeCite]);
+>>>>>>> Stashed changes
   return (
     <CiteCtx.Provider value={cite}>
       <div className="md">
@@ -362,14 +426,22 @@ export default function MarkdownContent({
               const Tag = `h${Math.min(b.level + 1, 6)}`;
               return (
                 <Tag key={idx} className={b.level <= 2 ? 't-h2' : 't-h3'}>
+<<<<<<< Updated upstream
                   {renderInline(b.content, handleCitation, citations)}
+=======
+                  {renderInline(b.content)}
+>>>>>>> Stashed changes
                 </Tag>
               );
             }
             case 'quote':
               return (
                 <blockquote key={idx} className="quote">
+<<<<<<< Updated upstream
                   {renderInline(b.content, handleCitation, citations)}
+=======
+                  {renderInline(b.content)}
+>>>>>>> Stashed changes
                 </blockquote>
               );
             case 'ul':
@@ -378,7 +450,11 @@ export default function MarkdownContent({
               return (
                 <Tag key={idx} className={`md-list md-list--${b.type}`}>
                   {b.items.map((item, ii) => (
+<<<<<<< Updated upstream
                     <li key={ii}>{renderInline(item, handleCitation, citations)}</li>
+=======
+                    <li key={ii}>{renderInline(item)}</li>
+>>>>>>> Stashed changes
                   ))}
                 </Tag>
               );
@@ -386,7 +462,11 @@ export default function MarkdownContent({
             default:
               return (
                 <Fragment key={idx}>
+<<<<<<< Updated upstream
                   <p className={idx === 0 ? 'md-lead' : undefined}>{renderInline(b.content, handleCitation, citations)}</p>
+=======
+                  <p className={idx === 0 ? 'md-lead' : undefined}>{renderInline(b.content)}</p>
+>>>>>>> Stashed changes
                 </Fragment>
               );
           }

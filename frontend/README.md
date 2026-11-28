@@ -7,6 +7,7 @@ React and Vite implementation of the Figma design v1.2 (`AcademicAdvisingPortal_
 - **Ask the assistant**: answers from the approved unit outlines with numbered sources, a clarifying question when a question is vague, and different cards for "the outlines don't cover this", a weak match and a service error.
 
 Explore majors and Unit outlines are designed in Figma but built later. Their sidebar links open a short page that says so.
+<<<<<<< Updated upstream
 
 ## Design
 
@@ -17,6 +18,8 @@ The Figma file has three pages. You need access to the file to open them.
 - [03 Screens](https://www.figma.com/design/WnhLHGGmjhhNtEum97z9rq/AcademicAdvisingPortal_Frontend_v1.2?node-id=1-3): every page on desktop and mobile, plus the system states
 
 "Figma to code" below says which file builds each part.
+=======
+>>>>>>> Stashed changes
 
 ## Run
 
@@ -124,7 +127,11 @@ For a rejected request (4xx), the system error banner shows the backend's `messa
 
 ## Privacy
 
+<<<<<<< Updated upstream
 The app never asks for a name, email or student ID. The plan (units, optional grades, term and load) is written to this browser's localStorage only when the student presses Save plan. Share with advisor sends the same plan, swaps included and without any identity, to get a short code. The chat lives in memory and is gone when the tab closes. It sends the plan only while "My plan" is on. Grades go with the plan, so "Past grades" only works while "My plan" is on too.
+=======
+The app never asks for a name, email or student ID. The plan (units, optional grades, term and load) is written to this browser's localStorage only when the student presses Save plan. Share with advisor sends the same plan, without any identity, to get a short code. The chat lives in memory and is gone when the tab closes; it sends the plan only while "My plan" is on, and grades only while "Past grades" is on.
+>>>>>>> Stashed changes
 
 ## Tests
 
@@ -141,4 +148,7 @@ The app never asks for a name, email or student ID. The plan (units, optional gr
 - Mock data is sample data. Answers in the mock are fixed text.
 - The backend does not read the chat's `plan` yet, and has no `POST /api/plans`. See `docs/BACKEND_HANDOFF.md`.
 - Answers are not streamed.
+<<<<<<< Updated upstream
 - `doc/Dataset/Course_Prerequisites.csv` has no prerequisites for COS30008 or SWE20004, so the planner can put them in the same term as a COS20007 retake. That needs fixing in the dataset.
+=======
+>>>>>>> Stashed changes

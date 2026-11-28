@@ -48,6 +48,7 @@ const PATHS = {
     <>
       <circle cx="12" cy="12" r="10" />
       <path d="m9 12 2 2 4-4" />
+<<<<<<< Updated upstream
     </>
   ),
   chevronDown: <path d="m6 9 6 6 6-6" />,
@@ -89,6 +90,35 @@ const PATHS = {
       <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
     </>
   ),
+=======
+    </>
+  ),
+  chevronDown: <path d="m6 9 6 6 6-6" />,
+  chevronUp: <path d="m18 15-6-6-6 6" />,
+  chevronRight: <path d="m9 18 6-6-6-6" />,
+  arrowRight: <path d="M5 12h14M12 5l7 7-7 7" />,
+  arrowUp: <path d="m5 12 7-7 7 7M12 19V5" />,
+  refresh: (
+    <>
+      <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+      <path d="M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+      <path d="M8 16H3v5" />
+    </>
+  ),
+  info: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 16v-4M12 8h.01" />
+    </>
+  ),
+  alert: (
+    <>
+      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+      <path d="M12 9v4M12 17h.01" />
+    </>
+  ),
+  x: <path d="M18 6 6 18M6 6l12 12" />,
+>>>>>>> Stashed changes
   copy: (
     <>
       <rect x="8" y="8" width="14" height="14" rx="2" />
@@ -130,7 +160,11 @@ const PATHS = {
   download: <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />,
 };
 
+<<<<<<< Updated upstream
 export default function Icon({ name, size = 16, className = '', title, strokeWidth = 1.5 }) {
+=======
+export default function Icon({ name, size = 16, className = '', title, strokeWidth = 1.75 }) {
+>>>>>>> Stashed changes
   return (
     <svg
       className={`icon ${className}`}

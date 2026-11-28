@@ -37,8 +37,11 @@ export function AppStateProvider({ children }) {
   const [scope, setScope] = useState(['outlines', 'plan']);
   const [pendingQuestion, setPendingQuestion] = useState(null); // sent from Home or search
   const [draft, setDraft] = useState('');
+<<<<<<< Updated upstream
   const [selected, setSelected] = useState(null); // source open in the chat side panel
   const [pendingUnitPrompt, setPendingUnitPrompt] = useState(null);
+=======
+>>>>>>> Stashed changes
   const lastId = useRef(0);
   const newId = useCallback(() => ++lastId.current, []);
 
@@ -161,11 +164,14 @@ export function AppStateProvider({ children }) {
       setPendingQuestion,
       draft,
       setDraft,
+<<<<<<< Updated upstream
       selected,
       setSelected,
       pendingUnitPrompt,
       setPendingUnitPrompt,
       discussUnitInChat,
+=======
+>>>>>>> Stashed changes
       newId,
     }),
     [
@@ -187,9 +193,12 @@ export function AppStateProvider({ children }) {
       scope,
       pendingQuestion,
       draft,
+<<<<<<< Updated upstream
       selected,
       pendingUnitPrompt,
       discussUnitInChat,
+=======
+>>>>>>> Stashed changes
       newId,
     ]
   );

@@ -6,7 +6,11 @@ import { Cite } from './Badge.jsx';
 export const sourceMeta = (c) => [c.date, c.page != null ? `p.${c.page}` : null, c.section].filter(Boolean).join(' · ');
 
 // Figma: SourceCard, collapsed and expanded. The expanded card shows the quoted passage and a link to the page.
+<<<<<<< Updated upstream
 export function SourceCard({ citation: c, n, open, onToggle, onViewPdf }) {
+=======
+export function SourceCard({ citation: c, n, open, onToggle }) {
+>>>>>>> Stashed changes
   const ref = useRef(null);
   useEffect(() => {
     if (open) ref.current?.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' });
@@ -25,9 +29,13 @@ export function SourceCard({ citation: c, n, open, onToggle, onViewPdf }) {
       >
         <Cite n={n} />
         <span className="source__text">
+<<<<<<< Updated upstream
           <span className="source__title" title={c.doc}>
             {c.doc}
           </span>
+=======
+          <span className="source__title">{c.doc}</span>
+>>>>>>> Stashed changes
           {sourceMeta(c) && <span className="source__meta">{sourceMeta(c)}</span>}
         </span>
         {canOpen && <Icon name={open ? 'chevronUp' : 'chevronDown'} size={16} className="source__chev" />}
@@ -35,6 +43,7 @@ export function SourceCard({ citation: c, n, open, onToggle, onViewPdf }) {
       {open && canOpen && (
         <div id={id} className="source__body">
           {c.quote && <blockquote className="quote">&quot;{c.quote}&quot;</blockquote>}
+<<<<<<< Updated upstream
           <div className="source__actions">
             {onViewPdf && (
               <button type="button" className="btn btn--secondary btn--s" onClick={() => onViewPdf(n)}>
@@ -50,13 +59,26 @@ export function SourceCard({ citation: c, n, open, onToggle, onViewPdf }) {
               </a>
             )}
           </div>
+=======
+          {c.url && (
+            <a className="source__link" href={c.url} target="_blank" rel="noreferrer">
+              {c.page != null ? `Open at page ${c.page}` : 'Open the document'}
+              <Icon name="external" size={13} />
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
+          )}
+>>>>>>> Stashed changes
         </div>
       )}
     </li>
   );
 }
 
+<<<<<<< Updated upstream
 export default function SourcesPanel({ citations, open, onToggle, onViewPdf, heading = true }) {
+=======
+export default function SourcesPanel({ citations, open, onToggle, heading = true }) {
+>>>>>>> Stashed changes
   return (
     <div className="sources">
       {heading && (
@@ -72,6 +94,7 @@ export default function SourcesPanel({ citations, open, onToggle, onViewPdf, hea
       {citations.length ? (
         <ol className="sources__list">
           {citations.map((c, i) => (
+<<<<<<< Updated upstream
             <SourceCard
               key={i}
               citation={c}
@@ -80,6 +103,9 @@ export default function SourcesPanel({ citations, open, onToggle, onViewPdf, hea
               onToggle={onToggle}
               onViewPdf={onViewPdf}
             />
+=======
+            <SourceCard key={i} citation={c} n={i + 1} open={open === i + 1} onToggle={onToggle} />
+>>>>>>> Stashed changes
           ))}
         </ol>
       ) : (

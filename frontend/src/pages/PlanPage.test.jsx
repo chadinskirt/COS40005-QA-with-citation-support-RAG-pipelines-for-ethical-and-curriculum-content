@@ -126,7 +126,11 @@ describe('PlanPage', () => {
     await user.click(screen.getByRole('button', { name: 'Share with advisor' }));
     expect(await screen.findByText('A7-3K')).toBeInTheDocument();
     const sent = api.sharePlan.mock.calls[0][0];
+<<<<<<< Updated upstream
     expect(Object.keys(sent).sort()).toEqual(['load', 'major', 'start', 'swaps', 'units']);
+=======
+    expect(Object.keys(sent).sort()).toEqual(['load', 'major', 'start', 'units']);
+>>>>>>> Stashed changes
   });
 
   it('explains that sharing is not on the server yet when it returns 404', async () => {
@@ -138,6 +142,7 @@ describe('PlanPage', () => {
     await user.click(screen.getByRole('button', { name: 'Share with advisor' }));
     expect(await screen.findByText(/Plan sharing is not available on this server yet\./)).toBeInTheDocument();
   });
+<<<<<<< Updated upstream
 
   it('keeps EditUnitsDialog open when toggling statuses inside and closes on outer backdrop click', async () => {
     const user = userEvent.setup();
@@ -159,4 +164,6 @@ describe('PlanPage', () => {
     await user.click(scrim);
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
+=======
+>>>>>>> Stashed changes
 });

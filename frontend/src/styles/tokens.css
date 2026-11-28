@@ -5,12 +5,16 @@
   /* surfaces */
   --color-bg-canvas: #f7f7f5;
   --color-bg-surface: #ffffff;
+<<<<<<< Updated upstream
   --color-bg-elevated: #fafbfc;
+=======
+>>>>>>> Stashed changes
   --color-bg-subtle: #f2f1ed;
   --color-bg-sunken: #fafaf8; /* table heads, side panel, card footers */
   --color-bg-brand: #2a4b8d;
   --color-bg-brand-hover: #213d74;
   --color-bg-brand-subtle: #eef2f9;
+<<<<<<< Updated upstream
   --color-bg-brand-subtle-hover: #dce6fa;
   --topbar-bg: rgba(255, 255, 255, 0.94);
 
@@ -49,10 +53,40 @@
   --status-blocked-border: #ebcbc3;
   --color-bg-source: #f4f1f9;
 
+=======
+
+  /* text */
+  --color-text-primary: #17191e;
+  --color-text-secondary: #4d5361;
+  --color-text-muted: #686d77;
+  --color-text-on-brand: #ffffff;
+  --color-text-brand: #2a4b8d;
+  --color-text-source: #62498f;
+
+  /* borders */
+  --color-border-default: #e7e5e0;
+  --color-border-strong: #d3d0c8;
+  --color-border-brand: #c9d5ea;
+  --color-border-source: #ddd4ec;
+
+  /* status: colour always comes with a word or icon */
+  --status-passed-text: #2d7452;
+  --status-passed-bg: #eaf3ed;
+  --status-passed-border: #c7dfd0;
+  --status-retake-text: #97600e;
+  --status-retake-bg: #fcf4e4;
+  --status-retake-border: #edd9b0;
+  --status-blocked-text: #a6432f;
+  --status-blocked-bg: #faedea;
+  --status-blocked-border: #ebcbc3;
+  --color-bg-source: #f4f1f9;
+
+>>>>>>> Stashed changes
   /* chart series (assessment weights) */
   --chart-1: #2a4b8d;
   --chart-2: #6a82b8;
   --chart-3: #a9b8d9;
+<<<<<<< Updated upstream
 
   /* spacing (4px scale) */
   --space-1: 4px;
@@ -62,6 +96,8 @@
   --space-5: 20px;
   --space-6: 24px;
   --space-8: 32px;
+=======
+>>>>>>> Stashed changes
 
   /* radius */
   --radius-xs: 5px;
@@ -69,6 +105,7 @@
   --radius-md: 10px;
   --radius-lg: 12px;
   --radius-xl: 14px;
+<<<<<<< Updated upstream
   --radius-pill: 999px;
 
   /* elevation & motion */
@@ -78,11 +115,20 @@
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --transition-fast: 150ms var(--ease-out);
   --transition-mid: 200ms var(--ease-out);
+=======
+
+  /* elevation */
+  --shadow-sm: 0 1px 2px rgba(23, 26, 31, 0.04), 0 4px 12px rgba(23, 26, 31, 0.05);
+  --shadow-lg: 0 12px 40px rgba(23, 26, 31, 0.16), 0 2px 6px rgba(23, 26, 31, 0.06);
+
+  --transition-fast: 150ms cubic-bezier(0.2, 0.8, 0.2, 1);
+>>>>>>> Stashed changes
 
   /* type */
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+<<<<<<< Updated upstream
 }
 
 [data-theme='dark'] {
@@ -127,4 +173,6 @@
   --shadow-sm: none;
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.45);
   --inset-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+=======
+>>>>>>> Stashed changes
 }

@@ -105,7 +105,11 @@ kbd,
   border: 0;
   border-radius: var(--radius-sm);
   background: var(--color-bg-brand);
+<<<<<<< Updated upstream
   color: var(--color-text-on-brand);
+=======
+  color: #fff;
+>>>>>>> Stashed changes
   font-weight: 500;
 }
 .skip-link:focus {
@@ -152,9 +156,17 @@ kbd,
   font-weight: 500;
 }
 .t-overline {
+<<<<<<< Updated upstream
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
+=======
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+>>>>>>> Stashed changes
   color: var(--color-text-muted);
 }
 .c-secondary {
@@ -397,7 +409,11 @@ button.cite-ref:hover,
   height: 30px;
   border-radius: var(--radius-sm);
   background: var(--color-bg-brand);
+<<<<<<< Updated upstream
   color: var(--color-text-on-brand);
+=======
+  color: #fff;
+>>>>>>> Stashed changes
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
@@ -547,7 +563,11 @@ button.scope:hover:not(:disabled) {
 .select select {
   appearance: none;
   border: 0;
+<<<<<<< Updated upstream
   background-color: var(--color-bg-surface);
+=======
+  background: transparent;
+>>>>>>> Stashed changes
   padding: 0 18px 0 0;
   margin-right: -18px;
   font-weight: 500;
@@ -555,11 +575,14 @@ button.scope:hover:not(:disabled) {
   cursor: pointer;
   outline: none;
 }
+<<<<<<< Updated upstream
 select,
 select option {
   background-color: var(--color-bg-surface);
   color: var(--color-text-primary);
 }
+=======
+>>>>>>> Stashed changes
 .select .icon {
   pointer-events: none;
   color: var(--color-text-muted);
@@ -761,11 +784,15 @@ select option {
   position: fixed;
   inset: 0;
   z-index: 40;
+<<<<<<< Updated upstream
   background: rgba(23, 25, 30, 0.45);
 }
 .dialog-layer > .scrim,
 .drawer-layer > .scrim {
   z-index: 0;
+=======
+  background: rgba(23, 25, 30, 0.32);
+>>>>>>> Stashed changes
 }
 .main {
   display: flex;
@@ -789,7 +816,11 @@ select option {
   padding: 10px 28px;
   border-bottom: 1px solid var(--color-border-default);
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+<<<<<<< Updated upstream
   background: var(--topbar-bg);
+=======
+  background: rgba(255, 255, 255, 0.94);
+>>>>>>> Stashed changes
   backdrop-filter: blur(8px);
 }
 .topbar__title {
@@ -939,7 +970,11 @@ select option {
 }
 .skeleton {
   border-radius: var(--radius-md);
+<<<<<<< Updated upstream
   background: linear-gradient(90deg, var(--color-bg-subtle) 0%, var(--color-bg-elevated) 50%, var(--color-bg-subtle) 100%);
+=======
+  background: linear-gradient(90deg, var(--color-bg-subtle) 0%, #f8f7f4 50%, var(--color-bg-subtle) 100%);
+>>>>>>> Stashed changes
   background-size: 200% 100%;
   animation: shimmer 1.4s ease-in-out infinite;
 }
@@ -1051,7 +1086,11 @@ select option {
   border: 0;
   border-radius: 9px;
   background: var(--color-bg-brand);
+<<<<<<< Updated upstream
   color: var(--color-text-on-brand);
+=======
+  color: #fff;
+>>>>>>> Stashed changes
 }
 .composer--home .send-btn {
   width: 36px;
@@ -1133,7 +1172,11 @@ select option {
 }
 .plan[aria-busy='true'] {
   opacity: 0.6;
+<<<<<<< Updated upstream
   transition: opacity var(--transition-mid);
+=======
+  transition: opacity 0.2s;
+>>>>>>> Stashed changes
 }
 .plan-header {
   display: flex;
@@ -1353,7 +1396,11 @@ button.unit-row__name:hover {
   border-radius: 50%;
   border: 1px dashed var(--color-border-strong);
   background: var(--color-bg-surface);
+<<<<<<< Updated upstream
   color: var(--color-text-on-brand);
+=======
+  color: #fff;
+>>>>>>> Stashed changes
 }
 .path__dot--pass {
   border: 0;
@@ -1549,15 +1596,24 @@ button.unit-row__name:hover {
 }
 .dialog {
   position: relative;
+<<<<<<< Updated upstream
   z-index: 50;
+=======
+  z-index: 1;
+>>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   width: min(480px, 100%);
   max-height: calc(100vh - 48px);
+<<<<<<< Updated upstream
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-xl);
   background: var(--color-bg-surface);
   color: var(--color-text-primary);
+=======
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-surface);
+>>>>>>> Stashed changes
   box-shadow: var(--shadow-lg);
 }
 .dialog--wide {
@@ -1727,6 +1783,7 @@ button.unit-row__name:hover {
   color: var(--color-text-muted);
 }
 .chat__sources {
+<<<<<<< Updated upstream
   position: relative;
   z-index: 2;
   border-left: 1px solid var(--color-border-default);
@@ -1738,6 +1795,18 @@ button.unit-row__name:hover {
 .chat__sources .sources {
   position: static;
   padding: 0;
+=======
+  border-left: 1px solid var(--color-border-default);
+  border-radius: 0 0 var(--radius-lg) 0;
+  background: var(--color-bg-sunken);
+}
+.chat__sources .sources {
+  position: sticky;
+  top: 56px;
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+  padding: 28px 20px;
+>>>>>>> Stashed changes
 }
 .drawer-layer {
   position: fixed;
@@ -1749,10 +1818,16 @@ button.unit-row__name:hover {
   top: 0;
   right: 0;
   bottom: 0;
+<<<<<<< Updated upstream
   z-index: 50;
   width: min(380px, 100%);
   overflow-y: auto;
   border-left: 1px solid var(--color-border-default);
+=======
+  z-index: 1;
+  width: min(380px, 100%);
+  overflow-y: auto;
+>>>>>>> Stashed changes
   background: var(--color-bg-sunken);
   box-shadow: var(--shadow-lg);
 }
@@ -1816,13 +1891,17 @@ button.unit-row__name:hover {
   font-size: 13px;
   line-height: 20px;
   font-weight: 500;
+<<<<<<< Updated upstream
   overflow-wrap: anywhere;
   word-break: break-word;
+=======
+>>>>>>> Stashed changes
 }
 .source__meta {
   font-size: 12px;
   line-height: 16px;
   color: var(--color-text-muted);
+<<<<<<< Updated upstream
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -1833,10 +1912,19 @@ button.unit-row__name:hover {
 }
 .source__body {
   position: static;
+=======
+}
+.source__chev {
+  margin: 8px 8px 0 0;
+  color: var(--color-text-secondary);
+}
+.source__body {
+>>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 0 14px 12px;
+<<<<<<< Updated upstream
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -1849,6 +1937,8 @@ button.unit-row__name:hover {
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
+=======
+>>>>>>> Stashed changes
 }
 .source__link {
   display: inline-flex;
@@ -2001,7 +2091,11 @@ button.unit-row__name:hover {
   height: 18px;
   border-radius: 50%;
   border: 1px dashed var(--color-border-strong);
+<<<<<<< Updated upstream
   color: var(--color-text-on-brand);
+=======
+  color: #fff;
+>>>>>>> Stashed changes
 }
 .is-done .pending__dot {
   border: 0;
@@ -2209,15 +2303,27 @@ button.unit-row__name:hover {
   background: var(--color-bg-sunken);
   border-bottom: 1px solid var(--color-border-default);
   color: var(--color-text-muted);
+<<<<<<< Updated upstream
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
+=======
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+>>>>>>> Stashed changes
   text-align: left;
   white-space: nowrap;
 }
 .md-table td {
   overflow-wrap: normal;
+<<<<<<< Updated upstream
   padding: 12px 16px;
+=======
+  padding: 11px 16px;
+>>>>>>> Stashed changes
   border-bottom: 1px solid var(--color-border-default);
   vertical-align: top;
 }
@@ -2630,7 +2736,11 @@ button.unit-row__name:hover {
     background: var(--color-bg-canvas);
     box-shadow: var(--shadow-lg);
     transform: translateX(-105%);
+<<<<<<< Updated upstream
     transition: transform var(--transition-mid);
+=======
+    transition: transform 0.2s ease;
+>>>>>>> Stashed changes
   }
   .sidebar[data-open='true'] {
     transform: none;
@@ -2995,6 +3105,7 @@ button.unit-row__name:hover {
     border: 0;
   }
 }
+<<<<<<< Updated upstream
 
 /* ---------- Theme toggle, citation pills & DocumentViewerDrawer ---------- */
 .theme-toggle {
@@ -3129,3 +3240,5 @@ button.unit-row__name:hover {
   background: var(--color-bg-sunken);
   border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
 }
+=======
+>>>>>>> Stashed changes

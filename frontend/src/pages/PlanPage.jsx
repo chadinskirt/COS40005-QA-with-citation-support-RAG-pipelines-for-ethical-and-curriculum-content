@@ -292,7 +292,11 @@ function RecommendedUnits({ view, onShare, selected, onSelect }) {
 }
 
 function UnitRow({ unit: u, index, view, selected, onSelect }) {
+<<<<<<< Updated upstream
   const { addSwap, profile, discussUnitInChat } = useAppState();
+=======
+  const { addSwap, profile } = useAppState();
+>>>>>>> Stashed changes
   const [open, setOpen] = useState(false);
   const [swapping, setSwapping] = useState(false);
   const status = (c) =>
@@ -369,9 +373,12 @@ function UnitRow({ unit: u, index, view, selected, onSelect }) {
       </div>
       <span className="unit-row__cp hide-mobile">{cp(u.cp)}</span>
       <div className="unit-row__actions hide-mobile">
+<<<<<<< Updated upstream
         <Button variant="ghost" onClick={() => discussUnitInChat(u.code, u.name)}>
           Discuss in Chat
         </Button>
+=======
+>>>>>>> Stashed changes
         <Button variant="ghost" onClick={() => setSwapping((v) => !v)} aria-expanded={swapping}>
           Swap
         </Button>
@@ -467,9 +474,15 @@ function PrerequisitePath({ code, view, profile }) {
 }
 
 function NotYetEligible({ units: all, start }) {
+<<<<<<< Updated upstream
   // Units this semester unlocks for next term come first, then blocked ones, then those that open later.
   const isNext = (u) => u.from && termKey(u.from) === termKey(addTerms(start, 1));
   const units = [...all.filter(isNext), ...all.filter((u) => !u.from), ...all.filter((u) => u.from && !isNext(u))];
+=======
+  // Units this semester unlocks for next term come first; blocked ones follow.
+  const next = all.filter((u) => u.from && termKey(u.from) === termKey(addTerms(start, 1)));
+  const units = [...next, ...all.filter((u) => !u.from)];
+>>>>>>> Stashed changes
   if (!units.length) return null;
   return (
     <section className="card hide-mobile" aria-labelledby="nye-title">
@@ -658,7 +671,11 @@ function EmptyPlan({ onStart, onEdit }) {
 }
 
 function ShareDialog({ onClose }) {
+<<<<<<< Updated upstream
   const { profile, start, load, swaps, savePlan } = useAppState();
+=======
+  const { profile, start, load, savePlan } = useAppState();
+>>>>>>> Stashed changes
   const [state, setState] = useState({ status: 'loading' });
   const [copied, setCopied] = useState(false);
   const [attempt, setAttempt] = useState(0);
@@ -667,8 +684,12 @@ function ShareDialog({ onClose }) {
     let live = true;
     savePlan();
     setState({ status: 'loading' });
+<<<<<<< Updated upstream
     // Swaps go too, so the advisor sees the same semesters as the student.
     api.sharePlan({ ...profile, start: termKey(start), load, swaps }).then(
+=======
+    api.sharePlan({ ...profile, start: termKey(start), load }).then(
+>>>>>>> Stashed changes
       (d) => live && setState({ status: 'done', code: d.code }),
       (error) => live && setState({ status: 'error', error })
     );

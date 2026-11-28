@@ -4,7 +4,10 @@ import AssistantMessage from '../components/AssistantMessage.jsx';
 import Button, { IconButton } from '../components/Button.jsx';
 import Composer from '../components/Composer.jsx';
 import { useModal } from '../components/Dialog.jsx';
+<<<<<<< Updated upstream
 import DocumentViewerDrawer from '../components/DocumentViewerDrawer.jsx';
+=======
+>>>>>>> Stashed changes
 import Icon from '../components/Icon.jsx';
 import SourcesPanel from '../components/SourcesPanel.jsx';
 import { TopBar } from '../components/Shell.jsx';
@@ -16,8 +19,11 @@ import { useAppState } from '../state/AppState.jsx';
 const SUGGESTIONS = ['Can I take COS30019 next semester?', 'How do I pass the AI unit?', 'Compare Data Science and AI'];
 const NO_ANSWER = 'No answer found in the approved documents.';
 const topicOf = (q) => (q.length > 48 ? `${q.slice(0, 46).trimEnd()}…` : q);
+<<<<<<< Updated upstream
 // Module-level guard survives React StrictMode unmount/remount cycles.
 let lastHandledPromptId = null;
+=======
+>>>>>>> Stashed changes
 
 // Figma: Ask the assistant, Rich answer, and the chat states in System states.
 export default function ChatPage() {
@@ -33,15 +39,21 @@ export default function ChatPage() {
     view,
     pendingQuestion,
     setPendingQuestion,
+<<<<<<< Updated upstream
     pendingUnitPrompt,
     setPendingUnitPrompt,
+=======
+>>>>>>> Stashed changes
     draft,
     setDraft,
     major,
   } = useAppState();
   const [selected, setSelected] = useState(null); // { msgId, n }
   const [drawer, setDrawer] = useState(false);
+<<<<<<< Updated upstream
   const [viewerOpen, setViewerOpen] = useState(true);
+=======
+>>>>>>> Stashed changes
   const input = useRef(null);
   const endRef = useRef(null);
   const busy = messages.some((m) => m.status === 'pending');
@@ -61,12 +73,19 @@ export default function ChatPage() {
           { role: 'assistant', content: m.result.answer ?? NO_ANSWER },
         ]);
       const usePlan = scope.includes('plan') && profile;
+<<<<<<< Updated upstream
       // Grades travel inside the plan, so they are only sent when the plan is.
       const useGrades = usePlan && scope.includes('grades');
       const plan = usePlan && {
         ...planBody(profile, load),
         start_term: termLabel(start),
         ...(useGrades && {
+=======
+      const plan = usePlan && {
+        ...planBody(profile, load),
+        start_term: termLabel(start),
+        ...(scope.includes('grades') && {
+>>>>>>> Stashed changes
           grades: Object.fromEntries(
             Object.entries(profile.units)
               .filter(([, u]) => u.grade)
@@ -81,7 +100,11 @@ export default function ChatPage() {
         role: 'assistant',
         question: q,
         status: 'pending',
+<<<<<<< Updated upstream
         scope: scope.filter((s) => (s === 'plan' ? usePlan : s === 'grades' ? useGrades : true)),
+=======
+        scope: usePlan ? scope : scope.filter((s) => s !== 'plan'),
+>>>>>>> Stashed changes
       };
       setMessages([...msgs, user, reply]);
       setDraft('');
@@ -89,10 +112,14 @@ export default function ChatPage() {
         const result = await api.chat(q, history, { scope: reply.scope, plan });
         setMessages((ms) => ms.map((m) => (m.id === reply.id ? { ...reply, status: 'done', result } : m)));
         // An answer without sources leaves the panel on the last one that had some.
+<<<<<<< Updated upstream
         if (result.citations.length) {
           setSelected({ msgId: reply.id, n: 1 });
           setViewerOpen(true);
         }
+=======
+        if (result.citations.length) setSelected({ msgId: reply.id, n: 1 });
+>>>>>>> Stashed changes
       } catch (error) {
         setMessages((ms) => ms.map((m) => (m.id === reply.id ? { ...reply, status: 'error', error } : m)));
       }
@@ -103,6 +130,7 @@ export default function ChatPage() {
   // A question sent from Home or the unit search. The ref keeps this effect tied to the question only.
   const askRef = useRef(ask);
   askRef.current = ask;
+<<<<<<< Updated upstream
   // While an answer is still loading the question waits, then goes once it is done.
   useEffect(() => {
     if (!pendingQuestion || busy) return;
@@ -119,6 +147,13 @@ export default function ChatPage() {
     setPendingUnitPrompt(null);
     askRef.current(prompt);
   }, [pendingUnitPrompt, busy, setPendingUnitPrompt]);
+=======
+  useEffect(() => {
+    if (!pendingQuestion) return;
+    setPendingQuestion(null);
+    askRef.current(pendingQuestion);
+  }, [pendingQuestion, setPendingQuestion]);
+>>>>>>> Stashed changes
 
   const focusComposer = (text) => {
     setDraft(text);
@@ -141,7 +176,10 @@ export default function ChatPage() {
 
   const openCite = (msg) => (n) => {
     setSelected((s) => (s?.msgId === msg.id && s.n === n ? { msgId: msg.id, n: null } : { msgId: msg.id, n }));
+<<<<<<< Updated upstream
     setViewerOpen(true);
+=======
+>>>>>>> Stashed changes
     if (window.matchMedia?.('(max-width: 1279px)').matches) setDrawer(true);
   };
 
@@ -168,6 +206,7 @@ export default function ChatPage() {
 
   const firstQuestion = messages.find((m) => m.role === 'user')?.text;
   const lastAssistant = [...messages].reverse().find((m) => m.role === 'assistant');
+<<<<<<< Updated upstream
   const grades = Boolean(profile) && scope.includes('plan') && scope.includes('grades');
   const toggle = (s) => setScope((cur) => (cur.includes(s) ? cur.filter((x) => x !== s) : [...cur, s]));
   const selectedCitation = openN ? citations[openN - 1] : null;
@@ -209,6 +248,16 @@ export default function ChatPage() {
         />
       )}
     </>
+=======
+  const toggle = (s) => setScope((cur) => (cur.includes(s) ? cur.filter((x) => x !== s) : [...cur, s]));
+
+  const sources = (
+    <SourcesPanel
+      citations={citations}
+      open={openN}
+      onToggle={(n) => setSelected({ msgId: shownMsg.id, n: openN === n ? null : n })}
+    />
+>>>>>>> Stashed changes
   );
 
   return (
@@ -319,12 +368,21 @@ export default function ChatPage() {
               <button
                 type="button"
                 className="scope"
+<<<<<<< Updated upstream
                 aria-pressed={grades}
                 disabled={!profile || !scope.includes('plan')}
                 title={scope.includes('plan') ? 'Off unless you turn it on' : 'Turn on My plan to share grades'}
                 onClick={() => toggle('grades')}
               >
                 <Icon name={grades ? 'check' : 'plus'} size={13} />
+=======
+                aria-pressed={scope.includes('grades') && Boolean(profile)}
+                disabled={!profile}
+                title="Off unless you turn it on"
+                onClick={() => toggle('grades')}
+              >
+                <Icon name={scope.includes('grades') && profile ? 'check' : 'plus'} size={13} />
+>>>>>>> Stashed changes
                 Past grades
               </button>
             </Composer>

@@ -101,6 +101,7 @@ describe('ChatPage', () => {
     expect(api.chat.mock.calls[2][2].plan).toBeFalsy();
   });
 
+<<<<<<< Updated upstream
   it('opens DocumentViewerDrawer with PDF iframe when an inline citation pill is clicked and closes cleanly', async () => {
     api.chat.mockResolvedValue(
       normalizeChat({
@@ -152,6 +153,8 @@ describe('ChatPage', () => {
     expect(screen.queryByText('Source [2] Excerpt')).not.toBeInTheDocument();
   });
 
+=======
+>>>>>>> Stashed changes
   it('shows the out-of-scope card, not an error, and lets the student rephrase', async () => {
     api.chat.mockResolvedValue(ABSTAIN('OUT_OF_SCOPE'));
     const user = userEvent.setup();

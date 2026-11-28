@@ -114,10 +114,13 @@ paths:
                       grade: { type: string, enum: [HD, D, C, P] }
                 start: { type: string, description: 'Term key, year-index: 2027-0 is January 2027' }
                 load: { type: integer, minimum: 1, maximum: 4 }
+<<<<<<< Updated upstream
                 swaps:
                   type: array
                   description: 'Unit pairs the student swapped in the planner, applied in order'
                   items: { type: array, items: { type: string }, minItems: 2, maxItems: 2 }
+=======
+>>>>>>> Stashed changes
       responses:
         '200':
           description: OK

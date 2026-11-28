@@ -11,7 +11,7 @@ cd ..
 mkdir -p dist/bge-small
 cd dist/bge-small || exit 1
 
-BASE_URL="https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main"
+BASE_URL="https://huggingface.co/BAAI/bge-small-en-v1.5/tree/main"
 
 if [ ! -f "tokenizer.json" ]; then
     wget -O tokenizer.json "$BASE_URL/tokenizer.json"

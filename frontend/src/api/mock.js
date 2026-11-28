@@ -68,6 +68,7 @@ const MAPPED = {
   'cyber-security': ['TNE10006', 'TNE10003', 'TNE30009', 'COS10009', 'COS20007', 'SWE20004'],
 };
 
+<<<<<<< Updated upstream
 const UNIT_DESCRIPTIONS = {
   COS10004: 'Covers digital logic, computer architecture, assembly programming, and hardware-software interaction.',
   COS10009: 'Introduces procedural and structured programming fundamentals, control flow, and problem solving.',
@@ -90,6 +91,9 @@ const unit = (code) => ({
   credit_points: 12.5,
   description: UNIT_DESCRIPTIONS[code] ?? `${CATALOG[code] ?? `Unit ${code}`} (12.5 credit points).`,
 });
+=======
+const unit = (code) => ({ code, name: CATALOG[code] ?? `Unit ${code}`, credit_points: 12.5 });
+>>>>>>> Stashed changes
 
 const majorOf = (id) => {
   const m = CS_MAJORS.find((x) => x.id === normalizeMajorId(id));
@@ -318,7 +322,11 @@ flowchart LR
   COS30019 --> COS30082["COS30082: Applied Machine Learning"]
 \`\`\`
 
+<<<<<<< Updated upstream
 A standard load is 3 units, so two more fit alongside COS20007 [2]. These also fit next semester:
+=======
+A standard load is 3 units, so two more fit alongside COS20007 [2]. These are next in your plan:
+>>>>>>> Stashed changes
 
 | Unit | Type | Why it fits |
 | --- | --- | --- |

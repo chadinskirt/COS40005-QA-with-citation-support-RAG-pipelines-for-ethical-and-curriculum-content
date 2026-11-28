@@ -1,7 +1,11 @@
 import { describe, expect, it, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+<<<<<<< Updated upstream
 import MarkdownContent, { parseBlocks } from './MarkdownContent.jsx';
+=======
+import MarkdownContent from './MarkdownContent.jsx';
+>>>>>>> Stashed changes
 import { parseFlowchart } from './PrereqMap.jsx';
 
 describe('MarkdownContent', () => {
@@ -20,6 +24,7 @@ describe('MarkdownContent', () => {
     expect(screen.getByText('expr = "$$a + b$$"')).toBeInTheDocument();
   });
 
+<<<<<<< Updated upstream
   it('keeps a lone "# " line as text instead of hanging', () => {
     expect(parseBlocks('Intro\n# \nMore')).toEqual([
       { type: 'p', content: 'Intro' },
@@ -28,6 +33,8 @@ describe('MarkdownContent', () => {
     ]);
   });
 
+=======
+>>>>>>> Stashed changes
   it('turns [n] into buttons that open source n', async () => {
     const onCite = vi.fn();
     render(<MarkdownContent text="Needs COS20007 [1] and a plan [2]." onCite={onCite} activeCite={2} />);
@@ -66,6 +73,7 @@ describe('MarkdownContent', () => {
     const g = parseFlowchart('graph TD\nX[X] --> Y("Y: two")\nY -.-> Z');
     expect(g.nodes.map((n) => n.label)).toEqual(['X', 'Y: two', 'Z']);
     expect(g.edges.map((e) => e.dashed)).toEqual([false, true]);
+<<<<<<< Updated upstream
   });
 
   it('renders Gemini-style citation pills for #citation-N and [1, 2] markers and triggers callbacks', async () => {
@@ -86,5 +94,7 @@ describe('MarkdownContent', () => {
 
     await user.click(pills[1]);
     expect(onCitationClick).toHaveBeenCalledWith(1);
+=======
+>>>>>>> Stashed changes
   });
 });

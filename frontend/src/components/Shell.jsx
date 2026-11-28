@@ -9,6 +9,7 @@ import { useAppState } from '../state/AppState.jsx';
 // Hash links drive the router, so the skip link moves focus instead of changing the hash.
 const skipToMain = () => document.getElementById('main')?.focus();
 
+<<<<<<< Updated upstream
 const THEME_KEY = 'advising-portal:theme';
 
 function readTheme() {
@@ -19,14 +20,21 @@ function readTheme() {
   }
 }
 
+=======
+>>>>>>> Stashed changes
 // Figma: App/Sidebar (Role = Student). Below 768 px it becomes a top bar with a menu.
 export default function Shell({ page, children }) {
   const { start } = useAppState();
   const [menuOpen, setMenuOpen] = useState(false);
+<<<<<<< Updated upstream
   const [theme, setTheme] = useState(readTheme);
+=======
+>>>>>>> Stashed changes
   const label = ROUTES.find((r) => r.id === page)?.label;
 
+  useEffect(() => setMenuOpen(false), [page]);
   useEffect(() => {
+<<<<<<< Updated upstream
     document.documentElement.dataset.theme = theme;
     try {
       localStorage.setItem(THEME_KEY, theme);
@@ -38,6 +46,8 @@ export default function Shell({ page, children }) {
 
   useEffect(() => setMenuOpen(false), [page]);
   useEffect(() => {
+=======
+>>>>>>> Stashed changes
     if (!menuOpen) return undefined;
     const onKey = (e) => e.key === 'Escape' && setMenuOpen(false);
     window.addEventListener('keydown', onKey);
@@ -57,6 +67,7 @@ export default function Shell({ page, children }) {
         <span className="mobile-bar__title">{page === 'home' ? 'Advising Portal' : label}</span>
         <button
           type="button"
+<<<<<<< Updated upstream
           className="theme-toggle"
           aria-label="Toggle dark mode"
           aria-pressed={theme === 'dark'}
@@ -67,6 +78,8 @@ export default function Shell({ page, children }) {
         </button>
         <button
           type="button"
+=======
+>>>>>>> Stashed changes
           className="icon-btn"
           aria-label="Menu"
           aria-expanded={menuOpen}
@@ -117,6 +130,7 @@ export default function Shell({ page, children }) {
             <span className="dot dot--pass" aria-hidden="true" />
             {OUTLINE_COUNT} unit outlines · synced {OUTLINES_SYNCED}
             {USE_MOCK && <Badge tone="caution">Demo data</Badge>}
+<<<<<<< Updated upstream
             <button
               type="button"
               className="theme-toggle"
@@ -127,6 +141,8 @@ export default function Shell({ page, children }) {
             >
               <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={14} />
             </button>
+=======
+>>>>>>> Stashed changes
           </p>
         </div>
       </nav>

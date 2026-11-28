@@ -54,6 +54,7 @@ export function normalizeCitation(c) {
     const [, code, section] = /^(\S+)\s*(?:\((.+)\))?$/.exec(c.source_file.trim()) ?? [];
     return {
       doc: code && /^[A-Z]{3}\d{5}$/.test(code) ? `${code} Unit Outline` : c.source_file,
+<<<<<<< Updated upstream
       section: c.section ?? (section ? titleCase(section) : null),
       page: c.page_number ?? c.page ?? null,
       date: c.outline_date ?? null,
@@ -68,6 +69,14 @@ export function normalizeCitation(c) {
             similarity: c.similarity ?? c.similarity_score ?? null,
           }
         : {}),
+=======
+      section: section ? titleCase(section) : null,
+      page: null,
+      date: null,
+      // Chunks start with "Unit CODE - Title (key):"; the passage is what follows.
+      quote: (c.text_snippet ?? '').replace(/^Unit [A-Z]{3}\d{5}[^\n]*:\n/, '').trim(),
+      url: null,
+>>>>>>> Stashed changes
     };
   }
   return {
